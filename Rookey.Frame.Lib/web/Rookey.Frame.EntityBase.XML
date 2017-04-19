@@ -1,0 +1,508 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rookey.Frame.EntityBase</name>
+    </assembly>
+    <members>
+        <member name="T:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute">
+            <summary>
+            表单字段配置
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.FieldName">
+            <summary>
+            字段名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.FieldType">
+            <summary>
+            字段类型（针对数据库）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.FieldLen">
+            <summary>
+            字段长度（针对数据库）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.Display">
+            <summary>
+            字段显示名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.ForeignModuleName">
+            <summary>
+            外键模块名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.IsEnableForm">
+            <summary>
+            是否是启用表单字段配置，为否是将不会插入到表单字段表中
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.ControlType">
+            <summary>
+            控件类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.ControlWidth">
+            <summary>
+            控件宽度
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.DefaultValue">
+            <summary>
+            默认值
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.MinCharLen">
+            <summary>
+            最小字符长度
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.MaxCharLen">
+            <summary>
+            最大字符长度
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.IsRequired">
+            <summary>
+            是否必填
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.IsUnique">
+            <summary>
+            是否唯一
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.IsAllowAdd">
+            <summary>
+            是否允许新增
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.IsAllowEdit">
+            <summary>
+            是否允许编辑
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.IsAllowBatchEdit">
+            <summary>
+            是否允许批量编辑
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.IsAllowCopy">
+            <summary>
+            是否允许复制
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.RowNum">
+            <summary>
+            表单行号,从1开始
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.ColNum">
+            <summary>
+            表单列号，从1开始
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.GroupName">
+            <summary>
+            分组名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.GroupIcon">
+            <summary>
+            分组图标
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.TabName">
+            <summary>
+            标签页名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.TabIcon">
+            <summary>
+            标签页图标
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.NullTipText">
+            <summary>
+            空文本时提示文字
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.ValueField">
+            <summary>
+            值字段名
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.TextField">
+            <summary>
+            文本字段名
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.Url">
+            <summary>
+            数据加载Url
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.IsMultiSelect">
+            <summary>
+            是否多选
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.IsEnableGrid">
+            <summary>
+            是否是启用视图字段配置，为否是将不会插入到视图字段表中
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.HeadWidth">
+            <summary>
+            视图字段宽度
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.IsFrozen">
+            <summary>
+            是否冻结
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.IsGroupField">
+            <summary>
+            是否分组字段
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.IsGridVisible">
+            <summary>
+            是否可见
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.HeadSort">
+            <summary>
+            列头排序编号，从0开始
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.FieldConfigAttribute.IsAllowGridSearch">
+            <summary>
+            是否允许列表中搜索
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.EntityBase.Attr.ModuleConfigAttribute">
+            <summary>
+            模块配置属性类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.EntityBase.Attr.ModuleConfigAttribute.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.ModuleConfigAttribute.TableName">
+            <summary>
+            数据表名
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.ModuleConfigAttribute.DataSourceType">
+            <summary>
+            数据来源类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.ModuleConfigAttribute.ParentName">
+            <summary>
+            父模块名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.ModuleConfigAttribute.Name">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.ModuleConfigAttribute.TitleKey">
+            <summary>
+            模块标题列
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.ModuleConfigAttribute.PrimaryKeyFields">
+            <summary>
+            主键字段，记录唯一标识，可以是多个字段
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.ModuleConfigAttribute.Logo">
+            <summary>
+            模块图标
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.ModuleConfigAttribute.IsAllowAdd">
+            <summary>
+            是否允许新增
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.ModuleConfigAttribute.IsAllowEdit">
+            <summary>
+            是否允许编辑
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.ModuleConfigAttribute.IsAllowDelete">
+            <summary>
+            是否允许删除
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.ModuleConfigAttribute.IsAllowCopy">
+            <summary>
+            是否允许复制
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.ModuleConfigAttribute.IsAllowImport">
+            <summary>
+            是否允许导入
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.ModuleConfigAttribute.IsAllowExport">
+            <summary>
+            是否允许导出
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.ModuleConfigAttribute.IsEnableAttachment">
+            <summary>
+            是否启用附件
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.ModuleConfigAttribute.IsEnabledRecycle">
+            <summary>
+            是否启用回收站
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.ModuleConfigAttribute.IsEnabledBatchEdit">
+            <summary>
+            是否启用批量编辑
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.ModuleConfigAttribute.IsEnabledPrint">
+            <summary>
+            是否允许打印
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.ModuleConfigAttribute.Sort">
+            <summary>
+            排序编码
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.ModuleConfigAttribute.StandardJsFolder">
+            <summary>
+            标准JS所属文件夹
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.Attr.ModuleConfigAttribute.ModuleEditMode">
+            <summary>
+            编辑模式
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.EntityBase.Attr.NoModuleAttribute">
+            <summary>
+            非模块标识，属性加上该标识后将不会添加到模块表中
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.EntityBase.Attr.NoFieldAttribute">
+            <summary>
+            非字段标识，属性加上该标识后将不会添加到字段表中
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.EntityBase.BaseEntity">
+            <summary>
+            实体基类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.EntityBase.BaseEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.BaseEntity.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.BaseEntity.CreateUserId">
+            <summary>
+            创建人ID
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.BaseEntity.ModifyUserId">
+            <summary>
+            修改人ID
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.BaseEntity.CreateUserName">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.BaseEntity.ModifyUserName">
+            <summary>
+            修改人
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.BaseEntity.CreateDate">
+            <summary>
+            创建日期
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.BaseEntity.ModifyDate">
+            <summary>
+            修改日期
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.BaseEntity.IsDeleted">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.BaseEntity.DeleteTime">
+            <summary>
+            删除时间
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.BaseEntity.IsDraft">
+            <summary>
+            是否草稿
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.BaseEntity.OrgId">
+            <summary>
+            单据所属组织
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.BaseEntity.AutoIncrmId">
+            <summary>
+            自增ID，排序使用
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.BaseEntity.FlowStatus">
+            <summary>
+            流程状态
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.BaseEntity.HasLoadForeignNameValue">
+            <summary>
+            是否已经加载外键Name字段值
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.EntityBase.BaseEntity.TaskToDoId">
+            <summary>
+            当前记录对应的待办ID
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.EntityBase.ControlTypeEnum">
+            <summary>
+            表单控件类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.EntityBase.ControlTypeEnum.TextBox">
+            <summary>
+            文本框
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.EntityBase.ControlTypeEnum.SingleCheckBox">
+            <summary>
+            单选CheckBox
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.EntityBase.ControlTypeEnum.MutiCheckBox">
+            <summary>
+            多选CheckBox
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.EntityBase.ControlTypeEnum.ComboBox">
+            <summary>
+            下拉列表框
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.EntityBase.ControlTypeEnum.ComboGrid">
+            <summary>
+            下拉弹出列表框
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.EntityBase.ControlTypeEnum.ComboTree">
+            <summary>
+            下拉树
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.EntityBase.ControlTypeEnum.NumberBox">
+            <summary>
+            浮点数值输入框
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.EntityBase.ControlTypeEnum.IntegerBox">
+            <summary>
+            整型数值输入框
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.EntityBase.ControlTypeEnum.DialogGrid">
+            <summary>
+            弹出列表框
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.EntityBase.ControlTypeEnum.RadioList">
+            <summary>
+            单选框组
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.EntityBase.ControlTypeEnum.DateBox">
+            <summary>
+            日期输入框
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.EntityBase.ControlTypeEnum.DateTimeBox">
+            <summary>
+            日期时间
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.EntityBase.ControlTypeEnum.TextAreaBox">
+            <summary>
+            文本域
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.EntityBase.ControlTypeEnum.RichTextBox">
+            <summary>
+            富文本框
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.EntityBase.ControlTypeEnum.PasswordBox">
+            <summary>
+            密码输入框
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.EntityBase.ControlTypeEnum.IconBox">
+            <summary>
+            图标控件
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.EntityBase.ControlTypeEnum.DialogTree">
+            <summary>
+            弹出树控件
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.EntityBase.ControlTypeEnum.FileUpload">
+            <summary>
+            文件上传
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.EntityBase.ControlTypeEnum.ImageUpload">
+            <summary>
+            图片上传控件
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.EntityBase.ControlTypeEnum.HiddenBox">
+            <summary>
+            隐藏控件
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.EntityBase.ControlTypeEnum.LabelBox">
+            <summary>
+            显示标签
+            </summary>
+        </member>
+    </members>
+</doc>

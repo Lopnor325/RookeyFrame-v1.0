@@ -1,0 +1,18 @@
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Orm.SqlServer.XML
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Orm.SqlServer.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Orm.SqlServer.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Orm.SqlServer\obj\Release\Rookey.Frame.Orm.SqlServer.csprojResolveAssemblyReference.cache
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Orm.SqlServer\obj\Release\Rookey.Frame.Orm.SqlServer.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Orm.SqlServer\obj\Release\Rookey.Frame.Orm.SqlServer.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Orm.SqlServer.XML
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Orm.SqlServer.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Orm.SqlServer.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Orm.SqlServer\obj\Release\Rookey.Frame.Orm.SqlServer.csprojResolveAssemblyReference.cache
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Orm.SqlServer\obj\Release\Rookey.Frame.Orm.SqlServer.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Orm.SqlServer\obj\Release\Rookey.Frame.Orm.SqlServer.pdb
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.Orm.SqlServer.XML
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.Orm.SqlServer.dll
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.Orm.SqlServer.pdb
+D:\rookey\git.oschina\Rookey.Frame.Orm.SqlServer\obj\Release\Rookey.Frame.Orm.SqlServer.csprojResolveAssemblyReference.cache
+D:\rookey\git.oschina\Rookey.Frame.Orm.SqlServer\obj\Release\Rookey.Frame.Orm.SqlServer.dll
+D:\rookey\git.oschina\Rookey.Frame.Orm.SqlServer\obj\Release\Rookey.Frame.Orm.SqlServer.pdb

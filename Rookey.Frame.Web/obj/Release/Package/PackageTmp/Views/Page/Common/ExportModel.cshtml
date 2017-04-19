@@ -1,0 +1,9 @@
+﻿@{
+    ViewBag.Title = "ExportModel";
+}
+@using Rookey.Frame.Common;
+@using Rookey.Frame.UIOperate;
+@{ UIFrameFactory frameFactory = UIFrameFactory.GetInstance(Request);
+   Guid moduleId = UIOperate.GetModuleIdByRequest(Request);
+   int cc = Request["cc"].ObjToInt();}
+@Html.Raw(frameFactory.GetExportModelHTML(moduleId, cc))

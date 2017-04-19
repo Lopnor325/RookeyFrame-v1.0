@@ -1,0 +1,27 @@
+﻿@using Rookey.Frame.UIOperate;
+@using Rookey.Frame.Base.Set;
+@using Rookey.Frame.Common;
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Html.Partial("~/Views/Shared/BaseStyles.cshtml")
+    <link type="text/css" rel="Stylesheet" href="@Url.Content("~/Css/common/main.css")" />
+    @if (GlobalSet.IsHorizontalMenu)
+    {
+        string themeName = UIOperate.GetThemeName(Request);
+        <link class="mainTheme" type="text/css" rel="Stylesheet" href="@Url.Content("~/Css/common/main_ext/main_" + themeName + ".css")" />
+    }
+    @Html.Partial("~/Views/Shared/BaseScripts.cshtml")
+    @{string r = WebHelper.GetJsModifyTimeStr("/Scripts/common/Main.js");}
+    <script type="text/javascript" src="@Url.Content(string.Format("~/Scripts/common/Main.js?r={0}", r))"></script>
+</head>
+<body class="easyui-layout">
+    @RenderBody()
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,16 @@
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Cache.Memcached.XML
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Cache.Memcached.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Cache.Memcached.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Cache.Memcached\obj\Release\Rookey.Frame.Cache.Memcached.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Cache.Memcached\obj\Release\Rookey.Frame.Cache.Memcached.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Cache.Memcached.XML
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Cache.Memcached.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Cache.Memcached.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Cache.Memcached\obj\Release\Rookey.Frame.Cache.Memcached.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Cache.Memcached\obj\Release\Rookey.Frame.Cache.Memcached.pdb
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.Cache.Memcached.XML
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.Cache.Memcached.dll
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.Cache.Memcached.pdb
+D:\rookey\git.oschina\Rookey.Frame.Cache.Memcached\obj\Release\Rookey.Frame.Cache.Memcached.csprojResolveAssemblyReference.cache
+D:\rookey\git.oschina\Rookey.Frame.Cache.Memcached\obj\Release\Rookey.Frame.Cache.Memcached.dll
+D:\rookey\git.oschina\Rookey.Frame.Cache.Memcached\obj\Release\Rookey.Frame.Cache.Memcached.pdb

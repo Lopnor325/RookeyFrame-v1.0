@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "DesktopGrid";
+}
+@using Rookey.Frame.Common;
+@using Rookey.Frame.UIOperate;
+@{ UIFrameFactory frameFactory = UIFrameFactory.GetInstance(Request);
+   Guid moduleId = UIOperate.GetModuleIdByRequest(Request);
+   int top = Request["top"].ObjToInt();
+   string sortName = Request["sort"].ObjToStr();
+   bool isDesc = Request["order"].ObjToStr() == "desc";
+   Dictionary<string, object> dic = null; //网格其他参数
+   //提出网格参数
+   if (Request.Params.AllKeys.Where(x => x.StartsWith("p_")).Count() > 0)
+   {
+       dic = new Dictionary<string, object>();
+       List<string> keys = Request.Params.AllKeys.Where(x => x.StartsWith("p_")).Distinct().ToList();
+       foreach (string key in keys)
+       {
+           dic.Add(key, Request.Params[key]);
+       }
+   }}
+@Html.Raw(frameFactory.GetDesktopGridHTML(moduleId, top, sortName, isDesc, dic))

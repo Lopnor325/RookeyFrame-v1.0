@@ -1,0 +1,25 @@
+﻿@using Rookey.Frame.Common;
+@{
+    ViewBag.Title = "LineParamSet";
+    string r = WebHelper.GetJsModifyTimeStr("/Scripts/Bpm/LineParamSet.js");
+    string r2 = WebHelper.GetJsModifyTimeStr("/Scripts/common/QueryCondition.js");
+}
+@section styles
+{
+    <style type="text/css">
+        .td_label {
+            width: 120px;
+        }
+    </style>
+}
+@section scripts
+{
+    <script type="text/javascript" src="@Url.Content(string.Format("~/Scripts/Bpm/LineParamSet.js?r={0}",r))"></script>
+    <script type="text/javascript" src="@Url.Content(string.Format("~/Scripts/common/QueryCondition.js?r={0}",r2))"></script>
+}
+@using Rookey.Frame.Common;
+@using Rookey.Frame.UIOperate;
+@{ UIFrameFactory frameFactory = UIFrameFactory.GetInstance(Request);
+   Guid workflowId = Request["workflowId"].ObjToGuid();
+   string tagId = Request["tagId"].ObjToStr();}
+@Html.Raw(frameFactory.GetLineParamSetHTML(workflowId, tagId))

@@ -1,0 +1,7 @@
+﻿@{
+    ViewBag.Title = "SetRoleModulePermission";
+}
+@using Rookey.Frame.Common;
+@using Rookey.Frame.UIOperate;
+@{ UIFrameFactory frameFactory = UIFrameFactory.GetInstance(Request);}
+@Html.Raw(frameFactory.SetRoleModulePermission())

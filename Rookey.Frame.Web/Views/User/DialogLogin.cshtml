@@ -1,0 +1,8 @@
+﻿@{
+    ViewBag.Title = string.Format("{0}－用户登录", Rookey.Frame.Common.WebConfigHelper.GetCurrWebName());
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+@using Rookey.Frame.UIOperate;
+@{ UIFrameFactory frameFactory = UIFrameFactory.GetInstance(Request);}
+@Html.Raw(frameFactory.GetDialogLoginHTML())
+@Html.Hidden("txtShowCode", (string)ViewBag.IsShowValidateCode)

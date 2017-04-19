@@ -1,0 +1,18 @@
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.IBLL.XML
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.IBLL.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.IBLL.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.IBLL\obj\Release\Rookey.Frame.IBLL.csprojResolveAssemblyReference.cache
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.IBLL\obj\Release\Rookey.Frame.IBLL.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.IBLL\obj\Release\Rookey.Frame.IBLL.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.IBLL.XML
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.IBLL.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.IBLL.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.IBLL\obj\Release\Rookey.Frame.IBLL.csprojResolveAssemblyReference.cache
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.IBLL\obj\Release\Rookey.Frame.IBLL.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.IBLL\obj\Release\Rookey.Frame.IBLL.pdb
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.IBLL.XML
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.IBLL.dll
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.IBLL.pdb
+D:\rookey\git.oschina\Rookey.Frame.IBLL\obj\Release\Rookey.Frame.IBLL.csprojResolveAssemblyReference.cache
+D:\rookey\git.oschina\Rookey.Frame.IBLL\obj\Release\Rookey.Frame.IBLL.dll
+D:\rookey\git.oschina\Rookey.Frame.IBLL\obj\Release\Rookey.Frame.IBLL.pdb

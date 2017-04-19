@@ -1,0 +1,28 @@
+﻿@using Rookey.Frame.Common;
+@{
+    ViewBag.Title = "NodeParamSet";
+    string r = WebHelper.GetJsModifyTimeStr("/Scripts/Bpm/NodeParamSet.js");
+}
+@section styles
+{
+    <style type="text/css">
+        .td_label {
+            width: 90px;
+            text-align: right;
+        }
+
+        .td_btnInput {
+            width: 120px;
+        }
+    </style>
+}
+@section scripts
+{
+    <script type="text/javascript" src="@Url.Content(string.Format("~/Scripts/Bpm/NodeParamSet.js?r={0}",r))"></script>
+}
+@using Rookey.Frame.Common;
+@using Rookey.Frame.UIOperate;
+@{ UIFrameFactory frameFactory = UIFrameFactory.GetInstance(Request);
+   Guid workflowId = Request["workflowId"].ObjToGuid();
+   string tagId = Request["tagId"].ObjToStr();}
+@Html.Raw(frameFactory.GetNodeParamSetHTML(workflowId, tagId))

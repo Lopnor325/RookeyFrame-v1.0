@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B6A7B291-9F23-40D2-8DC4-3A63F35F0EB0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rookey.Frame.Common</RootNamespace>
+    <AssemblyName>Rookey.Frame.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Rookey.Frame.Lib\web\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+    <DocumentationFile>..\Rookey.Frame.Lib\web\Rookey.Frame.Common.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Rookey.Frame.Lib\web\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Rookey.Frame.Lib\web\Rookey.Frame.Common.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\Rookey.Frame.Lib\office\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.PowerPoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\Rookey.Frame.Lib\office\Microsoft.Office.Interop.PowerPoint.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\Rookey.Frame.Lib\office\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Administration, Version=7.9.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\System32\inetsrv\Microsoft.Web.Administration.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Cecport.Frame.Lib\json\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Office, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\Rookey.Frame.Lib\office\Office.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.DirectoryServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing.Design">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Cecport.Frame.Lib\other\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Check\ArgumentCheck.cs" />
+    <Compile Include="Check\NotNullCheck.cs" />
+    <Compile Include="Document\SwfToolHelper.cs" />
+    <Compile Include="Global\Globals.cs" />
+    <Compile Include="Global\ApplicationObject.cs" />
+    <Compile Include="HttpHelper\HttpCookieHelper.cs" />
+    <Compile Include="HttpHelper\HttpHelper.cs" />
+    <Compile Include="Image\CutPhotoHelp.cs" />
+    <Compile Include="Document\OfficeToPdfHelper.cs" />
+    <Compile Include="Model\TbIndexInfo.cs" />
+    <Compile Include="Model\DbLinkArgs.cs" />
+    <Compile Include="Model\TransactionExtendModel.cs" />
+    <Compile Include="Model\TransactionModel.cs" />
+    <Compile Include="PubDefine\EnumDefine.cs" />
+    <Compile Include="String\StringHelper.cs" />
+    <Compile Include="System\AppPoolService.cs" />
+    <Compile Include="System\DynamicCompiler.cs" />
+    <Compile Include="TypeHandle\ClassHelper.cs" />
+    <Compile Include="TypeHandle\DynamicMethodMemberAccessor.cs" />
+    <Compile Include="TypeHandle\ObjectHelper.cs" />
+    <Compile Include="Validate\Validator.cs" />
+    <Compile Include="Web\HttpAsyncHandler.cs" />
+    <Compile Include="Web\ModelConfigHelper.cs" />
+    <Compile Include="Web\DataMutual.cs" />
+    <Compile Include="Comparer\DistinctComparer.cs" />
+    <Compile Include="File\FileOperateHelper.cs" />
+    <Compile Include="Map\Earth.cs" />
+    <Compile Include="Security\SecurityHelper.cs" />
+    <Compile Include="Comparer\SortComparer.cs" />
+    <Compile Include="TypeHandle\ConvertHelper.cs" />
+    <Compile Include="Extensions\DictionaryExtension.cs" />
+    <Compile Include="TypeHandle\EnumHelper.cs" />
+    <Compile Include="Extensions\ExpressionExtension.cs" />
+    <Compile Include="Extensions\ExpressionVisitor.cs" />
+    <Compile Include="Extensions\IEnumerableExtension.cs" />
+    <Compile Include="Extensions\ParameterRebinder .cs" />
+    <Compile Include="TypeHandle\JsonHelper.cs" />
+    <Compile Include="Extensions\ObjectExtension.cs" />
+    <Compile Include="Security\MySecurity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TypeHandle\RegexHelper.cs" />
+    <Compile Include="Validate\ValidateTools.cs" />
+    <Compile Include="TypeHandle\TypeUtil.cs" />
+    <Compile Include="UploadFile\UploadConfig.cs" />
+    <Compile Include="UploadFile\UploadFileManager.cs" />
+    <Compile Include="UploadFile\UploadFileModel.cs" />
+    <Compile Include="UploadFile\UploadFileModelCollection.cs" />
+    <Compile Include="Validate\ValidateCodeHelper.cs" />
+    <Compile Include="TypeHandle\XmlHelper.cs" />
+    <Compile Include="Web\WebConfigHelper.cs" />
+    <Compile Include="Web\WebHelper.cs" />
+    <Compile Include="Web\WebServiceHelper  .cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

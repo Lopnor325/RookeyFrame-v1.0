@@ -1,0 +1,246 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rookey.Frame.Bridge</name>
+    </assembly>
+    <members>
+        <member name="T:Rookey.Frame.Bridge.BridgeObject">
+            <summary>
+            业务层桥接类
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Bridge.BridgeObject.DEFAULT_MODEL_DLL">
+            <summary>
+            默认实体层DLL
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Bridge.BridgeObject.DEFAULT_IBLL_DLL">
+            <summary>
+            默认业务层接口DLL
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Bridge.BridgeObject.DEFAULT_BLL_DLL">
+            <summary>
+            默认业务层DLL
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Bridge.BridgeObject.DEFAULT_IDAL_DLL">
+            <summary>
+            默认数据层接口DLL
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Bridge.BridgeObject.DEFAULT_DAL_DLL">
+            <summary>
+            默认数据层DLL
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Bridge.BridgeObject.cache_modelType">
+            <summary>
+            实体类型缓存键
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Bridge.BridgeObject.cache_modelValidateType">
+            <summary>
+            实体验证类型缓存键
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Bridge.BridgeObject.cache_ibllType">
+            <summary>
+            业务层接口类型缓存键
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Bridge.BridgeObject.cache_bllType">
+            <summary>
+            业务层类型缓存键
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Bridge.BridgeObject.cache_idalType">
+            <summary>
+            数据层接口类型缓存键
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Bridge.BridgeObject.cache_dalType">
+            <summary>
+            数据层类型缓存键
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Bridge.BridgeObject.DEFAULT_OPERATE_DLL">
+            <summary>
+            默认操作层dll
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Bridge.BridgeObject.cache_operateHandleType">
+            <summary>
+            自定义操作处理类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Bridge.BridgeObject.cacheFactory">
+            <summary>
+            缓存对象
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Bridge.BridgeObject.interfaceObjCaches">
+            <summary>
+            业务层、数据层实体缓存对象集合
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Bridge.BridgeObject.Resolve``1(Rookey.Frame.Base.UserInfo)">
+            <summary>
+            实例化业务层或数据层对象
+            </summary>
+            <typeparam name="T">T为业务层接口类</typeparam>
+            <param name="currUser">当前用户</param>
+            <returns>返回业务层或数据层对象</returns>
+        </member>
+        <member name="M:Rookey.Frame.Bridge.BridgeObject.Resolve``1(Rookey.Frame.Base.UserInfo,System.Nullable{Rookey.Frame.Common.PubDefine.DatabaseType})">
+            <summary>
+            实例化业务层或数据层对象
+            </summary>
+            <typeparam name="T">T为业务层接口类</typeparam>
+            <param name="currUser">当前用户</param>
+            <param name="dbType">数据库类型</param>
+            <returns>返回业务层或数据层对象</returns>
+        </member>
+        <member name="M:Rookey.Frame.Bridge.BridgeObject.Resolve(Rookey.Frame.Base.UserInfo,System.Type,System.Nullable{Rookey.Frame.Common.PubDefine.DatabaseType})">
+            <summary>
+            实体化业务层或数据层对象
+            </summary>
+            <param name="currUser">当前用户</param>
+            <param name="type">业务层或数据层接口类型</param>
+            <param name="dbType">数据库类型</param>
+            <returns>返回业务层或数据层对象</returns>
+        </member>
+        <member name="M:Rookey.Frame.Bridge.BridgeObject.GetTypesByDLL(System.String)">
+            <summary>
+            获取DLL的所有类型
+            </summary>
+            <param name="dllName">DLL名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Bridge.BridgeObject.GetAllModelTypes">
+            <summary>
+            获取所有的模块类型集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Bridge.BridgeObject.GetTempModelTypes">
+            <summary>
+            获取临时实体类型集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Bridge.BridgeObject.GetModelType(System.String)">
+            <summary>
+            获取实体类型
+            </summary>
+            <param name="tableName">实体表名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Bridge.BridgeObject.GetModelTypeByModuleName(System.String)">
+            <summary>
+            获取实体类型
+            </summary>
+            <param name="moduleName">模块名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Bridge.BridgeObject.GetAllFluentValidationModelTypes">
+            <summary>
+            获取所有的验证模块类型集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Bridge.BridgeObject.GetFluentValidationModelType(System.String)">
+            <summary>
+            获取验证实体类型
+            </summary>
+            <param name="tableName">实体表名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Bridge.BridgeObject.GetAllBLLInterfaceTypes">
+            <summary>
+            获取当前所有业务接口类型集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Bridge.BridgeObject.GetBLLInterfaceType(System.Type)">
+            <summary>
+            获取数据模型类型对应的业务层接口类型
+            </summary>
+            <param name="modelType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Bridge.BridgeObject.GetAllBLLTypes">
+            <summary>
+            获取当前所有业务类型集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Bridge.BridgeObject.GetBLLType(System.Type)">
+            <summary>
+            获取数据模型类型对应的业务类型
+            </summary>
+            <param name="modelType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Bridge.BridgeObject.GetAllDALInterfaceTypes">
+            <summary>
+            获取所有数据层接口类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Bridge.BridgeObject.GetDALInterfaceType(System.Type)">
+            <summary>
+            获取数据模型类型对应的数据层接口类型
+            </summary>
+            <param name="modelType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Bridge.BridgeObject.GetAllDALTypes">
+            <summary>
+            获取所有数据层类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Bridge.BridgeObject.GetDALType(System.Type)">
+            <summary>
+            获取数据模型类型对应的数据层类型
+            </summary>
+            <param name="modelType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Bridge.BridgeObject.GetBLLMethodType(System.Type,System.String)">
+            <summary>
+            获取业务层方法类型（主要有公共方法，重写方法，自定义方法）
+            </summary>
+            <param name="modelType">实体类型</param>
+            <param name="methodName">方法名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Bridge.BridgeObject.GetCustomerOperateHandleTypes">
+            <summary>
+            获取自定义操作处理类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Bridge.MethodCallTypeEnum">
+            <summary>
+            方法调用类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Bridge.MethodCallTypeEnum.CommonMethod">
+            <summary>
+            通用方法
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Bridge.MethodCallTypeEnum.OverrideMethod">
+            <summary>
+            重写通用方法
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Bridge.MethodCallTypeEnum.CustomerMethod">
+            <summary>
+            自定义方法
+            </summary>
+        </member>
+    </members>
+</doc>

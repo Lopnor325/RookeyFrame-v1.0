@@ -1,0 +1,7 @@
+﻿@{
+    ViewBag.Title = "JobManage";
+}
+@using Rookey.Frame.UIOperate;
+@{ UIFrameFactory frameFactory = UIFrameFactory.GetInstance(Request);}
+@Html.Raw(frameFactory.GetJobManageHTML())
+

@@ -1,0 +1,8 @@
+﻿@{
+    ViewBag.Title = "SetRolePermission";
+}
+@using Rookey.Frame.Common;
+@using Rookey.Frame.UIOperate;
+@{ UIFrameFactory frameFactory = UIFrameFactory.GetInstance(Request);
+   Guid? roleId = Request["roleId"].ObjToGuidNull();}
+@Html.Raw(frameFactory.GetSetRolePermissionHTML(roleId))

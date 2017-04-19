@@ -1,0 +1,5015 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rookey.Frame.Model</name>
+    </assembly>
+    <members>
+        <member name="T:Rookey.Frame.Model.BaseBpmEntity">
+            <summary>
+            工作流实体基类
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.BaseDeskEntity">
+            <summary>
+            桌面基类
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.BaseLogEntity">
+            <summary>
+            日志基类
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.BaseMonitorEntity">
+            <summary>
+            系统监控实体基类
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.BaseSysEntity">
+            <summary>
+            系统模块基类
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.BaseOrgMEntity">
+            <summary>
+            组织管理基类
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.BaseMsgEntity">
+            <summary>
+            消息实体基类
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Bpm.Bpm_FlowBtn">
+            <summary>
+            流程按钮
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_FlowBtn.ButtonText">
+            <summary>
+            按钮显示名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_FlowBtn.ButtonIcon">
+            <summary>
+            按钮图标
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_FlowBtn.ClickMethod">
+            <summary>
+            单击事件
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_FlowBtn.ParentId">
+            <summary>
+            上级按钮Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_FlowBtn.ButtonType">
+            <summary>
+            按钮类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_FlowBtn.ButtonTypeOfEnum">
+            <summary>
+            按钮类型（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_FlowBtn.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_FlowBtn.Memo">
+            <summary>
+            按钮说明
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Bpm.Bpm_FlowClass">
+            <summary>
+            流程分类
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_FlowClass.Name">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_FlowClass.ParentId">
+            <summary>
+            上级分类
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_FlowClass.ParentName">
+            <summary>
+            上级分类
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_FlowClass.Des">
+            <summary>
+            分类描述
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Bpm.Bpm_NodeBtnConfig">
+            <summary>
+            审批按钮配置
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_NodeBtnConfig.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_NodeBtnConfig.Bpm_WorkFlowId">
+            <summary>
+            流程
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_NodeBtnConfig.Bpm_WorkFlowName">
+            <summary>
+            流程名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_NodeBtnConfig.Bpm_WorkNodeId">
+            <summary>
+            结点
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_NodeBtnConfig.Bpm_WorkNodeName">
+            <summary>
+            结点名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_NodeBtnConfig.Bpm_FlowBtnId">
+            <summary>
+            按钮
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_NodeBtnConfig.Bpm_FlowBtnName">
+            <summary>
+            按钮名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_NodeBtnConfig.BtnDisplay">
+            <summary>
+            按钮显示名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_NodeBtnConfig.IsEnabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Bpm.Bpm_SubWorkFlow">
+            <summary>
+            子流程配置
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_SubWorkFlow.Bpm_WorkFlowId">
+            <summary>
+            父流程Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_SubWorkFlow.Bpm_WorkFlowName">
+            <summary>
+            父流程名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_SubWorkFlow.Bpm_WorkNodeId">
+            <summary>
+            父流程结点Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_SubWorkFlow.Bpm_WorkNodeName">
+            <summary>
+            父流程结点名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_SubWorkFlow.Bpm_WorkFlowChildId">
+            <summary>
+            子流程Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_SubWorkFlow.Bpm_WorkFlowChildName">
+            <summary>
+            子流程名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_SubWorkFlow.Memo">
+            <summary>
+            备注说明
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Bpm.Bpm_WorkFlow">
+            <summary>
+            流程信息
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlow.Name">
+            <summary>
+            流程名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlow.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlow.Bpm_FlowClassId">
+            <summary>
+            所属分类Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlow.Bpm_FlowClassName">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlow.Sys_ModuleId">
+            <summary>
+            关联模块
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlow.Sys_ModuleName">
+            <summary>
+            关联模块名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlow.ValidStartTime">
+            <summary>
+            有效开始时间
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlow.ValidEndTime">
+            <summary>
+            有效结束时间
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlow.OrgM_EmpId">
+            <summary>
+            管理人，流程异常时跳到管理人处理
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlow.OrgM_EmpName">
+            <summary>
+            管理人
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlow.WorkNodes">
+            <summary>
+            节点集合
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlow.WorkLines">
+            <summary>
+            连线集合
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Bpm.Bpm_WorkFlowInstance">
+            <summary>
+            流程实例
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlowInstance.Code">
+            <summary>
+            流程编号
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlowInstance.Title">
+            <summary>
+            流程标题
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlowInstance.ParentId">
+            <summary>
+            父流程实例Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlowInstance.ParentName">
+            <summary>
+            父流程实例名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlowInstance.Bpm_WorkFlowId">
+            <summary>
+            流程Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlowInstance.Bpm_WorkFlowName">
+            <summary>
+            流程名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlowInstance.Status">
+            <summary>
+            流程状态
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlowInstance.StatusOfEnum">
+            <summary>
+            流程状态（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlowInstance.StartDate">
+            <summary>
+            发起时间
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlowInstance.OrgM_EmpId">
+            <summary>
+            发起者
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlowInstance.OrgM_EmpName">
+            <summary>
+            发起者
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlowInstance.RecordId">
+            <summary>
+            记录id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlowInstance.EndDate">
+            <summary>
+            完成时间
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Bpm.Bpm_WorkLine">
+            <summary>
+            流程连线配置
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkLine.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkLine.Bpm_WorkFlowId">
+            <summary>
+            流程Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkLine.Bpm_WorkFlowName">
+            <summary>
+            流程名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkLine.Bpm_WorkNodeStartId">
+            <summary>
+            起始节点
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkLine.Bpm_WorkNodeStartName">
+            <summary>
+            起始节点名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkLine.Bpm_WorkNodeEndId">
+            <summary>
+            终止节点
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkLine.Bpm_WorkNodeEndName">
+            <summary>
+            终止节点名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkLine.Note">
+            <summary>
+            连线标注
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkLine.IsCustomerCondition">
+            <summary>
+            是否自定义转向条件
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkLine.FormCondition">
+            <summary>
+            表单条件
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkLine.DutyCondition">
+            <summary>
+            职务条件
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkLine.DeptCondition">
+            <summary>
+            部门条件
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkLine.SqlCondition">
+            <summary>
+            SQL条件
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkLine.M">
+            <summary>
+            M
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkLine.FromTagId">
+            <summary>
+            连接起始节点
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkLine.ToTagId">
+            <summary>
+            连接终止节点
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkLine.TagId">
+            <summary>
+            标签id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkLine.LineType">
+            <summary>
+            连线类型
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Bpm.Bpm_WorkNode">
+            <summary>
+            流程结点
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.Code">
+            <summary>
+            节点编码
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.Bpm_WorkFlowId">
+            <summary>
+            流程信息Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.Bpm_WorkFlowName">
+            <summary>
+            流程信息
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.Name">
+            <summary>
+            节点名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.Sys_FormId">
+            <summary>
+            节点表单
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.Sys_FormName">
+            <summary>
+            表单名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.FormUrl">
+            <summary>
+            表单URL
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.HandlerType">
+            <summary>
+            处理者类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.HandlerTypeOfEnum">
+            <summary>
+            处理者类型（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.HandleRange">
+            <summary>
+            处理范围
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.HandleStrategy">
+            <summary>
+            处理策略
+            </summary> 
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.HandleStrategyOfEnum">
+            <summary>
+            处理策略（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.FormFieldName">
+            <summary>
+            表单字段
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.AutoJumpRule">
+            <summary>
+            自动跳转规则
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.BackType">
+            <summary>
+            回退类型设置
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.BackTypeOfEnum">
+            <summary>
+            回退类型设置（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.WorkNodeType">
+            <summary>
+            结点类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.WorkNodeTypeOfEnum">
+            <summary>
+            结点类型（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.Bpm_WorkFlowSubId">
+            <summary>
+            子流程信息
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.SubFlowType">
+            <summary>
+            子流程类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.SubFlowTypeOfEnum">
+            <summary>
+            子流程类型（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.Bpm_WorkFlowSubName">
+            <summary>
+            子流程名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.Width">
+            <summary>
+            节点宽度
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.Height">
+            <summary>
+            节点高度
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.Top">
+            <summary>
+            纵坐标
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.Left">
+            <summary>
+            横坐标
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.TagId">
+            <summary>
+            标签id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNode.BtnConfigs">
+            <summary>
+            结点审批按钮配置
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Bpm.Bpm_WorkNodeInstance">
+            <summary>
+            流程结点实例
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNodeInstance.SerialNo">
+            <summary>
+            流水号
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNodeInstance.Bpm_WorkFlowInstanceId">
+            <summary>
+            流程实例Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNodeInstance.Bpm_WorkFlowInstanceName">
+            <summary>
+            流程实例
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNodeInstance.Bpm_WorkNodeId">
+            <summary>
+            结点Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNodeInstance.Bpm_WorkNodeName">
+            <summary>
+            结点名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNodeInstance.StartDate">
+            <summary>
+            启动时间
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNodeInstance.FinishDate">
+            <summary>
+            完成时间
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNodeInstance.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNodeInstance.StatusOfEnum">
+            <summary>
+            状态（枚举）
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Bpm.Bpm_WorkToDoList">
+            <summary>
+            待办任务
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoList.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoList.Title">
+            <summary>
+            流程标题
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoList.Bpm_WorkFlowInstanceId">
+            <summary>
+            流程实例Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoList.Bpm_WorkFlowInstanceName">
+            <summary>
+            流程实例
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoList.Bpm_WorkNodeInstanceId">
+            <summary>
+            结点实例Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoList.Bpm_WorkNodeInstanceName">
+            <summary>
+            结点实例
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoList.OrgM_EmpId">
+            <summary>
+            待办人
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoList.OrgM_EmpName">
+            <summary>
+            待办人
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoList.Launcher">
+            <summary>
+            发起人
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoList.LaunchTime">
+            <summary>
+            发起时间
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoList.StartDate">
+            <summary>
+            接收时间
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoList.FinishDate">
+            <summary>
+            完成时间
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoList.Status">
+            <summary>
+            流程状态
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoList.StatusOfEnum">
+            <summary>
+            状态（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoList.ApprovalOpinions">
+            <summary>
+            处理意见
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoList.WorkAction">
+            <summary>
+            操作动作
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoList.WorkActionOfEnum">
+            <summary>
+            操作动作（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoList.Bpm_WorkNodeId">
+            <summary>
+            下一处理结点Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoList.Bpm_WorkNodeName">
+            <summary>
+            下一处理结点名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoList.NextNodeHandler">
+            <summary>
+            下一处理人
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoList.ModuleId">
+            <summary>
+            模块ID
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoList.RecordId">
+            <summary>
+            记录ID
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoList.IsInitHandler">
+            <summary>
+            是否原始待办人，找不到待办人时或其他原因系统自动指派给其他人处理待办，这里保存当前待办处理是否原始处理人
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoList.ParentId">
+            <summary>
+            父待办ID，针对子流程都有一个父流程待办
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoList.IsParentTodo">
+            <summary>
+            当前是否为父待办
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoList.FormUrl">
+            <summary>
+            自定义表单URL
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoList.ModuleName">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Bpm.Bpm_WorkToDoListHistory">
+            <summary>
+            待办任务历史数据
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoListHistory.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoListHistory.Title">
+            <summary>
+            流程标题
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoListHistory.Bpm_WorkFlowInstanceId">
+            <summary>
+            流程实例Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoListHistory.Bpm_WorkNodeInstanceId">
+            <summary>
+            结点实例Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoListHistory.OrgM_EmpId">
+            <summary>
+            待办人
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoListHistory.Launcher">
+            <summary>
+            发起人
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoListHistory.LaunchTime">
+            <summary>
+            发起时间
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoListHistory.StartDate">
+            <summary>
+            接收时间
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoListHistory.FinishDate">
+            <summary>
+            完成时间
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoListHistory.Status">
+            <summary>
+            流程状态
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoListHistory.StatusOfEnum">
+            <summary>
+            状态（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoListHistory.ApprovalOpinions">
+            <summary>
+            处理意见
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoListHistory.WorkAction">
+            <summary>
+            操作动作
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoListHistory.WorkActionOfEnum">
+            <summary>
+            操作动作（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoListHistory.Bpm_WorkNodeId">
+            <summary>
+            下一处理结点Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoListHistory.NextNodeHandler">
+            <summary>
+            下一处理人
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoListHistory.ModuleId">
+            <summary>
+            模块ID
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoListHistory.RecordId">
+            <summary>
+            记录ID
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoListHistory.IsInitHandler">
+            <summary>
+            是否原始待办人，找不到待办人时或其他原因系统自动指派给其他人处理待办，这里保存当前待办处理是否原始处理人
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoListHistory.ParentId">
+            <summary>
+            父待办ID，针对子流程都有一个父流程待办
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoListHistory.IsParentTodo">
+            <summary>
+            当前是否为父待办
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkToDoListHistory.ModuleName">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Bpm.Bpm_WorkFlowInstanceHistory">
+            <summary>
+            流程实例历史
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlowInstanceHistory.Code">
+            <summary>
+            流程编号
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlowInstanceHistory.Title">
+            <summary>
+            流程标题
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlowInstanceHistory.ParentId">
+            <summary>
+            父流程实例Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlowInstanceHistory.Bpm_WorkFlowId">
+            <summary>
+            流程Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlowInstanceHistory.Status">
+            <summary>
+            流程状态
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlowInstanceHistory.StatusOfEnum">
+            <summary>
+            流程状态（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlowInstanceHistory.StartDate">
+            <summary>
+            发起时间
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlowInstanceHistory.OrgM_EmpId">
+            <summary>
+            发起者
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlowInstanceHistory.RecordId">
+            <summary>
+            记录id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkFlowInstanceHistory.EndDate">
+            <summary>
+            完成时间
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Bpm.Bpm_WorkNodeInstanceHistory">
+            <summary>
+            流程结点实例
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNodeInstanceHistory.SerialNo">
+            <summary>
+            流水号
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNodeInstanceHistory.Bpm_WorkFlowInstanceId">
+            <summary>
+            流程实例Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNodeInstanceHistory.Bpm_WorkNodeId">
+            <summary>
+            结点Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNodeInstanceHistory.StartDate">
+            <summary>
+            启动时间
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNodeInstanceHistory.FinishDate">
+            <summary>
+            完成时间
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNodeInstanceHistory.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Bpm.Bpm_WorkNodeInstanceHistory.StatusOfEnum">
+            <summary>
+            状态（枚举）
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Desktop.Desktop_GridField">
+            <summary>
+            桌面列表配置
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Desktop.Desktop_GridField.Sys_ModuleId">
+            <summary>
+            模块Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Desktop.Desktop_GridField.Sys_ModuleName">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Desktop.Desktop_GridField.FieidName">
+            <summary>
+            字段名
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Desktop.Desktop_GridField.Width">
+            <summary>
+            字段宽度
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Desktop.Desktop_GridField.Sort">
+            <summary>
+            排序编号
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Desktop.Desktop_Item">
+            <summary>
+            桌面项管理
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Desktop.Desktop_Item.Name">
+            <summary>
+            桌面项名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Desktop.Desktop_Item.Sort">
+            <summary>
+            排序编号
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Desktop.Desktop_Item.IsCanClose">
+            <summary>
+            是否允许关闭
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Desktop.Desktop_Item.Des">
+            <summary>
+            桌面项描述
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Desktop.Desktop_Item.Desktop_ItemTabs">
+            <summary>
+            桌面项明细
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Desktop.Desktop_ItemTab">
+            <summary>
+            桌面项标签
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Desktop.Desktop_ItemTab.Desktop_ItemId">
+            <summary>
+            桌面项
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Desktop.Desktop_ItemTab.Desktop_ItemName">
+            <summary>
+            桌面项名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Desktop.Desktop_ItemTab.Title">
+            <summary>
+            标签项标题
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Desktop.Desktop_ItemTab.Url">
+            <summary>
+            链接Url地址
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Desktop.Desktop_ItemTab.MoreUrl">
+            <summary>
+            更多Url
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Desktop.Desktop_ItemTab.Sort">
+            <summary>
+            排序编号
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Desktop.Desktop_ItemTab.Des">
+            <summary>
+            标签项描述
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Desktop.Desktop_ItemTab.Flag">
+            <summary>
+            标识字符
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Desktop.Desktop_Permission">
+            <summary>
+            桌面权限配置
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Desktop.Desktop_Permission.SetType">
+            <summary>
+            权限设置类型，0-角色，1-职务
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Desktop.Desktop_Permission.TypeId">
+            <summary>
+            类型ID，当SetType=0时为角色ID，当SetType=1时为职务ID
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Desktop.Desktop_Permission.Desktop_ItemId">
+            <summary>
+            桌面项标签
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Msg.Msg_Bcc">
+            <summary>
+            消息密送人
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_Bcc.Msg_EventNotifyId">
+            <summary>
+            事件
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_Bcc.Msg_EventNotifyName">
+            <summary>
+            事件名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_Bcc.ReceiverType">
+            <summary>
+            密送人类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_Bcc.ReceiverTypeOfEnum">
+            <summary>
+            密送人类型（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_Bcc.ReceiverRange">
+            <summary>
+            密送人范围
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_Bcc.OtherReceiver">
+            <summary>
+            其他密送人
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Msg.Msg_Cc">
+            <summary>
+            消息抄送人
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_Cc.Msg_EventNotifyId">
+            <summary>
+            事件
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_Cc.Msg_EventNotifyName">
+            <summary>
+            事件名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_Cc.ReceiverType">
+            <summary>
+            抄送人类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_Cc.ReceiverTypeOfEnum">
+            <summary>
+            抄送人类型（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_Cc.ReceiverRange">
+            <summary>
+            抄送人范围
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_Cc.OtherReceiver">
+            <summary>
+            其他抄送人
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Msg.Msg_SendLog">
+            <summary>
+            消息发送日志
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_SendLog.EventName">
+            <summary>
+            事件名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_SendLog.Sender">
+            <summary>
+            发送者
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_SendLog.Tos">
+            <summary>
+            收件人
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_SendLog.Ccs">
+            <summary>
+            抄送人
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_SendLog.Bccs">
+            <summary>
+            密送人
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_SendLog.Subject">
+            <summary>
+            主题
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_SendLog.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_SendLog.IsSuccess">
+            <summary>
+            是否发送成功
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_SendLog.ErrMsg">
+            <summary>
+            异常信息
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_SendLog.SendFlag">
+            <summary>
+            发送标识
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Msg.Msg_To">
+            <summary>
+            消息收件人
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_To.Msg_EventNotifyId">
+            <summary>
+            事件
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_To.Msg_EventNotifyName">
+            <summary>
+            事件名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_To.ReceiverType">
+            <summary>
+            收件人类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_To.ReceiverTypeOfEnum">
+            <summary>
+            收件人类型（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_To.ReceiverRange">
+            <summary>
+            收件人范围
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_To.OtherReceiver">
+            <summary>
+            其他收件人
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Msg.Msg_Template">
+            <summary>
+            消息模板
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_Template.Name">
+            <summary>
+            模板名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_Template.TemplateType">
+            <summary>
+            模板类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_Template.TemplateTypeOfEnum">
+            <summary>
+            模板类型（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_Template.Title">
+            <summary>
+            模板标题
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_Template.Content">
+            <summary>
+            模板内容
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_Template.ValidStartTime">
+            <summary>
+            有效开始时间
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_Template.ValidEndTime">
+            <summary>
+            有效结束时间
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.WorkFlowStatusEnum">
+            <summary>
+            流程状态
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.WorkFlowStatusEnum.Start">
+            <summary>
+            流程已发起
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.WorkFlowStatusEnum.Approving">
+            <summary>
+            流程审批中
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.WorkFlowStatusEnum.Return">
+            <summary>
+            流程被回退
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.WorkFlowStatusEnum.Refused">
+            <summary>
+            流程被拒绝
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.WorkFlowStatusEnum.Freezed">
+            <summary>
+            流程被冻结
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.WorkFlowStatusEnum.Over">
+            <summary>
+            已通过,流程结束
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.WorkFlowStatusEnum.NoStatus">
+            <summary>
+            无状态，未发起
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.WorkFlowStatusEnum.Customer">
+            <summary>
+            自定义
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.WorkNodeStatusEnum">
+            <summary>
+            结点状态
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.WorkNodeStatusEnum.Undo">
+            <summary>
+            未处理
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.WorkNodeStatusEnum.Do">
+            <summary>
+            已处理
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.WorkNodeStatusEnum.Stop">
+            <summary>
+            暂停
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.WorkActionEnum">
+            <summary>
+            操作动作
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.WorkActionEnum.NoAction">
+            <summary>
+            未执行
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.WorkActionEnum.Starting">
+            <summary>
+            发起流程
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.WorkActionEnum.Approving">
+            <summary>
+            审批流程
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.WorkActionEnum.Returning">
+            <summary>
+            回退流程
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.WorkActionEnum.Directing">
+            <summary>
+            指派流程
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.WorkActionEnum.Refusing">
+            <summary>
+            拒绝流程
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.WorkActionEnum.Communicating">
+            <summary>
+            沟通流程
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.WorkActionEnum.SubStarting">
+            <summary>
+            发起子流程
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.WorkActionEnum.ReStarting">
+            <summary>
+            重新发起
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.WorkNodeTypeEnum">
+            <summary>
+            节点类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.WorkNodeTypeEnum.Start">
+            <summary>
+            开始节点
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.WorkNodeTypeEnum.End">
+            <summary>
+            结束节点
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.WorkNodeTypeEnum.Common">
+            <summary>
+            普通节点
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.WorkNodeTypeEnum.System">
+            <summary>
+            系统节点
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.HandleStrategyTypeEnum">
+            <summary>
+            处理策略类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.HandleStrategyTypeEnum.OneAgree">
+            <summary>
+            一人同意即可
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.HandleStrategyTypeEnum.AllAgree">
+            <summary>
+            所有人必须同意
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.NodeHandlerTypeEnum">
+            <summary>
+            节点处理者类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.NodeHandlerTypeEnum.All">
+            <summary>
+            所有人员
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.NodeHandlerTypeEnum.Dept">
+            <summary>
+            部门
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.NodeHandlerTypeEnum.Duty">
+            <summary>
+            职务
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.NodeHandlerTypeEnum.Position">
+            <summary>
+            岗位
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.NodeHandlerTypeEnum.Employee">
+            <summary>
+            人员
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.NodeHandlerTypeEnum.Role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.NodeHandlerTypeEnum.StarterDirectLeader">
+            <summary>
+            发起者直接上级
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.NodeHandlerTypeEnum.StarterChargeLeader">
+            <summary>
+            发起者部门负责人，部门leader
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.NodeHandlerTypeEnum.LastHandlerDirectLeader">
+            <summary>
+            上一步处理者直接上级
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.NodeHandlerTypeEnum.LastHandlerChargeLeader">
+            <summary>
+            上一处理者部门负责人
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.NodeHandlerTypeEnum.FormFieldValue">
+            <summary>
+            表单字段值
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.NodeHandlerTypeEnum.Starter">
+            <summary>
+            发起者
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.NodeHandlerTypeEnum.LastHandler">
+            <summary>
+            上一步处理者
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.NodeHandlerTypeEnum.StarterParentDeptLeader">
+            <summary>
+            发起者上级部门负责人
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.NodeHandlerTypeEnum.StarterParentParentDeptLeader">
+            <summary>
+            发起者上上级部门负责人
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.NodeHandlerTypeEnum.LastHandlerParentDeptLeader">
+            <summary>
+            上一处理者上级部门负责人
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.NodeHandlerTypeEnum.LastHandlerParentParentDeptLeader">
+            <summary>
+            上一处理者上上级部门负责人
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.NodeHandlerTypeEnum.StarterLevel1DeptLeader">
+            <summary>
+            发起者第一层级部门负责人
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.NodeHandlerTypeEnum.StarterLevel2DeptLeader">
+            <summary>
+            发起者第二层级部门负责人
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.NodeHandlerTypeEnum.StarterLevel3DeptLeader">
+            <summary>
+            发起者第三层级部门负责人
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.NodeHandlerTypeEnum.LastHandlerLevel1DeptLeader">
+            <summary>
+            上一处理者第一层级部门负责人
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.NodeHandlerTypeEnum.LastHandlerLevel2DeptLeader">
+            <summary>
+            上一处理者第二层级部门负责人
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.NodeHandlerTypeEnum.LastHandlerLevel3DeptLeader">
+            <summary>
+            上一处理者第三层级部门负责人
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.NodeBackTypeEnum">
+            <summary>
+            节点回退类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.NodeBackTypeEnum.BackToAll">
+            <summary>
+            回退到任意步骤
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.NodeBackTypeEnum.BackToFirst">
+            <summary>
+            回退到发起者
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.NodeBackTypeEnum.BackToLast">
+            <summary>
+            回退到上一步
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.FlowButtonTypeEnum">
+            <summary>
+            流程按钮类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.FlowButtonTypeEnum.AgreeBtn">
+            <summary>
+            同意按钮
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.FlowButtonTypeEnum.RejectBtn">
+            <summary>
+            拒绝按钮
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.FlowButtonTypeEnum.BackBtn">
+            <summary>
+            回退按钮
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.FlowButtonTypeEnum.AssignBtn">
+            <summary>
+            指派按钮
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.FlowButtonTypeEnum.CustomerBtn">
+            <summary>
+            自定义按钮
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.SubFlowTypeEnum">
+            <summary>
+            子流程类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.SubFlowTypeEnum.ChildFlow">
+            <summary>
+            子流程
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.SubFlowTypeEnum.BranchFlow">
+            <summary>
+            分支流程
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.GenderEnum">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.GenderEnum.Unknown">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.GenderEnum.M">
+            <summary>
+            女
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.GenderEnum.F">
+            <summary>
+            男
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.BloodTypeEnum">
+            <summary>
+            血型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.BloodTypeEnum.Unknown">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.BloodTypeEnum.A">
+            <summary>
+            A
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.BloodTypeEnum.B">
+            <summary>
+            B
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.BloodTypeEnum.AB">
+            <summary>
+            AB
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.BloodTypeEnum.O">
+            <summary>
+            O
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.EducationEnum">
+            <summary>
+            学历
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.EducationEnum.Unknown">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.EducationEnum.Primary">
+            <summary>
+            小学
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.EducationEnum.JuniorHigh">
+            <summary>
+            初中
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.EducationEnum.SeniorMiddle">
+            <summary>
+            高中
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.EducationEnum.Professional">
+            <summary>
+            专科
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.EducationEnum.Undergraduate">
+            <summary>
+            本科
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.EducationEnum.Master">
+            <summary>
+            硕士
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.EducationEnum.Doctor">
+            <summary>
+            博士
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.EmployeeTypeEnum">
+            <summary>
+            员工类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.EmployeeTypeEnum.Official">
+            <summary>
+            正式
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.EmployeeTypeEnum.Probation">
+            <summary>
+            试用期
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.EmployeeTypeEnum.Practice">
+            <summary>
+            实习生
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.EmployeeTypeEnum.Temporary">
+            <summary>
+            临时员工
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.EmpStatusEnum">
+            <summary>
+            员工状态
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.EmpStatusEnum.Work">
+            <summary>
+            在职
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.EmpStatusEnum.Resignation">
+            <summary>
+            离职
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.EmpStatusEnum.Retired">
+            <summary>
+            退休
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.FormTypeEnum">
+            <summary>
+            表单类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.FormTypeEnum.EditForm">
+            <summary>
+            编辑表单
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.FormTypeEnum.ViewForm">
+            <summary>
+            查看表单
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.ValidateTypeEnum">
+            <summary>
+            验证类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ValidateTypeEnum.No">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ValidateTypeEnum.email">
+            <summary>
+            Eamil
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ValidateTypeEnum.url">
+            <summary>
+            URL
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ValidateTypeEnum.intNum">
+            <summary>
+            整型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ValidateTypeEnum.floatNum">
+            <summary>
+            浮点型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ValidateTypeEnum.mobile">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ValidateTypeEnum.qq">
+            <summary>
+            QQ
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ValidateTypeEnum.zip">
+            <summary>
+            邮政编码
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ValidateTypeEnum.phone">
+            <summary>
+            电话号码
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ValidateTypeEnum.faxno">
+            <summary>
+            传真
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ValidateTypeEnum.idCard">
+            <summary>
+            身份证
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.ModuleEditModeEnum">
+            <summary>
+            模块编辑模式
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ModuleEditModeEnum.None">
+            <summary>
+            自适应模式
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ModuleEditModeEnum.TabFormEdit">
+            <summary>
+            标签页表单编辑模式
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ModuleEditModeEnum.PopFormEdit">
+            <summary>
+            弹出框表单编辑模式
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ModuleEditModeEnum.GridRowEdit">
+            <summary>
+            网格行编辑模式
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ModuleEditModeEnum.GridRowBottomFormEdit">
+            <summary>
+            网格行下方展开表单编辑
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.GridTypeEnum">
+            <summary>
+            视图类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.GridTypeEnum.System">
+            <summary>
+            列表视图
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.GridTypeEnum.Dialog">
+            <summary>
+            弹出框视图
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.GridTypeEnum.Custom">
+            <summary>
+            自定义
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.GridTypeEnum.Comprehensive">
+            <summary>
+            综合视图，包含外键模块字段的视图
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.GridTypeEnum.ComprehensiveDetail">
+            <summary>
+            综合明细视图，包含明细模块字段的视图
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.OperateButtonTypeEnum">
+            <summary>
+            操作按钮类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.OperateButtonTypeEnum.CommonButton">
+            <summary>
+            普通按钮
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.OperateButtonTypeEnum.FileMenuButton">
+            <summary>
+            文件菜单按钮
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.GridButtonLocationEnum">
+            <summary>
+            列表操作按钮位置
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.GridButtonLocationEnum.Toolbar">
+            <summary>
+            列表工具栏
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.GridButtonLocationEnum.RowHead">
+            <summary>
+            行头
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.ButtonLocationEnum">
+            <summary>
+            按钮组摆放位置
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ButtonLocationEnum.Top">
+            <summary>
+            顶部
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ButtonLocationEnum.Bottom">
+            <summary>
+            底部
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ButtonLocationEnum.TopBottom">
+            <summary>
+            顶部和底部
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.LoginTypeEnum">
+            <summary>
+            登录类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.LoginTypeEnum.HandheldDevices">
+            <summary>
+            手持设备
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.LoginTypeEnum.Computer">
+            <summary>
+            电脑
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.InterfaceCallTypeEnum">
+            <summary>
+            接口调用类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.InterfaceCallTypeEnum.CallExternalInterface">
+            <summary>
+            系统调用外部接口
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.InterfaceCallTypeEnum.ExternalCallSystemInterface">
+            <summary>
+            外接程序调用系统接口
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.FormAttachDisplayStyleEnum">
+            <summary>
+            表单附件显示方式
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.FormAttachDisplayStyleEnum.SimpleStyle">
+            <summary>
+            简单方式
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.FormAttachDisplayStyleEnum.GridStype">
+            <summary>
+            列表方式
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.ConditionMethodEnum">
+            <summary>
+            条件操作方法
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ConditionMethodEnum.Equal">
+            <summary>
+            等于
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ConditionMethodEnum.LessThan">
+            <summary>
+            小于
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ConditionMethodEnum.GreaterThan">
+            <summary>
+            大于
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ConditionMethodEnum.LessThanOrEqual">
+            <summary>
+            小于等于
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ConditionMethodEnum.GreaterThanOrEqual">
+            <summary>
+            大于等于
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ConditionMethodEnum.NotEqual">
+            <summary>
+            不等于
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ConditionMethodEnum.Contains">
+            <summary>
+            包含
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ConditionMethodEnum.StartsWith">
+            <summary>
+            开头为
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ConditionMethodEnum.EndsWith">
+            <summary>
+            结尾为
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ConditionMethodEnum.In">
+            <summary>
+            包含于
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.AlignTypeEnum">
+            <summary>
+            对齐方式
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.AlignTypeEnum.Left">
+            <summary>
+            左对齐
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.AlignTypeEnum.Right">
+            <summary>
+            右对齐
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.AlignTypeEnum.Center">
+            <summary>
+            居中对齐
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.IconTypeEnum">
+            <summary>
+            图标类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.IconTypeEnum.Piex16">
+            <summary>
+            16×16
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.IconTypeEnum.Piex32">
+            <summary>
+            32×32
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.IconTypeEnum.Piex64">
+            <summary>
+            64×64
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.IconTypeEnum.Other">
+            <summary>
+            其他
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.IconClassTypeEnum">
+            <summary>
+            图标分类
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.IconClassTypeEnum.SystemIcon">
+            <summary>
+            系统图标
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.IconClassTypeEnum.CustomerIcon">
+            <summary>
+            自定义图标
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.IconClassTypeEnum.UserUploadIcon">
+            <summary>
+            用户上传
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.ModuleDataSourceType">
+            <summary>
+            模块数据来源类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ModuleDataSourceType.DbTable">
+            <summary>
+            数据库表
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ModuleDataSourceType.InterfaceData">
+            <summary>
+            接口
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ModuleDataSourceType.XmlData">
+            <summary>
+            Xml
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ModuleDataSourceType.Other">
+            <summary>
+            其它
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.TempCacheProviderType">
+            <summary>
+            缓存类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.TempCacheProviderType.LOCALMEMORYCACHE">
+            <summary>
+            本地缓存
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.TempCacheProviderType.MEMCACHEDCACHE">
+            <summary>
+            MemcachedCache分布式缓存
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.TempCacheProviderType.REDIS">
+            <summary>
+            redis分布式缓存
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.TempDatabaseType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.TempDatabaseType.MsSqlServer">
+            <summary>
+            微软MsSqlServer数据库
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.TempDatabaseType.MySql">
+            <summary>
+            MySql数据库
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.TempDatabaseType.Oracle">
+            <summary>
+            Oracle数据库
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.DateFormatEnum">
+            <summary>
+            日期格式
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.DateFormatEnum.yy">
+            <summary>
+            年的前两位
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.DateFormatEnum.yyyy">
+            <summary>
+            年
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.DateFormatEnum.yyMM">
+            <summary>
+            年前两位+月
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.DateFormatEnum.yyyyMM">
+            <summary>
+            年+月
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.DateFormatEnum.yyMMdd">
+            <summary>
+            年前两位+月+天
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.DateFormatEnum.yyyyMMdd">
+            <summary>
+            年+月+天
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.DateFormatEnum.MMyy">
+            <summary>
+            月+年前两位
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.DateFormatEnum.MMyyyy">
+            <summary>
+            月+年
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.DateFormatEnum.yy_MM">
+            <summary>
+            年前两位-月
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.DateFormatEnum.yyyy_MM">
+            <summary>
+            年-月
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.DateFormatEnum.yy_MM_dd">
+            <summary>
+            年前两位-月-天
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.DateFormatEnum.yyyy_MM_dd">
+            <summary>
+            年-月-天
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.DateFormatEnum.MM_yy">
+            <summary>
+            月-年前两位
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.DateFormatEnum.MM_yyyy">
+            <summary>
+            月-年
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.DateFormatEnum.MM_dd_yy">
+            <summary>
+            月-天-年前两位
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.DateFormatEnum.MM_dd_yyyy">
+            <summary>
+            月-天-年
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.DateFormatEnum.MMSddSyy">
+            <summary>
+            月/天/年前两位
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.DateFormatEnum.MMSddSyyyy">
+            <summary>
+            月/天/年
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.DateFormatEnum.yySMMSdd">
+            <summary>
+            年前两位/月/天
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.DateFormatEnum.yyyySMMSdd">
+            <summary>
+            年/月/天
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.ResourceTypeEnum">
+            <summary>
+            资源类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ResourceTypeEnum.Menu">
+            <summary>
+            功能菜单
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ResourceTypeEnum.GridButton">
+            <summary>
+            网格按钮
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ResourceTypeEnum.FieldEdit">
+            <summary>
+            字段编辑
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ResourceTypeEnum.FieldView">
+            <summary>
+            字段查看
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ResourceTypeEnum.DataViewRange">
+            <summary>
+            数据查看范围
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ResourceTypeEnum.DataEditRange">
+            <summary>
+            数据编辑范围
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ResourceTypeEnum.DataDelRange">
+            <summary>
+            数据删除范围
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.FunctionTypeEnum">
+            <summary>
+            功能类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.FunctionTypeEnum.Menu">
+            <summary>
+            菜单
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.FunctionTypeEnum.Button">
+            <summary>
+            按钮
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.SystemSetTypeEnum">
+            <summary>
+            参数设定类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.SystemSetTypeEnum.GlobalSet">
+            <summary>
+            全局设置
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.SystemSetTypeEnum.UserSet">
+            <summary>
+            用户个人设置
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.CachePageTypeEnum">
+            <summary>
+            缓存页面类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.CachePageTypeEnum.GridPage">
+            <summary>
+            网格页面
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.CachePageTypeEnum.EditForm">
+            <summary>
+            编辑表单页面
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.CachePageTypeEnum.ViewForm">
+            <summary>
+            查看表单页面
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.CachePageTypeEnum.OtherPage">
+            <summary>
+            其他页面
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.MsgTemplateTypeEnum">
+            <summary>
+            消息模板类型枚举
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.MsgTemplateTypeEnum.Common">
+            <summary>
+            通用
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.MsgTemplateTypeEnum.Sys">
+            <summary>
+            系统
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.MsgTemplateTypeEnum.Email">
+            <summary>
+            邮件
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.MsgTemplateTypeEnum.Sms">
+            <summary>
+            短信
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.EventNotifyTypeEnum">
+            <summary>
+            事件通知类型枚举
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.EventNotifyTypeEnum.Email">
+            <summary>
+            邮件通知
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.EventNotifyTypeEnum.Sys">
+            <summary>
+            系统通知
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.EventNotifyTypeEnum.Sms">
+            <summary>
+            短信通知
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.EventNotifyTypeEnum.EmailSys">
+            <summary>
+            邮件+系统
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.EventNotifyTypeEnum.EmailSms">
+            <summary>
+            邮件+短信
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.EventNotifyTypeEnum.SysSms">
+            <summary>
+            系统+短信
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.EventNotifyTypeEnum.SysSmsEmail">
+            <summary>
+            系统+短信
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.EnumSpace.ReceiverTypeEnum">
+            <summary>
+            收件、抄送、密送范围类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ReceiverTypeEnum.Dept">
+            <summary>
+            部门
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ReceiverTypeEnum.Duty">
+            <summary>
+            职务
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ReceiverTypeEnum.Position">
+            <summary>
+            岗位
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ReceiverTypeEnum.Employee">
+            <summary>
+            人员
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Model.EnumSpace.ReceiverTypeEnum.Role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Log.Log_Exception">
+            <summary>
+            异常日志
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Log.Log_Exception.ControllerName">
+            <summary>
+            控制器或类名
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Log.Log_Exception.ActionName">
+            <summary>
+            方法名
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Log.Log_Exception.ExceptionName">
+            <summary>
+            异常名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Log.Log_Exception.ExceptionMsg">
+            <summary>
+            异常信息
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Log.Log_Exception.ExceptionSource">
+            <summary>
+            异常源
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Log.Log_Exception.StackTrace">
+            <summary>
+            堆栈信息
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Log.Log_Exception.ExceptionTime">
+            <summary>
+            异常时间
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Log.Log_Exception.ParamsObj">
+            <summary>
+            参数对象
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Log.Log_Login">
+            <summary>
+            登录日志
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Log.Log_Login.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Log.Log_Login.LoginName">
+            <summary>
+            登录名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Log.Log_Login.LoginTime">
+            <summary>
+            登录时间
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Log.Log_Login.LoginIp">
+            <summary>
+            登录IP
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Log.Log_Login.LoginStatus">
+            <summary>
+            登录状态
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Log.Log_Login.FailureReason">
+            <summary>
+            失败原因
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Log.Log_Login.LoginNum">
+            <summary>
+            登录总次数
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Log.Log_Operate">
+            <summary>
+            操作日志
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Log.Log_Operate.UserId">
+            <summary>
+            操作用户Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Log.Log_Operate.UserAlias">
+            <summary>
+            操作用户
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Log.Log_Operate.ModuleName">
+            <summary>
+            操作模块
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Log.Log_Operate.OperateType">
+            <summary>
+            操作类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Log.Log_Operate.OperateContent">
+            <summary>
+            操作内容
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Log.Log_Operate.OperateTime">
+            <summary>
+            操作时间
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Log.Log_Operate.ClientIp">
+            <summary>
+            客户端IP
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Log.Log_Operate.OperateResult">
+            <summary>
+            操作结果
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Log.Log_Operate.OperateTip">
+            <summary>
+            结果提示
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Monitor.Monitor_OpExecuteTime">
+            <summary>
+            操作时间监控
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Monitor.Monitor_OpExecuteTime.ModuleName">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Monitor.Monitor_OpExecuteTime.ControllerName">
+            <summary>
+            控制器名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Monitor.Monitor_OpExecuteTime.ActionName">
+            <summary>
+            Action名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Monitor.Monitor_OpExecuteTime.ExecuteMiniSeconds">
+            <summary>
+            执行时间（毫秒）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Monitor.Monitor_OpExecuteTime.OpUserName">
+            <summary>
+            操作用户
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Monitor.Monitor_OpExecuteTime.ClientIp">
+            <summary>
+            客户端IP
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Msg.Msg_EventNotify">
+            <summary>
+            事件通知
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_EventNotify.Name">
+            <summary>
+            事件名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_EventNotify.Sys_ModuleId">
+            <summary>
+            模块Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_EventNotify.Sys_ModuleName">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_EventNotify.Bpm_WorkNodeId">
+            <summary>
+            流程结点
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_EventNotify.EventType">
+            <summary>
+            事件类型，新增、编辑、删除、流程发起、审批、拒绝、回退、指派、自定义
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_EventNotify.NotifyType">
+            <summary>
+            通知方式
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_EventNotify.NotifyTypeOfEnum">
+            <summary>
+            通知方式（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_EventNotify.Msg_TemplateId">
+            <summary>
+            消息模板
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_EventNotify.Msg_TemplateName">
+            <summary>
+            消息模板名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_EventNotify.ValidStartTime">
+            <summary>
+            有效开始时间
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_EventNotify.ValidEndTime">
+            <summary>
+            有效结束时间
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_EventNotify.SendByOper">
+            <summary>
+            以操作者身份发送
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Msg.Msg_EventNotify.Flag">
+            <summary>
+            自定义事件必填标识
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.OrgM.OrgM_Dept">
+            <summary>
+            部门管理
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Dept.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Dept.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Dept.Alias">
+            <summary>
+            简称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Dept.ParentId">
+            <summary>
+            上级部门
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Dept.ParentName">
+            <summary>
+            上级部门名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Dept.DeptType">
+            <summary>
+            部门类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Dept.DeptGrade">
+            <summary>
+            部门级别
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Dept.Fax">
+            <summary>
+            传真
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Dept.InnerPhone">
+            <summary>
+            内线
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Dept.OuterPhone">
+            <summary>
+            外线
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Dept.DeptDes">
+            <summary>
+            部门描述
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Dept.DeptDuty">
+            <summary>
+            部门职责
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Dept.EmpCount">
+            <summary>
+            部门人数
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Dept.FixedPersons">
+            <summary>
+            定编人数
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Dept.IsValid">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Dept.EffectiveDate">
+            <summary>
+            生效日期
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Dept.InValidDate">
+            <summary>
+            失效日期
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Dept.Sort">
+            <summary>
+            序号
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Dept.IsCompany">
+            <summary>
+            是否为公司
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Dept.LevelDepth">
+            <summary>
+            部门层级
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Dept.F1">
+            <summary>
+            自定义字段1
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Dept.F2">
+            <summary>
+            自定义字段2
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Dept.F3">
+            <summary>
+            自定义字段3
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.OrgM.OrgM_DeptDuty">
+            <summary>
+            岗位管理
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_DeptDuty.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_DeptDuty.OrgM_DeptId">
+            <summary>
+            所属部门
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_DeptDuty.OrgM_DeptName">
+            <summary>
+            部门名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_DeptDuty.OrgM_DutyId">
+            <summary>
+            职务信息
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_DeptDuty.OrgM_DutyName">
+            <summary>
+            职务名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_DeptDuty.Name">
+            <summary>
+            岗位名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_DeptDuty.ParentId">
+            <summary>
+            上级岗位
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_DeptDuty.ParentName">
+            <summary>
+            上级岗位名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_DeptDuty.PositionDuty">
+            <summary>
+            岗位职责
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_DeptDuty.Establishment">
+            <summary>
+            岗位编制
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_DeptDuty.IsDeptCharge">
+            <summary>
+            是否部门主管岗位
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_DeptDuty.IsValid">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.OrgM.OrgM_Duty">
+            <summary>
+            职务管理
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Duty.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Duty.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Duty.DutyLevel">
+            <summary>
+            职务等级-字典
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Duty.DutyType">
+            <summary>
+            职务类型-字典
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Duty.IsValid">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Duty.EffectiveDate">
+            <summary>
+            生效日期
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Duty.InValidDate">
+            <summary>
+            失效日期
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Duty.Sort">
+            <summary>
+            序号
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Duty.Memo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.OrgM.OrgM_Emp">
+            <summary>
+            员工管理
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.Photo">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.Code">
+            <summary>
+            员工编号
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.Name">
+            <summary>
+            员工姓名
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.EName">
+            <summary>
+            英文名
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.GenderOfEnum">
+            <summary>
+            员工性别（枚举类型）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.BirthdayDate">
+            <summary>
+            出生日期
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.Height">
+            <summary>
+            身高
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.BloodType">
+            <summary>
+            血型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.BloodTypeOfEnum">
+            <summary>
+            血型（枚举类型）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.Education">
+            <summary>
+            学历
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.EducationOfEnum">
+            <summary>
+            学历（枚举类型）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.IsMarriage">
+            <summary>
+            婚姻状况
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.Mobile">
+            <summary>
+            移动电话
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.OfficePhone">
+            <summary>
+            办公电话
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.Email">
+            <summary>
+            电子邮箱
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.Fax">
+            <summary>
+            传真
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.EmpStatus">
+            <summary>
+            员工状态
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.EmpStatusOfEnum">
+            <summary>
+            员工状态（枚举类型）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.EmployeeType">
+            <summary>
+            员工类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.EmployeeTypeOfEnum">
+            <summary>
+            员工类型（枚举类型）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.StartWorkDate">
+            <summary>
+            最早参加工作日期
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.EntryDate">
+            <summary>
+            入职日期
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.PositiveDate">
+            <summary>
+            转正日期
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.StatusChangeDate">
+            <summary>
+            离退日期
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.Nationality">
+            <summary>
+            国籍-字典
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.Hometown">
+            <summary>
+            籍贯-字典
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.Political">
+            <summary>
+            民族-字典
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.Religion">
+            <summary>
+            宗教-字典
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.Sort">
+            <summary>
+            序号
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.F1">
+            <summary>
+            自定义字段1
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.F2">
+            <summary>
+            自定义字段2
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_Emp.F3">
+            <summary>
+            自定义字段3
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.OrgM.OrgM_EmpDeptDuty">
+            <summary>
+            员工岗位
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_EmpDeptDuty.Code">
+            <summary>
+            员工编码
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_EmpDeptDuty.OrgM_EmpId">
+            <summary>
+            员工信息
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_EmpDeptDuty.OrgM_EmpName">
+            <summary>
+            员工名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_EmpDeptDuty.OrgM_DeptId">
+            <summary>
+            部门信息
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_EmpDeptDuty.OrgM_DeptName">
+            <summary>
+            部门名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_EmpDeptDuty.OrgM_DutyId">
+            <summary>
+            职务信息
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_EmpDeptDuty.OrgM_DutyName">
+            <summary>
+            职务名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_EmpDeptDuty.IsMainDuty">
+            <summary>
+            是否主职职务
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_EmpDeptDuty.IsValid">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_EmpDeptDuty.EffectiveDate">
+            <summary>
+            生效日期
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_EmpDeptDuty.InValidDate">
+            <summary>
+            失效日期
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.OrgM.OrgM_EmpDeptDuty.Memo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_AttachModuleBind">
+            <summary>
+            附属模块绑定
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_AttachModuleBind.ModuleName">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_AttachModuleBind.Sys_UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_AttachModuleBind.Sys_UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_AttachModuleBind.Sys_ModuleId">
+            <summary>
+            附属模块Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_AttachModuleBind.Sys_ModuleName">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_AttachModuleBind.Sort">
+            <summary>
+            排序编号
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_AttachModuleBind.AttachModuleInGrid">
+            <summary>
+            网格内展开附属模块，针对网格页面
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_AttachModuleBind.IsValid">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_BillCodeRule">
+            <summary>
+            编码规则
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_BillCodeRule.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_BillCodeRule.Sys_ModuleId">
+            <summary>
+            所属模块
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_BillCodeRule.Sys_ModuleName">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_BillCodeRule.FieldName">
+            <summary>
+            字段名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_BillCodeRule.Prefix">
+            <summary>
+            前缀
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_BillCodeRule.IsEnableDate">
+            <summary>
+            是否启用日期
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_BillCodeRule.DateFormat">
+            <summary>
+            日期格式
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_BillCodeRule.DateFormatOfEnum">
+            <summary>
+            日期格式（枚举类型）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_BillCodeRule.SerialNumber">
+            <summary>
+            流水号
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_BillCodeRule.PlaceHolder">
+            <summary>
+            流水号占位符
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_BillCodeRule.SNLength">
+            <summary>
+            流水号长度
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_BillCodeRule.RuleFormat">
+            <summary>
+            显示格式
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_BillCodeRule.Memo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_BillCodeRule.CurrCode">
+            <summary>
+            当前编码
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_BillCodeRule.NextCode">
+            <summary>
+            下一编码
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_BindDictionary">
+            <summary>
+            字典绑定
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_BindDictionary.Sys_ModuleId">
+            <summary>
+            模块Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_BindDictionary.Sys_ModuleName">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_BindDictionary.FieldName">
+            <summary>
+            字段名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_BindDictionary.ClassName">
+            <summary>
+            字典分类名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_BindDictionary.IsValid">
+            <summary>
+            是否生效
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_CacheConfig">
+            <summary>
+            缓存配置
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Model.Sys.Sys_CacheConfig.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_CacheConfig.ModuleName">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_CacheConfig.IsEnableCache">
+            <summary>
+            是否启用缓存
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_CacheConfig.CacheType">
+            <summary>
+            缓存类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_CacheConfig.CacheTypeOfEnum">
+            <summary>
+            缓存类型（枚举）
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_Organization">
+            <summary>
+            组织管理，主要用于数据权限控制
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Organization.Name">
+            <summary>
+            组织名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Organization.ParentId">
+            <summary>
+            上级组织Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Organization.ParentName">
+            <summary>
+            上级组织
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Organization.Flag">
+            <summary>
+            标识，NULL或""－自定义组织，其他为GUID的为对应的部门ID
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Organization.Des">
+            <summary>
+            组织描述
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_PermissionData">
+            <summary>
+            角色数据权限
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_PermissionData.Sys_RoleId">
+            <summary>
+            角色Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_PermissionData.Sys_ModuleId">
+            <summary>
+            所属模块
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_PermissionData.CanViewOrgIds">
+            <summary>
+            允许查看所属组织的数据，组织Id以逗号分隔，如1045，1046，为空则可查看所有
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_PermissionData.CanEditOrgIds">
+            <summary>
+            允许修改所属组织的数据，组织Id以逗号分隔，如1045，1046，为空则可修改所有
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_PermissionData.CanDelOrgIds">
+            <summary>
+            允许删除所属组织的数据，组织Id以逗号分隔，如1045，1046，为空则可删除所有
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_PermissionField">
+            <summary>
+            角色字段权限
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_PermissionField.Sys_RoleId">
+            <summary>
+            角色Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_PermissionField.Sys_ModuleId">
+            <summary>
+            所属模块
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_PermissionField.CanViewFields">
+            <summary>
+            允许查看的字段，字段以逗号分隔，如Name,Des，为空代表可查看所有字段
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_PermissionField.CanAddFields">
+            <summary>
+            允许新增的字段，字段以逗号分隔，如Name,Des，为空代表可新增所有字段
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_PermissionField.CanEditFields">
+            <summary>
+            允许修改的字段，字段以逗号分隔，如Name,Des，为空代表可修改所有字段
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_PermissionFun">
+            <summary>
+            角色功能权限
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_PermissionFun.Sys_RoleId">
+            <summary>
+            角色Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_PermissionFun.FunId">
+            <summary>
+            功能Id（如果FunType为菜单类型，则FunId为菜单Id,如果FunType为按钮类型，则FunId为按钮Id）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_PermissionFun.FunType">
+            <summary>
+            功能类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_PermissionFun.FunTypeOfEnum">
+            <summary>
+            功能类型（枚举类型）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_PermissionFun.Des">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_RoleForm">
+            <summary>
+            角色表单
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_RoleForm.Sys_RoleId">
+            <summary>
+            角色Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_RoleForm.Sys_RoleName">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_RoleForm.Sys_FormId">
+            <summary>
+            表单Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_RoleForm.Sys_FormName">
+            <summary>
+            表单名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_RoleForm.Sys_ModuleId">
+            <summary>
+            模块Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_RoleForm.Sys_ModuleName">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_DbConfig">
+            <summary>
+            数据库配置
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Model.Sys.Sys_DbConfig.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_DbConfig.ModuleName">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_DbConfig.AutoReCreateIndex">
+            <summary>
+            是否自动重建索引
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_DbConfig.CreateIndexPageDensity">
+            <summary>
+            重建索引页密度
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_DbConfig.CurrPageDensity">
+            <summary>
+            当前页密度
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_DbConfig.AutomaticPartition">
+            <summary>
+            是否自动分区
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_DbConfig.PartitionInterval">
+            <summary>
+            分区间隔记录数
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_DbConfig.DbType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_DbConfig.DbTypeOfEnum">
+            <summary>
+            数据库类型（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_DbConfig.ReadConnString">
+            <summary>
+            读连接字符串
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_DbConfig.WriteConnString">
+            <summary>
+            写连接字符串
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_IconManage">
+            <summary>
+            图标管理
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Model.Sys.Sys_IconManage.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_IconManage.StyleClassName">
+            <summary>
+            样式类名
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_IconManage.IconAddr">
+            <summary>
+            样式图标
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_IconManage.IconClass">
+            <summary>
+            图标分类
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_IconManage.IconClassOfEnum">
+            <summary>
+            图标分类（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_IconManage.IconType">
+            <summary>
+            图标类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_IconManage.IconTypeOfEnum">
+            <summary>
+            图标类型（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_IconManage.Memo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_SystemSet">
+            <summary>
+            参数设定，系统或用户参数设置
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_SystemSet.Name">
+            <summary>
+            设置名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_SystemSet.Value">
+            <summary>
+            设置值
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_SystemSet.SetType">
+            <summary>
+            设置类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_SystemSet.SetTypeOfEnum">
+            <summary>
+            设置类型（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_SystemSet.Sys_UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_SystemSet.Sys_UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_SystemSet.Des">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_UserGrid">
+            <summary>
+            用户视图
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_UserGrid.Sys_UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_UserGrid.Sys_UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_UserGrid.Sys_GridId">
+            <summary>
+            视图Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_UserGrid.Sys_GridName">
+            <summary>
+            视图名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_UserGrid.IsDefault">
+            <summary>
+            是否为默认视图
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_Attachment">
+            <summary>
+            附件信息
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Attachment.Sys_ModuleId">
+            <summary>
+            模块Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Attachment.Sys_ModuleName">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Attachment.RecordId">
+            <summary>
+            记录Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Attachment.RecordTitleKeyValue">
+            <summary>
+            记录的TitleKey值
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Attachment.FileName">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Attachment.FileType">
+            <summary>
+            文件类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Attachment.FileDes">
+            <summary>
+            文件说明
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Attachment.FileSize">
+            <summary>
+            文件大小
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Attachment.FileUrl">
+            <summary>
+            文件路径
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Attachment.PdfUrl">
+            <summary>
+            PDF文件路径
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Attachment.SwfUrl">
+            <summary>
+            SWF文件路径
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Attachment.Thumbnail">
+            <summary>
+            缩略图
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Attachment.AttachType">
+            <summary>
+            附件类型
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_Dictionary">
+            <summary>
+            数据字典
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Dictionary.ClassName">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Dictionary.Name">
+            <summary>
+            字典文本
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Dictionary.Value">
+            <summary>
+            字典值
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Dictionary.ParentId">
+            <summary>
+            字典上级
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Dictionary.ParentName">
+            <summary>
+            上级名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Dictionary.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Dictionary.IsValid">
+            <summary>
+            是否生效
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Dictionary.IsDefault">
+            <summary>
+            是否默认
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Dictionary.Memo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_Field">
+            <summary>
+            字段管理
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Model.Sys.Sys_Field.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Field.Name">
+            <summary>
+            字段名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Field.Display">
+            <summary>
+            字段显示名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Field.Sys_ModuleId">
+            <summary>
+            模块Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Field.Sys_ModuleName">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Field.ForeignModuleName">
+            <summary>
+            外键模块名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Field.Precision">
+            <summary>
+            精度值
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Field.DbType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Field.DbLen">
+            <summary>
+            Db字段长度
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_Form">
+            <summary>
+            表单类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Model.Sys.Sys_Form.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Form.Name">
+            <summary>
+            表单名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Form.Sys_ModuleId">
+            <summary>
+            模块Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Form.Sys_ModuleName">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Form.Width">
+            <summary>
+            表单宽度
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Form.Height">
+            <summary>
+            表单高度
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Form.ModuleEditMode">
+            <summary>
+            模块编辑模式
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Form.ModuleEditModeOfEnum">
+            <summary>
+            模块编辑模式（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Form.InputWidth">
+            <summary>
+            表单控件宽度
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Form.LabelWidth">
+            <summary>
+            标签宽度
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Form.SpaceWidth">
+            <summary>
+            间隔宽度
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Form.RightToken">
+            <summary>
+            分隔符
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Form.LabelAlign">
+            <summary>
+            标签对齐方式
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Form.LabelAlignOfEnum">
+            <summary>
+            对齐方式（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Form.InputAlign">
+            <summary>
+            控件对齐方式
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Form.InputAlignOfEnum">
+            <summary>
+            对齐方式（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Form.ButtonLocation">
+            <summary>
+            按钮组位置（top:表单顶部,bottom:表单底部）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Form.ButtonLocationOfEnum">
+            <summary>
+            按钮组位置（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Form.IsDefault">
+            <summary>
+            是否默认
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Form.FormFields">
+            <summary>
+            表单字段集合
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_FormField">
+            <summary>
+            表单字段
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.Sys_FormId">
+            <summary>
+            表单Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.Sys_FormName">
+            <summary>
+            表单名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.Sys_FieldId">
+            <summary>
+            字段Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.Sys_FieldName">
+            <summary>
+            字段名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.Display">
+            <summary>
+            显示名称（冗余字段）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.IsAllowAdd">
+            <summary>
+            是否允许新增
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.IsAllowEdit">
+            <summary>
+            是否允许编辑
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.IsAllowBatchEdit">
+            <summary>
+            是否允许批量编辑
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.IsAllowCopy">
+            <summary>
+            是否允许复制
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.IsRequired">
+            <summary>
+            是否必填
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.IsUnique">
+            <summary>
+            是否唯一
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.MinCharLen">
+            <summary>
+            最小字符长度
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.MaxCharLen">
+            <summary>
+            最大字符长度
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.MinValue">
+            <summary>
+            最小值
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.MaxValue">
+            <summary>
+            最大值
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.GroupName">
+            <summary>
+            分组名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.GroupIcon">
+            <summary>
+            分组图标
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.TabName">
+            <summary>
+            标签页名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.TabIcon">
+            <summary>
+            标签页图标
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.ControlType">
+            <summary>
+            控件类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.ControlTypeOfEnum">
+            <summary>
+            控件类型（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.ValidateType">
+            <summary>
+            验证类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.ValidateTypeOfEnum">
+            <summary>
+            验证类型（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.Width">
+            <summary>
+            控件宽度
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.DefaultValue">
+            <summary>
+            默认值
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.NullTipText">
+            <summary>
+            空文本时提示文字
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.ValueField">
+            <summary>
+            值字段名
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.TextField">
+            <summary>
+            文本字段名
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.UrlOrData">
+            <summary>
+            数据源（URL或JSON数据）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.FilterCondition">
+            <summary>
+            过滤条件
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.IsMultiSelect">
+            <summary>
+            是否多选
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.RowNo">
+            <summary>
+            所在行
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.ColNo">
+            <summary>
+            所在列
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.BeforeIcon">
+            <summary>
+            前置图标
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.RowEditRowNo">
+            <summary>
+            行编辑时行号
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.TempSysField">
+            <summary>
+            临时字段信息
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.TempDics">
+            <summary>
+            临时字典信息
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.TempEnums">
+            <summary>
+            临时枚举信息
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.FieldFormatter">
+            <summary>
+            格式化函数
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_FormField.EditorFormatter">
+            <summary>
+            编辑器函数
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_Grid">
+            <summary>
+            视图管理
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Model.Sys.Sys_Grid.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Grid.Name">
+            <summary>
+            视图名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Grid.Sys_ModuleId">
+            <summary>
+            模块Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Grid.Sys_ModuleName">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Grid.GridType">
+            <summary>
+            视图类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Grid.GridTypeOfEnum">
+            <summary>
+            视图类型（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Grid.MaxSearchNum">
+            <summary>
+            最大搜索字段数
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Grid.IsDefault">
+            <summary>
+            是否为默认视图
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Grid.AddFilterRow">
+            <summary>
+            是否添加过滤行
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Grid.ShowCheckBox">
+            <summary>
+            是否显示复选框
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Grid.MutiSelect">
+            <summary>
+            允许多选
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Grid.ButtonLocation">
+            <summary>
+            按钮组位置（top:列表顶部,bottom:列表底部）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Grid.ButtonLocationOfEnum">
+            <summary>
+            按钮组位置（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Grid.TreeField">
+            <summary>
+            左边显示树，右边显示列表的形成树的字段，如员工中的部门
+            可以是枚举字段、字典字段、字符串字段、外键字段
+            如果是外键字段，则显示外键模块树
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Grid.IsTreeGrid">
+            <summary>
+            是否为树型网格
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Grid.GridFields">
+            <summary>
+            视图字段集合
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_GridButton">
+            <summary>
+            视图按钮
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Model.Sys.Sys_GridButton.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridButton.Sys_ModuleId">
+            <summary>
+            模块Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridButton.Sys_ModuleName">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridButton.ButtonText">
+            <summary>
+            按钮显示名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridButton.ButtonTagId">
+            <summary>
+            按钮标签属性Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridButton.ButtonIcon">
+            <summary>
+            按钮图标
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridButton.ClickMethod">
+            <summary>
+            单击事件
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridButton.IsSystem">
+            <summary>
+            是否系统按钮
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridButton.OperateButtonType">
+            <summary>
+            按钮类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridButton.OperateButtonTypeOfEnum">
+            <summary>
+            按钮类型（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridButton.ParentId">
+            <summary>
+            上级按钮Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridButton.ParentName">
+            <summary>
+            父按钮名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridButton.GridButtonLocation">
+            <summary>
+            视图按钮位置
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridButton.GridButtonLocationOfEnum">
+            <summary>
+            视图按钮位置（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridButton.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridButton.IsValid">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridButton.AfterSeparator">
+            <summary>
+            后接分隔符
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_GridField">
+            <summary>
+            视图字段类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Model.Sys.Sys_GridField.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridField.Sys_GridId">
+            <summary>
+            列表Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridField.Sys_GridName">
+            <summary>
+            列表名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridField.Sys_FieldId">
+            <summary>
+            字段Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridField.Sys_FieldName">
+            <summary>
+            字段名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridField.Display">
+            <summary>
+            显示名称（冗余字段）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridField.MinWidth">
+            <summary>
+            视图字段最小宽度
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridField.Width">
+            <summary>
+            视图字段宽度
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridField.IsFrozen">
+            <summary>
+            是否冻结
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridField.IsGroupField">
+            <summary>
+            是否分组字段
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridField.IsVisible">
+            <summary>
+            是否可见
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridField.Sort">
+            <summary>
+            列头排序
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridField.IsAllowSearch">
+            <summary>
+            是否允许搜索
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridField.IsAllowSort">
+            <summary>
+            是否允许排序
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridField.IsAllowHide">
+            <summary>
+            是否允许隐藏
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridField.Align">
+            <summary>
+            对齐方式
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridField.AlignOfEnum">
+            <summary>
+            对齐方式（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridField.IsAllowExport">
+            <summary>
+            允许导出
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridField.FieldFormatter">
+            <summary>
+            格式化函数
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridField.EditorFormatter">
+            <summary>
+            编辑器函数
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_GridField.TempSysField">
+            <summary>
+            临时字段信息
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_Menu">
+            <summary>
+            菜单管理
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Menu.Name">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Menu.Display">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Menu.ParentId">
+            <summary>
+            上级菜单Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Menu.ParentName">
+            <summary>
+            上级菜单名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Menu.Sys_ModuleId">
+            <summary>
+            模块Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Menu.Sys_ModuleName">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Menu.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Menu.IsValid">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Menu.IsLeaf">
+            <summary>
+            是否是叶子节点
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Menu.Icon">
+            <summary>
+            菜单图标
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Menu.Url">
+            <summary>
+            菜单URL
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Menu.IsNewWinOpen">
+            <summary>
+            新窗口打开
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_Module">
+            <summary>
+            模块管理
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Model.Sys.Sys_Module.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.Name">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.Display">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.TableName">
+            <summary>
+            模块对应的物理表名或视图名
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.DataSourceType">
+            <summary>
+            数据来源类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.DataSourceTypeOfEnum">
+            <summary>
+            数据来源类型（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.PrimaryKeyFields">
+            <summary>
+            主键字段，多个字段以逗号分隔
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.TitleKey">
+            <summary>
+            模块标题列
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.ParentId">
+            <summary>
+            父模块Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.ParentName">
+            <summary>
+            父模块名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.ModuleLogo">
+            <summary>
+            模块图标
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.IsAllowAdd">
+            <summary>
+            是否允许新增
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.IsAllowEdit">
+            <summary>
+            是否允许编辑
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.IsAllowDelete">
+            <summary>
+            是否允许删除
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.IsAllowCopy">
+            <summary>
+            是否允许复制
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.IsAllowImport">
+            <summary>
+            是否允许导入
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.IsAllowExport">
+            <summary>
+            是否允许导出
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.IsEnableAttachment">
+            <summary>
+            是否启用附件
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.IsEnabledRecycle">
+            <summary>
+            是否启用回收站
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.IsEnabledBatchEdit">
+            <summary>
+            是否启用批量编辑
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.IsEnabledPrint">
+            <summary>
+            启用打印
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.IsEnabledDraft">
+            <summary>
+            是否启用草稿
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.IsMutiSelect">
+            <summary>
+            是否启用多选
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.IsEnableCodeRule">
+            <summary>
+            是否启用编码规则
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.IsCustomerModule">
+            <summary>
+            是否自定义模块
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.StandardJsFolder">
+            <summary>
+            标准JS所属文件夹
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.DetailTopDisplay">
+            <summary>
+            明细在顶部显示，针对编辑或查看页面
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.DetailInGrid">
+            <summary>
+            网格展开明细，针对网格页面
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.AttachModuleTopDisplay">
+            <summary>
+            附属模块在顶部显示，针对查看页面
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.FormAttachDisplayStyle">
+            <summary>
+            附件显示方式，针对编辑可查看页面
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.FormAttachDisplayStyleOfEnum">
+            <summary>
+            附件显示方式（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Module.TitleKeyDisplay">
+            <summary>
+            TitleKey显示名称
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_Role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Role.Name">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Role.ParentId">
+            <summary>
+            父角色Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Role.ParentName">
+            <summary>
+            父角色名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Role.OtherParentRoles">
+            <summary>
+            其他父角色
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Role.OtherParentRolesName">
+            <summary>
+            其他父角色，名称字段
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Role.IsValid">
+            <summary>
+            是否有效
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Role.ExpiryDate">
+            <summary>
+            失效时间
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_Role.Des">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_TempUser">
+            <summary>
+            临时用户
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_User">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_User.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_User.AliasName">
+            <summary>
+            用户别名
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_User.Sys_OrganizationId">
+            <summary>
+            组织Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_User.Sys_OrganizationName">
+            <summary>
+            组织名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_User.PasswordHash">
+            <summary>
+            通过PasswordSalt混淆加密后的密码散列码
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_User.PasswordSalt">
+            <summary>
+            混淆码
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_User.PwdProtectQuest">
+            <summary>
+            密保问题
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_User.PwdProtectAnswer">
+            <summary>
+            密保答案
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_User.IsActivated">
+            <summary>
+            是否激活
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_User.ActivatedDate">
+            <summary>
+            激活时间
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_User.IsValid">
+            <summary>
+            是否有效
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_User.ExpiryDate">
+            <summary>
+            失效时间
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_UserQuckMenu">
+            <summary>
+            用户快捷菜单
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_UserQuckMenu.Sys_UserId">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_UserQuckMenu.Sys_MenuId">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_UserQuckMenu.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_UserRole">
+            <summary>
+            用户角色
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_UserRole.Sys_UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_UserRole.Sys_UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_UserRole.Sys_RoleId">
+            <summary>
+            角色Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_UserRole.Sys_RoleName">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_UserPermissionData">
+            <summary>
+            用户数据权限
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_UserPermissionData.Sys_UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_UserPermissionData.Sys_ModuleId">
+            <summary>
+            所属模块
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_UserPermissionData.CanViewOrgIds">
+            <summary>
+            允许查看所属组织的数据，组织Id以逗号分隔，如1045，1046，为空则可查看所有
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_UserPermissionData.CanEditOrgIds">
+            <summary>
+            允许修改所属组织的数据，组织Id以逗号分隔，如1045，1046，为空则可修改所有
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_UserPermissionData.CanDelOrgIds">
+            <summary>
+            允许删除所属组织的数据，组织Id以逗号分隔，如1045，1046，为空则可删除所有
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_UserPermissionField">
+            <summary>
+            用户字段权限
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_UserPermissionField.Sys_UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_UserPermissionField.Sys_ModuleId">
+            <summary>
+            所属模块
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_UserPermissionField.CanViewFields">
+            <summary>
+            允许查看的字段，字段以逗号分隔，如Name,Des，为空代表可查看所有字段
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_UserPermissionField.CanAddFields">
+            <summary>
+            允许新增的字段，字段以逗号分隔，如Name,Des，为空代表可新增所有字段
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_UserPermissionField.CanEditFields">
+            <summary>
+            允许修改的字段，字段以逗号分隔，如Name,Des，为空代表可修改所有字段
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_UserPermissionFun">
+            <summary>
+            用户功能权限
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_UserPermissionFun.Sys_UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_UserPermissionFun.FunId">
+            <summary>
+            功能Id（如果FunType为菜单类型，则FunId为菜单Id,如果FunType为按钮类型，则FunId为按钮Id）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_UserPermissionFun.FunType">
+            <summary>
+            功能类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_UserPermissionFun.FunTypeOfEnum">
+            <summary>
+            功能类型（枚举类型）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_UserPermissionFun.Des">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Model.Sys.Sys_PageCache">
+            <summary>
+            页面缓存，缓存页面html
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_PageCache.Sys_ModuleId">
+            <summary>
+            模块Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_PageCache.Sys_ModuleName">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_PageCache.CacheKey">
+            <summary>
+            缓存键值
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_PageCache.CachePageType">
+            <summary>
+            缓存页面类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_PageCache.CachePageTypeOfEnum">
+            <summary>
+            缓存页面类型（枚举）
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Model.Sys.Sys_PageCache.PageHtml">
+            <summary>
+            页面html
+            </summary>
+        </member>
+    </members>
+</doc>

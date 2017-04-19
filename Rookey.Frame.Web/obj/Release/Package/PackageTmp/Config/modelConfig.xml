@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <!--BaseLogEntity isEnableCache="0" cacheType="0" dbType="MsSqlServer" readConnString="Data Source=.;Initial Catalog=Rookey_SysLog;User ID=sa;Password=123456;Pooling=true;MAX Pool Size=512;Min Pool Size=50;Connection Lifetime=30"></BaseLogEntity-->
+  <!--系统模块全部启用缓存-->
+  <BaseSysEntity isEnableCache="1" cacheType="0"></BaseSysEntity>
+</Root>

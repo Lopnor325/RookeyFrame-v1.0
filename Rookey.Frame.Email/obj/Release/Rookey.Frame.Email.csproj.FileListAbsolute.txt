@@ -1,0 +1,16 @@
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Email.XML
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Email.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Email.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Email\obj\Release\Rookey.Frame.Email.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Email\obj\Release\Rookey.Frame.Email.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Email.XML
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Email.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Email.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Email\obj\Release\Rookey.Frame.Email.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Email\obj\Release\Rookey.Frame.Email.pdb
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.Email.XML
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.Email.dll
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.Email.pdb
+D:\rookey\git.oschina\Rookey.Frame.Email\obj\Release\Rookey.Frame.Email.csprojResolveAssemblyReference.cache
+D:\rookey\git.oschina\Rookey.Frame.Email\obj\Release\Rookey.Frame.Email.dll
+D:\rookey\git.oschina\Rookey.Frame.Email\obj\Release\Rookey.Frame.Email.pdb

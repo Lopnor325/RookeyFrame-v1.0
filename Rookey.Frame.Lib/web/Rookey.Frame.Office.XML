@@ -1,0 +1,320 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rookey.Frame.Office</name>
+    </assembly>
+    <members>
+        <member name="T:Rookey.Frame.Office.NPOI_ExcelBatchExport">
+            <summary>
+            Excel导出分批处理
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelBatchExport.ExportExcel(System.Data.DataTable,System.String)">
+            <summary>
+            导出Excel
+            </summary>
+            <param name="dtSource"></param>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelBatchExport.SaveExcelFile(NPOI.SS.UserModel.IWorkbook,System.String)">
+            <summary>
+            保存Excel文件
+            </summary>
+            <param name="excelWorkBook"></param>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelBatchExport.OpenOrCreateExcelFile(System.String)">
+            <summary>
+            创建Excel文件
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelBatchExport.CreateHeader(NPOI.SS.UserModel.ISheet,System.Data.DataColumnCollection)">
+            <summary>
+            创建excel表头
+            </summary>
+            <param name="excelSheet"></param>
+            <param name="columns"></param>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelBatchExport.InsertRow(System.Data.DataTable,NPOI.SS.UserModel.IWorkbook)">
+            <summary>
+            插入数据行
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelBatchExport.InsertCell(System.Data.DataTable,System.Data.DataRow,NPOI.SS.UserModel.IRow,NPOI.SS.UserModel.ISheet,NPOI.SS.UserModel.IWorkbook)">
+            <summary>
+            导出数据行
+            </summary>
+            <param name="dtSource"></param>
+            <param name="drSource"></param>
+            <param name="currentExcelRow"></param>
+            <param name="excelSheet"></param>
+            <param name="excelWorkBook"></param>
+        </member>
+        <member name="T:Rookey.Frame.Office.NPOI_ExcelHelper">
+            <summary>
+            NPOI操作excel
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelHelper.GetCellValue(NPOI.SS.UserModel.ICell)">
+            <summary>
+            根据Excel列类型获取列的值
+            </summary>
+            <param name="cell">Excel列</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelHelper.AutoSizeColumns(NPOI.SS.UserModel.ISheet)">
+            <summary>
+            自动设置Excel列宽
+            </summary>
+            <param name="sheet">Excel表</param>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelHelper.SaveToFile(System.IO.MemoryStream,System.String)">
+            <summary>
+            保存Excel文档流到文件
+            </summary>
+            <param name="ms">Excel文档流</param>
+            <param name="fileName">文件名</param>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelHelper.RenderToBrowser(System.IO.MemoryStream,System.Web.HttpContext,System.String)">
+            <summary>
+            输出文件到浏览器
+            </summary>
+            <param name="ms">Excel文档流</param>
+            <param name="context">HTTP上下文</param>
+            <param name="fileName">文件名</param>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelHelper.RenderToExcel(System.Data.IDataReader)">
+            <summary>
+            DataReader转换成Excel文档流
+            </summary>
+            <param name="reader"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelHelper.RenderToExcel(System.Data.IDataReader,System.String)">
+            <summary>
+            DataReader转换成Excel文档流，并保存到文件
+            </summary>
+            <param name="reader"></param>
+            <param name="fileName">保存的路径</param>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelHelper.RenderToExcel(System.Data.IDataReader,System.Web.HttpContext,System.String)">
+            <summary>
+            DataReader转换成Excel文档流，并输出到客户端
+            </summary>
+            <param name="reader"></param>
+            <param name="context">HTTP上下文</param>
+            <param name="fileName">输出的文件名</param>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelHelper.RenderToExcel(System.Data.DataTable)">
+            <summary>
+            DataTable转换成Excel文档流
+            </summary>
+            <param name="table"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelHelper.RenderToExcel(System.Data.DataTable,System.String)">
+            <summary>
+            DataTable转换成Excel文档流，并保存到文件
+            </summary>
+            <param name="table"></param>
+            <param name="fileName">保存的路径</param>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelHelper.RenderToExcel(System.Data.DataTable,System.Web.HttpContext,System.String)">
+            <summary>
+            DataTable转换成Excel文档流，并输出到客户端
+            </summary>
+            <param name="table"></param>
+            <param name="context"></param>
+            <param name="fileName">输出的文件名</param>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelHelper.RenderToExcel(System.Data.DataSet)">
+            <summary>
+            DataSet转成文档流
+            </summary>
+            <param name="ds">DataSet对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelHelper.RenderToExcel(System.Data.DataSet,System.String)">
+            <summary>
+            DataSet转换成Excel文档流，并保存到文件
+            </summary>
+            <param name="ds"></param>
+            <param name="fileName">保存的路径</param>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelHelper.RenderToExcel(System.Data.DataSet,System.Web.HttpContext,System.String)">
+            <summary>
+            DataSet转换成Excel文档流，并输出到客户端
+            </summary>
+            <param name="ds"></param>
+            <param name="response"></param>
+            <param name="fileName">输出的文件名</param>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelHelper.HasData(System.IO.Stream,System.Boolean)">
+            <summary>
+            Excel文档流是否有数据
+            </summary>
+            <param name="excelFileStream">Excel文档流</param>
+            <param name="isxlsx">是否为excel 2007以后版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelHelper.HasData(System.IO.Stream,System.Int32,System.Boolean)">
+            <summary>
+            Excel文档流是否有数据
+            </summary>
+            <param name="excelFileStream">Excel文档流</param>
+            <param name="sheetIndex">表索引号，如第一个表为0</param>
+            <param name="isxlsx">是否为excel 2007以后版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelHelper.RenderFromExcel(System.IO.Stream,System.String,System.Boolean)">
+            <summary>
+            Excel文档流转换成DataTable
+            第一行必须为标题行
+            </summary>
+            <param name="excelFileStream">Excel文档流</param>
+            <param name="sheetName">表名称</param>
+            <param name="isxlsx">是否为excel 2007以后版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelHelper.RenderFromExcel(System.IO.Stream,System.String,System.Int32,System.Boolean)">
+            <summary>
+            Excel文档流转换成DataTable
+            </summary>
+            <param name="excelFileStream">Excel文档流</param>
+            <param name="sheetName">表名称</param>
+            <param name="headerRowIndex">标题行索引号，如第一行为0</param>
+            <param name="isxlsx">是否为excel 2007以后版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelHelper.RenderFromExcel(System.IO.Stream,System.Boolean)">
+            <summary>
+            Excel文档流转换成DataTable
+            默认转换Excel的第一个表
+            第一行必须为标题行
+            </summary>
+            <param name="excelFileStream">Excel文档流</param>
+            <param name="isxlsx">是否为excel 2007以后版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelHelper.RenderFromExcel(System.IO.Stream,System.Int32,System.Boolean)">
+            <summary>
+            Excel文档流转换成DataTable
+            第一行必须为标题行
+            </summary>
+            <param name="excelFileStream">Excel文档流</param>
+            <param name="sheetIndex">表索引号，如第一个表为0</param>
+            <param name="isxlsx">是否为excel 2007以后版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelHelper.RenderFromExcel(System.IO.Stream,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Excel文档流转换成DataTable
+            </summary>
+            <param name="excelFileStream">Excel文档流</param>
+            <param name="sheetIndex">表索引号，如第一个表为0</param>
+            <param name="headerRowIndex">标题行索引号，如第一行为0</param>
+            <param name="isxlsx">是否为excel 2007以后版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelHelper.RenderDsFromExcel(System.IO.Stream,System.Int32,System.Boolean)">
+            <summary>
+            Excel文档流转换成DataSet
+            </summary>
+            <param name="excelFileStream">Excel文档流</param>
+            <param name="headerRowIndex">标题行索引号，如第一行为0</param>
+            <param name="isxlsx">是否为excel 2007以后版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelHelper.RenderFromExcel(NPOI.SS.UserModel.ISheet,System.Int32)">
+            <summary>
+            Excel表格转换成DataTable
+            </summary>
+            <param name="sheet">表格</param>
+            <param name="headerRowIndex">标题行索引号，如第一行为0</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelHelper.RenderToDb(System.IO.Stream,System.String,Rookey.Frame.Office.NPOI_ExcelHelper.DBAction,System.Boolean)">
+            <summary>
+            Excel文档导入到数据库
+            默认取Excel的第一个表
+            第一行必须为标题行
+            </summary>
+            <param name="excelFileStream">Excel文档流</param>
+            <param name="insertSql">插入语句</param>
+            <param name="dbAction">更新到数据库的方法</param>
+            <param name="isxlsx">是否为excel 2007以后版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_ExcelHelper.RenderToDb(System.IO.Stream,System.String,Rookey.Frame.Office.NPOI_ExcelHelper.DBAction,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Excel文档导入到数据库
+            </summary>
+            <param name="excelFileStream">Excel文档流</param>
+            <param name="insertSql">插入语句</param>
+            <param name="dbAction">更新到数据库的方法</param>
+            <param name="sheetIndex">表索引号，如第一个表为0</param>
+            <param name="headerRowIndex">标题行索引号，如第一行为0</param>
+            <param name="isxlsx">是否为excel 2007以后版本</param>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Office.NPOI_WordHelper">
+            <summary>
+            Word操作帮助
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_WordHelper.WordKeyReplace(System.String,System.Object,System.String)">
+            <summary>
+            将模板文件中关键字替换并生成新的word文件
+            </summary>
+            <param name="templateFileName">模板文件</param>
+            <param name="model">实体对象</param>
+            <param name="fileName">保存的路径</param>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_WordHelper.WordKeyReplace(System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            将模板文件中关键字替换并生成新的word文件
+            </summary>
+            <param name="templateFileName">模板文件</param>
+            <param name="replaceKeyAndValue">key:替换关键字,value:将key替换成value</param>
+            <param name="fileName">保存的路径</param>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_WordHelper.Export(System.String,System.Object)">
+            <summary>
+            导出word模板流
+            </summary>
+            <param name="filepath">模板文件</param>
+            <param name="model">实体对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_WordHelper.Export(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            导出word模板流
+            </summary>
+            <param name="filepath">模板文件</param>
+            <param name="replaceKeyAndValue">key:替换关键字,value:将key替换成value</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_WordHelper.ReplaceKey(NPOI.XWPF.UserModel.XWPFParagraph,System.Object)">
+            <summary>
+            替换关键字
+            </summary>
+            <param name="para"></param>
+            <param name="model"></param>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_WordHelper.ReplaceKey(NPOI.XWPF.UserModel.XWPFParagraph,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            替换关键字
+            </summary>
+            <param name="para"></param>
+            <param name="replaceKeyAndValue"></param>
+        </member>
+        <member name="M:Rookey.Frame.Office.NPOI_WordHelper.SaveToFile(System.IO.MemoryStream,System.String)">
+            <summary>
+            保存Word文档流到文件
+            </summary>
+            <param name="ms">word文档流</param>
+            <param name="fileName">文件名</param>
+        </member>
+    </members>
+</doc>

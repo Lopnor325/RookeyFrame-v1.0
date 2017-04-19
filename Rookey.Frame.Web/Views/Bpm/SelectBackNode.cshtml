@@ -1,0 +1,14 @@
+﻿@using Rookey.Frame.Common;
+@{
+    ViewBag.Title = "SelectBackNode";
+    string r = WebHelper.GetJsModifyTimeStr("/Scripts/Bpm/SelectBackNode.js");
+}
+@section scripts
+{
+    <script type="text/javascript" src="@Url.Content(string.Format("~/Scripts/Bpm/SelectBackNode.js?r={0}",r))"></script>
+}
+@using Rookey.Frame.Common;
+@using Rookey.Frame.UIOperate;
+@{ UIFrameFactory frameFactory = UIFrameFactory.GetInstance(Request);
+   Guid todoId = Request["todoId"].ObjToGuid();}
+@Html.Raw(frameFactory.GetSelectBackNodeHTML(todoId))

@@ -1,0 +1,344 @@
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Web.XML
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Web.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Web.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Common.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Controllers.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.UIOperate.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\System.Net.Http.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\System.Net.Http.Formatting.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\System.Net.Http.WebRequest.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\System.Web.Http.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\System.Web.Http.WebHost.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\System.Web.Mvc.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\System.Web.Razor.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\System.Web.WebPages.Deployment.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\System.Web.WebPages.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\System.Web.WebPages.Razor.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Newtonsoft.Json.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Model.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Base.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.AutoProcess.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Operate.Base.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\FluentValidation.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\FluentValidation.Mvc.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.EntityBase.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.QuartzClient.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\ServiceStack.Interfaces.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Cache.Factory.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Bridge.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.IBLL.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Office.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Email.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Quartz.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Cache.Memcached.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\ServiceStack.Redis.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\NPOI.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\NPOI.OOXML.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\C5.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Common.Logging.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Enyim.Caching.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\ServiceStack.Text.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\ServiceStack.Common.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\ICSharpCode.SharpZipLib.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\NPOI.OpenXmlFormats.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\NPOI.OpenXml4Net.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Common.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Common.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Controllers.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Controllers.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.UIOperate.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.UIOperate.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\System.Web.Mvc.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Microsoft.Web.Infrastructure.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\System.Net.Http.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\System.Net.Http.Formatting.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\System.Net.Http.WebRequest.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\System.Web.Http.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\System.Web.Http.WebHost.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\System.Web.Razor.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\System.Web.WebPages.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\System.Web.WebPages.Deployment.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\System.Web.WebPages.Razor.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Newtonsoft.Json.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Model.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Model.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Base.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Base.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.AutoProcess.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.AutoProcess.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Operate.Base.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Operate.Base.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\FluentValidation.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\FluentValidation.Mvc.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.EntityBase.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.EntityBase.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.QuartzClient.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.QuartzClient.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Cache.Factory.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Cache.Factory.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Bridge.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Bridge.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.IBLL.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.IBLL.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Office.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Office.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Email.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Email.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Quartz.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Cache.Memcached.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Cache.Memcached.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\NPOI.xml
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\Enyim.Caching.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\zh-Hans\System.Web.Mvc.resources.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\zh-Hans\System.Net.Http.resources.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\zh-Hans\System.Net.Http.WebRequest.resources.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\zh-Hans\System.Web.Http.resources.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\zh-Hans\System.Web.Razor.resources.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\zh-Hans\System.Web.WebPages.resources.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\obj\Release\Rookey.Frame.Web.csprojResolveAssemblyReference.cache
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\obj\Release\Rookey.Frame.Web.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\obj\Release\Rookey.Frame.Web.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Web.XML
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Web.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Web.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Common.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Controllers.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.UIOperate.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Net.Http.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Net.Http.Formatting.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Net.Http.WebRequest.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Web.Http.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Web.Http.WebHost.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Web.Mvc.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Web.Razor.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Web.WebPages.Deployment.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Web.WebPages.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Web.WebPages.Razor.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Newtonsoft.Json.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Model.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Base.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\ICSharpCode.SharpZipLib.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.AutoProcess.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Operate.Base.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\FluentValidation.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\FluentValidation.Mvc.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.EntityBase.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.QuartzClient.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\ServiceStack.Interfaces.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Cache.Factory.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Bridge.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.IBLL.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Office.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Email.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Quartz.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Cache.Memcached.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\ServiceStack.Redis.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\NPOI.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\NPOI.OOXML.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\C5.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Common.Logging.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Enyim.Caching.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\ServiceStack.Text.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\ServiceStack.Common.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\NPOI.OpenXmlFormats.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\NPOI.OpenXml4Net.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Common.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Common.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Controllers.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Controllers.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.UIOperate.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.UIOperate.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Web.Mvc.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Microsoft.Web.Infrastructure.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Net.Http.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Net.Http.Formatting.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Net.Http.WebRequest.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Web.Http.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Web.Http.WebHost.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Web.Razor.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Web.WebPages.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Web.WebPages.Deployment.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Web.WebPages.Razor.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Newtonsoft.Json.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Model.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Model.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Base.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Base.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.AutoProcess.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.AutoProcess.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Operate.Base.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Operate.Base.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\FluentValidation.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\FluentValidation.Mvc.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.EntityBase.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.EntityBase.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.QuartzClient.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.QuartzClient.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Cache.Factory.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Cache.Factory.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Bridge.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Bridge.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.IBLL.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.IBLL.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Office.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Office.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Email.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Email.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Quartz.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Cache.Memcached.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Rookey.Frame.Cache.Memcached.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\NPOI.xml
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\Enyim.Caching.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\zh-Hans\System.Web.Mvc.resources.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\zh-Hans\System.Net.Http.resources.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\zh-Hans\System.Net.Http.WebRequest.resources.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\zh-Hans\System.Web.Http.resources.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\zh-Hans\System.Web.Razor.resources.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\zh-Hans\System.Web.WebPages.resources.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\obj\Release\Rookey.Frame.Web.csprojResolveAssemblyReference.cache
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\obj\Release\Rookey.Frame.Web.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\obj\Release\Rookey.Frame.Web.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Data.DataSetExtensions.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Data.Entity.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Drawing.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.EnterpriseServices.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.ServiceModel.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.ServiceModel.Web.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Web.Abstractions.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Web.ApplicationServices.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Web.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Web.DynamicData.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Web.Entity.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Web.Extensions.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Web.Routing.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Web.Services.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Xml.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\bin\System.Xml.Linq.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\obj\Release\Rookey.Frame.Web.csprojResolveAssemblyReference.cache
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Web.XML
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Web.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Web.pdb
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Common.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Controllers.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.UIOperate.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Data.DataSetExtensions.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Data.Entity.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Drawing.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.EnterpriseServices.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Net.Http.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Net.Http.Formatting.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Net.Http.WebRequest.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.ServiceModel.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.ServiceModel.Web.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Web.Abstractions.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Web.ApplicationServices.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Web.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Web.DynamicData.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Web.Entity.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Web.Extensions.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Web.Http.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Web.Http.WebHost.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Web.Mvc.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Web.Razor.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Web.Routing.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Web.Services.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Web.WebPages.Deployment.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Web.WebPages.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Web.WebPages.Razor.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Xml.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Xml.Linq.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Newtonsoft.Json.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Model.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Base.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\ICSharpCode.SharpZipLib.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.AutoProcess.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Operate.Base.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\FluentValidation.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\FluentValidation.Mvc.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.EntityBase.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.QuartzClient.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\ServiceStack.Interfaces.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Cache.Factory.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Bridge.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.IBLL.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Office.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Email.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Quartz.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Cache.Memcached.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\ServiceStack.Redis.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\NPOI.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\NPOI.OOXML.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\C5.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Common.Logging.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Enyim.Caching.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\ServiceStack.Text.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\ServiceStack.Common.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\NPOI.OpenXmlFormats.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\NPOI.OpenXml4Net.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Common.pdb
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Common.xml
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Controllers.pdb
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Controllers.xml
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.UIOperate.pdb
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.UIOperate.xml
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Web.Mvc.xml
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Microsoft.Web.Infrastructure.xml
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Net.Http.xml
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Net.Http.Formatting.xml
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Net.Http.WebRequest.xml
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Web.Http.xml
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Web.Http.WebHost.xml
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Web.Razor.xml
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Web.WebPages.xml
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Web.WebPages.Deployment.xml
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Web.WebPages.Razor.xml
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Model.pdb
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Model.xml
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Base.pdb
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Base.xml
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.AutoProcess.pdb
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.AutoProcess.xml
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Operate.Base.pdb
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Operate.Base.xml
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.EntityBase.pdb
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.EntityBase.xml
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.QuartzClient.pdb
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.QuartzClient.xml
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Cache.Factory.pdb
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Cache.Factory.xml
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Bridge.pdb
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Bridge.xml
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.IBLL.pdb
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.IBLL.xml
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Office.pdb
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Office.xml
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Email.pdb
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Email.xml
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Cache.Memcached.pdb
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\Rookey.Frame.Cache.Memcached.xml
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\zh-Hans\System.Web.Mvc.resources.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\zh-Hans\System.Net.Http.resources.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\zh-Hans\System.Net.Http.WebRequest.resources.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\zh-Hans\System.Web.Http.resources.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\zh-Hans\System.Web.Razor.resources.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\zh-Hans\System.Web.WebPages.resources.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\obj\Release\Rookey.Frame.Web.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\obj\Release\Rookey.Frame.Web.pdb
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Web.Helpers.dll
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\System.Web.Helpers.xml
+D:\rookey\git.oschina\Rookey.Frame.Web\bin\zh-Hans\System.Web.Helpers.resources.dll

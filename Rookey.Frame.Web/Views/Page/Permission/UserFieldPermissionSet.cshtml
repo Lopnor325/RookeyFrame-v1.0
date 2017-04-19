@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "UserFieldPermissionSet";
+}
+@using Rookey.Frame.Common;
+@using Rookey.Frame.UIOperate;
+@{ UIFrameFactory frameFactory = UIFrameFactory.GetInstance(Request);
+   string moduleName = Server.UrlDecode(Request["moduleName"].ObjToStr());
+   Guid userId = Request["userId"].ObjToGuid();
+   int type = Request["type"].ObjToInt();}
+@Html.Raw(frameFactory.GetUserFieldPermissionSetHTML(moduleName, userId, type))

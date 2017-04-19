@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh" style="height: 100%;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Html.Partial("~/Views/Shared/BaseStyles.cshtml")
+    @RenderSection("styles", required: false)
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery/jquery-1.8.0.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-plug/jquery.cookie.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-easyui/jquery.easyui.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-easyui/locale/easyui-lang-zh_CN.js")"></script>
+</head>
+<body class="easyui-layout" style="overflow-y: visible;">
+    @RenderBody()
+    <script type="text/javascript" src="@Url.Content("~/Scripts/login/Login.js")"></script>
+</body>
+</html>

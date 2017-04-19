@@ -1,0 +1,1297 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rookey.Frame.UIOperate</name>
+    </assembly>
+    <members>
+        <member name="T:Rookey.Frame.UIOperate.ConstDefine">
+            <summary>
+            常量定义类
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.UIOperate.ConstDefine.DEFAULT_THEME">
+            <summary>
+            默认皮肤样式为扁平灰
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.UIOperate.ConstDefine.PANEL_HEAD_HEIGHT">
+            <summary>
+            panel标题栏高度
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.UIOperate.ConstDefine.BOTTOM_STATUS_REGON_HEIGHT">
+            <summary>
+            底部状态栏区域高度
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.UIOperate.ConstDefine.FORM_CONTROL_HEIGHT">
+            <summary>
+            表单控件高度
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.UIOperate.ConstDefine.FORM_TEXTAREA_CONTROL_HEIGHT">
+            <summary>
+            文本域表单控件高度
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.UIOperate.ConstDefine.FORM_ROW_HEIGHT">
+            <summary>
+            表单行高
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.UIOperate.ConstDefine.FORM_TEXTAREA_ROW_HEIGHT">
+            <summary>
+            文本域表单行高
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.UIOperate.ConstDefine.FORM_PANEL_PADDING">
+            <summary>
+            表单panel的padding
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.UIOperate.ConstDefine.DIALOG_FORM_MIN_WIDTH">
+            <summary>
+            弹出框表单最小宽度
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.UIOperate.ConstDefine.DIALOG_FORM_MIN_HEIGHT">
+            <summary>
+            弹出框表单最小高度
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.UIOperate.ConstDefine.DIALOG_TOOLBAR_HEIGHT">
+            <summary>
+            弹出框底部工具栏高度
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.UIOperate.ConstDefine.DIALOG_BORDER_WIDTH">
+            <summary>
+            弹出框边框宽度
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.UIOperate.ConstDefine.GRID_LEFT_MENU_WIDTH">
+            <summary>
+            网格左侧菜单默认宽度
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.UIOperate.ConstDefine.GRID_TOOLBAR_HEIGHT">
+            <summary>
+            网格工具栏高度
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.UIOperate.ConstDefine.GRID_FIX_HEIGHT">
+            <summary>
+            网格高度修正值
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.UIOperate.ConstDefine.STANDARD_LABEL">
+            <summary>
+            标准lable宽度
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.UIOperate.ConstDefine.STANDARD_CONTROL">
+            <summary>
+            标准控件宽度
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.UIOperate.ConstDefine.STANDARD_INPUTWIDTH">
+            <summary>
+            标准标签加标准控件总宽度
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.UIOperate.ConstDefine.SCROLL_WIDTH">
+            <summary>
+            滚动条宽度
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.UIOperate.ConstDefine.TOP_NORTH_REGION_HEIGHT">
+            <summary>
+            北方布局高度（LOGO高度）
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.UIOperate.ConstDefine.TAB_HEAD_HEIGHT">
+            <summary>
+            TAB头的高度
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.UIOperate.ConstDefine.DIALOG_FORM_MAX_WIDTH">
+            <summary>
+            弹出框表单最大宽度限制
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.UIOperate.ConstDefine.DIALOG_FORM_MAX_HEIGHT">
+            <summary>
+            弹出框表单最大高度限制
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.UIOperate.ConstDefine.MAIN_LEFT_MENU_WIDTH">
+            <summary>
+            主界面左侧菜单默认宽度
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.UIOperate.Control.EasyuiGrid">
+            <summary>
+            Easyui网格
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.Control.EasyuiGrid.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.UIOperate.Control.EasyuiGrid.columns">
+            <summary>
+            字段
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.UIOperate.Control.EasyuiGrid.frozenColumns">
+            <summary>
+            冻结字段
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.UIOperate.Control.EasyuiGrid.fitColumns">
+            <summary>
+            宽度自适应
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.UIOperate.Control.EasyuiGrid.autoRowHeight">
+            <summary>
+            行高自适应，默认为true
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.UIOperate.Control.EasyuiGrid.toolbar">
+            <summary>
+            工具栏
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.UIOperate.Control.EasyuiGrid.idField">
+            <summary>
+            指明哪一个字段是标识字段，默认为Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.UIOperate.Control.EasyuiGrid.method">
+            <summary>
+            请求远程数据类型，默认为get
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.UIOperate.Control.EasyuiGrid.url">
+            <summary>
+            数据加载url
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.UIOperate.Control.EasyuiGrid.pagination">
+            <summary>
+            是否分页
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.UIOperate.Control.EasyuiGrid.rownumbers">
+            <summary>
+            是否显示行号，默认显示
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.UIOperate.Control.EasyuiGrid.singleSelect">
+            <summary>
+            只允许选择一行，默认为true
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.UIOperate.Control.EasyuiGrid.sortName">
+            <summary>
+            排序字段，默认为Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.UIOperate.Control.EasyuiGrid.sortOrder">
+            <summary>
+            排序方式，默认为desc
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.UIOperate.Control.EasyuiGridField">
+            <summary>
+            Easyui网格字段
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.UIOperate.Control.EasyuiGridField.field">
+            <summary>
+            字段名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.UIOperate.Control.EasyuiGridField.title">
+            <summary>
+            字段显示名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.UIOperate.Control.EasyuiGridField.width">
+            <summary>
+            字段宽度
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.UIOperate.Control.EasyuiGridField.checkbox">
+            <summary>
+            是否显示复选框
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.UIOperate.Control.EasyuiGridField.hidden">
+            <summary>
+            是否隐藏
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.UIOperate.Control.EasyuiGridField.formatter">
+            <summary>
+            格式化函数
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.UIOperate.Control.EasyuiGridField.editor">
+            <summary>
+            编辑器
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.UIOperate.Control.EasyuiGridField.halign">
+            <summary>
+            标题对齐方式
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.UIOperate.Control.EasyuiGridField.align">
+            <summary>
+            数据对齐方式
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.UIOperate.Control.MvcExtensions">
+            <summary>
+            EasyUI扩展控件
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.UIOperate.EasyUIFrame">
+            <summary>
+            EasyUI页面框架
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.UIOperate.UIFrameFactory">
+            <summary>
+            UI框架工厂类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetInstance(System.Web.HttpRequestBase)">
+            <summary>
+            实例化工厂
+            </summary>
+            <param name="request">请求对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.Init">
+            <summary>
+            初始化
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetLoginHTML">
+            <summary>
+            获取登录页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetDialogLoginHTML">
+            <summary>
+            获取弹出登录框页面HTML
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetMainPageHTML">
+            <summary>
+            获取前端框架主页面HTML
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetPersonalSetHTML">
+            <summary>
+            获取个人设置页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetChangePwdHTML">
+            <summary>
+            获取修改密码页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetAddQuckMenuHTML">
+            <summary>
+            获取添加快捷菜单页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetGridHTML(System.Guid,Rookey.Frame.Operate.Base.EnumDef.DataGridType,System.String,System.String,System.Nullable{System.Guid},System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean,System.Collections.Generic.List{System.String},System.Nullable{System.Guid},System.Boolean,System.Web.HttpRequestBase)">
+            <summary>
+            返回网格页面
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <param name="gridType">网格类型</param>
+            <param name="condition">过滤条件</param>
+            <param name="where">where过滤条件</param>
+            <param name="viewId">视图Id</param>
+            <param name="initModule">针对表单弹出外键选择框，表单原始模块</param>
+            <param name="initField">针对表单外键弹出框，表单原始字段</param>
+            <param name="otherParams">其他参数</param>
+            <param name="detailCopy">明细复制</param>
+            <param name="filterFields">过滤字段</param>
+            <param name="menuId">菜单ID，从哪个菜单进来的</param>
+            <param name="isGridLeftTree">是否网格左侧树，针对附属网格</param>
+            <param name="request">请求对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetAdvanceSearchHTML(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            返回高级搜索页面
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <param name="viewId">视图Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetQuickEditViewHTML(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            加载快速编辑视图页面
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <param name="viewId">视图ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetGridSetHTML(System.Guid)">
+            <summary>
+            获取列表视图设置页面
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetAttachModuleSetHTML(System.Guid)">
+            <summary>
+            获取附属模块设置页面
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetEditFormHTML(System.Guid,System.Nullable{System.Guid},System.String,System.Nullable{System.Guid},System.Boolean,System.Nullable{System.Guid},System.Nullable{System.Guid},System.Web.HttpRequestBase)">
+            <summary>
+            获取通用表单页面HTML
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <param name="id">记录Id</param>
+            <param name="gridId">为网格表单编辑模式的网格Id</param>
+            <param name="copyId">复制时被复制的记录Id</param>
+            <param name="showTip">是否显示表单tip按钮</param>
+            <param name="todoTaskId">待办任务ID</param>
+            <param name="formId">表单ID</param>
+            <param name="request">请求对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetViewFormHTML(System.Guid,System.Guid,System.String,System.String,System.Boolean,System.Boolean,System.Nullable{System.Guid},System.Web.HttpRequestBase)">
+            <summary>
+            获取通用查看表单页面HTML
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <param name="id">记录Id</param>
+            <param name="gridId">明细网格Id</param>
+            <param name="fromEditPageFlag">从编辑页面点击查看按钮标识</param>
+            <param name="isRecycle">是否来自回收站</param>
+            <param name="showTip">是否显示表单tip按钮</param>
+            <param name="formId">表单ID</param>        
+            <param name="request">请求对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetUploadMitiFileHTML(System.Nullable{System.Guid})">
+            <summary>
+            多文件上传表单HTML
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetEditFieldHTML(System.Guid,System.String,System.Guid)">
+            <summary>
+            获取编辑字段页面
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <param name="fieldName">字段名称</param>
+            <param name="recordId">记录Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetBatchEditHTML(System.Guid,System.Int32,System.Int32)">
+            <summary>
+            获取批量编辑页面
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <param name="selectRecords">选择的记录数</param>
+            <param name="pageRecords">当前页记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetImportModelHTML(System.Guid)">
+            <summary>
+            获取实体导入页面
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetExportModelHTML(System.Guid,System.Int32)">
+            <summary>
+            获取导出设置页面
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <param name="cc">当前记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetCombDataSourceSetHTML">
+            <summary>
+            获取下拉框数据源设置页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetIconSelectHTML">
+            <summary>
+            返回选择图标页面HTML
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetDialogTreeHTML(System.Guid,System.Web.HttpRequestBase)">
+            <summary>
+            获取弹出树HTML
+            </summary>
+            <param name="moduleId">模块id</param>
+            <param name="request">请求对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetSetRoleFormHTML(System.Guid)">
+            <summary>
+            设置角色表单页面
+            </summary>
+            <param name="roleId">角色Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetQuickEditFormHTML(System.Guid,System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            加载快速编辑角色表单页面
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <param name="roleId">角色Id</param>
+            <param name="formId">表单Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetSetUserRoleHTML(System.Guid)">
+            <summary>
+            获取设置用户角色页面
+            </summary>
+            <param name="userId">用户Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetWebConfigHTML">
+            <summary>
+            获取系统配置页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetAddCommonBtnHTML(System.Guid)">
+            <summary>
+            添加通用按钮
+            </summary>
+            <param name="moduleId">模块id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetSetRoleModulePermissionHTML">
+            <summary>
+            获取设置角色模块权限页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetSetRolePermissionHTML(System.Nullable{System.Guid})">
+            <summary>
+            获取设置角色权限页面
+            </summary>
+            <param name="roleId">角色Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetRoleDataPermissionSetHTML(System.String,System.String,System.Int32)">
+            <summary>
+            获取角色数据权限设置页面
+            </summary>
+            <param name="moduleName">模块名称</param>
+            <param name="roleName">角色名称</param>
+            <param name="type">数据权限类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetRoleFieldPermissionSetHTML(System.String,System.String,System.Int32)">
+            <summary>
+            获取角色字段权限设置页面
+            </summary>
+            <param name="moduleName">模块名称</param>
+            <param name="roleName">角色名称</param>
+            <param name="type">字段权限类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetSetUserPermissionHTML(System.Nullable{System.Guid})">
+            <summary>
+            获取设置用户权限页面
+            </summary>
+            <param name="userId">用户Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetUserDataPermissionSetHTML(System.String,System.Guid,System.Int32)">
+            <summary>
+            获取用户数据权限设置页面
+            </summary>
+            <param name="moduleName">模块名称</param>
+            <param name="userId">用户Id</param>
+            <param name="type">数据权限类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetUserFieldPermissionSetHTML(System.String,System.Guid,System.Int32)">
+            <summary>
+            获取用户字段权限设置页面
+            </summary>
+            <param name="moduleName">模块名称</param>
+            <param name="userId">用户Id</param>
+            <param name="type">字段权限类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetDesktopIndexHTML">
+            <summary>
+            获取我的桌面页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetDesktopGridHTML(System.Guid,System.Int32,System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            获取通用桌面列表页面
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <param name="top">取前多少条</param>
+            <param name="sortName">排序字段</param>
+            <param name="isDesc">是否降序</param>
+            <param name="dic">其他参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetEmailIndexHTML">
+            <summary>
+            获取邮件首页
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetFlowDesignHTML">
+            <summary>
+            获取流程设计页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetFlowCanvasHTML">
+            <summary>
+            获取流程画布页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetNodeParamSetHTML(System.Guid,System.String)">
+            <summary>
+            获取流程节点参数设置页面
+            </summary>
+            <param name="workflowId">流程ID</param>
+            <param name="tagId">节点TagId</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetLineParamSetHTML(System.Guid,System.String)">
+            <summary>
+            获取流程连接线参数设置页面
+            </summary>
+            <param name="workflowId">流程ID</param>
+            <param name="tagId">连线TagId</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetSelectBackNodeHTML(System.Guid)">
+            <summary>
+            获取选择回退结点页面
+            </summary>
+            <param name="workTodoId">待办ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetFlowTipsHTML(System.Guid,System.Guid)">
+            <summary>
+            获取流程tips页面HTML
+            </summary>
+            <param name="moduleId">模块ID</param>
+            <param name="recordId">记录ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetQuartzCenterHTML">
+            <summary>
+            获取调度中心页面HTML
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetJobManageHTML">
+            <summary>
+            获取任务管理页面HTML
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetAddJobHTML">
+            <summary>
+            获取添加任务页面HTML
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetAddJobPlanHTML">
+            <summary>
+            获取添加任务计划页面HTML
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetQuartzLogHTML">
+            <summary>
+            获取查看执行日志页面HTML
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.CalcFormWidth(System.Guid,Rookey.Frame.Model.Sys.Sys_Form)">
+            <summary>
+            动态计算表单宽度
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <param name="form">表单</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.CalcFormHeight(System.Guid,Rookey.Frame.Model.Sys.Sys_Form)">
+            <summary>
+            动态计算表单高度
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <param name="form">表单</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetPanelHeight(System.Linq.IGrouping{System.String,Rookey.Frame.Model.Sys.Sys_FormField})">
+            <summary>
+            获取Panel高度
+            </summary>
+            <param name="group"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetPanelWidth(System.Linq.IGrouping{System.String,Rookey.Frame.Model.Sys.Sys_FormField},Rookey.Frame.Model.Sys.Sys_Form)">
+            <summary>
+            获取表单panel宽度
+            </summary>
+            <param name="group"></param>
+            <param name="form"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetEditMode(Rookey.Frame.Model.Sys.Sys_Module,Rookey.Frame.Model.Sys.Sys_Form,System.Int32@,System.Int32@,System.Nullable{System.Guid})">
+            <summary>
+            获取编辑模式
+            </summary>
+            <param name="module">模块对象</param>
+            <param name="form">表单对象</param>
+            <param name="formWidth">表单宽度</param>
+            <param name="formHeight">表单高度</param>
+            <param name="userId">当前用户</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetCustomerPageHTML(System.Guid,System.String,System.Object[])">
+            <summary>
+            取自定义页面html
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <param name="methodName">接口方法名称</param>
+            <param name="args">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetFormFieldInputValue(System.String@,Rookey.Frame.Model.Sys.Sys_Module,Rookey.Frame.Model.Sys.Sys_FormField,Rookey.Frame.Model.Sys.Sys_Field,System.Object,System.Object,System.Boolean,System.Boolean,Rookey.Frame.Base.UserInfo)">
+            <summary>
+            获取表单字段值
+            </summary>
+            <param name="textValue">文本字段值</param>
+            <param name="module">模块</param>
+            <param name="field">表单字段</param>
+            <param name="sysField">字段</param>
+            <param name="model">实体对象</param>
+            <param name="copyModel">复制对象</param>
+            <param name="canOp">是否可新增或编辑</param>
+            <param name="isRestartFlow">是否重新发起流程</param>
+            <param name="currUser">当前用户</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetFormFieldViewValue(Rookey.Frame.Model.Sys.Sys_Module,Rookey.Frame.Model.Sys.Sys_Form,Rookey.Frame.Model.Sys.Sys_FormField,Rookey.Frame.Model.Sys.Sys_Field,System.Object,System.Guid,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            获取查看表单字段值
+            </summary>
+            <param name="module">模块</param>
+            <param name="form">表单对象</param>
+            <param name="field">表单字段</param>
+            <param name="sysField">字段</param>
+            <param name="model">实体对象</param>
+            <param name="id">记录ID</param>
+            <param name="canView">是否允许查看该字段</param>
+            <param name="canEdit">是否允许编辑该字段</param>
+            <param name="hasRecordEditPower">是否有记录编辑权限</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetFormFieldInputHTML(System.Guid,Rookey.Frame.Model.Sys.Sys_FormField,Rookey.Frame.Model.Sys.Sys_Field,System.Object,System.Boolean,System.String,System.Object,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Boolean,System.Nullable{System.Boolean},Rookey.Frame.Base.UserInfo,System.Boolean)">
+            <summary>
+            获取表单字段的编辑控件的HTML
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <param name="field">表单字段</param>
+            <param name="sysField">字段对象</param>
+            <param name="model">该模块记录</param>
+            <param name="isSearchForm">是否搜索表单</param>
+            <param name="linkFields">受当前字段值关联的字段，多个以逗号分隔</param>
+            <param name="copyModel">被复制的对象</param>
+            <param name="controlWidth">指定控件宽度</param>
+            <param name="controlHeight">指定控件高度</param>
+            <param name="canOp">允许操作（新增、编辑）字段集合</param>
+            <param name="isCache">是否来自缓存</param>
+            <param name="currUser">当前用户</param>
+            <param name="isRestartFlow">是否为重新发起流程</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetAttachmentListHTML(Rookey.Frame.Model.Sys.Sys_Module,System.Nullable{System.Guid},Rookey.Frame.Model.EnumSpace.FormTypeEnum)">
+            <summary>
+            附件信息列表HTML
+            </summary>
+            <param name="module">模块</param>
+            <param name="id">记录Id</param>
+            <param name="formType">表单类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetApprovalInfoAndOpinionsHtml(System.Guid,System.Nullable{System.Guid},System.Nullable{System.Guid},Rookey.Frame.Base.UserInfo,System.Boolean,System.String)">
+            <summary>
+            获取审批信息和审批意见页面HTML
+            </summary>
+            <param name="moduleId">模块ID</param>
+            <param name="id">记录ID</param>
+            <param name="todoTaskId">待办任务ID</param>
+            <param name="currUser">当前用户</param>
+            <param name="isParentTodo">是否为子流程的父待办</param>
+            <param name="domainPath">域路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetFormButtonHTML(Rookey.Frame.Model.Sys.Sys_Module,System.Collections.Generic.List{Rookey.Frame.Operate.Base.TempModel.FormButton},System.Int32,System.String,Rookey.Frame.Base.UserInfo,System.Nullable{System.Guid},System.String)">
+            <summary>
+            获取表单按钮HTML
+            </summary>
+            <param name="module">模块</param>
+            <param name="buttons">按钮集合</param>
+            <param name="editMode">编辑模式</param>
+            <param name="gridId">网格domid</param>
+            <param name="currUser">当前用户</param>
+            <param name="id">记录ID</param>
+            <param name="titleKeyValue">titleKeyValue</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIFrameFactory.GetFormToolTagsHTML(Rookey.Frame.Model.Sys.Sys_Module,System.Nullable{System.Guid},System.Collections.Generic.List{Rookey.Frame.Operate.Base.TempModel.FormToolTag})">
+            <summary>
+            获取表单tooltags的html
+            </summary>
+            <param name="module">模块</param>
+            <param name="id">ID</param>
+            <param name="toolTags">工具标签按钮集合</param>
+            <returns></returns>
+        </member>
+        <member name="P:Rookey.Frame.UIOperate.UIFrameFactory.CurrUser">
+            <summary>
+            当前用户
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.Init">
+            <summary>
+            初始化
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetLoginForm(System.Boolean)">
+            <summary>
+            登录表单
+            </summary>
+            <param name="isDialog">是否为弹出框</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetLoginHTML">
+            <summary>
+            获取登录页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetDialogLoginHTML">
+            <summary>
+            获取弹出登录框页面HTML
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetMainPageHTML">
+            <summary>
+            返回主页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetPersonalSetHTML">
+            <summary>
+            获取个人设置页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetChangePwdHTML">
+            <summary>
+            获取修改密码页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetAddQuckMenuHTML">
+            <summary>
+            获取添加快捷菜单页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetGridHTML(System.Guid,Rookey.Frame.Operate.Base.EnumDef.DataGridType,System.String,System.String,System.Nullable{System.Guid},System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean,System.Collections.Generic.List{System.String},System.Nullable{System.Guid},System.Boolean,System.Web.HttpRequestBase)">
+            <summary>
+            返回网格页面
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <param name="gridType">网格类型</param>
+            <param name="condition">过滤条件</param>
+            <param name="where">where过滤条件</param>
+            <param name="viewId">视图Id</param>
+            <param name="initModule">针对表单弹出外键选择框，表单原始模块</param>
+            <param name="initField">针对表单外键弹出框，表单原始字段</param>
+            <param name="otherParams">其他参数</param>
+            <param name="detailCopy">明细复制</param>
+            <param name="filterFields">过滤字段</param>
+            <param name="menuId">菜单ID，从哪个菜单进来的</param>
+            <param name="isGridLeftTree">是否网格左侧树，针对附属网格</param>
+            <param name="request">请求对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetGridButtonAttr(Rookey.Frame.Model.Sys.Sys_Module,System.String,System.Int32,System.Int32,System.Int32,System.String,Rookey.Frame.Operate.Base.EnumDef.DataGridType,Rookey.Frame.Model.Sys.Sys_GridButton,System.String,System.Nullable{System.Guid})">
+            <summary>
+            获取弹出编辑表单时网格按钮属性
+            </summary>
+            <param name="module">模块</param>
+            <param name="titleKeyDisplay">titleKey显示名称</param>
+            <param name="editMode">编辑模式</param>
+            <param name="formWidth">表单宽度</param>
+            <param name="formHeight">表单高度</param>
+            <param name="gridId">网格tagId</param>
+            <param name="gridType">网格类型</param>
+            <param name="button">按钮</param>
+            <param name="customerFormUrl">编辑、查看表单的自定义表单URL</param>
+            <param name="formId">表单ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetGridFieldFormatter(Rookey.Frame.Model.Sys.Sys_Module,Rookey.Frame.Model.Sys.Sys_GridField,Rookey.Frame.Operate.Base.EnumDef.DataGridType,System.String,System.Int32,System.String,System.String@,System.Guid)">
+            <summary>
+            获取网格字段格式化参数，并返回编辑参数
+            </summary>
+            <param name="module">模块</param>
+            <param name="field">字段</param>
+            <param name="gridType">网格类型</param>
+            <param name="gridId">网格DomId</param>
+            <param name="editMode">编辑模式</param>
+            <param name="otherFormatParams">其他参数</param>
+            <param name="editorStr">返回编辑参数</param>
+            <param name="userId">当前用户</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetAdvanceSearchHTML(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            加载高级搜索页面
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <param name="viewId">视图Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetQuickEditViewHTML(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            加载快速编辑视图页面
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <param name="viewId">视图ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetGridSetHTML(System.Guid)">
+            <summary>
+            加载列表视图设置页面
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetAttachModuleSetHTML(System.Guid)">
+            <summary>
+            获取附属模块设置页面
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetNewEditFormGroupTable(Rookey.Frame.Model.Sys.Sys_Module,Rookey.Frame.Model.Sys.Sys_Form,System.Collections.Generic.List{System.Linq.IGrouping{System.Int32,Rookey.Frame.Model.Sys.Sys_FormField}},System.Collections.Generic.List{Rookey.Frame.Model.Sys.Sys_FormField},System.String,System.Object,System.Object,System.Collections.Generic.List{System.Object}@,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Nullable{System.Boolean},System.Boolean)">
+            <summary>
+            基于表格式Group编辑表单Table
+            </summary>
+            <param name="module">模块</param>
+            <param name="form">表单</param>
+            <param name="rows">group内字段</param>
+            <param name="formFields">表单字段</param>
+            <param name="tableWidth">table宽</param>
+            <param name="model">实体对象</param>
+            <param name="copyModel">复制实体对象</param>
+            <param name="fieldObjects">字段匿名对象集合</param>
+            <param name="canViewFields">允许查看字段集合</param>
+            <param name="canOpFields">允许操作（新增、编辑）字段集合</param>
+            <param name="isCache">是否来自缓存</param>
+            <param name="isRestartFlow">是否重新发起流程</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetEditFormHTML(System.Guid,System.Nullable{System.Guid},System.String,System.Nullable{System.Guid},System.Boolean,System.Nullable{System.Guid},System.Nullable{System.Guid},System.Web.HttpRequestBase)">
+            <summary>
+            返回通用编辑表单页面
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <param name="id">记录Id</param>
+            <param name="gridId">为网格表单编辑模式的网格Id</param>
+            <param name="copyId">复制时被复制的记录Id</param>
+            <param name="showTip">是否显示表单tip按钮</param>
+            <param name="todoTaskId">待办任务ID</param>
+            <param name="formId">指定表单ID</param>
+            <param name="request">请求对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetNewViewFormGroupTable(Rookey.Frame.Model.Sys.Sys_Module,Rookey.Frame.Model.Sys.Sys_Form,System.Collections.Generic.List{System.Linq.IGrouping{System.Int32,Rookey.Frame.Model.Sys.Sys_FormField}},System.String,System.Guid,System.Object,System.Boolean,System.Collections.Generic.List{System.Object}@,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Boolean,System.Nullable{System.Boolean})">
+            <summary>
+            基于表格式Group查看表单Table
+            </summary>
+            <param name="module">模块</param>
+            <param name="form">表单</param>
+            <param name="rows">group内字段</param>
+            <param name="tableWidth">group的panel宽</param>
+            <param name="id">记录id</param>
+            <param name="model">实体对象</param>
+            <param name="isRecycle">是否来自回收站</param>
+            <param name="fieldObjects">字段匿名对象集合</param>
+            <param name="canViewFields">允许查看字段集合</param>
+            <param name="canEditFields">允许编辑字段集合</param>
+            <param name="hasRecoredEdit">是否有记录的编辑权限</param>
+            <param name="isCache">是否来自缓存</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetViewFormHTML(System.Guid,System.Guid,System.String,System.String,System.Boolean,System.Boolean,System.Nullable{System.Guid},System.Web.HttpRequestBase)">
+            <summary>
+            查看页面
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <param name="id">记录Id</param>
+            <param name="gridId">为网格表单查看模式的网格Id</param>
+            <param name="fromEditPageFlag">从编辑页面点击查看按钮标识</param>
+            <param name="isRecycle">是否来自回收站</param>
+            <param name="showTip">是否显示表单tip按钮</param>
+            <param name="formId">指定表单ID</param>
+            <param name="request">请求对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetUploadMitiFileHTML(System.Nullable{System.Guid})">
+            <summary>
+            获取附件上传表单
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetEditFieldHTML(System.Guid,System.String,System.Guid)">
+            <summary>
+            获取编辑字段页面
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <param name="fieldName">字段名称</param>
+            <param name="recordId">记录Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetBatchEditHTML(System.Guid,System.Int32,System.Int32)">
+            <summary>
+            获取批量编辑页面
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <param name="selectRecords">选择的记录数</param>
+            <param name="pageRecords">当前页记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetImportModelHTML(System.Guid)">
+            <summary>
+            获取实体导入页面
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetExportModelHTML(System.Guid,System.Int32)">
+            <summary>
+            获取导出设置页面
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <param name="cc">当前记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetCombDataSourceSetHTML">
+            <summary>
+            获取下拉框数据源设置页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetIconSelectHTML">
+            <summary>
+            返回选择图标页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetDialogTreeHTML(System.Guid,System.Web.HttpRequestBase)">
+            <summary>
+            获取弹出树HTML
+            </summary>
+            <param name="moduleId">模块id</param>
+            <param name="request">请求对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetSetRoleFormHTML(System.Guid)">
+            <summary>
+            获取关联角色表单页面
+            </summary>
+            <param name="roleId">角色Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetQuickEditFormHTML(System.Guid,System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            加载快速编辑角色表单页面
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <param name="roleId">角色Id</param>
+            <param name="formId">表单Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetSetUserRoleHTML(System.Guid)">
+            <summary>
+            获取设置用户角色页面
+            </summary>
+            <param name="userId">用户Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetWebConfigHTML">
+            <summary>
+            获取系统配置页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetAddCommonBtnHTML(System.Guid)">
+            <summary>
+            添加通用按钮
+            </summary>
+            <param name="moduleId">模块id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetSetRoleModulePermissionHTML">
+            <summary>
+            获取设置角色模块权限页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetSetRolePermissionHTML(System.Nullable{System.Guid})">
+            <summary>
+            获取设置角色权限页面
+            </summary>
+            <param name="roleId">角色Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetRoleDataPermissionSetHTML(System.String,System.String,System.Int32)">
+            <summary>
+            获取角色数据权限设置页面
+            </summary>
+            <param name="moduleName">模块名称</param>
+            <param name="roleName">角色名称</param>
+            <param name="type">数据权限类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetRoleFieldPermissionSetHTML(System.String,System.String,System.Int32)">
+            <summary>
+            获取角色字段权限设置页面
+            </summary>
+            <param name="moduleName">模块名称</param>
+            <param name="roleName">角色名称</param>
+            <param name="type">字段权限类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetSetUserPermissionHTML(System.Nullable{System.Guid})">
+            <summary>
+            获取设置用户权限页面
+            </summary>
+            <param name="userId">用户Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetUserDataPermissionSetHTML(System.String,System.Guid,System.Int32)">
+            <summary>
+            获取用户数据权限设置页面
+            </summary>
+            <param name="moduleName">模块名称</param>
+            <param name="userId">用户Id</param>
+            <param name="type">数据权限类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetUserFieldPermissionSetHTML(System.String,System.Guid,System.Int32)">
+            <summary>
+            获取用户字段权限设置页面
+            </summary>
+            <param name="moduleName">模块名称</param>
+            <param name="userId">用户Id</param>
+            <param name="type">字段权限类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetDesktopIndexHTML">
+            <summary>
+            获取我的桌面页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetDesktopGridHTML(System.Guid,System.Int32,System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            获取通用桌面列表页面
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <param name="top">top</param>
+            <param name="sortName">排序字段</param>
+            <param name="isDesc">是否降序</param>
+            <param name="dic">其他参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetEmailIndexHTML">
+            <summary>
+            获取邮件首页
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetFlowDesignHTML">
+            <summary>
+            获取流程设计页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetFlowCanvasHTML">
+            <summary>
+            获取流程画布页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetNodeParamSetHTML(System.Guid,System.String)">
+            <summary>
+            获取流程节点参数设置页面
+            </summary>
+            <param name="workflowId">流程ID</param>
+            <param name="tagId">节点TagId</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetLineParamSetHTML(System.Guid,System.String)">
+            <summary>
+            获取流程连接线参数设置页面
+            </summary>
+            <param name="workflowId">流程ID</param>
+            <param name="tagId">连线TagId</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetSelectBackNodeHTML(System.Guid)">
+            <summary>
+            获取选择回退结点页面
+            </summary>
+            <param name="workTodoId">待办ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetFlowTipsHTML(System.Guid,System.Guid)">
+            <summary>
+            获取流程tips页面HTML
+            </summary>
+            <param name="moduleId">模块ID</param>
+            <param name="recordId">记录ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetQuartzCenterHTML">
+            <summary>
+            获取调度中心页面HTML
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetJobManageHTML">
+            <summary>
+            获取任务管理页面HTML
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetAddJobHTML">
+            <summary>
+            获取添加任务页面HTML
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetAddJobPlanHTML">
+            <summary>
+            获取添加任务计划页面HTML
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.EasyUIFrame.GetQuartzLogHTML">
+            <summary>
+            获取查看执行日志页面HTML
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.UIOperate.UIOperate">
+            <summary>
+            UI操作
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIOperate.GetModuleIdByRequest(System.Web.HttpRequestBase)">
+            <summary>
+            从request中取moduleId
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIOperate.GetGridHTML(System.Web.HttpRequestBase)">
+            <summary>
+            获取网格HTML
+            </summary>
+            <param name="request">请求对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIOperate.GetThemeName(System.Web.HttpRequestBase)">
+            <summary>
+            获取皮肤名称
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIOperate.GetModelJsHTML(System.Guid,System.Web.HttpRequestBase)">
+            <summary>
+            获取modeljs的HTML
+            </summary>
+            <param name="moduleId">模块id</param>
+            <param name="request">请求对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIOperate.GetModelJsHTML(Rookey.Frame.Model.Sys.Sys_Module,System.Web.HttpRequestBase)">
+            <summary>
+            获取modeljs的HTML
+            </summary>
+            <param name="module">模块</param>
+            <param name="request">请求对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIOperate.GetAccountExpiredTipHtml">
+            <summary>
+            获取账号过期提示html
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIOperate.IsJsShowFullPath(System.Web.HttpRequestBase)">
+            <summary>
+            js是否显示全路径
+            </summary>
+            <param name="request">请求对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.UIOperate.UIOperate.FormatJsPath(System.String)">
+            <summary>
+            格式化JS格式，根据修改日期添加标识
+            </summary>
+            <param name="jsPath">JS的URL路径</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,18 @@
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.BLL.XML
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.BLL.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.BLL.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.BLL\obj\Release\Rookey.Frame.BLL.csprojResolveAssemblyReference.cache
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.BLL\obj\Release\Rookey.Frame.BLL.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.BLL\obj\Release\Rookey.Frame.BLL.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.BLL.XML
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.BLL.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.BLL.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.BLL\obj\Release\Rookey.Frame.BLL.csprojResolveAssemblyReference.cache
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.BLL\obj\Release\Rookey.Frame.BLL.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.BLL\obj\Release\Rookey.Frame.BLL.pdb
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.BLL.XML
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.BLL.dll
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.BLL.pdb
+D:\rookey\git.oschina\Rookey.Frame.BLL\obj\Release\Rookey.Frame.BLL.csprojResolveAssemblyReference.cache
+D:\rookey\git.oschina\Rookey.Frame.BLL\obj\Release\Rookey.Frame.BLL.dll
+D:\rookey\git.oschina\Rookey.Frame.BLL\obj\Release\Rookey.Frame.BLL.pdb

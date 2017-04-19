@@ -1,0 +1,6 @@
+﻿@{
+    ViewBag.Title = "WebConfig";
+}
+@using Rookey.Frame.UIOperate;
+@{ UIFrameFactory frameFactory = UIFrameFactory.GetInstance(Request);}
+@Html.Raw(frameFactory.GetWebConfigHTML())

@@ -1,0 +1,851 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rookey.Frame.DALFactory</name>
+    </assembly>
+    <members>
+        <member name="T:Rookey.Frame.DALFactory.DalAbstractFactory`1">
+            <summary>
+            数据层抽象工厂
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.GetInstance(Rookey.Frame.Common.PubDefine.DatabaseType)">
+            <summary>
+            实例化工厂
+            </summary>
+            <param name="factoryType">数据工厂类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.GetAllEntities(System.Boolean,System.String)">
+            <summary>
+            获取所有实体集合
+            </summary>
+            <param name="references">是否加载导航属性</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.GetEntity(System.String@,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.List{System.String},System.Boolean,System.String)">
+            <summary>
+            获取单个实体对象
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="expression">条件表达式</param>
+            <param name="where">条件语句</param>
+            <param name="fieldNames">要查询的字段集合</param>
+            <param name="references">是否加载导航属性</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.GetEntityById(System.String@,System.Object,System.Collections.Generic.List{System.String},System.Boolean,System.String)">
+            <summary>
+            获取单个实体
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="id">记录ID</param>
+            <param name="fieldNames">要查询的字段集合</param>
+            <param name="references">是否加载导航属性</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.GetEntities(System.String@,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Boolean},System.Nullable{System.Int32},System.Collections.Generic.List{System.String},System.Boolean,System.String)">
+            <summary>
+            获取实体对象集合
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="expression">条件表达式</param>
+            <param name="where">条件语句</param>
+            <param name="orderFields">排序字段</param>
+            <param name="isDescs">是否降序</param>
+            <param name="top">取前几条</param>
+            <param name="fieldNames">要查询的字段集合</param>
+            <param name="references">是否加载导航属性</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.GetEntitiesByField(System.String@,System.String,System.Object,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Boolean},System.Nullable{System.Int32},System.Collections.Generic.List{System.String},System.Boolean,System.String)">
+            <summary>
+            获取实体集合
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="fieldName">字段名</param>
+            <param name="fieldValue">字段值</param>
+            <param name="expression">条件表达式</param>
+            <param name="where">条件语句</param>
+            <param name="orderFields">排序字段</param>
+            <param name="isDescs">排序方式</param>
+            <param name="top">取前几条</param>
+            <param name="fieldNames">要查询的字段集合</param>
+            <param name="references">是否加载导航属性</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.GetPageEntities(System.Int64@,System.String@,System.Int32,System.Int32,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.List{System.String},System.Boolean,System.String)">
+            <summary>
+            分页获取实体集合
+            </summary>
+            <param name="totalCount">总记录数</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="pageIndex">页码</param>
+            <param name="pageSize">页记录</param>
+            <param name="orderFields">排序字段</param>
+            <param name="isDescs">排序方式</param>
+            <param name="expression">条件表达式</param>
+            <param name="where">条件语句</param>
+            <param name="fieldNames">要查询的字段集合</param>
+            <param name="references">是否加载导航属性</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.Count(System.String@,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.String)">
+            <summary>
+            获取记录数
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="expression">条件表达式</param>
+            <param name="where">条件语句</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.LoadReferences(`0,System.String@,System.String)">
+            <summary>
+            加载导航属性
+            </summary>
+            <param name="instance">实体对象</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.LoadListReferences(System.Collections.Generic.List{`0},System.String@,System.String)">
+            <summary>
+            加载导航属性
+            </summary>
+            <param name="instances">实体集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.Scalar(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String@,System.String)">
+            <summary>
+            加载字段值
+            </summary>
+            <param name="field">字段表达式</param>
+            <param name="expression">条件表达式</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.AddEntity(`0,System.String@,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            新增实体
+            </summary>
+            <param name="entity">实体对象</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="references">是否保存导航属性</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.AddEntities(System.Collections.Generic.List{`0},System.String@,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            新增实体集合
+            </summary>
+            <param name="entities">实体集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="references">是否保存导航属性</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.UpdateEntity(`0,System.String@,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            更新实体
+            </summary>
+            <param name="entity">实体对象</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="references">是否保存导航属性</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.UpdateEntities(System.Collections.Generic.List{`0},System.String@,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            更新实体集合
+            </summary>
+            <param name="entities">实体集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="references">是否保存导航属性</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.UpdateEntityFields(`0,System.Collections.Generic.List{System.String},System.String@,System.String,System.Data.IDbConnection)">
+            <summary>
+            更新实体字段
+            </summary>
+            <param name="entity">实体对象</param>
+            <param name="fieldNames">字段名集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.UpdateEntityByExpression(System.Object,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String@,System.String,System.Data.IDbConnection)">
+            <summary>
+            更新记录值
+            </summary>
+            <param name="obj">要更新的匿名对象</param>
+            <param name="expression">要更新的记录的条件表达式</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.DeleteEntity(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String@,System.String,System.Data.IDbConnection)">
+            <summary>
+            删除实体
+            </summary>
+            <param name="expression">条件表达式</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.DeleteEntityById(System.Object,System.String@,System.String,System.Data.IDbConnection)">
+            <summary>
+            删除实体
+            </summary>
+            <param name="id">记录ID</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.DeleteEntityByIds(System.Collections.IEnumerable,System.String@,System.String,System.Data.IDbConnection)">
+            <summary>
+            删除实体集合
+            </summary>
+            <param name="ids">记录ID集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.GetEntitiesBySql(System.String@,System.String,System.Object[],System.String)">
+            <summary>
+            获取实体集合
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="sql">查询语句</param>
+            <param name="sqlParams">查询参数</param>
+            <param name="connString">连接字符串</param>
+            <returns>返回实体集合</returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.ExecuteQuery(System.String@,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String)">
+            <summary>
+            以SQL方式执行查询
+            </summary>
+            <param name="errorMsg">错误信息</param>
+            <param name="sql">sql语句</param>
+            <param name="sqlParams">sql参数</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.ExecuteScale(System.String@,System.String,System.Object[],System.String)">
+            <summary>
+            获取查询到的第一行第一列的数据
+            </summary>
+            <param name="errorMsg">错误信息</param>
+            <param name="sql">sql语句</param>
+            <param name="sqlParams">sql参数</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.ExecuteNonQuery(System.String@,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String,System.Data.IDbConnection)">
+            <summary>
+            执行增删改语句
+            </summary>
+            <param name="errorMsg">错误信息</param>
+            <param name="sql">sql</param>
+            <param name="sqlParams">sql参数</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.RunProcedureNoQuery(System.String@,System.Collections.Generic.Dictionary{System.String,System.Object}@,System.String,System.Object,System.String,System.Data.IDbConnection)">
+            <summary>
+            执行存储过程，针对非查询
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="outParams">输出参数</param>
+            <param name="procedureName">存储过程名</param>
+            <param name="inParams">输入参数 eg:new{Age=30}</param>
+            <param name="connString">连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns>返回受影响的行数</returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.RunProcedure(System.String@,System.Collections.Generic.Dictionary{System.String,System.Object}@,System.String,System.Object,System.String,System.Data.IDbConnection)">
+            <summary>
+            执行存储过程，针对查询
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="outParams">输出参数</param>
+            <param name="procedureName">存储过程名</param>
+            <param name="inParams">输入参数 eg:new{Age=30}</param>
+            <param name="connString">连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns>返回查询记录</returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.ExecuteTransaction(System.Collections.Generic.List{Rookey.Frame.Common.Model.TransactionModel{`0}},System.String@,System.String)">
+            <summary>
+            执行事务
+            </summary>
+            <param name="transactionObjects">事务对象集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.ExecuteTransactionExtend(System.Collections.Generic.List{Rookey.Frame.Common.Model.TransactionExtendModel},System.String@,System.String)">
+            <summary>
+            执行事务
+            </summary>
+            <param name="transactionObjects">事务扩展对象集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.TransactionHandle(Rookey.Frame.Common.Model.TransactionTask,System.String@,System.String)">
+            <summary>
+            执行事务
+            </summary>
+            <param name="transTask">事务处理函数</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.CreateTable(System.String)">
+            <summary>
+            创建数据表
+            </summary>
+            <param name="connString">数据库连接字符串</param>
+            <returns>创建成功返回空字符串，失败返回异常信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.DropTable(System.String)">
+            <summary>
+            删除数据表
+            </summary>
+            <param name="connString">数据库连接字符串</param>
+            <returns>删除成功返回空字符串，失败返回异常信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.AlterTable(System.String,System.String)">
+            <summary>
+            修改数据表
+            </summary>
+            <param name="command">操作sql，如：[ALTER TABLE a] ADD Column b int</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns>成功返回空字符串，失败返回异常信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.ColumnIsExists(System.String,System.String)">
+            <summary>
+            数据列是否存在
+            </summary>
+            <param name="fieldName">字段名称</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.AddColumn(System.String,System.String)">
+            <summary>
+            增加数据列
+            </summary>
+            <param name="fieldName">字段名称</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns>成功返回空字符串，失败返回异常信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.AlterColumn(System.String,System.String)">
+            <summary>
+            修改数据列
+            </summary>
+            <param name="fieldName">字段名称</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns>成功返回空字符串，失败返回异常信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.ChangeColumnName(System.String,System.String,System.String)">
+            <summary>
+            修改列名
+            </summary>
+            <param name="fieldName">字段名称</param>
+            <param name="oldFieldName">旧的字段名</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns>成功返回空字符串，失败返回异常信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.DropColumn(System.String,System.String)">
+            <summary>
+            删除列
+            </summary>
+            <param name="columnName">列名</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.CreateIndex(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.String,System.Boolean,System.String)">
+            <summary>
+            创建索引
+            </summary>
+            <param name="field">字段</param>
+            <param name="indexName">索引名</param>
+            <param name="unique">是否唯一索引</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns>成功返回空字符串，失败返回异常信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.DropIndex(System.String,System.String)">
+            <summary>
+            删除索引
+            </summary>
+            <param name="indexName">索引名称</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.DalAbstractFactory`1.ExpressionConditionToWhereSql(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            将lamda条件表达式转换成sql
+            </summary>
+            <param name="expression">条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="P:Rookey.Frame.DALFactory.DalAbstractFactory`1.ReadConnectionString">
+            <summary>
+            读数据库连接串
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.DALFactory.DalAbstractFactory`1.WriteConnectionString">
+            <summary>
+            写数据库连接串
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.DALFactory.OrmLiteDalFactory`1">
+            <summary>
+            OrmLite映射工厂类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:Rookey.Frame.DALFactory.OrmLiteDalFactory`1._dialectProvider">
+            <summary>
+            orm Provider
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.defaultSortField">
+            <summary>
+            默认排序字段
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.modelConnStringWriteDic">
+            <summary>
+            模块写连接字符串，线程安全
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.modelConnStringReadDic">
+            <summary>
+            模块读连接字符串，线程安全
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.GetModelConfigConnString(System.Boolean,System.Type)">
+            <summary>
+            获取模块配置的连接字符串
+            </summary>
+            <param name="read">是否读</param>
+            <param name="modelType">指定实体类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.GetConnString(System.String,System.Boolean,System.Type)">
+            <summary>
+            获取连接字符串
+            </summary>
+            <param name="connString">数据库连接字符串</param>
+            <param name="read">是否读</param>
+            <param name="modelType">指定实体类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.GetAllEntities(System.Boolean,System.String)">
+            <summary>
+            获取所有实体集合
+            </summary>
+            <param name="references">是否加载导航属性</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.GetEntity(System.String@,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.List{System.String},System.Boolean,System.String)">
+            <summary>
+            获取实体
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="expression">条件表达式</param>
+            <param name="where">条件语句</param>
+            <param name="fieldNames">要查询的字段集合</param>
+            <param name="references">是否加载导航属性</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.GetEntityById(System.String@,System.Object,System.Collections.Generic.List{System.String},System.Boolean,System.String)">
+            <summary>
+            获取实体
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="id">记录ID</param>
+            <param name="fieldNames">要查询的字段集合</param>
+            <param name="references">是否加载导航属性</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.GetEntities(System.String@,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Boolean},System.Nullable{System.Int32},System.Collections.Generic.List{System.String},System.Boolean,System.String)">
+            <summary>
+            获取实体集合
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="expression">条件表达式</param>
+            <param name="where">条件语句</param>
+            <param name="orderFields">排序字段</param>
+            <param name="isDescs">排序方式</param>
+            <param name="top">取前几条</param>
+            <param name="fieldNames">要查询的字段集合</param>
+            <param name="references">是否加载导航属性</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.GetEntitiesByField(System.String@,System.String,System.Object,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Boolean},System.Nullable{System.Int32},System.Collections.Generic.List{System.String},System.Boolean,System.String)">
+            <summary>
+            获取实体集合
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="fieldName">字段名</param>
+            <param name="fieldValue">字段值</param>
+            <param name="expression">条件表达式</param>
+            <param name="where">条件语句</param>
+            <param name="orderFields">排序字段</param>
+            <param name="isDescs">排序方式</param>
+            <param name="top">取前几条</param>
+            <param name="fieldNames">要查询的字段集合</param>
+            <param name="references">是否加载导航属性</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.GetPageEntities(System.Int64@,System.String@,System.Int32,System.Int32,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.List{System.String},System.Boolean,System.String)">
+            <summary>
+            分页获取实体集合
+            </summary>
+            <param name="totalCount">总记录数</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="pageIndex">页码</param>
+            <param name="pageSize">页记录</param>
+            <param name="orderFields">排序字段</param>
+            <param name="isDescs">排序方式</param>
+            <param name="expression">条件表达式</param>
+            <param name="where">条件语句</param>
+            <param name="fieldNames">要查询的字段集合</param>
+            <param name="references">是否加载导航属性</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.Count(System.String@,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.String)">
+            <summary>
+            获取记录数
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="expression">条件表达式</param>
+            <param name="where">条件语句</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.LoadReferences(`0,System.String@,System.String)">
+            <summary>
+            加载导航属性
+            </summary>
+            <param name="instance">实体对象</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.LoadListReferences(System.Collections.Generic.List{`0},System.String@,System.String)">
+            <summary>
+            加载导航属性
+            </summary>
+            <param name="instances">实体集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.Scalar(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String@,System.String)">
+            <summary>
+            加载字段值
+            </summary>
+            <param name="field">字段表达式</param>
+            <param name="expression">条件表达式</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.AddEntity(`0,System.String@,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            新增实体
+            </summary>
+            <param name="entity">实体对象</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="references">是否保存导航属性</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.AddEntities(System.Collections.Generic.List{`0},System.String@,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            新增实体集合
+            </summary>
+            <param name="entities">实体集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="references">是否保存导航属性</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.UpdateEntity(`0,System.String@,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            更新实体
+            </summary>
+            <param name="entity">实体对象</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="references">是否保存导航属性</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.UpdateEntities(System.Collections.Generic.List{`0},System.String@,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            更新实体集合
+            </summary>
+            <param name="entities">实体集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="references">是否保存导航属性</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.UpdateEntityFields(`0,System.Collections.Generic.List{System.String},System.String@,System.String,System.Data.IDbConnection)">
+            <summary>
+            更新实体字段
+            </summary>
+            <param name="entity">实体对象</param>
+            <param name="fieldNames">字段名集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.UpdateEntityByExpression(System.Object,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String@,System.String,System.Data.IDbConnection)">
+            <summary>
+            更新记录值
+            </summary>
+            <param name="obj">要更新的匿名对象</param>
+            <param name="expression">要更新的记录的条件表达式</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.DeleteEntity(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String@,System.String,System.Data.IDbConnection)">
+            <summary>
+            删除实体
+            </summary>
+            <param name="expression">条件表达式</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.DeleteEntityById(System.Object,System.String@,System.String,System.Data.IDbConnection)">
+            <summary>
+            删除实体
+            </summary>
+            <param name="id">记录ID</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.DeleteEntityByIds(System.Collections.IEnumerable,System.String@,System.String,System.Data.IDbConnection)">
+            <summary>
+            删除实体集合
+            </summary>
+            <param name="ids">记录ID集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.GetEntitiesBySql(System.String@,System.String,System.Object[],System.String)">
+            <summary>
+            获取实体集合
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="sql">查询语句</param>
+            <param name="sqlParams">查询参数</param>
+            <param name="connString">连接字符串</param>
+            <returns>返回实体集合</returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.ExecuteQuery(System.String@,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String)">
+            <summary>
+            以SQL方式执行查询
+            </summary>
+            <param name="errorMsg">错误信息</param>
+            <param name="sql">sql语句</param>
+            <param name="sqlParams">sql参数</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.ExecuteScale(System.String@,System.String,System.Object[],System.String)">
+            <summary>
+            获取查询到的第一行第一列的数据
+            </summary>
+            <param name="errorMsg">错误信息</param>
+            <param name="sql">sql语句</param>
+            <param name="sqlParams">sql参数</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.ExecuteNonQuery(System.String@,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String,System.Data.IDbConnection)">
+            <summary>
+            执行增删改语句
+            </summary>
+            <param name="errorMsg">错误信息</param>
+            <param name="sql">sql</param>
+            <param name="sqlParams">sql参数</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.RunProcedureNoQuery(System.String@,System.Collections.Generic.Dictionary{System.String,System.Object}@,System.String,System.Object,System.String,System.Data.IDbConnection)">
+            <summary>
+            执行存储过程，针对非查询
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="outParams">输出参数</param>
+            <param name="procedureName">存储过程名</param>
+            <param name="inParams">输入参数 eg:new{Age=30}</param>
+            <param name="connString">连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns>返回受影响的行数</returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.RunProcedure(System.String@,System.Collections.Generic.Dictionary{System.String,System.Object}@,System.String,System.Object,System.String,System.Data.IDbConnection)">
+            <summary>
+            执行存储过程，针对查询
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="outParams">输出参数</param>
+            <param name="procedureName">存储过程名</param>
+            <param name="inParams">输入参数 eg:new{Age=30}</param>
+            <param name="connString">连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns>返回查询记录</returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.ExecuteTransaction(System.Collections.Generic.List{Rookey.Frame.Common.Model.TransactionModel{`0}},System.String@,System.String)">
+            <summary>
+            执行事务
+            </summary>
+            <param name="transactionObjects">事务对象集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.ExecuteTransactionExtend(System.Collections.Generic.List{Rookey.Frame.Common.Model.TransactionExtendModel},System.String@,System.String)">
+            <summary>
+            执行事务
+            </summary>
+            <param name="transactionObjects">事务扩展对象集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.TransactionHandle(Rookey.Frame.Common.Model.TransactionTask,System.String@,System.String)">
+            <summary>
+            执行事务
+            </summary>
+            <param name="transTask">事务处理函数</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.CreateTable(System.String)">
+            <summary>
+            创建数据表
+            </summary>
+            <param name="connString">数据库连接字符串</param>
+            <returns>创建成功返回空字符串，失败返回异常信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.DropTable(System.String)">
+            <summary>
+            删除数据表
+            </summary>
+            <param name="connString">数据库连接字符串</param>
+            <returns>删除成功返回空字符串，失败返回异常信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.AlterTable(System.String,System.String)">
+            <summary>
+            修改数据表
+            </summary>
+            <param name="command">操作sql，如：[ALTER TABLE a] ADD Column b int</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns>成功返回空字符串，失败返回异常信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.ColumnIsExists(System.String,System.String)">
+            <summary>
+            数据列是否存在
+            </summary>
+            <param name="fieldName">字段名称</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.AddColumn(System.String,System.String)">
+            <summary>
+            增加数据列
+            </summary>
+            <param name="fieldName">字段名称</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns>成功返回空字符串，失败返回异常信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.AlterColumn(System.String,System.String)">
+            <summary>
+            修改数据列
+            </summary>
+            <param name="fieldName">字段名称</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns>成功返回空字符串，失败返回异常信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.ChangeColumnName(System.String,System.String,System.String)">
+            <summary>
+            修改列名
+            </summary>
+            <param name="fieldName">字段名称</param>
+            <param name="oldFieldName">旧的字段名</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns>成功返回空字符串，失败返回异常信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.DropColumn(System.String,System.String)">
+            <summary>
+            删除列
+            </summary>
+            <param name="columnName">列名</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.CreateIndex(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.String,System.Boolean,System.String)">
+            <summary>
+            创建索引
+            </summary>
+            <param name="field">字段</param>
+            <param name="indexName">索引名</param>
+            <param name="unique">是否唯一索引</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns>成功返回空字符串，失败返回异常信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.DropIndex(System.String,System.String)">
+            <summary>
+            删除索引
+            </summary>
+            <param name="indexName">索引名称</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DALFactory.OrmLiteDalFactory`1.ExpressionConditionToWhereSql(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            将lamda条件表达式转换成sql
+            </summary>
+            <param name="expression">条件表达式</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

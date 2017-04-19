@@ -1,0 +1,18 @@
+﻿@using Rookey.Frame.Common;
+@{
+    ViewBag.Title = "FlowCanvas";
+    string r = WebHelper.GetJsModifyTimeStr("/Scripts/Bpm/FlowCanvas.js");
+}
+@section styles{
+    <link href="~/Scripts/Bpm/GooFlow/default.css" rel="stylesheet" type="text/css" />
+    <link href="~/Scripts/Bpm/GooFlow/GooFlow2.css" rel="stylesheet" type="text/css" />
+}
+@section scripts
+{
+    <script type="text/javascript" src="~/Scripts/Bpm/GooFlow/GooFunc.js"></script>
+    <script type="text/javascript" src="~/Scripts/Bpm/GooFlow/GooFlow.js"></script>
+    <script type="text/javascript" src="@Url.Content(string.Format("~/Scripts/Bpm/FlowCanvas.js?r={0}",r))"></script>
+}
+@using Rookey.Frame.UIOperate;
+@{ UIFrameFactory frameFactory = UIFrameFactory.GetInstance(Request);}
+@Html.Raw(frameFactory.GetFlowCanvasHTML())

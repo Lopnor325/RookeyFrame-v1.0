@@ -1,0 +1,18 @@
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.DALFactory.XML
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.DALFactory.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.DALFactory.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.DALFactory\obj\Release\Rookey.Frame.DALFactory.csprojResolveAssemblyReference.cache
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.DALFactory\obj\Release\Rookey.Frame.DALFactory.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.DALFactory\obj\Release\Rookey.Frame.DALFactory.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.DALFactory.XML
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.DALFactory.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.DALFactory.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.DALFactory\obj\Release\Rookey.Frame.DALFactory.csprojResolveAssemblyReference.cache
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.DALFactory\obj\Release\Rookey.Frame.DALFactory.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.DALFactory\obj\Release\Rookey.Frame.DALFactory.pdb
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.DALFactory.XML
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.DALFactory.dll
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.DALFactory.pdb
+D:\rookey\git.oschina\Rookey.Frame.DALFactory\obj\Release\Rookey.Frame.DALFactory.csprojResolveAssemblyReference.cache
+D:\rookey\git.oschina\Rookey.Frame.DALFactory\obj\Release\Rookey.Frame.DALFactory.dll
+D:\rookey\git.oschina\Rookey.Frame.DALFactory\obj\Release\Rookey.Frame.DALFactory.pdb

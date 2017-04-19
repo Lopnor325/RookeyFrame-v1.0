@@ -1,0 +1,444 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rookey.Frame.Base</name>
+    </assembly>
+    <members>
+        <member name="T:Rookey.Frame.Base.GlobalConst">
+            <summary>
+            全局常量
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Base.GlobalConst.DATA_CONTROLLER_NAME">
+            <summary>
+            通用数据处理控制器名
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Base.GlobalConst.ASYNC_DATA_CONTROLLER_NAME">
+            <summary>
+            异步通用数据处理控制器名
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Base.GlobalConst.STSTEM_CONTROLLER_NAME">
+            <summary>
+            系统处理控制器名
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Base.GlobalConst.ASYNC_STSTEM_CONTROLLER_NAME">
+            <summary>
+            异步系统处理控制器名
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Base.GlobalConst.ANNEX_CONTROLLER_NAME">
+            <summary>
+            附件处理控制器名
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Base.GlobalConst.ASYNC_ANNEX_CONTROLLER_NAME">
+            <summary>
+            异步附件处理控制器名
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Base.GlobalConst.USER_CONTROLLER_NAME">
+            <summary>
+            用户处理控制器名
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Base.GlobalConst.ASYNC_USER_CONTROLLER_NAME">
+            <summary>
+            异步用户处理控制器名
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Base.UserExtendEventHandler">
+            <summary>
+            用户扩展事件处理
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Base.UserExtendEventHandler.GetUserExtendInfo(Rookey.Frame.Base.UserInfo)">
+            <summary>
+            获取用户扩展对象
+            </summary>
+            <param name="userInfo">用户信息</param>
+            <returns></returns>
+        </member>
+        <member name="E:Rookey.Frame.Base.UserExtendEventHandler.BindUserExtendEvent">
+            <summary>
+            绑定用户扩展事件
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Base.UserExtendEventHandler.EventUserExtend">
+            <summary>
+            用户扩展代理
+            </summary>
+            <param name="o"></param>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Base.EventUserArgs">
+            <summary>
+            用户登录事件参数
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Base.EventUserArgs.#ctor(Rookey.Frame.Base.UserInfo)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="currUser"></param>
+        </member>
+        <member name="P:Rookey.Frame.Base.EventUserArgs.CurrUser">
+            <summary>
+            当前用户
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Base.FormsPrincipal">
+            <summary>
+            表单认证
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Base.FormsPrincipal.#ctor(System.Web.Security.FormsAuthenticationTicket,Rookey.Frame.Base.UserInfo)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="ticket"></param>
+            <param name="userData"></param>
+        </member>
+        <member name="M:Rookey.Frame.Base.FormsPrincipal.IsInRole(System.String)">
+            <summary>
+            角色判断
+            </summary>
+            <param name="role"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Base.FormsPrincipal.Login(System.String,Rookey.Frame.Base.UserInfo,System.Int32,System.Web.HttpContext)">
+            <summary>
+            执行用户登录操作
+            </summary>
+            <param name="loginName">登录名</param>
+            <param name="userData">与登录名相关的用户信息</param>
+            <param name="expiration">登录Cookie的过期时间，单位：分钟。</param>
+            <param name="currContext">当前context</param>
+        </member>
+        <member name="M:Rookey.Frame.Base.FormsPrincipal.Logout(System.Web.HttpResponseBase,System.Web.HttpSessionStateBase)">
+            <summary>
+            安全退出系统
+            </summary>
+            <param name="response">响应对象</param>
+            <param name="session">session对象</param>
+        </member>
+        <member name="M:Rookey.Frame.Base.FormsPrincipal.TrySetUserInfo(System.Web.HttpContext)">
+            <summary>
+            根据HttpContext对象设置用户标识对象
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="P:Rookey.Frame.Base.FormsPrincipal.UserData">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.FormsPrincipal.Identity">
+            <summary>
+            身份标识
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Base.Set.UserNameAndEmpConfigRule">
+            <summary>
+            员工用户名默认配置规则
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Base.Set.UserNameAndEmpConfigRule.EmpCode">
+            <summary>
+            以工号默认为用户名
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Base.Set.UserNameAndEmpConfigRule.EmailPre">
+            <summary>
+            以邮箱前缀默认为用户名
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Base.Set.UserNameAndEmpConfigRule.Email">
+            <summary>
+            以邮箱默认为用户名
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Base.Set.UserNameAndEmpConfigRule.Mobile">
+            <summary>
+            以手机号默认为用户名
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Base.Set.GlobalSet">
+            <summary>
+            全局设置
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.Set.GlobalSet.EmpUserNameConfigRule">
+            <summary>
+            员工用户名默认配置规则
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.Set.GlobalSet.IsAllowOtherConfigRuleLogin">
+            <summary>
+            是否允许除当前配置规则以外的其他方式登录系统
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.Set.GlobalSet.ExportDataPagingSize">
+            <summary>
+            导出数据分页大小，默认500
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.Set.GlobalSet.IsShowStyleBtn">
+            <summary>
+            是否显示样式按钮
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.Set.GlobalSet.IsStartLoadCache">
+            <summary>
+            启动程序时是否加载所有缓存数据
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.Set.GlobalSet.IsHorizontalMenu">
+            <summary>
+            是否为横向菜单
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.Set.GlobalSet.IsEnabledPageCache">
+            <summary>
+            是否启用页面缓存
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.Set.GlobalSet.IsAllowAttachModule">
+            <summary>
+            列表是否允许加载明细、附属模块
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.Set.GlobalSet.IsDefaultSimpleSearch">
+            <summary>
+            默认显示简单搜索模式
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.Set.GlobalSet.SmtpServer">
+            <summary>
+            Smtp服务器
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.Set.GlobalSet.SmtpPort">
+            <summary>
+            Smtp端口号
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.Set.GlobalSet.SysEmail">
+            <summary>
+            系统邮箱账号
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.Set.GlobalSet.SysEmailPwd">
+            <summary>
+            系统邮箱密码
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.Set.GlobalSet.SysEmailDes">
+            <summary>
+            系统邮箱账号描述
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Base.UserExtendBase">
+            <summary>
+            用户扩展基类
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.UserExtendBase.RoleIds">
+            <summary>
+            角色ID集合
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.UserExtendBase.RoleNames">
+            <summary>
+            角色名称集合
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Base.User.EmpExtendInfo">
+            <summary>
+            员工扩展信息类
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.User.EmpExtendInfo.CompanyId">
+            <summary>
+            公司ID
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.User.EmpExtendInfo.DeptId">
+            <summary>
+            主职部门ID
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.User.EmpExtendInfo.DeptName">
+            <summary>
+            主职部门
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.User.EmpExtendInfo.DutyId">
+            <summary>
+            主职职务ID
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.User.EmpExtendInfo.DutyName">
+            <summary>
+            主职职务
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.User.EmpExtendInfo.PartimeDeptIds">
+            <summary>
+            兼职部门ID集合
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.User.EmpExtendInfo.PartimeDeptNames">
+            <summary>
+            兼职部门集合
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.User.EmpExtendInfo.PartimePositionIds">
+            <summary>
+            兼职岗位ID集合
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.User.EmpExtendInfo.PartimePositionNames">
+            <summary>
+            兼职岗位集合
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Base.User.UserExtendInfo">
+            <summary>
+            用户扩展对象
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.User.UserExtendInfo.EmpExtend">
+            <summary>
+            员工扩展信息
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Base.UserInfo">
+            <summary>
+            用户类
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Base.UserInfo.ACCOUNT_EXPIRATION_TIME">
+            <summary>
+            账号过期时间（分钟）
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Base.UserInfo.locker">
+            <summary>
+            互斥锁
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Base.UserInfo.GetCurretnUser(System.Web.HttpContext)">
+            <summary>
+            获取当前用户
+            </summary>
+            <param name="context">上下文对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Base.UserInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Base.UserInfo.GetUserAliasName(Rookey.Frame.Base.UserInfo)">
+            <summary>
+            获取当前用户别名
+            </summary>
+            <param name="currUser">当前用户</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Base.UserInfo.IsSuperAdmin(Rookey.Frame.Base.UserInfo)">
+            <summary>
+            当前用户是否为超级管理员
+            </summary>
+            <param name="currUser">当前用户</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Base.UserInfo.CacheUserExtendInfo(System.String,Rookey.Frame.Base.UserExtendBase)">
+            <summary>
+            缓存用户扩展信息
+            </summary>
+            <param name="username">用户名</param>
+            <param name="extend">用户扩展信息</param>
+        </member>
+        <member name="M:Rookey.Frame.Base.UserInfo.GetUserExtendCache(System.String)">
+            <summary>
+            获取用户扩展信息
+            </summary>
+            <param name="username">用户名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Base.UserInfo.RemoveExtendCache(System.String)">
+            <summary>
+            移除用户扩展缓存
+            </summary>
+            <param name="username">用户名</param>
+        </member>
+        <member name="M:Rookey.Frame.Base.UserInfo.GetCurrEmpExtendInfo(Rookey.Frame.Base.UserInfo,System.Nullable{System.Guid})">
+            <summary>
+            获取当前用户扩展信息
+            </summary>
+            <param name="currUser">用户信息</param>
+            <param name="companyId">公司ID</param>
+            <returns></returns>
+        </member>
+        <member name="P:Rookey.Frame.Base.UserInfo.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.UserInfo.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.UserInfo.AliasName">
+            <summary>
+            用户别名
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.UserInfo.OrganizationId">
+            <summary>
+            所属组织
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.UserInfo.ClientIP">
+            <summary>
+            客户端IP
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.UserInfo.EmpId">
+            <summary>
+            员工ID
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.UserInfo.EmpName">
+            <summary>
+            员工姓名
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.UserInfo.EmpCode">
+            <summary>
+            员工编号
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.UserInfo.ExtendUserObject">
+            <summary>
+            扩展用户对象
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.UserInfo.ClientBrowserWidth">
+            <summary>
+            客户端浏览器可见区域宽
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Base.UserInfo.ClientBrowserHeight">
+            <summary>
+            客户端浏览器可见区域高
+            </summary>
+        </member>
+    </members>
+</doc>

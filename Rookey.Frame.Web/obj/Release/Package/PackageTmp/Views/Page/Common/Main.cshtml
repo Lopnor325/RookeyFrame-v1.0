@@ -1,0 +1,7 @@
+﻿@{
+    ViewBag.Title = Rookey.Frame.Common.WebConfigHelper.GetCurrWebName();
+    Layout = "~/Views/Shared/_IndexLayout.cshtml";
+}
+@using Rookey.Frame.UIOperate;
+@{ UIFrameFactory frameFactory = UIFrameFactory.GetInstance(Request);}
+@Html.Raw(frameFactory.GetMainPageHTML())

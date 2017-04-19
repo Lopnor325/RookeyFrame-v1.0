@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "AddCommonBtn";
+}
+@section scripts{
+    <script type="text/javascript">
+        function GetData() {
+            moduleId = $('#moduleId').combobox('getValue');
+            var selectItems = '';
+            $('input[name=btnChk]').each(function (i, item) {
+                if ($(item).attr('checked') == 'checked') {
+                    var val = $(item).val();
+                    if (selectItems.length > 0) selectItems += ',';
+                    selectItems += val;
+                }
+            });
+            return { moduleId: moduleId, selectItems: selectItems };
+        }
+    </script>
+}
+@using Rookey.Frame.Common;
+@using Rookey.Frame.UIOperate;
+@{ UIFrameFactory frameFactory = UIFrameFactory.GetInstance(Request);
+   Guid moduleId = UIOperate.GetModuleIdByRequest(Request);}
+@Html.Raw(frameFactory.GetAddCommonBtnHTML(moduleId))

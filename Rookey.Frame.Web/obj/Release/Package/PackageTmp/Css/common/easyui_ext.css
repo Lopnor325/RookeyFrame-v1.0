@@ -1,0 +1,9 @@
+﻿[class^="icon-"],
+[class*=" icon-"] {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 10px;
+    top: 50%;
+    margin-top: -5px;
+}

@@ -1,0 +1,15 @@
+﻿@using Rookey.Frame.Common;
+@using Rookey.Frame.UIOperate;
+@{ UIFrameFactory frameFactory = UIFrameFactory.GetInstance(Request);
+   Guid moduleId = UIOperate.GetModuleIdByRequest(Request);
+   Guid id = Request["id"].ObjToGuid();
+   string gridId = Request["gridId"].ObjToStr(); //网格行内展开查看表单的主网格domId
+   string ff = Request["ff"].ObjToStr(); //从表单页面点击查看标识
+   bool isRecycle = Request["recycle"].ObjToInt() == 1; //是否从回收站加载
+   bool showTip = Request["tip"].ObjToInt() == 1;
+   Guid? formId = Request["formId"].ObjToGuidNull(); //表单ID
+}
+@{
+    ViewBag.Title = "ViewForm";
+}
+@Html.Raw(frameFactory.GetViewFormHTML(moduleId, id, gridId, ff, isRecycle, showTip, null, Request))

@@ -1,0 +1,37 @@
+﻿@using Rookey.Frame.UIOperate;
+@using Rookey.Frame.Common;
+@{
+    string themeName = UIOperate.GetThemeName(Request);
+    bool isShowFullPath = UIOperate.IsJsShowFullPath(Request);
+    string domainPath = isShowFullPath ? Globals.GetBaseUrl() : "~/";
+}
+<link class="easyuiTheme" type="text/css" rel="Stylesheet" href="@Url.Content(string.Format("{0}Scripts/jquery-easyui/themes/{1}/easyui.css", domainPath, themeName))" />
+<link class="easyuiExtTheme" type="text/css" rel="Stylesheet" href="@Url.Content(string.Format("{0}Scripts/jquery-easyui/themes/{1}/easyui-ext.css", domainPath, themeName))" />
+<link type="text/css" rel="Stylesheet" href="@Url.Content(string.Format("{0}Scripts/jquery-easyui/themes/icon.css", domainPath))" />
+<link type="text/css" rel="Stylesheet" href="@Url.Content(string.Format("{0}Scripts/jquery-easyui/themes/color.css", domainPath))" />
+<link type="text/css" rel="Stylesheet" href="@Url.Content(string.Format("{0}Scripts/jquery-plug/jquery.autocomplete.css", domainPath))" />
+<link type="text/css" rel="Stylesheet" href="@Url.Content(string.Format("{0}Css/global.css", domainPath))" />
+<link type="text/css" rel="Stylesheet" href="@Url.Content(string.Format("{0}Css/icon.css", domainPath))" />
+<link type="text/css" rel="Stylesheet" href="@Url.Content(string.Format("{0}Css/font-awesome/css/font-awesome.min.css", domainPath))" />
+<link type="text/css" rel="Stylesheet" href="@Url.Content(string.Format("{0}Css/common/easyui_ext.css", domainPath))" />
+<link type="text/css" rel="Stylesheet" href="@Url.Content(string.Format("{0}Css/common/print.css", domainPath))" media="print" />
+<style type="text/css">
+    /*-------datagrid网格换行显示--------*/
+    /*.datagrid-header-row td span:first-child {
+        word-break:normal;width:auto;display:block;white-space:pre-wrap;word-wrap:break-word;overflow:hidden;
+    }*/
+    /*-------datagrid网格超出宽度时显示省略号-----------*/
+    .datagrid-cell, .datagrid-cell-group, .datagrid-header-rownumber, .datagrid-cell-rownumber {
+        text-overflow: ellipsis;
+    }
+    /*::-webkit-scrollbar-track{border-radius: 10px;-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);}
+    ::-webkit-scrollbar-thumb{background-color: rgba(0,0,0,0.05);border-radius: 10px;-webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1);}
+    ::-webkit-scrollbar-thumb{background-color: rgba(0,0,0,0.2);border-radius: 10px;-webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1);}
+    ::-webkit-scrollbar{width: 16px;height: 16px;}
+    ::-webkit-scrollbar-track,
+    ::-webkit-scrollbar-thumb{border-radius: 999px;border: 5px solid transparent;}
+    ::-webkit-scrollbar-track{box-shadow: 1px 1px 5px rgba(0,0,0,.2) inset;}
+    ::-webkit-scrollbar-thumb{min-height: 20px;background-clip: content-box;box-shadow: 0 0 0 5px rgba(0,0,0,.2) inset;}
+    ::-webkit-scrollbar-corner{background: transparent;}*/
+</style>
+

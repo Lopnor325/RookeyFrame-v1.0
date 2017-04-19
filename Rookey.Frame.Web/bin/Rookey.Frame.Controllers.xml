@@ -1,0 +1,2525 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rookey.Frame.Controllers</name>
+    </assembly>
+    <members>
+        <member name="T:Rookey.Frame.Controllers.AppConfig.FilterConfig">
+            <summary>
+            过滤配置
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AppConfig.FilterConfig.RegisterGlobalFilters(System.Web.Mvc.GlobalFilterCollection)">
+            <summary>
+            全局过滤配置
+            </summary>
+            <param name="filters"></param>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.AppConfig.MvcApplication">
+            <summary>
+            MVC应用程序类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AppConfig.MvcApplication.Application_Start">
+            <summary>
+            应用程序启动
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AppConfig.MvcApplication.Application_End(System.Object,System.EventArgs)">
+            <summary>
+            应用程序结束
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AppConfig.MvcApplication.Application_BeginRequest(System.Object,System.EventArgs)">
+            <summary>
+            应用程序请求开始
+            </summary>
+            <param name="sender">发送对象</param>
+            <param name="e">事件参数</param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AppConfig.MvcApplication.Application_EndRequest">
+            <summary>
+            应用程序结束请求
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AppConfig.MvcApplication.Application_AuthenticateRequest(System.Object,System.EventArgs)">
+            <summary>
+            应用程序认证请求
+            </summary>
+            <param name="sender">发送对象</param>
+            <param name="e">事件参数</param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AppConfig.MvcApplication.ConfigureFluentValidation">
+            <summary>
+            FluentValidation验证设置
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AppConfig.MvcApplication.RegisterView">
+            <summary>
+            注册视图访问规则
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.AppConfig.MyViewEngine">
+            <summary>
+            自定义视图引擎类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AppConfig.MyViewEngine.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AppConfig.MyViewEngine.FindView(System.Web.Mvc.ControllerContext,System.String,System.String,System.Boolean)">
+            <summary>
+            查找视图
+            </summary>
+            <param name="controllerContext">控制器上下文</param>
+            <param name="viewName">视图名</param>
+            <param name="masterName"></param>
+            <param name="useCache"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.AppConfig.RouteConfig">
+            <summary>
+            路由配置
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AppConfig.RouteConfig.RegisterRoutes(System.Web.Routing.RouteCollection)">
+            <summary>
+            注册路由
+            </summary>
+            <param name="routes">路由集合</param>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.AppConfig.WebApiConfig">
+            <summary>
+            WebApi配置
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AppConfig.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            注册路由
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.Attr.AnonymousAttribute">
+            <summary>
+            匿名访问标记
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.Attr.ApiFilterAttribute">
+            <summary>
+            webapi过滤特性
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Attr.ApiFilterAttribute.OnActionExecuting(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            执行action前
+            </summary>
+            <param name="actionContext"></param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Attr.ApiFilterAttribute.CheckAnonymous(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            [Anonymous标记]验证是否匿名访问
+            </summary>
+            <param name="actionContext"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Attr.ApiFilterAttribute.CheckLoginAllowView(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            [LoginAllowView标记]验证是否登录就可以访问(如果已经登陆,那么不对于标识了LoginAllowView的方法就不需要验证了)
+            </summary>
+            <param name="actionContext"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Attr.ApiFilterAttribute.AuthorizeCore(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            //权限判断业务逻辑
+            </summary>
+            <param name="actionContext"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Attr.ApiFilterAttribute.OnActionExecuted(System.Web.Http.Filters.HttpActionExecutedContext)">
+            <summary>
+            执行action后
+            </summary>
+            <param name="actionExecutedContext"></param>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.Attr.CrossOriginAttribute">
+            <summary>
+            跨域属性类
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Controllers.Attr.CrossOriginAttribute.AccessControlAllowOrigin">
+            <summary>
+            Access-Control-Allow-Origin是HTML5中定义的一种服务器端返回Response header，用来解决资源（比如字体）的跨域权限问题。
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Attr.CrossOriginAttribute.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Attr.CrossOriginAttribute.OnActionExecuted(System.Web.Http.Filters.HttpActionExecutedContext)">
+            <summary>
+            该方法允许api支持跨域调用
+            </summary>
+            <param name="actionExecutedContext"> 初始化 System.Web.Http.Filters.HttpActionExecutedContext 类的新实例。</param>
+        </member>
+        <member name="P:Rookey.Frame.Controllers.Attr.CrossOriginAttribute.OriginHeaderdefault">
+            <summary>
+            OriginHeaderdefault的值可以使 URL 或 *，如果是 URL 则只会允许来自该 URL 的请求，* 则允许任何域的请求
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.Attr.ExceptionAttribute">
+            <summary>
+            异常处理特性
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Attr.ExceptionAttribute.OnException(System.Web.Mvc.ExceptionContext)">
+            <summary>
+            触发异常时调用的方法
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.Attr.LoginAllowViewAttribute">
+            <summary>
+            代表该方法可以允许登录用户都能访问
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.Attr.LoginAttribute">
+            <summary>
+            登录属性，记录登录信息
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Controllers.Attr.LoginAttribute.loginLog">
+            <summary>
+            定义对象
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Attr.LoginAttribute.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)">
+            <summary>
+            登录前
+            </summary>
+            <param name="filterContext">过滤上下文</param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Attr.LoginAttribute.OnResultExecuted(System.Web.Mvc.ResultExecutedContext)">
+            <summary>
+            登录后
+            </summary>
+            <param name="resultContext">结果上下文</param>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.Attr.OpTimeMonitorAttribute">
+            <summary>
+            操作时间监控属性
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Attr.OpTimeMonitorAttribute.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)">
+            <summary>
+            操作执行前
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Attr.OpTimeMonitorAttribute.OnResultExecuted(System.Web.Mvc.ResultExecutedContext)">
+            <summary>
+            操作执行后
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.Attr.PermissionFilterAttribute">
+            <summary>
+            权限拦截
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Attr.PermissionFilterAttribute.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)">
+            <summary>
+            权限拦截
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Attr.PermissionFilterAttribute.CheckAnonymous(System.Web.Mvc.ActionExecutingContext)">
+            <summary>
+            [Anonymous标记]验证是否匿名访问
+            </summary>
+            <param name="filterContext"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Attr.PermissionFilterAttribute.CheckLoginAllowView(System.Web.Mvc.ActionExecutingContext)">
+            <summary>
+            [LoginAllowView标记]验证是否登录就可以访问(如果已经登陆,那么不对于标识了LoginAllowView的方法就不需要验证了)
+            </summary>
+            <param name="filterContext"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Attr.PermissionFilterAttribute.AuthorizeCore(System.Web.Mvc.ActionExecutingContext)">
+            <summary>
+            //权限判断业务逻辑
+            </summary>
+            <param name="filterContext"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.AutoHandle.SysApplicationHandle">
+            <summary>
+            系统应用程序处理类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AutoHandle.SysApplicationHandle.Application_Start(System.Web.HttpApplicationState)">
+            <summary>
+            应用程序启动
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AutoHandle.SysApplicationHandle.Application_End(System.Web.HttpApplication)">
+            <summary>
+            应用程序结束
+            </summary>
+            <param name="application">应用程序对象</param>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.AutoHandle.SysAutoHandle">
+            <summary>
+            系统自动任务
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AutoHandle.SysAutoHandle.SysBackgroundTaskAdd(System.Object,System.EventArgs)">
+            <summary>
+            添加后台系统任务
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.AsyncBaseController">
+            <summary>
+            异步基础控制器
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.AnnexAsyncController">
+            <summary>
+            通用附件控制器（异步）
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexAsyncController.ImageUpAsync">
+            <summary>
+            异步UEditor上传图片
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexAsyncController.ImageUpAsync(System.Web.HttpPostedFileBase,System.String,System.String)">
+            <summary>
+             异步UEditor上传图片
+            </summary>
+            <param name="upfile">文件</param>
+            <param name="pictitle">图片标题</param>
+            <param name="dir">路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexAsyncController.FileUpAsync">
+            <summary>
+             异步UEditor上传文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexAsyncController.FileUpAsync(System.Web.HttpPostedFileBase)">
+            <summary>
+             异步UEditor上传文件
+            </summary>
+            <param name="upfile">文件</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexAsyncController.GetMovieAsync(System.String,System.String)">
+            <summary>
+             异步UEditor获取video
+            </summary>
+            <param name="searchKey">搜索关键字</param>
+            <param name="videoType">视频类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexAsyncController.ImageManagerAsync(System.String)">
+            <summary>
+            异步图片在线管理
+            </summary>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexAsyncController.ScrawlUpAsync(System.Web.HttpPostedFileBase,System.String)">
+            <summary>
+            异步涂鸦
+            </summary>
+            <param name="upfile">图片文件</param>
+            <param name="content">涂鸦内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexAsyncController.UploadAttachmentAsync(System.Web.HttpPostedFileBase[],System.Nullable{System.Guid},System.Nullable{System.Guid},System.Boolean)">
+            <summary>
+            异步上传附件，兼容非表单附件
+            </summary>
+            <param name="file">文件</param>
+            <param name="moduleId">模块Id,针对表单附件</param>
+            <param name="id">记录Id,针对表单附件</param>
+            <param name="isCreateSwf">是否创建SWF文件</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexAsyncController.SaveFormAttachAsync(System.Guid,System.Guid,System.String,System.Boolean)">
+            <summary>
+            异步保存表单附件
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <param name="id">记录Id</param>
+            <param name="fileMsg">文件信息</param>
+            <param name="isAdd">是否只是添加</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexAsyncController.DeleteAttachmentAsync(System.String)">
+            <summary>
+            异步删除附件
+            </summary>
+            <param name="attachIds">附件Id集合，多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexAsyncController.DownloadAttachmentAsync(System.Guid)">
+            <summary>
+            异步下载附件
+            </summary>
+            <param name="attachId">附件Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexAsyncController.DownloadFileAsync(System.String)">
+            <summary>
+            异步下载文件
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexAsyncController.UploadTempImageAsync(System.Web.HttpPostedFileBase)">
+            <summary>
+            异步上传临时图片
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexAsyncController.UploadTempImportFileAsync(System.Web.HttpPostedFileBase)">
+            <summary>
+            异步上传临时导入模板文件
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.AnnexController">
+            <summary>
+            通用附件控制器
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.BaseController">
+            <summary>
+            控制器基类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BaseController.#ctor(System.Web.HttpRequestBase)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="request">请求对象</param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BaseController.SetRequest(System.Web.HttpRequestBase)">
+            <summary>
+            设置请求对象
+            </summary>
+            <param name="request">请求对象</param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BaseController.GetCurrentUser(System.Web.HttpRequestBase)">
+            <summary>
+            获取当前用户信息
+            </summary>
+            <param name="request">请求对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BaseController.GetHttpContext(System.Web.HttpRequestBase)">
+            <summary>
+            获取httpContext对象
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Rookey.Frame.Controllers.BaseController.CurrentUser">
+            <summary>
+            当前用户
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Controllers.BaseController.CurrEmpExtendInfos">
+            <summary>
+            当前用户扩展信息集合
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Controllers.BaseController.CurrEmpExtendInfo">
+            <summary>
+            当前用户扩展信息
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Controllers.BaseController.CurrHttpContext">
+            <summary>
+            当前httpContext
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexController.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexController.#ctor(System.Web.HttpRequestBase)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="request">请求对象</param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexController.GetFilePath(System.String@,System.String@)">
+            <summary>
+            获取文件路径,如果路径不存在就创建
+            </summary>
+            <param name="pdfSavePath"></param>
+            <param name="swfSavePath"></param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexController.CreateSwfFile(System.Object,System.Boolean)">
+            <summary>
+            生成SWF文件
+            </summary>
+            <param name="obj">对象</param>
+            <param name="isAsync">是否异步方式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexController.ImageUp">
+            <summary>
+            UEditor上传图片
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexController.ImageUp(System.Web.HttpPostedFileBase,System.String,System.String)">
+            <summary>
+             UEditor上传图片
+            </summary>
+            <param name="upfile">文件</param>
+            <param name="pictitle">图片标题</param>
+            <param name="dir">路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexController.FileUp">
+            <summary>
+             UEditor上传文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexController.FileUp(System.Web.HttpPostedFileBase)">
+            <summary>
+             UEditor上传文件
+            </summary>
+            <param name="upfile">文件</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexController.UploadFile(System.Web.HttpPostedFileBase,System.String,System.String)">
+            <summary>
+            上传文件
+            </summary>
+            <param name="upfile">上传的文件</param>
+            <param name="configName">配置名称</param>
+            <param name="dir">保存的文件夹</param>
+            <returns>保存路径</returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexController.GetMovie(System.String,System.String)">
+            <summary>
+             UEditor获取video
+            </summary>
+            <param name="searchKey">搜索关键字</param>
+            <param name="videoType">视频类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexController.ImageManager(System.String)">
+            <summary>
+            图片在线管理
+            </summary>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexController.ScrawlUp(System.Web.HttpPostedFileBase,System.String)">
+            <summary>
+            涂鸦
+            </summary>
+            <param name="upfile">图片文件</param>
+            <param name="content">涂鸦内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexController.UploadAttachment(System.Web.HttpPostedFileBase[],System.Nullable{System.Guid},System.Nullable{System.Guid},System.Boolean)">
+            <summary>
+            上传附件，兼容非表单附件
+            </summary>
+            <param name="file">文件</param>
+            <param name="moduleId">模块Id,针对表单附件</param>
+            <param name="id">记录Id,针对表单附件</param>
+            <param name="isCreateSwf">是否创建SWF文件</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexController.SaveFormAttach(System.Guid,System.Guid,System.String,System.Boolean)">
+            <summary>
+            保存表单附件
+            </summary>
+            <param name="moduleId">模块Id</param>
+            <param name="id">记录Id</param>
+            <param name="fileMsg">文件信息</param>
+            <param name="isAdd">是否只是添加</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexController.DeleteAttachment(System.String)">
+            <summary>
+            删除附件
+            </summary>
+            <param name="attachIds">附件Id集合，多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexController.DownloadAttachment(System.Guid)">
+            <summary>
+            下载附件
+            </summary>
+            <param name="attachId">附件Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexController.DownloadFile(System.String)">
+            <summary>
+            下载文件
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexController.UploadTempImage(System.Web.HttpPostedFileBase)">
+            <summary>
+            上传临时图片
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.AnnexController.UploadTempImportFile(System.Web.HttpPostedFileBase)">
+            <summary>
+            上传临时导入模板文件
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.BaseApiController">
+            <summary>
+            Api控制器基类
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.BpmController">
+            <summary>
+            工作流处理控制器
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmController.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmController.#ctor(System.Web.HttpRequestBase)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="request">请求对象</param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmController.FlowDesign">
+            <summary>
+            流程设计页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmController.FlowCanvas">
+            <summary>
+            流程画布
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmController.NodeParamSet">
+            <summary>
+            流程节点参数设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmController.LineParamSet">
+            <summary>
+            流程连线参数设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmController.FlowTips">
+            <summary>
+            流程tips
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmController.FlowOpGuide">
+            <summary>
+            流程操作指南
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmController.GetFlowClassTree">
+            <summary>
+            获取流程分类树，包括流程分类下的流程
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmController.UpdateWorkflowChart">
+            <summary>
+            更新流程图
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmController.LoadWorkflowChart">
+            <summary>
+            加载流程图
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmController.GetNodeForms">
+            <summary>
+            获取节点表单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmController.LoadHandlerFields">
+            <summary>
+            加载处理者字段
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmController.UpdateNodeParams">
+            <summary>
+            更新结点参数，针对已在运行的流程
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmController.MutiStartProcess(System.Guid,System.String)">
+            <summary>
+            批量发起
+            </summary>
+            <param name="moduleId">模块ID</param>
+            <param name="ids">记录ID，多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmController.StartProcess(System.Guid,System.Guid)">
+            <summary>
+            发起流程
+            </summary>
+            <param name="moduleId">模块ID</param>
+            <param name="id">记录ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmController.ApprovalProcess(System.Guid,System.String,Rookey.Frame.Model.EnumSpace.WorkActionEnum,System.Nullable{System.Guid},System.Nullable{System.Guid},System.String)">
+            <summary>
+            审批流程
+            </summary>
+            <param name="toDoTaskId">待办任务ID，子流程审批时为父待办ID</param>
+            <param name="approvalOpinions">处理意见</param>
+            <param name="workAction">动作</param>
+            <param name="returnNodeId">退回时退回结点</param>
+            <param name="directHandler">指派时的被指派人</param>
+            <param name="childTodoIds">子流程待办ID集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmController.MutiApprovalProcess(System.String,System.String,Rookey.Frame.Model.EnumSpace.WorkActionEnum,System.Nullable{System.Guid},System.Nullable{System.Guid})">
+            <summary>
+            批量审批
+            </summary>
+            <param name="toDoTaskIds">待办任务ID集合</param>
+            <param name="approvalOpinions">处理意见</param>
+            <param name="workAction">动作</param>
+            <param name="returnNodeId">退回时退回结点</param>
+            <param name="directHandler">指派时的被指派人</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmController.HandleOpProcess(System.Guid,System.String,System.Guid,System.Nullable{System.Guid},System.Nullable{System.Guid},System.String)">
+            <summary>
+            处理待办流程，包括同意、拒绝等操作
+            </summary>
+            <param name="toDoTaskId">待办任务ID，子流程审批时为父待办ID</param>
+            <param name="approvalOpinions">处理意见</param>
+            <param name="flowBtnId">操作按钮ID</param>
+            <param name="returnNodeId">退回时退回结点</param>
+            <param name="directHandler">指派时的被指派人</param>
+            <param name="childTodoIds">子流程待办ID集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmController.LoadBackNode(System.Guid)">
+            <summary>
+            加载回退结点
+            </summary>
+            <param name="toDoTaskId">待办ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmController.GetMyToDoList">
+            <summary>
+            获取我的待办、我的申请、我的审批
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmController.GetModuleNodes">
+            <summary>
+            获取模块结点集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.BpmAsyncController">
+            <summary>
+            异步控制器
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmAsyncController.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmAsyncController.#ctor(System.Web.HttpRequestBase)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="request">请求对象</param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmAsyncController.GetFlowClassTreeAsync">
+            <summary>
+            获取流程分类树，包括流程分类下的流程
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmAsyncController.UpdateWorkflowChartAsync">
+            <summary>
+            更新流程图
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmAsyncController.LoadWorkflowChartAsync">
+            <summary>
+            加载流程图
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmAsyncController.GetNodeFormsAsync">
+            <summary>
+            获取节点表单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmAsyncController.LoadHandlerFieldsAsync">
+            <summary>
+            加载处理者字段
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmAsyncController.UpdateNodeParamsAsync">
+            <summary>
+            更新结点参数，针对已在运行的流程
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmAsyncController.MutiStartProcessAsync(System.Guid,System.String)">
+            <summary>
+            批量发起
+            </summary>
+            <param name="moduleId">模块ID</param>
+            <param name="ids">记录ID，多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmAsyncController.StartProcessAsync(System.Guid,System.Guid)">
+            <summary>
+            发起流程
+            </summary>
+            <param name="moduleId">模块ID</param>
+            <param name="id">记录ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmAsyncController.ApprovalProcessAsync(System.Guid,System.String,Rookey.Frame.Model.EnumSpace.WorkActionEnum,System.Nullable{System.Guid},System.Nullable{System.Guid},System.String)">
+            <summary>
+            审批流程
+            </summary>
+            <param name="toDoTaskId">待办任务ID</param>
+            <param name="approvalOpinions">处理意见</param>
+            <param name="workAction">动作</param>
+            <param name="returnNodeId">退回时退回结点</param>
+            <param name="directHandler">指派时的被指派人</param>
+            <param name="childTodoIds">子流程待办ID集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmAsyncController.MutiApprovalProcessAsync(System.String,System.String,Rookey.Frame.Model.EnumSpace.WorkActionEnum,System.Nullable{System.Guid},System.Nullable{System.Guid})">
+            <summary>
+            批量审批流程
+            </summary>
+            <param name="toDoTaskIds">待办任务ID集合</param>
+            <param name="approvalOpinions">处理意见</param>
+            <param name="workAction">动作</param>
+            <param name="returnNodeId">退回时退回结点</param>
+            <param name="directHandler">指派时的被指派人</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmAsyncController.HandleOpProcessAsync(System.Guid,System.String,System.Guid,System.Nullable{System.Guid},System.Nullable{System.Guid},System.String)">
+            <summary>
+            处理待办流程，包括同意、拒绝等操作
+            </summary>
+            <param name="toDoTaskId">待办任务ID</param>
+            <param name="approvalOpinions">处理意见</param>
+            <param name="flowBtnId">操作按钮ID</param>
+            <param name="returnNodeId">退回时退回结点</param>
+            <param name="directHandler">指派时的被指派人</param>
+            <param name="childTodoIds">子流程待办ID集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmAsyncController.LoadBackNodeAsync(System.Guid)">
+            <summary>
+            加载回退结点
+            </summary>
+            <param name="toDoTaskId">待办ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmAsyncController.GetMyToDoListAsync">
+            <summary>
+            获取我的待办、我的申请、我的审批
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.BpmAsyncController.GetModuleNodesAsync">
+            <summary>
+            获取我的待办、我的申请、我的审批
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.DataAsyncController">
+            <summary>
+            公共通用数据控制器（异步）
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataAsyncController.GetTreeByNodeAsync">
+            <summary>
+            异步加载树（结点方式）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataAsyncController.LoadGridDataAsync">
+            <summary>
+            异步通用分页数据加载
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataAsyncController.ExportModelDataAsync">
+            <summary>
+            异步导出模块数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataAsyncController.GridOperateVerifyAsync">
+            <summary>
+            异步列表工具栏操作验证
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataAsyncController.SaveDataAsync">
+            <summary>
+            异步通用保存数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataAsyncController.DeleteAsync">
+            <summary>
+            异步通用删除，单条记录，多条记录删除均适用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataAsyncController.RestoreAsync">
+            <summary>
+            异步通用还原，单条记录，多条记录删除均适用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataAsyncController.LoadFormDataAsync">
+            <summary>
+            异步表单数据加载
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataAsyncController.LoadModuleDatasAsync">
+            <summary>
+            异步加载模块数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataAsyncController.UpdateFieldAsync">
+            <summary>
+            异步更新字段值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataAsyncController.BatchUpdateAsync">
+            <summary>
+            异步批量更新字段值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataAsyncController.DownImportTemplateAsync">
+            <summary>
+            异步下载导入模板
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataAsyncController.ImportModelDataAsync">
+            <summary>
+            异步导入实体数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataAsyncController.BindEnumFieldDataAsync">
+            <summary>
+            绑定枚举字段下拉框数据，参数为模块Id或模块名称、字段名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataAsyncController.BindForeignFieldComboDataAsync">
+            <summary>
+            绑定外键字段下拉框数据，参数为模块Id或模块名称、字段名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataAsyncController.BindDictionaryDataAsync">
+            <summary>
+            绑定下拉框字典数据，参数为模块Id或模块名称、字段名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataAsyncController.BindChildDictionaryAsync">
+            <summary>
+            绑定下级字典，参数为模块Id或模块名称、字段名、字典值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataAsyncController.BindExistsFieldValueDataAsync">
+            <summary>
+            绑定字段已存在的值为下拉框数据，参数为模块Id或模块名称、字段名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataAsyncController.BindModuleComboDataAsync">
+            <summary>
+            绑定模块下拉框数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataAsyncController.AutoCompleteAsync">
+            <summary>
+            自动完成功能
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.DataController">
+            <summary>
+            公共通用数据控制器
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataController.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataController.#ctor(System.Web.HttpRequestBase)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="request">请求对象</param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataController.GetTreeByNode">
+            <summary>
+            加载树（结点方式）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataController.LoadGridData">
+            <summary>
+            通用分页数据加载
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataController.ExportModelData">
+            <summary>
+            导出模块数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataController.GridOperateVerify">
+            <summary>
+            列表工具栏操作验证
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataController.SaveData">
+            <summary>
+            通用保存数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataController.Delete">
+            <summary>
+            通用删除，单条记录，多条记录删除均适用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataController.Restore">
+            <summary>
+            通用还原，单条记录，多条记录删除均适用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataController.LoadFormData">
+            <summary>
+            表单数据加载
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataController.LoadModuleDatas">
+            <summary>
+            加载模块数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataController.UpdateField">
+            <summary>
+            更新字段值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataController.BatchUpdate">
+            <summary>
+            批量更新字段值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataController.DownImportTemplate">
+            <summary>
+            下载导入模板
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataController.ImportModelData">
+            <summary>
+            导入实体数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataController.BindEnumFieldData">
+            <summary>
+            绑定枚举字段下拉框数据，参数为模块Id或模块名称、字段名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataController.BindForeignFieldComboData">
+            <summary>
+            绑定外键字段下拉框数据，参数为模块Id或模块名称、字段名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataController.BindDictionaryData">
+            <summary>
+            绑定下拉框字典数据，参数为模块Id或模块名称、字段名或参数为字典分类名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataController.BindChildDictionary">
+            <summary>
+            绑定下级字典，参数为模块Id或模块名称、字段名、字典值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataController.BindExistsFieldValueData">
+            <summary>
+            绑定字段已存在的值为下拉框数据，参数为模块Id或模块名称、字段名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataController.BindModuleComboData">
+            <summary>
+            绑定模块下拉框数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataController.AutoComplete">
+            <summary>
+            自动完成功能
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.DataApiController">
+            <summary>
+            公共通用数据控制器（API）
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataApiController.GetTreeByNode">
+            <summary>
+            加载树（结点方式）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataApiController.LoadGridData">
+            <summary>
+            通用分页数据加载
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataApiController.ExportModelData">
+            <summary>
+            导出模块数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataApiController.GridOperateVerify">
+            <summary>
+            列表工具栏操作验证
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataApiController.SaveData">
+            <summary>
+            通用保存数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataApiController.Delete">
+            <summary>
+            通用删除，单条记录，多条记录删除均适用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataApiController.Restore">
+            <summary>
+            通用还原，单条记录，多条记录删除均适用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataApiController.LoadFormData">
+            <summary>
+            表单数据加载
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataApiController.LoadModuleDatas">
+            <summary>
+            加载模块数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataApiController.UpdateField">
+            <summary>
+            更新字段值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataApiController.BatchUpdate">
+            <summary>
+            批量更新字段值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataApiController.DownImportTemplate">
+            <summary>
+            下载导入模板
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataApiController.ImportModelData">
+            <summary>
+            导入实体数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataApiController.BindEnumFieldData">
+            <summary>
+            绑定枚举字段下拉框数据，参数为模块Id或模块名称、字段名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataApiController.BindForeignFieldComboData">
+            <summary>
+            绑定外键字段下拉框数据，参数为模块Id或模块名称、字段名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataApiController.BindDictionaryData">
+            <summary>
+            绑定下拉框字典数据，参数为模块Id或模块名称、字段名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataApiController.BindChildDictionary">
+            <summary>
+            绑定下级字典数据，参数为模块Id或模块名称、字段名、字典值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataApiController.BindExistsFieldValueData">
+            <summary>
+            绑定字段已存在的值为下拉框数据，参数为模块Id或模块名称、字段名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataApiController.BindModuleComboData">
+            <summary>
+            绑定模块下拉框数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.DataApiController.AutoComplete">
+            <summary>
+            自动完成功能
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.PageController">
+            <summary>
+            通用页面控制器
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.Test">
+            <summary>
+            测试页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.Init">
+            <summary>
+            初始化
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.Main">
+            <summary>
+            主页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.PersonalSet">
+            <summary>
+            个人设置页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.ChangePwd">
+            <summary>
+            修改密码页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.AddQuckMenu">
+            <summary>
+            添加快捷菜单页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.Grid">
+            <summary>
+            通用列表页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.AdvanceSearch">
+            <summary>
+            通用高级搜索页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.QuickEditView">
+            <summary>
+            快速添加、编辑视图
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.GridSet">
+            <summary>
+            列表视图设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.AttachModuleSet">
+            <summary>
+            附属模块设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.EditForm">
+            <summary>
+            通用表单页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.ViewForm">
+            <summary>
+            通用查看页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.UploadForm">
+            <summary>
+            通用上传附件页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.ImgUploadForm">
+            <summary>
+            表单页面图片控件上传表单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.EditField">
+            <summary>
+            编辑字段页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.BatchEdit">
+            <summary>
+            批量编辑页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.DocView">
+            <summary>
+            在线查看文档
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.ImportModel">
+            <summary>
+            通用导入实体页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.ExportModel">
+            <summary>
+            通用导出设置页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.CombDataSourceSet">
+            <summary>
+            下拉框数据源设置页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.IconSelect">
+            <summary>
+            图标选择页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.DialogTree">
+            <summary>
+            通用弹出树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.SetUserRole">
+            <summary>
+            设置用户角色页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.SetRoleForm">
+            <summary>
+            设置角色表单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.QuickEditForm">
+            <summary>
+            快速编辑表单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.WebConfig">
+            <summary>
+            系统配置页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.AddCommonBtn">
+            <summary>
+            添加通用按钮页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.SetRoleModulePermission">
+            <summary>
+            设置角色模块权限页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.SetRolePermission">
+            <summary>
+            设置角色权限页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.RoleDataPermissionSet">
+            <summary>
+            角色数据权限设置页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.RoleFieldPermissionSet">
+            <summary>
+            角色字段权限设置页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.SetUserPermission">
+            <summary>
+            设置用户权限页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.UserDataPermissionSet">
+            <summary>
+            用户数据权限设置页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.UserFieldPermissionSet">
+            <summary>
+            用户字段权限设置页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.DesktopIndex">
+            <summary>
+            我的桌面主页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.DesktopGrid">
+            <summary>
+            获取桌面列表页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.PageController.EmailIndex">
+            <summary>
+            邮件首页
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.QuartzController">
+            <summary>
+            任务调度控制器
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.QuartzController.JobManage">
+            <summary>
+            Job管理页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.QuartzController.AddJob">
+            <summary>
+            添加任务页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.QuartzController.AddJobPlan">
+            <summary>
+            添加任务计划页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.QuartzController.QuartzCenter">
+            <summary>
+            调度中心页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.QuartzController.QuartzLog">
+            <summary>
+            调度日志查看页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.QuartzController.GetJobList">
+            <summary>
+            获取任务列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.QuartzController.GetQuartzLog">
+            <summary>
+            调度日志
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.QuartzController.GetJobPlanList">
+            <summary>
+            获取任务计划列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.QuartzController.GetJobGroupList">
+            <summary>
+            获取任务组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.QuartzController.GetPlanGroupList">
+            <summary>
+            获取计划组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.QuartzController.GetJobTypeList">
+            <summary>
+            获取任务类型列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.QuartzController.GetSchedulerInfo">
+            <summary>
+            获取任务调度信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.QuartzController.GetQuartzServiceInfo">
+            <summary>
+            获取调度服务信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.QuartzController.SaveJob(System.String)">
+            <summary>
+            保存任务
+            </summary>
+            <param name="jobInfo">任务JSON数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.QuartzController.OperateJob">
+            <summary>
+            任务操作
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.QuartzController.ServiceOperate(System.String)">
+            <summary>
+            服务操作
+            </summary>
+            <param name="op"></param>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.SecurityController">
+            <summary>
+            安全处理控制器
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Controllers.SecurityController.VALIDATECODE">
+            <summary>
+            验证码标记字符串
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.SecurityController.ValidateCode">
+            <summary>
+            生成验证码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.UserAsyncController">
+            <summary>
+            用户控制器（异步）
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.UserAsyncController.UserLoginAsync(System.String,System.String,System.String)">
+            <summary>
+            用户登录
+            </summary>
+            <param name="username">用户名</param>
+            <param name="userpwd">密码</param>
+            <param name="valcode">验证码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.UserAsyncController.GetDataPermissionOrgTreeAsync">
+            <summary>
+            获取数据权限组织树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.UserAsyncController.ChangePwdAsync">
+            <summary>
+            修改密码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.UserController">
+            <summary>
+            用户控制器
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.UserController.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.UserController.#ctor(System.Web.HttpRequestBase)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="request">请求对象</param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.UserController.#ctor(System.Web.HttpRequestBase,System.Web.HttpResponseBase,System.Web.HttpSessionStateBase,System.Web.Mvc.TempDataDictionary)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="request">请求对象</param>
+            <param name="response">返回请求</param>
+            <param name="session">session</param>
+            <param name="tempData">临时数据</param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.UserController.Login">
+            <summary>
+            登录页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.UserController.DialogLogin">
+            <summary>
+            弹出登录框
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.UserController.UserLogin(System.String,System.String,System.String)">
+            <summary>
+            用户登录
+            </summary>
+            <param name="username">用户名</param>
+            <param name="userpwd">密码</param>
+            <param name="valcode">验证码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.UserController.GetUserName(System.String)">
+            <summary>
+            获取用户名
+            </summary>
+            <param name="username">用户名或工号或邮箱或手机号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.UserController.ChangeUser">
+            <summary>
+            切换用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.UserController.CacheUserData(Rookey.Frame.Base.UserInfo)">
+            <summary>
+            缓存用户Cookie数据
+            </summary>
+            <param name="userInfo">用户信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.UserController.Logout">
+            <summary>
+            登出
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.UserController.GetDataPermissionOrgTree">
+            <summary>
+            获取数据权限组织树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.UserController.ChangePwd">
+            <summary>
+            修改密码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.UserApiController">
+            <summary>
+            用户API控制器
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.UserApiController.GetDataPermissionOrgTree">
+            <summary>
+            获取数据权限组织树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.UserApiController.ChangePwd">
+            <summary>
+            修改密码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.Sys.SystemAsyncController">
+            <summary>
+            系统模块相关操作控制器（异步）
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.LoadModulesAsync">
+            <summary>
+            异步加载所有模块
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.LoadModulesExpAsync">
+            <summary>
+            异步加载所有模块并将当前模块也添加到其中，
+            针对模块添加时添加下拉外键模块
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.LoadNotDetailModuleAsync">
+            <summary>
+            异步加载非明细模块
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.LoadDetailModuleAsync">
+            <summary>
+            异步加载明细模块，参数moduleId或moduleName不为空取该模块的明细模块，否则取所有明细模块
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.LoadBillCodeModuleAsync">
+            <summary>
+            异步加载启用了编码规则的模块
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.ReCreateModuleAsync">
+            <summary>
+            重新生成模块
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.GetFormFieldsAsync">
+            <summary>
+            异步获取表单字段信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.GetFormFieldAsync">
+            <summary>
+            异步获取单个表单字段
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.LoadViewFieldsAsync">
+            <summary>
+            异步加载视图字段，参数：viewId或moduleId或moduleName,参数为viewId时加载该视图字段，
+            参数为moduleId或moduleName时加载该模块的默认视图字段
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.LoadFieldsAsync">
+            <summary>
+            异步加载字段信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.LoadUserGridViewAsync">
+            <summary>
+            异步取用户列表视图，取特定用户视图传userId或username参数，否则取当前用户视图
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.ChangeGridViewAsync">
+            <summary>
+            异步切换用户视图，参数viewId
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.SaveGridViewAsync">
+            <summary>
+            异步保存用户视图
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.DelGridViewAsync">
+            <summary>
+            异步删除视图
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.IsGridViewCanOperateAsync">
+            <summary>
+            异步检测视图是否可编辑，系统视图和非自己创建视图不可编辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.LoadInnerDetailModuleGridAsync">
+            <summary>
+            异步加载明细或附属模块数据视图
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.SaveUserAttachModuleSetAsync">
+            <summary>
+            异步保存用户附属模块设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.LoadViewButtonsAsync">
+            <summary>
+            异步加载视图按钮
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.SaveCommonBtnAsync">
+            <summary>
+            保存常用按钮设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.RefreshFieldFormatAsync">
+            <summary>
+            刷新字段格式化
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.LoadRoleFormsAsync">
+            <summary>
+            异步加载角色表单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.SaveFormAsync">
+            <summary>
+            异步保存表单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.RelateRoleFormAsync">
+            <summary>
+            异步关联角色表单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.DelRoleFormAsync">
+            <summary>
+            异步删除角色表单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.GetModuleFormsAsync">
+            <summary>
+            获取模块表单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.LoadFormBtnsAsync">
+            <summary>
+            加载表单按钮
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.GetDicClassMaxSortAsync">
+            <summary>
+            异步获取字典分类下字典项的最大排序号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.LoadFolderMenuTreeAsync">
+            <summary>
+            异步加载非叶子节点菜单树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.SaveUserQuckMenusAsync">
+            <summary>
+            保存用户快捷菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.ReloadUserQuckMenusAsync">
+            <summary>
+            重新加载用户快捷菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.GetIconPageHtmlAsync">
+            <summary>
+            异步获取图标分页html
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.IconStyleClassNameIsExistsAsync">
+            <summary>
+            异步判断图标样式类名是否已存在
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.AddCustomerStyleClassAsync">
+            <summary>
+            异步增加自定义样式类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.SaveUserRoleAsync">
+            <summary>
+            异步保存用户角色
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.LoadRolePermissionAsync">
+            <summary>
+            异步加载角色权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.SaveRolePermissionAsync">
+            <summary>
+            异步保存角色权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.LoadUserPermissionAsync">
+            <summary>
+            异步加载用户权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.SaveUserPermissionAsync">
+            <summary>
+            异步保存用户权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.LoadQueryMethodEnumListAsync">
+            <summary>
+            加载查询方法枚举列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemAsyncController.RefreshCacheAsync">
+            <summary>
+            刷新缓存
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.Sys.SystemController">
+            <summary>
+            系统模块相关操作控制器
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.#ctor(System.Web.HttpRequestBase)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="request">请求对象</param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.LoadModules">
+            <summary>
+            加载所有模块
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.LoadModulesExp">
+            <summary>
+            加载所有模块并将当前模块也添加到其中，针对模块添加时添加下拉外键模块
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.LoadNotDetailModule">
+            <summary>
+            加载非明细模块
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.LoadDetailModule">
+            <summary>
+            加载明细模块，参数moduleId或moduleName不为空取该模块的明细模块，否则取所有明细模块
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.LoadBillCodeModule">
+            <summary>
+            加载启用了编码规则的模块
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.ReCreateModule">
+            <summary>
+            重新生成模块
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.GetFormFields">
+            <summary>
+            获取表单字段信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.GetFormField">
+            <summary>
+            获取单个表单字段
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.LoadViewFields">
+            <summary>
+            加载视图字段，参数：viewId或moduleId或moduleName,参数为viewId时加载该视图字段，
+            参数为moduleId或moduleName时加载该模块的默认视图字段
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.LoadFields">
+            <summary>
+            加载字段信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.LoadUserGridView">
+            <summary>
+            取用户列表视图，取特定用户视图传userId或username参数，否则取当前用户视图
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.ChangeGridView">
+            <summary>
+            切换用户视图，参数viewId
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.SaveGridView">
+            <summary>
+            保存用户视图
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.DelGridView">
+            <summary>
+            删除视图
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.IsGridViewCanOperate">
+            <summary>
+            检测视图是否可编辑，系统视图和非自己创建视图不可编辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.LoadInnerDetailModuleGrid">
+            <summary>
+            加载网格内明细视图
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.SaveUserAttachModuleSet">
+            <summary>
+            保存用户附属模块设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.LoadViewButtons">
+            <summary>
+            加载视图按钮
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.SaveCommonBtn">
+            <summary>
+            保存常用按钮设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.RefreshFieldFormat">
+            <summary>
+            刷新字段格式化
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.LoadRoleForms">
+            <summary>
+            加载角色表单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.SaveForm">
+            <summary>
+            保存表单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.RelateRoleForm">
+            <summary>
+            关联角色表单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.DelRoleForm">
+            <summary>
+            删除角色表单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.GetModuleForms">
+            <summary>
+            获取模块表单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.LoadFormBtns">
+            <summary>
+            加载表单按钮
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.GetDicClassMaxSort">
+            <summary>
+            获取字典分类下字典项的最大排序号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.LoadFolderMenuTree">
+            <summary>
+            加载非叶子节点菜单树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.SaveUserQuckMenus">
+            <summary>
+            保存用户快捷菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.ReloadUserQuckMenus">
+            <summary>
+            重新加载用户快捷菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.GetIconPageHtml">
+            <summary>
+            获取图标分页html
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.IconStyleClassNameIsExists">
+            <summary>
+            判断图标样式类名是否已存在
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.AddCustomerStyleClass">
+            <summary>
+            增加自定义样式类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.SaveUserRole">
+            <summary>
+            保存用户角色
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.LoadRolePermission">
+            <summary>
+            加载角色权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.SaveRolePermission">
+            <summary>
+            保存角色权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.LoadUserPermission">
+            <summary>
+            加载用户权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.SaveUserPermission">
+            <summary>
+            保存用户权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.ClearUserPermission">
+            <summary>
+            清除用户权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.LoadQueryMethodEnumList">
+            <summary>
+            加载查询方法枚举列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Sys.SystemController.RefreshCache">
+            <summary>
+            刷新缓存
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.OrgM.OrgMAsyncController">
+            <summary>
+            组织机构相关操作控制器（异步）
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.OrgM.OrgMAsyncController.GetDeptDutysAsync">
+            <summary>
+            异步获取部门职务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.OrgM.OrgMAsyncController.GetEmpLevelDepthDeptAsync">
+            <summary>
+            异步获取员工的层级部门信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.OrgM.OrgMController">
+            <summary>
+            组织机构相关操作控制器
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.OrgM.OrgMController.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.OrgM.OrgMController.#ctor(System.Web.HttpRequestBase)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="request">请求对象</param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.OrgM.OrgMController.GetDeptDutys">
+            <summary>
+            获取部门职务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.OrgM.OrgMController.GetEmpLevelDepthDept">
+            <summary>
+            获取员工的层级部门信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.FileManage.DownloadFile">
+            <summary>
+            文件管理-下载
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.FileManage.DownloadFile.ResponseFile(System.String,System.Web.HttpContext,System.Boolean)">
+            <summary>
+            下载文件
+            </summary>
+            <param name="path"></param>
+            <param name="context"></param>
+            <param name="hasfileName"></param>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.FileManage.WebExplorer">
+            <summary>
+            WebExplorer
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.FileManage.WebExplorer.ProcessRequest(System.Web.HttpContext)">
+            <summary>
+            接收请求
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.FileManage.WebExplorer.CheckLogin(System.Web.HttpContext)">
+            <summary>
+            检查用户是否登录
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.FileManage.WebExplorer.ResponseList(System.Web.HttpContext,System.Boolean)">
+            <summary>
+            获取文件及文件夹路径列表
+            </summary>
+            <param name="context"></param>
+            <param name="isAdmin"></param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.FileManage.WebExplorer.DownFile(System.Web.HttpContext)">
+            <summary>
+            下载文件操作
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.FileManage.WebExplorer.GetEditFileContent(System.Web.HttpContext)">
+            <summary>
+            从服务器读取文件内容
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.FileManage.WebExplorer.SaveFile(System.Web.HttpContext,System.Boolean)">
+            <summary>
+            保存已经编辑的文件 
+            </summary>
+            <param name="context"></param>
+            <param name="isNew">是否新建</param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.FileManage.WebExplorer.CreateDirectory(System.Web.HttpContext)">
+            <summary>
+            新建目录
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.FileManage.WebExplorer.Delete(System.Web.HttpContext)">
+            <summary>
+            删除文件/目录操作
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.FileManage.WebExplorer.CutCopy(System.Web.HttpContext,System.String)">
+            <summary>
+            执行剪贴 复制 操作
+            </summary>
+            <param name="context"></param>
+            <param name="flag"></param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.FileManage.WebExplorer.Direactory(System.String,System.String)">
+            <summary>
+            复制目录操作
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.FileManage.WebExplorer.Zip(System.Web.HttpContext)">
+            <summary>
+            压缩文件 
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.FileManage.WebExplorer.UnZip(System.Web.HttpContext)">
+            <summary>
+            解压缩
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.FileManage.WebExplorer.UpLoad(System.Web.HttpContext)">
+            <summary>
+            上传 
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.FileManage.WebExplorer.DownLoads(System.Web.HttpContext)">
+            <summary>
+            下载多个文件
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.FileManage.WebExplorer.ReName(System.Web.HttpContext)">
+            <summary>
+            重命名操作
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="P:Rookey.Frame.Controllers.FileManage.WebExplorer.IsReusable">
+            <summary>
+            IsReusable
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.FileManage.ZipClass">
+            <summary>
+            解压缩处理类
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.Other.FileAccessInterception">
+            <summary>
+            文件访问拦截
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Other.FileAccessInterception.BeginProcess(System.Web.HttpContext)">
+            <summary>
+            处理请求
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Other.FileAccessInterception.ProcessRequest(System.Web.HttpContext)">
+            <summary>
+            处理请求
+            </summary>
+            <param name="context">上下文对象</param>
+        </member>
+        <member name="P:Rookey.Frame.Controllers.Other.FileAccessInterception.IsReusable">
+            <summary>
+            IsReusable
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.Other.ReturnResult">
+            <summary>
+            控制器方法返回结果
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Controllers.Other.ReturnResult.Success">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Controllers.Other.ReturnResult.Message">
+            <summary>
+            异常信息
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.Other.LoginReturnResult">
+            <summary>
+            登录返回结果
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Controllers.Other.LoginReturnResult.Url">
+            <summary>
+            转向url
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Controllers.Other.LoginReturnResult.IsShowCode">
+            <summary>
+            是否显示验证码
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.Other.SaveDataReturnResult">
+            <summary>
+            保存表单数据返回结果
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Controllers.Other.SaveDataReturnResult.RecordId">
+            <summary>
+            记录Id
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.Other.UpdateFieldReturnResult">
+            <summary>
+            更新字段值返回结果
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Controllers.Other.UpdateFieldReturnResult.FieldDisplayValue">
+            <summary>
+            字段显示值
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.Other.ExportReturnResult">
+            <summary>
+            导出返回结果
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Controllers.Other.ExportReturnResult.DownUrl">
+            <summary>
+            下载地址
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Controllers.Other.UserExtendHandle">
+            <summary>
+            用户扩展处理类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Controllers.Other.UserExtendHandle.GetUserExtendObject(System.Object,Rookey.Frame.Base.EventUserArgs)">
+            <summary>
+            获取用户扩展信息
+            </summary>
+            <param name="o"></param>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1002 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rookey.Frame.DAL</name>
+    </assembly>
+    <members>
+        <member name="T:Rookey.Frame.DAL.Base.BaseDAL`1">
+            <summary>
+            数据层基类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:Rookey.Frame.DAL.Base.BaseDAL`1.defaultSortField">
+            <summary>
+            默认排序字段
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.DAL.Base.BaseDAL`1.dalFactory">
+            <summary>
+            dal抽象工厂对象
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.DAL.Base.BaseDAL`1.cacheFactory">
+            <summary>
+            缓存工厂
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.DAL.Base.BaseDAL`1.cacheKey">
+            <summary>
+            缓存key
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.DAL.Base.BaseDAL`1.cacheType">
+            <summary>
+            缓存类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.DAL.Base.BaseDAL`1.cacheKeyList">
+            <summary>
+            所有缓存key集合
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.DAL.Base.BaseDAL`1.currUser">
+            <summary>
+            当前用户
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.DAL.Base.BaseDAL`1.lockObj">
+            <summary>
+            锁对象
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.DAL.Base.BaseDAL`1.isAsyncUpCache">
+            <summary>
+            是否异步更新缓存
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.#ctor(Rookey.Frame.Base.UserInfo)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="userInfo">当前用户</param>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.#ctor(Rookey.Frame.Base.UserInfo,System.Nullable{Rookey.Frame.Common.PubDefine.DatabaseType})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="userInfo">当前用户</param>
+            <param name="dbType">数据库类型</param>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.GetEntitiesByWhere(System.String,System.String)">
+            <summary>
+            获取实体集合
+            </summary>
+            <param name="whereSql">where条件</param>
+            <param name="connString">连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.DalFactoryInit(System.Nullable{Rookey.Frame.Common.PubDefine.DatabaseType})">
+            <summary>
+            数据工厂初始化
+            </summary>
+            <param name="_dbType">数据库类型</param>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.CacheInit">
+            <summary>
+            缓存初始化
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.CacheData(System.String,System.String)">
+            <summary>
+            缓存数据
+            </summary>
+            <param name="whereSql">条件语句</param>
+            <param name="connString">连接字符串</param>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.GetPermissionFilterWhere">
+            <summary>
+            获取数据权限过滤语句，返回NULL无权限，
+            返回空字符串有全部权限，否则返回where语句
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.GetPermissionFilterExpression">
+            <summary>
+            获取权限表达式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.HasRecordOperatePermission(`0,System.Int32)">
+            <summary>
+            是否有记录的操作（查看，更新、删除）权限
+            </summary>
+            <param name="t">实体对象</param>
+            <param name="type">类型，0-查看，1-更新，2-删除</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.GetPermissionExp(System.String@,System.Boolean)">
+            <summary>
+            获取权限表达式
+            </summary>
+            <param name="filterWhere">过虑条件SQL</param>
+            <param name="queryCache">是否从缓存中查询</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.GetEntity(System.String@,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.List{System.String},System.Boolean,System.String)">
+            <summary>
+            获取单个实体
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="expression">查询条件</param>
+            <param name="whereSql">SQL条件语句</param>
+            <param name="fieldNames">要查询的字段集合</param>
+            <param name="references">是否加载关联对象数据（导航属性）</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.GetEntityById(System.String@,System.Object,System.Collections.Generic.List{System.String},System.Boolean,System.String)">
+            <summary>
+            通过主键Id获取实体
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="id">主键Id</param>
+            <param name="fieldNames">要查询的字段集合</param>
+            <param name="references">是否加载关联对象数据（导航属性）</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.GetEntitiesByField(System.String@,System.String,System.Object,System.Boolean,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Boolean},System.Nullable{System.Int32},System.Collections.Generic.List{System.String},System.Boolean,System.String)">
+            <summary>
+            根据字段获取记录
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="fieldName">字段名称</param>
+            <param name="fieldValue">字段值</param>
+            <param name="permissionFilter">是否进行权限过滤</param>
+            <param name="orderFields">排序字段</param>
+            <param name="isDescs">是否降序</param>
+            <param name="top">取前几条记录</param>
+            <param name="fieldNames">要查询的字段集合</param>
+            <param name="references">是否加载关联对象数据（导航属性）</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.GetEntities(System.String@,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Boolean},System.Nullable{System.Int32},System.Collections.Generic.List{System.String},System.Boolean,System.String)">
+            <summary>
+            获取实体集合
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="expression">条件表达式</param>
+            <param name="whereSql">SQL条件语句</param>
+            <param name="permissionFilter">是否进行权限过滤</param>
+            <param name="orderFields">排序字段</param>
+            <param name="isDescs">是否降序排序</param>
+            <param name="top">取前多少条</param>
+            <param name="fieldNames">要查询的字段集合</param>
+            <param name="references">是否加载关联对象数据（导航属性）</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.GetPageEntities(System.Int64@,System.String@,System.Boolean,System.Int32,System.Int32,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.List{System.String},System.Boolean,System.String)">
+            <summary>
+            获取分页实体集合
+            </summary>
+            <param name="totalCount">总记录数</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="permissionFilter">是否进行权限过滤</param>
+            <param name="pageIndex">页号，最小为1，默认为1</param>
+            <param name="pageSize">每页记录数，最大为2000，默认为10</param>
+            <param name="orderFields">排序字段</param>
+            <param name="isDescs">降序排序</param>
+            <param name="expression">条件表达式</param>
+            <param name="whereSql">SQL条件语句</param>
+            <param name="fieldNames">要查询的字段集合</param>
+            <param name="references">是否加载关联对象数据（导航属性）</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.Count(System.String@,System.Boolean,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.String)">
+            <summary>
+            获取记录数
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="permissionFilter">是否启用权限过滤</param>
+            <param name="expression">条件表达式</param>
+            <param name="whereSql">SQL条件语句</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.LoadReferences(`0,System.String@,System.String)">
+            <summary>
+            加载实体对象的关联对象（导航属性）
+            </summary>
+            <param name="instance">实体对象</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.LoadListReferences(System.Collections.Generic.List{`0},System.String@,System.String)">
+            <summary>
+            加载关联对象（导航属性）
+            </summary>
+            <param name="instances">实体对象集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.Scalar(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String@,System.String)">
+            <summary>
+            获取实体某个字段值
+            </summary>
+            <param name="field">字段</param>
+            <param name="expression">条件表达式</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.AddEntity(`0,System.String@,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            新增实体
+            </summary>
+            <param name="entity">实体</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="references">是否保存关联对象数据（导航属性）</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns>返回实体Id</returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.AddEntities(System.Collections.Generic.List{`0},System.String@,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            批量新增
+            </summary>
+            <param name="entities">实体集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="references">是否保存关联对象数据（导航属性）</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.UpdateEntity(`0,System.String@,System.Boolean,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            更新单个实体
+            </summary>
+            <param name="entity">实体</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="permissionValidate">是否进行权限验证</param>
+            <param name="references">是否保存关联对象数据（导航属性）</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns>返回更新结果</returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.UpdateEntities(System.Collections.Generic.List{`0},System.String@,System.Boolean,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            批量更新实体
+            </summary>
+            <param name="entities">实体集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="permissionValidate">是否进行权限验证</param>
+            <param name="references">是否保存关联对象数据（导航属性）</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.UpdateEntityFields(`0,System.Collections.Generic.List{System.String},System.String@,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            更新实体字段
+            </summary>
+            <param name="entity">实体对象</param>
+            <param name="fieldNames">要更新的字段</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="permissionValidate">是否进行权限验证</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.UpdateEntityByExpression(System.Object,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String@,System.String,System.Data.IDbConnection)">
+            <summary>
+            通过表达式更新实体
+             UpdateEntityByExpression(new { FirstName = "JJ" }, p => p.LastName == "Hendrix");
+             UPDATE "Person" SET "FirstName" = 'JJ' WHERE ("LastName" = 'Hendrix')
+            </summary>
+            <param name="obj">匿名对象</param>
+            <param name="expression">表达式</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.DeleteEntity(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String@,System.String,System.Data.IDbConnection)">
+            <summary>
+            删除实体
+            </summary>
+            <param name="expression">条件</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns>返回结果</returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.DeleteEntityById(System.Object,System.String@,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            通过主键Id删除实体
+            </summary>
+            <param name="id">主键Id</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="permissionValidate">是否进行权限验证</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.DeleteEntityByIds(System.Collections.IEnumerable,System.String@,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            通过主键Id集合删除实体
+            </summary>
+            <param name="ids">主键Id集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="permissionValidate">是否进行权限验证</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.GetEntitiesBySql(System.String@,System.String,System.Object[],System.String)">
+            <summary>
+            以SQL方式获取实体集合
+            </summary>
+            <param name="errMsg">错误信息</param>
+            <param name="sql">sql语句</param>
+            <param name="sqlParams">sql参数</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.ExecuteQuery(System.String@,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String)">
+            <summary>
+            以SQL方式执行查询
+            </summary>
+            <param name="errMsg">错误信息</param>
+            <param name="sql">sql语句</param>
+            <param name="sqlParams">sql参数</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.ExecuteScale(System.String@,System.String,System.Object[],System.String)">
+            <summary>
+            获取查询到的第一行第一列的数据
+            </summary>
+            <param name="errMsg">错误信息</param>
+            <param name="sql">sql语句</param>
+            <param name="sqlParams">sql参数</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.ExecuteNonQuery(System.String@,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String,System.Data.IDbConnection)">
+            <summary>
+            执行增删改语句
+            </summary>
+            <param name="errMsg">错误信息</param>
+            <param name="sql">sql</param>
+            <param name="sqlParams">sql参数</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.RunProcedureNoQuery(System.String@,System.Collections.Generic.Dictionary{System.String,System.Object}@,System.String,System.Object,System.String,System.Data.IDbConnection)">
+            <summary>
+            执行存储过程，针对非查询
+            </summary>
+            <param name="errMsg">异常信息</param>
+            <param name="outParams">输出参数</param>
+            <param name="procedureName">存储过程名</param>
+            <param name="inParams">输入参数 eg:new{Age=30}</param>
+            <param name="connString">连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns>返回受影响的行数</returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.RunProcedure(System.String@,System.Collections.Generic.Dictionary{System.String,System.Object}@,System.String,System.Object,System.String,System.Data.IDbConnection)">
+            <summary>
+            执行存储过程，针对查询
+            </summary>
+            <param name="errMsg">异常信息</param>
+            <param name="outParams">输出参数</param>
+            <param name="procedureName">存储过程名</param>
+            <param name="inParams">输入参数 eg:new{Age=30}</param>
+            <param name="connString">连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns>返回查询记录</returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.ExecuteTransaction(System.Collections.Generic.List{Rookey.Frame.Common.Model.TransactionModel{`0}},System.String@,System.String)">
+            <summary>
+            执行事务
+            </summary>
+            <param name="transactionObjects">事务对象集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.ExecuteTransactionExtend(System.Collections.Generic.List{Rookey.Frame.Common.Model.TransactionExtendModel},System.String@,System.String)">
+            <summary>
+            执行事务
+            </summary>
+            <param name="transactionObjects">事务扩展对象集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.TransactionHandle(Rookey.Frame.Common.Model.TransactionTask,System.String@,System.String)">
+            <summary>
+            执行事务
+            </summary>
+            <param name="transTask">事务处理函数</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.CreateTable(System.String)">
+            <summary>
+            创建数据表
+            </summary>
+            <param name="connString">数据库连接字符串</param>
+            <returns>创建成功返回空字符串，失败返回异常信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.DropTable(System.String)">
+            <summary>
+            删除数据表
+            </summary>
+            <param name="connString">数据库连接字符串</param>
+            <returns>删除成功返回空字符串，失败返回异常信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.AlterTable(System.String,System.String)">
+            <summary>
+            修改数据表
+            </summary>
+            <param name="command">操作sql，如：[ALTER TABLE a] ADD Column b int</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns>成功返回空字符串，失败返回异常信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.ColumnIsExists(System.String,System.String)">
+            <summary>
+            数据列是否存在
+            </summary>
+            <param name="fieldName">字段名称</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.AddColumn(System.String,System.String)">
+            <summary>
+            增加数据列
+            </summary>
+            <param name="fieldName">字段名称</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns>成功返回空字符串，失败返回异常信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.AlterColumn(System.String,System.String)">
+            <summary>
+            修改数据列
+            </summary>
+            <param name="fieldName">字段名称</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns>成功返回空字符串，失败返回异常信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.ChangeColumnName(System.String,System.String,System.String)">
+            <summary>
+            修改列名
+            </summary>
+            <param name="fieldName">字段名称</param>
+            <param name="oldFieldName">旧的字段名</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns>成功返回空字符串，失败返回异常信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.DropColumn(System.String,System.String)">
+            <summary>
+            删除列
+            </summary>
+            <param name="columnName">列名</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.CreateIndex(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.String,System.Boolean,System.String)">
+            <summary>
+            创建索引
+            </summary>
+            <param name="field">字段</param>
+            <param name="indexName">索引名</param>
+            <param name="unique">是否唯一索引</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns>成功返回空字符串，失败返回异常信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.DropIndex(System.String,System.String)">
+            <summary>
+            删除索引
+            </summary>
+            <param name="indexName">索引名称</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.ExpressionConditionToWhereSql(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            将lamda条件表达式转换成sql
+            </summary>
+            <param name="expression">条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.ClearCache">
+            <summary>
+            清除当前模块缓存
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.ClearAllCache">
+            <summary>
+            清除所有缓存
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.SetCustomerCache(System.String,System.Object)">
+            <summary>
+            设置自定义缓存
+            </summary>
+            <param name="key">缓存key</param>
+            <param name="data">数据</param>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.RemoveCustomerCache(System.String)">
+            <summary>
+            移除自定义缓存
+            </summary>
+            <param name="key">缓存key</param>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Base.BaseDAL`1.GetCustomerCache(System.String)">
+            <summary>
+            获取自定义缓存
+            </summary>
+            <param name="key">缓存key</param>
+        </member>
+        <member name="P:Rookey.Frame.DAL.Base.BaseDAL`1.CurrUser">
+            <summary>
+            当前用户
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.DAL.Sys.Sys_CacheConfigDAL">
+            <summary>
+            缓存配置数据层重写
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.DAL.Sys.Sys_CacheConfigDAL.tableIdDic">
+            <summary>
+            Table - Id对应表
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_CacheConfigDAL.#ctor(Rookey.Frame.Base.UserInfo)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="currUser">当前用户</param>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_CacheConfigDAL.GetAllModelTypes">
+            <summary>
+            获取所有modelTypes
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_CacheConfigDAL.GetModuleCacheConfig(System.String,System.String,System.Nullable{System.Guid})">
+            <summary>
+            从xml配置文件中获取模块缓存配置
+            </summary>
+            <param name="tableName">模块表名或类名</param>
+            <param name="moduleName">模块名称</param>
+            <param name="moduleId">模块ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_CacheConfigDAL.SaveModuleCacheConfig(Rookey.Frame.Model.Sys.Sys_CacheConfig)">
+            <summary>
+            保存模块缓存配置
+            </summary>
+            <param name="cacheConfig">缓存配置对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_CacheConfigDAL.AddEntity(Rookey.Frame.Model.Sys.Sys_CacheConfig,System.String@,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            新增实体
+            </summary>
+            <param name="entity">实体对象</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="references">是否新增导航数据</param>
+            <param name="connString">连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_CacheConfigDAL.AddEntities(System.Collections.Generic.List{Rookey.Frame.Model.Sys.Sys_CacheConfig},System.String@,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            新增实体集合
+            </summary>
+            <param name="entities">实体对象集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="references">是否保存导航数据</param>
+            <param name="connString">连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_CacheConfigDAL.DeleteEntity(System.Linq.Expressions.Expression{System.Func{Rookey.Frame.Model.Sys.Sys_CacheConfig,System.Boolean}},System.String@,System.String,System.Data.IDbConnection)">
+            <summary>
+            删除实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_CacheConfigDAL.DeleteEntityById(System.Object,System.String@,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            通过ID删除实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_CacheConfigDAL.DeleteEntityByIds(System.Collections.IEnumerable,System.String@,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            通过ids删除实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_CacheConfigDAL.GetPageEntities(System.Int64@,System.String@,System.Boolean,System.Int32,System.Int32,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Boolean},System.Linq.Expressions.Expression{System.Func{Rookey.Frame.Model.Sys.Sys_CacheConfig,System.Boolean}},System.String,System.Collections.Generic.List{System.String},System.Boolean,System.String)">
+            <summary>
+            分页方法重写
+            </summary>
+            <param name="totalCount">总记录数</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="permissionFilter">是否权限过滤</param>
+            <param name="pageIndex">页号</param>
+            <param name="pageSize">页大小</param>
+            <param name="orderFields">排序字段</param>
+            <param name="isDescs">是否降序</param>
+            <param name="expression">条件表达式</param>
+            <param name="whereSql">条件语句</param>
+            <param name="references">是否加载导航属性</param>
+            <param name="connString">连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_CacheConfigDAL.GetEntities(System.String@,System.Linq.Expressions.Expression{System.Func{Rookey.Frame.Model.Sys.Sys_CacheConfig,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Boolean},System.Nullable{System.Int32},System.Collections.Generic.List{System.String},System.Boolean,System.String)">
+            <summary>
+            获取实体集合重写
+            </summary>
+            <param name="errorMsg"></param>
+            <param name="expression"></param>
+            <param name="whereSql"></param>
+            <param name="permissionFilter"></param>
+            <param name="orderFields"></param>
+            <param name="isDescs"></param>
+            <param name="top"></param>
+            <param name="references"></param>
+            <param name="connString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_CacheConfigDAL.GetEntityById(System.String@,System.Object,System.Collections.Generic.List{System.String},System.Boolean,System.String)">
+            <summary>
+            重写获取实体对象
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="id">Id</param>
+            <param name="references"></param>
+            <param name="connString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_CacheConfigDAL.UpdateEntity(Rookey.Frame.Model.Sys.Sys_CacheConfig,System.String@,System.Boolean,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            重写更新实体
+            </summary>
+            <param name="entity">实体对象</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="permissionValidate">是否进行权限验证</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_CacheConfigDAL.UpdateEntityFields(Rookey.Frame.Model.Sys.Sys_CacheConfig,System.Collections.Generic.List{System.String},System.String@,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            重写更新实体对象
+            </summary>
+            <param name="entity">实体对象</param>
+            <param name="fieldNames">要更新的字段</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="permissionValidate">是否进行权限验证</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_CacheConfigDAL.UpdateEntityByExpression(System.Object,System.Linq.Expressions.Expression{System.Func{Rookey.Frame.Model.Sys.Sys_CacheConfig,System.Boolean}},System.String@,System.String,System.Data.IDbConnection)">
+            <summary>
+            重写根据表达式更新实体
+            </summary>
+            <param name="obj">更新字段对象</param>
+            <param name="expression">条件表达式</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.DAL.Sys.Sys_DbConfigDAL">
+            <summary>
+            数据库配置数据层重写
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.DAL.Sys.Sys_DbConfigDAL.tableIdDic">
+            <summary>
+            Table - Id对应表
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_DbConfigDAL.#ctor(Rookey.Frame.Base.UserInfo)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="currUser">当前用户</param>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_DbConfigDAL.GetAllModelTypes">
+            <summary>
+            获取所有modelTypes
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_DbConfigDAL.GetModuleCacheConfig(System.String,System.String,System.Nullable{System.Guid})">
+            <summary>
+            从xml配置文件中获取模块缓存配置
+            </summary>
+            <param name="tableName">模块表名或类名</param>
+            <param name="moduleName">模块名称</param>
+            <param name="moduleId">模块ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_DbConfigDAL.SaveModuleDbConfig(Rookey.Frame.Model.Sys.Sys_DbConfig)">
+            <summary>
+            保存模块数据库配置
+            </summary>
+            <param name="dbConfig">配置对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_DbConfigDAL.AddEntity(Rookey.Frame.Model.Sys.Sys_DbConfig,System.String@,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            新增实体
+            </summary>
+            <param name="entity">实体对象</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="references">是否新增导航数据</param>
+            <param name="connString">连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_DbConfigDAL.AddEntities(System.Collections.Generic.List{Rookey.Frame.Model.Sys.Sys_DbConfig},System.String@,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            新增实体集合
+            </summary>
+            <param name="entities">实体对象集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="references">是否保存导航数据</param>
+            <param name="connString">连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_DbConfigDAL.DeleteEntity(System.Linq.Expressions.Expression{System.Func{Rookey.Frame.Model.Sys.Sys_DbConfig,System.Boolean}},System.String@,System.String,System.Data.IDbConnection)">
+            <summary>
+            删除实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_DbConfigDAL.DeleteEntityById(System.Object,System.String@,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            通过ID删除实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_DbConfigDAL.DeleteEntityByIds(System.Collections.IEnumerable,System.String@,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            通过ids删除实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_DbConfigDAL.GetPageEntities(System.Int64@,System.String@,System.Boolean,System.Int32,System.Int32,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Boolean},System.Linq.Expressions.Expression{System.Func{Rookey.Frame.Model.Sys.Sys_DbConfig,System.Boolean}},System.String,System.Collections.Generic.List{System.String},System.Boolean,System.String)">
+            <summary>
+            重写获取分页数据方法
+            </summary>
+            <param name="totalCount">总记录数</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="permissionValidate">是否过滤权限</param>
+            <param name="pageIndex">页号</param>
+            <param name="pageSize">每页记录数</param>
+            <param name="orderFields">排序字段</param>
+            <param name="isDescs">是否降序</param>
+            <param name="expression">条件表达式</param>
+            <param name="whereSql">where语句</param>
+            <param name="references">是否加载导航属性</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_DbConfigDAL.GetEntities(System.String@,System.Linq.Expressions.Expression{System.Func{Rookey.Frame.Model.Sys.Sys_DbConfig,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Boolean},System.Nullable{System.Int32},System.Collections.Generic.List{System.String},System.Boolean,System.String)">
+            <summary>
+            获取数据库配置集合
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="expression">表达式</param>
+            <param name="whereSql">条件语句</param>
+            <param name="permissionFilter">是否权限过滤</param>
+            <param name="orderFields">排序字段</param>
+            <param name="isDescs">排序方式</param>
+            <param name="top">取前几条</param>
+            <param name="references">加载关联属性</param>
+            <param name="connString">连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_DbConfigDAL.GetEntityById(System.String@,System.Object,System.Collections.Generic.List{System.String},System.Boolean,System.String)">
+            <summary>
+            重写取实体
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="id">记录id</param>
+            <param name="references"></param>
+            <param name="connString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_DbConfigDAL.UpdateEntity(Rookey.Frame.Model.Sys.Sys_DbConfig,System.String@,System.Boolean,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            重写更新实体方法
+            </summary>
+            <param name="entity">实体对象</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="permissionValidate">是否进行权限验证</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_DbConfigDAL.UpdateEntityFields(Rookey.Frame.Model.Sys.Sys_DbConfig,System.Collections.Generic.List{System.String},System.String@,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            重写更新实体方法
+            </summary>
+            <param name="entity">实体对象</param>
+            <param name="fieldNames">要更新的字段</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="permissionValidate">是否进行权限验证</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_DbConfigDAL.UpdateEntityByExpression(System.Object,System.Linq.Expressions.Expression{System.Func{Rookey.Frame.Model.Sys.Sys_DbConfig,System.Boolean}},System.String@,System.String,System.Data.IDbConnection)">
+            <summary>
+            重写根据表达式更新实体
+            </summary>
+            <param name="obj">更新字段对象</param>
+            <param name="expression">条件表达式</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.DAL.Sys.ObjectReferenceClass">
+            <summary>
+            对象处理相关
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.ObjectReferenceClass.GetParentRoleId(System.Guid)">
+            <summary>
+            获取父角色Id
+            </summary>
+            <param name="roleId">角色Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.ObjectReferenceClass.GetParentsRoleId(System.Guid)">
+            <summary>
+            获取所有祖宗角色Id，包含父角色Id，祖父角色Id，。。
+            </summary>
+            <param name="roleId">角色Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.ObjectReferenceClass.GetUserRoleIds(System.Guid)">
+            <summary>
+            获取用户角色Id，包含父角色
+            </summary>
+            <param name="userId">用户Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.ObjectReferenceClass.GetParentMenuId(System.Guid,Rookey.Frame.Base.UserInfo)">
+            <summary>
+            获取父菜单Id
+            </summary>
+            <param name="menuId">菜单Id</param>
+            <param name="currUser">当前用户</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.ObjectReferenceClass.GetParentsMenuId(System.Guid,Rookey.Frame.Base.UserInfo)">
+            <summary>
+            获取所有祖宗菜单Id，包含父菜单Id，祖父菜单Id，。。
+            </summary>
+            <param name="menuId">菜单Id</param>
+            <param name="currUser">当前用户</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.ObjectReferenceClass.GetAllInferiorPerson(Rookey.Frame.Base.UserInfo)">
+            <summary>
+            获取所有下级人员用户ID集合
+            </summary>
+            <param name="currUser">当前用户</param>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.DAL.Sys.Sys_PermissionDataDAL">
+            <summary>
+            数据权限自定义数据层
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_PermissionDataDAL.#ctor(Rookey.Frame.Base.UserInfo)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="currUser">当前用户</param>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_PermissionDataDAL.GetRoleDataPermissions(System.Guid,System.Guid,System.Int32,System.Boolean)">
+            <summary>
+            获取角色可（查看、编辑、删除）模块中哪些组织下的数据，返回可（查看、编辑、删除）
+            的组织Id集合字典，
+            第一个参数为组织Id，第二个参数为是否来自父角色的权限，非当前
+            角色的权限
+            </summary>
+            <param name="roleId">角色Id</param>
+            <param name="moduleId">模块Id</param>
+            <param name="dataPermissionType">数据权限类型,0-查看，1-编辑，2-删除</param>
+            <param name="read">是否为应用读取</param>
+            <returns>返回组织Id集合字典</returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_PermissionDataDAL.GetUserDataPermissions(System.Guid,System.Guid,System.Int32)">
+            <summary>
+            获取用户可（查看、编辑、删除）模块中哪些组织下的数据，
+            返回可（查看、编辑、删除）的组织Id集合
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="moduleId">模块Id</param>
+            <param name="dataPermissionType">数据权限类型,0-查看，1-编辑，2-删除</param>
+            <returns>返回组织Id集合字典</returns>
+        </member>
+        <member name="T:Rookey.Frame.DAL.Sys.Sys_PermissionFieldDAL">
+            <summary>
+            字段权限自定义数据层
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_PermissionFieldDAL.#ctor(Rookey.Frame.Base.UserInfo)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="currUser">当前用户</param>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_PermissionFieldDAL.GetRoleFieldPermissions(System.Guid,System.Guid,System.Int32,System.Boolean)">
+            <summary>
+            获取角色（查看、新增、编辑）字段权限，返回允许（查看、新增、编辑）的字段名字典，
+            第一个参数为字段名，第二个参数为是否来自父角色的权限，
+            非当前角色权限
+            </summary>
+            <param name="roleId">角色Id</param>
+            <param name="moduleId">模块Id</param>
+            <param name="fieldPermissionType">字段权限类型,0-查看，1-新增，2-编辑</param>
+            <param name="read">是否为应用读取，应用读取快速返回</param>
+            <returns>返回允许（查看、新增、编辑）的字段名字典</returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_PermissionFieldDAL.GetUserFieldsPermissions(System.Guid,System.Guid,System.Int32)">
+            <summary>
+            获取用户（查看、新增、编辑）字段权限
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="moduleId">模块Id</param>
+            <param name="fieldPermissionType">字段权限类型，0-查看，1-新增，2-编辑</param>
+            <returns>返回允许（查看、新增、编辑）的字段名集合</returns>
+        </member>
+        <member name="T:Rookey.Frame.DAL.Sys.Sys_PermissionFunDAL">
+            <summary>
+            功能权限自定义数据层
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_PermissionFunDAL.#ctor(Rookey.Frame.Base.UserInfo)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="currUser">当前用户</param>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_PermissionFunDAL.GetRoleFunPermissions(System.Guid,System.Int32,System.Nullable{System.Guid})">
+            <summary>
+            获取角色功能权限，子角色默认继承父角色的所有权限，当前返回字典，
+            字典第一个参数为功能Id（菜单或按钮Id）,第二个参数为是否该功能Id继承父角色，
+            非当前角色所有
+            </summary>
+            <param name="roleId">角色Id</param>
+            <param name="functionType">功能类型，菜单或网格按钮,0-菜单，1-按钮</param>
+            <param name="moduleId">模块ID，针对按钮需要</param>
+            <returns>返回功能Id、是否来自父角色的权限字典</returns>
+        </member>
+        <member name="M:Rookey.Frame.DAL.Sys.Sys_PermissionFunDAL.GetUserFunPermissions(System.Guid,System.Int32,System.Nullable{System.Guid})">
+            <summary>
+            获取用户的功能（菜单或网格按钮）权限，返回字典，
+            字典的第一个参数为功能Id（菜单或按钮Id），第二个
+            参数为是否来自父角色的权限，非当前角色权限
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="functionType">功能类型（菜单、网格按钮）,0-菜单，1-按钮</param>
+            <param name="moduleId">模块ID，针对按钮需要</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,52 @@
+﻿@using Rookey.Frame.Common;
+@{ string fn = HttpUtility.UrlDecode(Request["fn"].ObjToStr());}
+@{
+    ViewBag.Title = fn;
+}
+@section scripts{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/FlexPaper/js/flexpaper_flash.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/FlexPaper/js/swfobject/swfobject.js")"></script>
+    <script type="text/javascript">
+        <!-- For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection. -->
+    var swfVersionStr = "10.0.0";
+    var xiSwfUrlStr = "playerProductInstall.swf";
+    var swfUrl = decodeURI(GetLocalQueryString("swfUrl"));
+    var flashvars = {
+        SwfFile: swfUrl,
+        Scale: 0.6,
+        ZoomTransition: "easeOut",
+        ZoomTime: 0.5,
+        ZoomInterval: 0.1,
+        FitPageOnLoad: false,
+        FitWidthOnLoad: true,
+        PrintEnabled: true,
+        PrintToolsVisible: true,
+        FullScreenAsMaxWindow: false,
+        ProgressiveLoading: true,
+        ViewModeToolsVisible: true,
+        ZoomToolsVisible: true,
+        FullScreenVisible: true,
+        NavToolsVisible: true,
+        CursorToolsVisible: true,
+        SearchToolsVisible: true,
+        localeChain: "en_US"
+    };
+    var params = {};
+    params.quality = "high";
+    params.bgcolor = "#ffffff";
+    params.allowscriptaccess = "sameDomain";
+    params.allowfullscreen = "true";
+    var attributes = {};
+    attributes.id = "FlexPaperViewer";
+    attributes.name = "FlexPaperViewer";
+    swfobject.embedSWF(
+        "@Url.Content("~/Scripts/FlexPaper/FlexPaperViewer.swf")", "flashContent",
+        "1024", "768",
+        swfVersionStr, xiSwfUrlStr,
+        flashvars, params, attributes);
+    swfobject.createCSS("#flashContent", "display:block;text-align:left;margin: 0 auto;");
+    </script>
+}
+<div style="width: 1024px; margin: 0 auto;">
+    <div id="flashContent"></div>
+</div>

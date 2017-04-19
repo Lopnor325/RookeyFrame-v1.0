@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rookey.Frame.QuartzClient</name>
+    </assembly>
+    <members>
+        <member name="M:Rookey.Frame.QuartzClient.DefaultScheduler.#ctor(Quartz.IScheduler)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="scheduler"></param>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.DefaultScheduler.StartScheduler">
+            <summary>
+            启动调度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.DefaultScheduler.StopScheduler">
+            <summary>
+            停止调度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.DefaultScheduler.PauseJobGroup(System.String)">
+            <summary>
+            暂停任务组
+            </summary>
+            <param name="jobGroupName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.DefaultScheduler.ResumeJobGroup(System.String)">
+            <summary>
+            恢复暂停的任务组
+            </summary>
+            <param name="jobGroupName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.DefaultScheduler.PauseJob(System.String,System.String)">
+            <summary>
+            暂停任务
+            </summary>
+            <param name="jobName"></param>
+            <param name="jobGroupName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.DefaultScheduler.ResumeJob(System.String,System.String)">
+            <summary>
+            恢得暂停的任务
+            </summary>
+            <param name="jobName"></param>
+            <param name="jobGroupName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.DefaultScheduler.PauseTrigger(System.String,System.String)">
+            <summary>
+            暂停执行计划
+            </summary>
+            <param name="triggerName"></param>
+            <param name="jogGroupName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.DefaultScheduler.ResumeTrigger(System.String,System.String)">
+            <summary>
+            恢得暂停的执行计划
+            </summary>
+            <param name="triggerName"></param>
+            <param name="jobGroupName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.DefaultScheduler.TriggerJobExecute(System.String,System.String)">
+            <summary>
+            触发任务执行
+            </summary>
+            <param name="jobName"></param>
+            <param name="jobGroupName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.DefaultScheduler.AddJob(Rookey.Frame.QuartzClient.Job)">
+            <summary>
+            添加任务
+            </summary>
+            <param name="triggersAndJob"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.DefaultScheduler.DeleteJob(System.String,System.String)">
+            <summary>
+            删除任务
+            </summary>
+            <param name="jobName">任务名称</param>
+            <param name="jobGroupName">任务组名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.DefaultScheduler.RunJobNow(System.String,System.String)">
+            <summary>
+            立即执行任务
+            </summary>
+            <param name="jobName"></param>
+            <param name="jobGroupName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.DefaultScheduler.GetJobGroups">
+            <summary>
+            获取job groups
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.DefaultScheduler.WriteLog(System.String)">
+            <summary>
+            写日志
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.QuartzClient.DefaultScheduler.Data">
+            <summary>
+            调度数据
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.QuartzClient.Job.JobName">
+            <summary>
+            任务名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.QuartzClient.Job.JobGroupName">
+            <summary>
+            任务组名
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.QuartzClient.Job.JobType">
+            <summary>
+            任务类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.QuartzClient.Job.JobDes">
+            <summary>
+            任务描述
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.QuartzClient.Job.TriggerName">
+            <summary>
+            任务计划名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.QuartzClient.Job.TriggerGroupName">
+            <summary>
+            任务计划组名
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.QuartzClient.Job.TriggerCron">
+            <summary>
+            任务执行表达式
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.QuartzClient.Job.TriggerDes">
+            <summary>
+            任务计划描述
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.QuartzClient.Job.StartTime">
+            <summary>
+            任务执行开始时间
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.QuartzClient.Job.EndTime">
+            <summary>
+            任务执行结束时间
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.QuartzClient.Job.IsStartNow">
+            <summary>
+            任务是否立即执行
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.QuartzClient.FrameJob.RebuildDbIndexJob">
+            <summary>
+            重建数据库索引
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.FrameJob.RebuildDbIndexJob.Execute(Quartz.IJobExecutionContext)">
+            <summary>
+            执行重建索引任务
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Rookey.Frame.QuartzClient.QuartzDataHandler">
+            <summary>
+            quartz任务调度处理类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.QuartzDataHandler.GetInstance">
+            <summary>
+            构造函数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.QuartzDataHandler.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.QuartzDataHandler.GetSchedulerStatus(Quartz.IScheduler)">
+            <summary>
+            运行状态
+            </summary>
+            <param name="scheduler">调度对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.QuartzDataHandler.GetJobDetailsData(System.String,System.String)">
+            <summary>
+            获取任务详细信息
+            </summary>
+            <param name="jobName"></param>
+            <param name="jobGroupName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.QuartzDataHandler.GetAllGroupsName">
+            <summary>
+            获取所有任务组名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.QuartzDataHandler.GetAllJob(System.String@)">
+            <summary>
+            获取所有任务信息，返回JSON格式数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.QuartzDataHandler.AddJob(System.String)">
+            <summary>
+            添加任务
+            </summary>
+            <param name="jobInfo">序列化后的任务数据</param>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.QuartzDataHandler.DeleteJob(System.String,System.String)">
+            <summary>
+            删除任务
+            </summary>
+            <param name="jobName">任务名称</param>
+            <param name="jobGroupName">任务组名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.QuartzDataHandler.PauseJob(System.String,System.String)">
+            <summary>
+            暂停任务
+            </summary>
+            <param name="jobName">任务名称</param>
+            <param name="jobGroupName">任务组名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.QuartzDataHandler.ResumeJob(System.String,System.String)">
+            <summary>
+            恢复任务
+            </summary>
+            <param name="jobName">任务名称</param>
+            <param name="jobGroupName">任务组名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.QuartzDataHandler.RunJobNow(System.String,System.String)">
+            <summary>
+            立即执行任务
+            </summary>
+            <param name="jobName"></param>
+            <param name="jobGroupName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.QuartzDataHandler.GetAllTriggerGroupName">
+            <summary>
+            获取所有计划组名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.QuartzDataHandler.GetJobPlan(System.String,System.String)">
+            <summary>
+            获取任务计划
+            </summary>
+            <param name="jobName"></param>
+            <param name="jobGroupName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.QuartzDataHandler.GetJobPlan(System.String,System.String,System.String)">
+            <summary>
+            获取任务计划数据,返回JSON格式数据
+            </summary>
+            <param name="jobName"></param>
+            <param name="jobGroupName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.ServiceControl.GetQuartzServiceInfo">
+            <summary>
+            获取调度服务启动信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.ServiceControl.InstallQuartzService">
+            <summary>
+            安装服务
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.ServiceControl.UninstallQuartzService">
+            <summary>
+            反安装服务
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.ServiceControl.StartQuartzService">
+            <summary>
+            启动服务
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.ServiceControl.RestartQuartzService">
+            <summary>
+            重启服务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.QuartzClient.ServiceControl.StopQuartzService">
+            <summary>
+            停止服务
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

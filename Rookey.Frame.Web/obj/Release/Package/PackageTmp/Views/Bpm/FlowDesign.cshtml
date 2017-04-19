@@ -1,0 +1,12 @@
+﻿@using Rookey.Frame.Common;
+@{
+    ViewBag.Title = "FlowDesign";
+    string r = WebHelper.GetJsModifyTimeStr("/Scripts/Bpm/FlowDesign.js");
+}
+@section scripts
+{
+    <script type="text/javascript" src="@Url.Content(string.Format("~/Scripts/Bpm/FlowDesign.js?r={0}",r))"></script>
+}
+@using Rookey.Frame.UIOperate;
+@{ UIFrameFactory frameFactory = UIFrameFactory.GetInstance(Request);}
+@Html.Raw(frameFactory.GetFlowDesignHTML())

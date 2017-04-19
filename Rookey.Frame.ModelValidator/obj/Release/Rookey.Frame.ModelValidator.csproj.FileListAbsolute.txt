@@ -1,0 +1,18 @@
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.ModelValidator.XML
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.ModelValidator.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.ModelValidator.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.ModelValidator\obj\Release\Rookey.Frame.ModelValidator.csprojResolveAssemblyReference.cache
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.ModelValidator\obj\Release\Rookey.Frame.ModelValidator.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.ModelValidator\obj\Release\Rookey.Frame.ModelValidator.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.ModelValidator.XML
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.ModelValidator.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.ModelValidator.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.ModelValidator\obj\Release\Rookey.Frame.ModelValidator.csprojResolveAssemblyReference.cache
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.ModelValidator\obj\Release\Rookey.Frame.ModelValidator.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.ModelValidator\obj\Release\Rookey.Frame.ModelValidator.pdb
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.ModelValidator.XML
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.ModelValidator.dll
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.ModelValidator.pdb
+D:\rookey\git.oschina\Rookey.Frame.ModelValidator\obj\Release\Rookey.Frame.ModelValidator.csprojResolveAssemblyReference.cache
+D:\rookey\git.oschina\Rookey.Frame.ModelValidator\obj\Release\Rookey.Frame.ModelValidator.dll
+D:\rookey\git.oschina\Rookey.Frame.ModelValidator\obj\Release\Rookey.Frame.ModelValidator.pdb

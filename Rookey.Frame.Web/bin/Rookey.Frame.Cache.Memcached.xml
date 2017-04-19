@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rookey.Frame.Cache.Memcached</name>
+    </assembly>
+    <members>
+        <member name="T:Rookey.Frame.Cache.Memcached.MemcachedClientCache">
+            <summary>
+            A memcached implementation of the ServiceStack ICacheClient interface.
+            Good practice not to have dependencies on implementations in your business logic.
+            
+            Basically delegates all calls to Enyim.Caching.MemcachedClient with added diagnostics and logging.
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Memcached.MemcachedClientCache.#ctor">
+            <summary>
+            Initializes the Cache using the default configuration section (enyim/memcached) to configure the memcached client
+            </summary>
+            <see cref="T:Enyim.Caching.Configuration.MemcachedClientSection"/>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Memcached.MemcachedClientCache.#ctor(System.Collections.Generic.IEnumerable{System.String},System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes the Cache using the provided hosts to configure the memcached client
+            </summary>
+            <param name="hosts">主机</param>
+            <param name="minPoolSize">pool最小值</param>
+            <param name="maxPoolSize">pool最大值</param>
+            <param name="connectionTimeout">连接超时时间（秒）</param>
+            <param name="deadTimeout">死机超时时间（分钟）</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Memcached.MemcachedClientCache.#ctor(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Initializes the Cache using the provided hosts to configure the memcached client
+            </summary>
+            <param name="hosts"></param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Memcached.MemcachedClientCache.#ctor(Enyim.Caching.Configuration.IMemcachedClientConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Rookey.Frame.Cache.Memcached.MemcachedClientCache"/> class based on an existing <see cref="T:Enyim.Caching.Configuration.IMemcachedClientConfiguration"/>.
+            </summary>
+            <param name="memcachedClientConfiguration">The <see cref="T:Enyim.Caching.Configuration.IMemcachedClientConfiguration"/>.</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Memcached.MemcachedClientCache.PrepareMemcachedClientConfiguration(System.Collections.Generic.IEnumerable{System.Net.IPEndPoint})">
+            <summary>
+            Prepares a MemcachedClientConfiguration based on the provided ipEndpoints.
+            </summary>
+            <param name="ipEndpoints">The ip endpoints.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Memcached.MemcachedClientCache.Execute``1(System.Func{``0})">
+            <summary>
+            Executes the specified expression. 
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="action">The action.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Memcached.MemcachedClientCache.Execute(System.Action)">
+            <summary>
+            Executes the specified action (for void methods).
+            </summary>
+            <param name="action">The action.</param>
+        </member>
+    </members>
+</doc>

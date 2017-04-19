@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rookey.Frame.ModelValidator</name>
+    </assembly>
+    <members>
+        <member name="T:Rookey.Frame.ModelValidator.Sys_IconManageValidator">
+            <summary>
+            图标管理验证
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.ModelValidator.Sys_IconManageValidator.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.ModelValidator.Sys_MenuValidator">
+            <summary>
+            菜单验证
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.ModelValidator.Sys_MenuValidator.#ctor">
+            <summary>
+            菜单验证构造函数
+            </summary>
+        </member>
+    </members>
+</doc>

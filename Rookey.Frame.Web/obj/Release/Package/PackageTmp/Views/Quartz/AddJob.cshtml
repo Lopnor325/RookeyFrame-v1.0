@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "AddJob";
+}
+@section scripts{
+    <style type="text/css">
+        body {
+            margin: 0px 0px 0px 0px;
+            font-size: 13px;
+        }
+        td {
+            height: 30px;
+        }
+        .td_text {
+            text-align: right;
+            width: 100px;
+        }
+        .td_value {
+            text-align: left;
+            width: 200px;
+        }
+        input {
+            width: 180px;
+        }
+    </style>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Quartz/AddJob.js")"></script>
+}
+@using Rookey.Frame.UIOperate;
+@{ UIFrameFactory frameFactory = UIFrameFactory.GetInstance(Request);}
+@Html.Raw(frameFactory.GetAddJobHTML())

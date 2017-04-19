@@ -1,0 +1,15 @@
+﻿@using Rookey.Frame.Common;
+@using Rookey.Frame.UIOperate;
+@{ UIFrameFactory frameFactory = UIFrameFactory.GetInstance(Request);
+   Guid moduleId = UIOperate.GetModuleIdByRequest(Request);
+   Guid? id = Request["id"].ObjToGuidNull();
+   string gridId = Request["gridId"].ObjToStr();
+   Guid? copyId = Request["copyId"].ObjToGuidNull(); //复制时被复制记录Id
+   bool showTip = Request["tip"].ObjToInt() == 1;
+   Guid? todoTaskId = Request["todoId"].ObjToGuidNull(); //待办任务ID
+   Guid? formId = Request["formId"].ObjToGuidNull(); //表单ID
+}
+@{
+    ViewBag.Title = "EditForm";
+}
+@Html.Raw(frameFactory.GetEditFormHTML(moduleId, id, gridId, copyId, showTip, todoTaskId, formId, Request))

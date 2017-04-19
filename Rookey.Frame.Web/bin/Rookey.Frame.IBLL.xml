@@ -1,0 +1,508 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rookey.Frame.IBLL</name>
+    </assembly>
+    <members>
+        <member name="T:Rookey.Frame.IBLL.Base.IBaseBLL`1">
+            <summary>
+            通用业务层接口
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.GetEntity(System.String@,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.List{System.String},System.Boolean,System.String)">
+            <summary>
+            获取单个实体
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="expression">查询表达式</param>
+            <param name="whereSql">SQL条件语句</param>
+            <param name="fieldNames">要查询的字段集合</param>
+            <param name="references">是否加载关联对象数据（导航属性）</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.GetEntityById(System.String@,System.Object,System.Collections.Generic.List{System.String},System.Boolean,System.String)">
+            <summary>
+            通过主键Id获取实体
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="id">主键Id</param>
+            <param name="fieldNames">要查询的字段集合</param>
+            <param name="references">是否加载关联对象数据（导航属性）</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.GetEntities(System.String@,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Boolean,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Boolean},System.Nullable{System.Int32},System.Collections.Generic.List{System.String},System.Boolean,System.String)">
+            <summary>
+            获取实体集合
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="expression">条件表达式</param>
+            <param name="whereSql">SQL条件语句</param>
+            <param name="permissionFilter">是否启用权限过滤</param>
+            <param name="orderFields">排序字段</param>
+            <param name="isDescs">是否降序排序</param>
+            <param name="fieldNames">要查询的字段集合</param>
+            <param name="references">是否加载关联对象数据（导航属性）</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.GetEntitiesByField(System.String@,System.String,System.Object,System.Boolean,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Boolean},System.Nullable{System.Int32},System.Collections.Generic.List{System.String},System.Boolean,System.String)">
+            <summary>
+            根据字段获取记录
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="fieldName">字段名称</param>
+            <param name="fieldValue">字段值</param>
+            <param name="permissionFilter">是否启用权限过滤</param>
+            <param name="orderFields">排序字段</param>
+            <param name="isDescs">是否降序</param>
+            <param name="fieldNames">要查询的字段集合</param>
+            <param name="references">是否加载关联对象数据（导航属性）</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.GetPageEntities(System.Int64@,System.String@,System.Boolean,System.Int32,System.Int32,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.Collections.Generic.List{System.String},System.Boolean,System.String)">
+            <summary>
+            获取分页实体集合
+            </summary>
+            <param name="totalCount">总记录数</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="permissionFilter">是否启用权限过滤</param>
+            <param name="pageIndex">页号，最小为1，默认为1</param>
+            <param name="pageSize">每页记录数，最大为500，默认为10</param>
+            <param name="orderFields">排序字段</param>
+            <param name="isDescs">降序排序</param>
+            <param name="expression">条件表达式</param>
+            <param name="whereSql">SQL条件语句</param>
+            <param name="fieldNames">要查询的字段集合</param>
+            <param name="references">是否加载关联对象数据（导航属性）</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.Count(System.String@,System.Boolean,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,System.String)">
+            <summary>
+            获取记录数
+            </summary>
+            <param name="errorMsg">异常信息</param>
+            <param name="permissionFilter">是否启用权限过滤</param>
+            <param name="expression">条件表达式</param>
+            <param name="whereSql">SQL条件语句</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.LoadReferences(`0,System.String@,System.String)">
+            <summary>
+            加载实体对象的关联对象（导航属性）
+            </summary>
+            <param name="instance">实体对象</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.LoadListReferences(System.Collections.Generic.List{`0},System.String@,System.String)">
+            <summary>
+            加载关联对象（导航属性）
+            </summary>
+            <param name="instances">实体对象集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.Scalar(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String@,System.String)">
+            <summary>
+            获取实体某个字段值
+            </summary>
+            <param name="field">字段</param>
+            <param name="expression">条件表达式</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.AddEntity(`0,System.String@,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            新增实体返回实体Id
+            </summary>
+            <param name="entity">实体</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="references">是否保存关联对象数据（导航属性）</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.AddEntities(System.Collections.Generic.List{`0},System.String@,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            批量新增
+            </summary>
+            <param name="entities">实体集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="references">是否保存关联对象数据（导航属性）</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.UpdateEntity(`0,System.String@,System.Collections.Generic.List{System.String},System.Boolean,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            更新单个实体
+            </summary>
+            <param name="entity">实体</param>
+            <param name="fieldNames">要更新的字段名称集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="permissionValidate">是否进行权限验证</param>
+            <param name="references">是否保存关联对象数据（导航属性）</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns>返回更新结果</returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.UpdateEntities(System.Collections.Generic.List{`0},System.String@,System.Boolean,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            批量更新实体
+            </summary>
+            <param name="entities">实体集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="permissionValidate">是否进行权限验证</param>
+            <param name="references">是否保存关联对象数据（导航属性）</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.UpdateFields(System.Collections.Generic.List{`0},System.String@,System.Collections.Generic.List{System.String},System.String,System.Data.IDbConnection)">
+            <summary>
+            批量更新字段
+            </summary>
+            <param name="entities">实体集合</param>
+            <param name="errMsg">异常信息</param>
+            <param name="fieldNames">字段集合</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.UpdateEntityByExpression(System.Object,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String@,System.String,System.Data.IDbConnection)">
+            <summary>
+            通过表达式更新实体
+             UpdateEntityByExpression(new { FirstName = "JJ" }, p => p.LastName == "Hendrix");
+             UPDATE "Person" SET "FirstName" = 'JJ' WHERE ("LastName" = 'Hendrix')
+            </summary>
+            <param name="obj">匿名对象</param>
+            <param name="expression">表达式</param>
+            <param name="errMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.DeleteEntity(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String@,System.String,System.Data.IDbConnection)">
+            <summary>
+            删除实体
+            </summary>
+            <param name="expression">条件</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns>返回结果</returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.DeleteEntityById(System.Object,System.String@,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            通过主键Id删除实体
+            </summary>
+            <param name="ids">主键Id</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="permissionValidate">是否进行权限验证</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.DeleteEntityByIds(System.Collections.IEnumerable,System.String@,System.Boolean,System.String,System.Data.IDbConnection)">
+            <summary>
+            通过主键Id集合删除实体
+            </summary>
+            <param name="id">主键Id集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="permissionValidate">是否进行权限验证</param>
+            <param name="connString">数据库连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.GetEntitiesBySql(System.String@,System.String,System.Object[],System.String)">
+            <summary>
+            以SQL方式获取实体集合
+            </summary>
+            <param name="errorMsg">错误信息</param>
+            <param name="sql">sql语句</param>
+            <param name="sqlParams">sql参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.ExecuteQuery(System.String@,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String)">
+            <summary>
+            以SQL方式执行查询
+            </summary>
+            <param name="errMsg">错误信息</param>
+            <param name="sql">sql语句</param>
+            <param name="sqlParams">sql参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.ExecuteScale(System.String@,System.String,System.Object[],System.String)">
+            <summary>
+            获取查询到的第一行第一列的数据
+            </summary>
+            <param name="errMsg">错误信息</param>
+            <param name="sql">sql语句</param>
+            <param name="sqlParams">sql参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.ExecuteNonQuery(System.String@,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String,System.Data.IDbConnection)">
+            <summary>
+            执行增删改语句
+            </summary>
+            <param name="errorMsg">错误信息</param>
+            <param name="sql">sql</param>
+            <param name="sqlParams">sql参数</param>
+            <param name="transConn">事务连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.RunProcedureNoQuery(System.String@,System.Collections.Generic.Dictionary{System.String,System.Object}@,System.String,System.Object,System.String,System.Data.IDbConnection)">
+            <summary>
+            执行存储过程，针对非查询
+            </summary>
+            <param name="errMsg">异常信息</param>
+            <param name="outParams">输出参数</param>
+            <param name="procedureName">存储过程名</param>
+            <param name="inParams">输入参数 eg:new{Age=30}</param>
+            <param name="connString">连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns>返回受影响的行数</returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.RunProcedure(System.String@,System.Collections.Generic.Dictionary{System.String,System.Object}@,System.String,System.Object,System.String,System.Data.IDbConnection)">
+            <summary>
+            执行存储过程，针对查询
+            </summary>
+            <param name="errMsg">异常信息</param>
+            <param name="outParams">输出参数</param>
+            <param name="procedureName">存储过程名</param>
+            <param name="inParams">输入参数 eg:new{Age=30}</param>
+            <param name="connString">连接字符串</param>
+            <param name="transConn">事务连接对象</param>
+            <returns>返回查询记录</returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.ExecuteTransaction(System.Collections.Generic.List{Rookey.Frame.Common.Model.TransactionModel{`0}},System.String@,System.String)">
+            <summary>
+            执行事务
+            </summary>
+            <param name="transactionObjects">事务对象集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.ExecuteTransactionExtend(System.Collections.Generic.List{Rookey.Frame.Common.Model.TransactionExtendModel},System.String@,System.String)">
+            <summary>
+            执行事务
+            </summary>
+            <param name="transactionObjects">事务扩展对象集合</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.TransactionHandle(Rookey.Frame.Common.Model.TransactionTask,System.String@,System.String)">
+            <summary>
+            执行事务
+            </summary>
+            <param name="transTask">事务处理函数</param>
+            <param name="errorMsg">异常信息</param>
+            <param name="connString">数据库连接字符串</param>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.CreateTable(System.String)">
+            <summary>
+            创建数据表
+            </summary>
+            <param name="connString">数据库连接字符串</param>
+            <returns>创建成功返回空字符串，失败返回异常信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.DropTable(System.String)">
+            <summary>
+            删除数据表
+            </summary>
+            <param name="connString">数据库连接字符串</param>
+            <returns>删除成功返回空字符串，失败返回异常信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.AlterTable(System.String,System.String)">
+            <summary>
+            修改数据表
+            </summary>
+            <param name="command">操作sql，如：[ALTER TABLE a] ADD Column b int</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns>成功返回空字符串，失败返回异常信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.ColumnIsExists(System.String,System.String)">
+            <summary>
+            数据列是否存在
+            </summary>
+            <param name="fieldName">字段名称</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.AddColumn(System.String,System.String)">
+            <summary>
+            增加数据列
+            </summary>
+            <param name="fieldName">字段名称</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns>成功返回空字符串，失败返回异常信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.AlterColumn(System.String,System.String)">
+            <summary>
+            修改数据列
+            </summary>
+            <param name="fieldName">字段名称</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns>成功返回空字符串，失败返回异常信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.ChangeColumnName(System.String,System.String,System.String)">
+            <summary>
+            修改列名
+            </summary>
+            <param name="fieldName">字段名称</param>
+            <param name="oldFieldName">旧的字段名</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns>成功返回空字符串，失败返回异常信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.DropColumn(System.String,System.String)">
+            <summary>
+            删除列
+            </summary>
+            <param name="columnName">列名</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.CreateIndex(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.String,System.Boolean,System.String)">
+            <summary>
+            创建索引
+            </summary>
+            <param name="field">字段</param>
+            <param name="indexName">索引名</param>
+            <param name="unique">是否唯一索引</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns>成功返回空字符串，失败返回异常信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.DropIndex(System.String,System.String)">
+            <summary>
+            删除索引
+            </summary>
+            <param name="indexName">索引名称</param>
+            <param name="connString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.ExpressionConditionToWhereSql(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            将lamda条件表达式转换成sql
+            </summary>
+            <param name="expression">条件表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.ClearCache">
+            <summary>
+            清除当前模块缓存
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.ClearAllCache">
+            <summary>
+            清除所有缓存
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.SetCustomerCache(System.String,System.Object)">
+            <summary>
+            设置自定义缓存
+            </summary>
+            <param name="key">缓存key</param>
+            <param name="data">数据</param>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.RemoveCustomerCache(System.String)">
+            <summary>
+            移除自定义缓存
+            </summary>
+            <param name="key">缓存key</param>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Base.IBaseBLL`1.GetCustomerCache(System.String)">
+            <summary>
+            获取自定义缓存
+            </summary>
+            <param name="key">缓存key</param>
+        </member>
+        <member name="T:Rookey.Frame.IBLL.Sys.ISys_PermissionDataBLL">
+            <summary>
+            数据权限自定义业务层接口
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Sys.ISys_PermissionDataBLL.GetRoleDataPermissions(System.Guid,System.Guid,System.Int32,System.Boolean)">
+            <summary>
+            获取角色可（查看、编辑、删除）模块中哪些组织下的数据，返回可（查看、编辑、删除）
+            的组织Id集合字典，
+            第一个参数为组织Id，第二个参数为是否来自父角色的权限，非当前
+            角色的权限
+            </summary>
+            <param name="roleId">角色Id</param>
+            <param name="moduleId">模块Id</param>
+            <param name="dataPermissionType">数据权限类型,0-查看，1-编辑，2-删除</param>
+            <param name="read">是否为应用读取</param>
+            <returns>返回组织Id集合字典</returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Sys.ISys_PermissionDataBLL.GetUserDataPermissions(System.Guid,System.Guid,System.Int32)">
+            <summary>
+            获取用户可（查看、编辑、删除）模块中哪些组织下的数据，
+            返回可（查看、编辑、删除）的组织Id集合
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="moduleId">模块Id</param>
+            <param name="dataPermissionType">数据权限类型,0-查看，1-编辑，2-删除</param>
+            <returns>返回组织Id集合字典</returns>
+        </member>
+        <member name="T:Rookey.Frame.IBLL.Sys.ISys_PermissionFieldBLL">
+            <summary>
+            字段权限自定义业务层接口
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Sys.ISys_PermissionFieldBLL.GetRoleFieldPermissions(System.Guid,System.Guid,System.Int32,System.Boolean)">
+            <summary>
+            获取角色（查看、新增、编辑）字段权限，返回允许（查看、新增、编辑）的字段名字典，
+            第一个参数为字段名，第二个参数为是否来自父角色的权限，
+            非当前角色权限
+            </summary>
+            <param name="roleId">角色Id</param>
+            <param name="moduleId">模块Id</param>
+            <param name="fieldPermissionType">字段权限类型,0-查看，1-新增，2-编辑</param>
+            <param name="read">是否为应用读取，应用读取快速返回</param>
+            <returns>返回允许（查看、新增、编辑）的字段名字典</returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Sys.ISys_PermissionFieldBLL.GetUserFieldsPermissions(System.Guid,System.Guid,System.Int32)">
+            <summary>
+            获取用户（查看、新增、编辑）字段权限
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="moduleId">模块Id</param>
+            <param name="fieldPermissionType">字段权限类型，0-查看，1-新增，2-编辑</param>
+            <returns>返回允许（查看、新增、编辑）的字段名集合</returns>
+        </member>
+        <member name="T:Rookey.Frame.IBLL.Sys.ISys_PermissionFunBLL">
+            <summary>
+            功能权限自定义业务层接口
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Sys.ISys_PermissionFunBLL.GetRoleFunPermissions(System.Guid,System.Int32,System.Nullable{System.Guid})">
+            <summary>
+            获取角色功能权限，子角色默认继承父角色的所有权限，当前返回字典，
+            字典第一个参数为功能Id（菜单或按钮Id）,第二个参数为是否该功能Id继承父角色，
+            非当前角色所有
+            </summary>
+            <param name="roleId">角色Id</param>
+            <param name="functionType">功能类型，菜单或网格按钮,0-菜单，1-按钮</param>
+            <param name="moduleId">模块ID，针对按钮权限需要</param>
+            <returns>返回功能Id、是否来自父角色的权限字典</returns>
+        </member>
+        <member name="M:Rookey.Frame.IBLL.Sys.ISys_PermissionFunBLL.GetUserFunPermissions(System.Guid,System.Int32,System.Nullable{System.Guid})">
+            <summary>
+            获取用户的功能（菜单或网格按钮）权限，返回字典，
+            字典的第一个参数为功能Id（菜单或按钮Id），第二个
+            参数为是否来自父角色的权限，非当前角色权限
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="functionType">功能类型（菜单、网格按钮）,0-菜单，1-按钮</param>
+            <param name="moduleId">模块ID，针对按钮权限需要</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

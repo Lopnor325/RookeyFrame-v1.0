@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rookey.Frame.Web</name>
+    </assembly>
+    <members>
+        <member name="T:Config">
+            <summary>
+            Config 的摘要说明
+            </summary>
+        </member>
+        <member name="F:Config.ImageSavePath">
+            <summary>
+            图片保存路径
+            </summary>
+        </member>
+        <member name="T:Uploader">
+            <summary>
+            UEditor编辑器通用上传类
+            </summary>
+        </member>
+        <member name="M:Uploader.upFile(System.Web.HttpContext,System.String,System.String[],System.Int32)">
+             上传文件的主处理方法
+             @param HttpContext
+             @param string
+             @param  string[]
+            @param int
+             @return Hashtable
+        </member>
+        <member name="M:Uploader.upScrawl(System.Web.HttpContext,System.String,System.String,System.String)">
+             * 上传涂鸦的主处理方法
+              * @param HttpContext
+              * @param string
+              * @param  string[]
+              *@param string
+              * @return Hashtable
+        </member>
+        <member name="M:Uploader.getOtherInfo(System.Web.HttpContext,System.String)">
+            获取文件信息
+            @param context
+            @param string
+            @return string
+        </member>
+        <member name="M:Uploader.getUploadInfo">
+            获取上传信息
+            @return Hashtable
+        </member>
+        <member name="M:Uploader.reName">
+            重命名文件
+            @return string
+        </member>
+        <member name="M:Uploader.checkType(System.String[])">
+            文件类型检测
+            @return bool
+        </member>
+        <member name="M:Uploader.checkSize(System.Int32)">
+            文件大小检测
+            @param int
+            @return bool
+        </member>
+        <member name="M:Uploader.getFileExt">
+            获取文件扩展名
+            @return string
+        </member>
+        <member name="M:Uploader.createFolder">
+            按照日期自动创建存储文件夹
+        </member>
+        <member name="M:Uploader.deleteFolder(System.String)">
+            删除存储文件夹
+            @param string
+        </member>
+        <member name="T:NameFormater">
+            <summary>
+            文件名称格式化
+            </summary>
+        </member>
+        <member name="M:NameFormater.Format(System.String,System.String)">
+            <summary>
+            格式化文件名
+            </summary>
+            <param name="format"></param>
+            <param name="filename"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <default>
+
+    <!--上传文件基础路径-->
+    <basePath></basePath>
+    
+    <!--上传临时文件夹-->
+    <tempPath>Upload/Temp</tempPath>
+
+    <!--允许上传文件类型-->
+    <allowType>*.jpg;*.gif;*.png;*.doc;*.docx;*.pdf;*.txt;*.xls;*.xlsx;*.rtf;*.ppt;*.pptx</allowType>
+
+    <!--单个文件最大尺寸，单位KB-->
+    <maxFileSize>512</maxFileSize>
+
+    <!--最多允许上传文件个数，0为不限制-->
+    <queueSizeLimit>5</queueSizeLimit>
+
+    <folder>Upload/</folder>
+    
+  </default>
+
+  <Attachment>
+    <allowType>*.jpg;*.gif;*.png;*.doc;*.docx;*.xls;*.xlsx;*.pdf;*.txt;*.rtf;*.ppt;*.pptx;*.rar;*.zip</allowType>
+    <maxFileSize>102400</maxFileSize>
+    <folder>Upload/Attachment</folder>
+  </Attachment>
+
+  <UEImage>
+    <allowType>*.gif; *.png;*.jpg;*.jpeg;*.bmp</allowType>
+    <maxFileSize>2048</maxFileSize>
+    <folder>Upload/UE</folder>
+  </UEImage>
+
+  <UEFile>
+    <allowType>*.rar;*.doc;*.docx;*.zip;*.pdf;*.txt;*.xls;*.xlsx;*.swf;*.mkv;*.avi;*.rm;*.rmvb;*.mpeg;*.mpg;*.ogg;*.mov;*.wmv;*.mp4;*.webm;*.ppt;*.pptx</allowType>
+    <maxFileSize>102400</maxFileSize>
+    <folder>Upload/UE</folder>
+  </UEFile>
+
+</root>

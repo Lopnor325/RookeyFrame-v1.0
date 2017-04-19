@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DBC040B-98DF-4B27-8DDC-3847BDE3C391}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rookey.Frame.UIOperate</RootNamespace>
+    <AssemblyName>Rookey.Frame.UIOperate</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Rookey.Frame.Lib\web\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Rookey.Frame.Lib\web\Rookey.Frame.UIOperate.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Rookey.Frame.Lib\web\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DocumentationFile>..\Rookey.Frame.Lib\web\Rookey.Frame.UIOperate.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Cecport.Frame.Lib\other\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EasyUI\ConstDefine.cs" />
+    <Compile Include="EasyUI\Control\EasyuiGrid.cs" />
+    <Compile Include="EasyUI\Control\MvcExtensions.cs" />
+    <Compile Include="EasyUI\EasyUIFrame.cs" />
+    <Compile Include="EasyUI\UIFrameFactory.cs" />
+    <Compile Include="EasyUI\UIOperate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rookey.Frame.Base\Rookey.Frame.Base.csproj">
+      <Project>{628ff3d3-b976-4eac-90e8-a19dd338613e}</Project>
+      <Name>Rookey.Frame.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rookey.Frame.Common\Rookey.Frame.Common.csproj">
+      <Project>{b6a7b291-9f23-40d2-8dc4-3a63f35f0eb0}</Project>
+      <Name>Rookey.Frame.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rookey.Frame.EntityBase\Rookey.Frame.EntityBase.csproj">
+      <Project>{ca335d51-bcd7-4d88-8016-57dea03fc6c1}</Project>
+      <Name>Rookey.Frame.EntityBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rookey.Frame.Model\Rookey.Frame.Model.csproj">
+      <Project>{c49902e4-7448-45ff-b336-a590e80bccfa}</Project>
+      <Name>Rookey.Frame.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rookey.Frame.Operate.Base\Rookey.Frame.Operate.Base.csproj">
+      <Project>{96d1a48c-8711-4ac8-bf63-0023b711ac21}</Project>
+      <Name>Rookey.Frame.Operate.Base</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="项目说明.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

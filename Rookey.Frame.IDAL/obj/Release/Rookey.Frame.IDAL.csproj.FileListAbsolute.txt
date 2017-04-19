@@ -1,0 +1,18 @@
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.IDAL.XML
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.IDAL.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.IDAL.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.IDAL\obj\Release\Rookey.Frame.IDAL.csprojResolveAssemblyReference.cache
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.IDAL\obj\Release\Rookey.Frame.IDAL.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.IDAL\obj\Release\Rookey.Frame.IDAL.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.IDAL.XML
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.IDAL.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.IDAL.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.IDAL\obj\Release\Rookey.Frame.IDAL.csprojResolveAssemblyReference.cache
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.IDAL\obj\Release\Rookey.Frame.IDAL.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.IDAL\obj\Release\Rookey.Frame.IDAL.pdb
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.IDAL.XML
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.IDAL.dll
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.IDAL.pdb
+D:\rookey\git.oschina\Rookey.Frame.IDAL\obj\Release\Rookey.Frame.IDAL.csprojResolveAssemblyReference.cache
+D:\rookey\git.oschina\Rookey.Frame.IDAL\obj\Release\Rookey.Frame.IDAL.dll
+D:\rookey\git.oschina\Rookey.Frame.IDAL\obj\Release\Rookey.Frame.IDAL.pdb

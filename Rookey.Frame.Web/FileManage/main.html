@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html PUBLIC "-W3CDTD XHTML 1.0 TransitionalEN" "http:www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>程序文件在线管理</title>
+    <script src="js/Ajax.js" type="text/javascript"></script>
+    <script src="js/Tree.js" type="text/javascript"></script>
+    <script src="js/Dialog.js" type="text/javascript"></script>
+    <script src="js/Common.js" type="text/javascript"></script>
+    <link href="images/dialog/Dialog.css" rel="stylesheet" type="text/css" />
+    <link href="css/WebExplorer.css" rel="stylesheet" type="text/css" />
+    <script src="fckeditor/fckeditor.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function Load() {
+            var url = defaultURL + "?action=CHECKLOGIN";
+            var result = executeHttpRequest("GET", url, null);
+            if (result.toLowerCase() == "true") { //用户已登录并且是管理员
+                document.getElementById("fileExplorer").style.display = "block";
+            }
+            else {
+                document.getElementById("fileExplorer").style.display = "none";
+                window.alert("您没有该功能权限，请联系超级管理员！");
+            }
+        }
+    </script>
+</head>
+<body onload="Load();">
+    <div id="fileExplorer" style="display: none;">
+        <div id="tree">
+        </div>
+        <div id="rightPanel">
+            <div id="path">
+                当前位置：<span id="pathString"></span>
+            </div>
+            <hr />
+            <!-- 这里是菜单开始 -->
+            <div id="menu">
+                <div class="menuItem" onclick="javascript:gotoParentDirectory();">
+                    <img class="menuItemImg" src="images/up.gif" />
+                    <div class="tipText">
+                        向上
+                    </div>
+                </div>
+                <div class="menuItem" onclick="javascrip:goRoot();">
+                    <img class="menuItemImg" src="images/home.gif" />
+                    <div class="tipText">
+                        根目录
+                    </div>
+                </div>
+                <div class="menuItem" onclick="javascript:refersh()">
+                    <img class="menuItemImg" src="images/refersh.gif" />
+                    <div class="tipText">
+                        刷新
+                    </div>
+                </div>
+                <div class="menuItem" onclick="javascript:newDirectory();">
+                    <img class="menuItemImg" src="images/newfolder.gif" />
+                    <div class="tipText">
+                        新目录
+                    </div>
+                </div>
+                <div class="menuItem" onclick="javascript:newFile();">
+                    <img class="menuItemImg" src="images/newfile.gif" />
+                    <div class="tipText">
+                        新文件
+                    </div>
+                </div>
+                <div class="menuItem" onclick="javascript:del();">
+                    <img class="menuItemImg" src="images/delete.gif" />
+                    <div class="tipText">
+                        删除
+                    </div>
+                </div>
+                <div class="menuItem" onclick="javascript:cut();">
+                    <img class="menuItemImg" src="images/cut.gif" />
+                    <div class="tipText">
+                        剪切
+                    </div>
+                </div>
+                <div class="menuItem" onclick="javascript:copy();">
+                    <img class="menuItemImg" src="images/copy.gif" />
+                    <div class="tipText">
+                        复制
+                    </div>
+                </div>
+                <div class="menuItem" onclick="javascript:paste();">
+                    <img class="menuItemImg" src="images/paste.gif" />
+                    <div class="tipText">
+                        粘贴
+                    </div>
+                </div>
+                <div class="menuItem" onclick="javascript:zipFile();">
+                    <img class="menuItemImg" src="images/zipfile.gif" />
+                    <div class="tipText">
+                        压缩
+                    </div>
+                </div>
+                <div class="menuItem" onclick="javascript:unZipFile();">
+                    <img class="menuItemImg" src="images/unzip.gif" />
+                    <div class="tipText">
+                        解压
+                    </div>
+                </div>
+                <div class="menuItem" onclick="javascript:downloadsFiles();">
+                    <img class="menuItemImg" src="images/download.gif" />
+                    <div class="tipText">
+                        下载
+                    </div>
+                </div>
+                <div class="menuItem" onclick="javascript:uploadFile();">
+                    <img class="menuItemImg" src="images/upload.gif" />
+                    <div class="tipText">
+                        上传
+                    </div>
+                </div>
+                <div style="clear: both">
+                </div>
+            </div>
+            <!-- 这里是菜单结束 -->
+            <!-- 这里是文件列表开始 -->
+            <div id="fileListHead">
+                <div class="chkColumn">
+                    <input type="checkbox" id="checkAll" onclick="javascript: selectAll();" title="全部选中" />
+                </div>
+                <div class="fileType">
+                    类型
+                </div>
+                <div class="fileName">
+                    名称
+                </div>
+                <div class="fileSize">
+                    大小
+                </div>
+                <div class="lastUpdate">
+                    最后更新
+                </div>
+                <div class="rename">
+                    重命名
+                </div>
+                <div style="clear: both;">
+                </div>
+            </div>
+
+            <div id="fileList"></div>
+            <!-- 这里是文件列表结束 -->
+        </div>
+    </div>
+
+    <script src="js/WebExplorerMain.js" type="text/javascript"></script>
+
+</body>
+<script type="text/javascript">
+    //树高度随浏览器高度变化而变化
+    var treeDiv = document.getElementById("tree");
+    var treeDiv_Resize = function () {
+        treeDiv.style.width = 200;
+        treeDiv.style.height = document.documentElement.clientHeight; //document.body.clientHeight
+    }
+    treeDiv_Resize();
+    window.onresize = treeDiv_Resize;
+</script>
+</html>

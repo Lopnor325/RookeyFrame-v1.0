@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D7921231-B897-4A94-8C70-0B0E66B3C09E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rookey.Frame.Controllers</RootNamespace>
+    <AssemblyName>Rookey.Frame.Controllers</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Rookey.Frame.Lib\web\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Rookey.Frame.Lib\web\Rookey.Frame.Controllers.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Rookey.Frame.Lib\web\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Rookey.Frame.Lib\web\Rookey.Frame.Controllers.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentValidation">
+      <HintPath>..\Cecport.Frame.Lib\validate\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation.Mvc">
+      <HintPath>..\Cecport.Frame.Lib\validate\FluentValidation.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="FredCK.FCKeditorV2">
+      <HintPath>..\Rookey.Frame.Lib\other\FredCK.FCKeditorV2.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.84.0.0, Culture=neutral, PublicKeyToken=1b03e6acf1164f73">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Rookey.Frame.Web\bin\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Http.SelfHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Cecport.Frame.Lib\other\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppConfig\FilterConfig.cs" />
+    <Compile Include="AppConfig\MvcApplication.cs" />
+    <Compile Include="AppConfig\MyViewEngine.cs" />
+    <Compile Include="AppConfig\RouteConfig.cs" />
+    <Compile Include="AppConfig\WebApiConfig.cs" />
+    <Compile Include="Attr\AnonymousAttribute.cs" />
+    <Compile Include="Attr\ApiFilterAttribute.cs" />
+    <Compile Include="Attr\CrossOriginAttribute .cs" />
+    <Compile Include="Attr\ExceptionAttribute.cs" />
+    <Compile Include="Attr\LoginAllowViewAttribute.cs" />
+    <Compile Include="Attr\LoginAttribute.cs" />
+    <Compile Include="Attr\OpTimeMonitorAttribute.cs" />
+    <Compile Include="Attr\PermissionFilterAttribute.cs" />
+    <Compile Include="AutoHandle\SysApplicationHandle.cs" />
+    <Compile Include="AutoHandle\SysAutoHandle.cs" />
+    <Compile Include="Controllers\AsyncBaseController.cs" />
+    <Compile Include="Controllers\Common\AnnexController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\BaseApiController.cs" />
+    <Compile Include="Controllers\Common\BpmController.cs" />
+    <Compile Include="Controllers\Common\DataController.cs" />
+    <Compile Include="Controllers\Common\PageController.cs" />
+    <Compile Include="Controllers\Common\QuartzController.cs" />
+    <Compile Include="Controllers\Common\SecurityController.cs" />
+    <Compile Include="Controllers\Common\UserController.cs" />
+    <Compile Include="Controllers\Common\SystemController.cs" />
+    <Compile Include="Controllers\Common\OrgMController.cs" />
+    <Compile Include="FileManage\DownLoadFile.cs" />
+    <Compile Include="FileManage\WebExplorer.cs" />
+    <Compile Include="FileManage\ZipClass.cs" />
+    <Compile Include="Other\FileAccessInterception.cs" />
+    <Compile Include="Other\ReturnResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Other\UserExtendHandle.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rookey.Frame.AutoProcess\Rookey.Frame.AutoProcess.csproj">
+      <Project>{eda54753-62e3-4722-a28e-201f1cce3f33}</Project>
+      <Name>Rookey.Frame.AutoProcess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rookey.Frame.Base\Rookey.Frame.Base.csproj">
+      <Project>{628ff3d3-b976-4eac-90e8-a19dd338613e}</Project>
+      <Name>Rookey.Frame.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rookey.Frame.Common\Rookey.Frame.Common.csproj">
+      <Project>{b6a7b291-9f23-40d2-8dc4-3a63f35f0eb0}</Project>
+      <Name>Rookey.Frame.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rookey.Frame.EntityBase\Rookey.Frame.EntityBase.csproj">
+      <Project>{ca335d51-bcd7-4d88-8016-57dea03fc6c1}</Project>
+      <Name>Rookey.Frame.EntityBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rookey.Frame.Model\Rookey.Frame.Model.csproj">
+      <Project>{c49902e4-7448-45ff-b336-a590e80bccfa}</Project>
+      <Name>Rookey.Frame.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rookey.Frame.Operate.Base\Rookey.Frame.Operate.Base.csproj">
+      <Project>{96d1a48c-8711-4ac8-bf63-0023b711ac21}</Project>
+      <Name>Rookey.Frame.Operate.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rookey.Frame.QuartzClient\Rookey.Frame.QuartzClient.csproj">
+      <Project>{a1366a1f-40ed-4d71-95bd-b40980b9f4e2}</Project>
+      <Name>Rookey.Frame.QuartzClient</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

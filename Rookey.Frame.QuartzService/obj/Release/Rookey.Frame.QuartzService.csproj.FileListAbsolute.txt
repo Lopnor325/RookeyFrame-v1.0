@@ -1,0 +1,30 @@
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\Service\Rookey.Frame.QuartzService.exe.config
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\Service\Rookey.Frame.QuartzService.XML
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\Service\Rookey.Frame.QuartzService.exe
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Web\Service\Rookey.Frame.QuartzService.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.QuartzService\obj\Release\Rookey.Frame.QuartzService.csprojResolveAssemblyReference.cache
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.QuartzService\obj\Release\Rookey.Frame.QuartzService.ProjectInstaller.resources
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.QuartzService\obj\Release\Rookey.Frame.QuartzService.QuartzService.resources
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.QuartzService\obj\Release\Rookey.Frame.QuartzService.csproj.GenerateResource.Cache
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.QuartzService\obj\Release\Rookey.Frame.QuartzService.exe
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.QuartzService\obj\Release\Rookey.Frame.QuartzService.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\Service\Rookey.Frame.QuartzService.exe.config
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\Service\Rookey.Frame.QuartzService.XML
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\Service\Rookey.Frame.QuartzService.exe
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Web\Service\Rookey.Frame.QuartzService.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.QuartzService\obj\Release\Rookey.Frame.QuartzService.csprojResolveAssemblyReference.cache
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.QuartzService\obj\Release\Rookey.Frame.QuartzService.ProjectInstaller.resources
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.QuartzService\obj\Release\Rookey.Frame.QuartzService.QuartzService.resources
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.QuartzService\obj\Release\Rookey.Frame.QuartzService.csproj.GenerateResource.Cache
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.QuartzService\obj\Release\Rookey.Frame.QuartzService.exe
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.QuartzService\obj\Release\Rookey.Frame.QuartzService.pdb
+D:\rookey\git.oschina\Rookey.Frame.Web\Service\Rookey.Frame.QuartzService.exe.config
+D:\rookey\git.oschina\Rookey.Frame.Web\Service\Rookey.Frame.QuartzService.XML
+D:\rookey\git.oschina\Rookey.Frame.Web\Service\Rookey.Frame.QuartzService.exe
+D:\rookey\git.oschina\Rookey.Frame.Web\Service\Rookey.Frame.QuartzService.pdb
+D:\rookey\git.oschina\Rookey.Frame.QuartzService\obj\Release\Rookey.Frame.QuartzService.csprojResolveAssemblyReference.cache
+D:\rookey\git.oschina\Rookey.Frame.QuartzService\obj\Release\Rookey.Frame.QuartzService.ProjectInstaller.resources
+D:\rookey\git.oschina\Rookey.Frame.QuartzService\obj\Release\Rookey.Frame.QuartzService.QuartzService.resources
+D:\rookey\git.oschina\Rookey.Frame.QuartzService\obj\Release\Rookey.Frame.QuartzService.csproj.GenerateResource.Cache
+D:\rookey\git.oschina\Rookey.Frame.QuartzService\obj\Release\Rookey.Frame.QuartzService.exe
+D:\rookey\git.oschina\Rookey.Frame.QuartzService\obj\Release\Rookey.Frame.QuartzService.pdb

@@ -1,0 +1,1272 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rookey.Frame.Cache.Factory</name>
+    </assembly>
+    <members>
+        <member name="T:Rookey.Frame.Cache.Factory.CacheFactory">
+            <summary>
+            缓存工厂
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Cache.Factory.CacheFactory.lockObj">
+            <summary>
+            锁对象
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.CacheFactory.GetCacheInstance(Rookey.Frame.Cache.Factory.Provider.CacheProviderType)">
+            <summary>
+            创建缓存实例
+            </summary>
+            <param name="providerType">缓存类型</param>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Cache.Factory.Provider.CachingMethod">
+            <summary>
+            表示用于Caching特性的缓存方式。
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Cache.Factory.Provider.CachingMethod.Get">
+            <summary>
+            表示需要从缓存中获取对象。如果缓存中不存在所需的对象，系统则会调用实际的方法获取对象，
+            然后将获得的结果添加到缓存中。
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Cache.Factory.Provider.CachingMethod.Set">
+            <summary>
+            表示需要将对象存入缓存。此方式会调用实际方法以获取对象，然后将获得的结果添加到缓存中，
+            并直接返回方法的调用结果。
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Cache.Factory.Provider.CachingMethod.Remove">
+            <summary>
+            表示需要将对象从缓存中移除。
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Cache.Factory.Provider.CacheProviderType">
+            <summary>
+            缓存类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Cache.Factory.Provider.CacheProviderType.LOCALMEMORYCACHE">
+            <summary>
+            本地缓存
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Cache.Factory.Provider.CacheProviderType.MEMCACHEDCACHE">
+            <summary>
+            MemcachedCache分布式缓存
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Cache.Factory.Provider.CacheProviderType.ServiceStackREDIS">
+            <summary>
+            redis分布式缓存
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Cache.Factory.ICacheProvider">
+            <summary>
+            缓存接口
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Add(System.String,System.Object)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Add``1(System.String,``0)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Add(System.String,System.Object,System.TimeSpan)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="slidingExpiration">活动过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Add``1(System.String,``0,System.TimeSpan)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="slidingExpiration">活动过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Add(System.String,System.Object,System.DateTime)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="absoluteExpiration">绝对过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Add``1(System.String,``0,System.DateTime)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="absoluteExpiration">绝对过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Set(System.String,System.Object)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Set``1(System.String,``0)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Set(System.String,System.Object,System.TimeSpan)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="slidingExpiration">活动过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Set``1(System.String,``0,System.TimeSpan)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="slidingExpiration">活动过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Set(System.String,System.Object,System.DateTime)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="absoluteExpiration">绝对过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Set``1(System.String,``0,System.DateTime)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="absoluteExpiration">绝对过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Get``1(System.String)">
+            <summary>
+            从缓存中读取对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <returns>被缓存的对象。</returns>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Get(System.String)">
+            <summary>
+            从缓存中读取对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <returns>被缓存的对象。</returns>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Remove(System.String)">
+            <summary>
+            从缓存中移除对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Exists(System.String)">
+            <summary>
+            获取一个<see cref="T:System.Boolean"/>值，该值表示拥有指定键值的缓存是否存在。
+            </summary>
+            <param name="key">指定的键值。</param>
+            <returns>如果缓存存在，则返回true，否则返回false。</returns>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.FlushAll">
+            <summary>
+            清空所有缓存
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Add(System.String,System.String,System.Object)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Add``1(System.String,System.String,``0)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Add(System.String,System.String,System.Object,System.TimeSpan)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="slidingExpiration">活动过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Add``1(System.String,System.String,``0,System.TimeSpan)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="slidingExpiration">活动过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Add(System.String,System.String,System.Object,System.DateTime)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="absoluteExpiration">绝对过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Add``1(System.String,System.String,``0,System.DateTime)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="absoluteExpiration">绝对过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Set(System.String,System.String,System.Object)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Set``1(System.String,System.String,``0)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Set(System.String,System.String,System.Object,System.TimeSpan)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="slidingExpiration">活动过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Set``1(System.String,System.String,``0,System.TimeSpan)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="slidingExpiration">活动过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Set(System.String,System.String,System.Object,System.DateTime)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="absoluteExpiration">绝对过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Set``1(System.String,System.String,``0,System.DateTime)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="absoluteExpiration">绝对过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Get``1(System.String,System.String)">
+            <summary>
+            从缓存中读取对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <returns>被缓存的对象。</returns>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Get(System.String,System.String)">
+            <summary>
+            从缓存中读取对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <returns>被缓存的对象。</returns>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Remove(System.String,System.String)">
+            <summary>
+            从缓存中移除对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值键</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.ICacheProvider.Exists(System.String,System.String)">
+            <summary>
+            获取一个值，该值表示拥有指定键值和缓存值键的缓存是否存在。
+            </summary>
+            <param name="key">指定的键值。</param>
+            <param name="valKey">缓存值键。</param>
+            <returns>如果缓存存在，则返回true，否则返回false。</returns>
+        </member>
+        <member name="T:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheConfigInfo">
+            <summary>
+            Memcached缓存配置信息类
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheConfigInfo.ServerList">
+            <summary>
+            服务器列表
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheConfigInfo.MinPoolSize">
+            <summary>
+            连接池最小连接数
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheConfigInfo.MaxPoolSize">
+            <summary>
+            连接池最大连接数
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheConfigInfo.ConnectionTimeOut">
+            <summary>
+            连接超时时间(单位为秒)
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheConfigInfo.QueueTimeOut">
+            <summary>
+            查询超时时间(单位为秒)
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheConfigInfo.ReceiveTimeOut">
+            <summary>
+            接收超时时间(单位为秒)
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheConfigInfo.DeadTimeOut">
+            <summary>
+            宕机服务器检查时间(单位为秒)
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheConfigInfo.CacheTimeOut">
+            <summary>
+            缓存超时时间(单位为秒)
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider">
+            <summary>
+            Memcached缓存
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Add(System.String,System.Object)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Add``1(System.String,``0)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Add(System.String,System.Object,System.TimeSpan)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="slidingExpiration">活动过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Add``1(System.String,``0,System.TimeSpan)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="slidingExpiration">活动过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Add(System.String,System.Object,System.DateTime)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="absoluteExpiration">绝对过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Add``1(System.String,``0,System.DateTime)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="absoluteExpiration">绝对过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Set(System.String,System.Object)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Set``1(System.String,``0)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Set(System.String,System.Object,System.TimeSpan)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="slidingExpiration">活动过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Set``1(System.String,``0,System.TimeSpan)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="slidingExpiration">活动过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Set(System.String,System.Object,System.DateTime)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="absoluteExpiration">绝对过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Set``1(System.String,``0,System.DateTime)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="absoluteExpiration">绝对过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Get(System.String)">
+            <summary>
+            从缓存中读取对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <returns>被缓存的对象。</returns>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Get``1(System.String)">
+            <summary>
+            从缓存中读取对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <returns>被缓存的对象。</returns>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Remove(System.String)">
+            <summary>
+            从缓存中移除对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Exists(System.String)">
+            <summary>
+            获取一个<see cref="T:System.Boolean"/>值，该值表示拥有指定键值的缓存是否存在。
+            </summary>
+            <param name="key">指定的键值。</param>
+            <returns>如果缓存存在，则返回true，否则返回false。</returns>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.FlushAll">
+            <summary>
+            清空所有缓存
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Add(System.String,System.String,System.Object)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Add``1(System.String,System.String,``0)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Add(System.String,System.String,System.Object,System.TimeSpan)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="slidingExpiration">活动过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Add``1(System.String,System.String,``0,System.TimeSpan)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="slidingExpiration">活动过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Add(System.String,System.String,System.Object,System.DateTime)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="absoluteExpiration">绝对过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Add``1(System.String,System.String,``0,System.DateTime)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="absoluteExpiration">绝对过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Set(System.String,System.String,System.Object)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Set``1(System.String,System.String,``0)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Set(System.String,System.String,System.Object,System.TimeSpan)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="slidingExpiration">活动过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Set``1(System.String,System.String,``0,System.TimeSpan)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="slidingExpiration">活动过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Set(System.String,System.String,System.Object,System.DateTime)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="absoluteExpiration">绝对过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Set``1(System.String,System.String,``0,System.DateTime)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="absoluteExpiration">绝对过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Get(System.String,System.String)">
+            <summary>
+            从缓存中读取对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <returns>被缓存的对象。</returns>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Get``1(System.String,System.String)">
+            <summary>
+            从缓存中读取对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <returns>被缓存的对象。</returns>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Remove(System.String,System.String)">
+            <summary>
+            从缓存中移除对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值键</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemcachedCacheProvider.Exists(System.String,System.String)">
+            <summary>
+            获取一个<see cref="T:System.Boolean"/>值，该值表示拥有指定键值和缓存值键的缓存是否存在。
+            </summary>
+            <param name="key">指定的键值。</param>
+            <param name="valKey">缓存值键。</param>
+            <returns>如果缓存存在，则返回true，否则返回false。</returns>
+        </member>
+        <member name="T:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider">
+            <summary>
+            内存缓存提供器
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.rw">
+            <summary>
+            单个写线程锁与多个读线程的锁
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Add(System.String,System.Object)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Add``1(System.String,``0)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Add(System.String,System.Object,System.TimeSpan)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="slidingExpiration">活动过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Add``1(System.String,``0,System.TimeSpan)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="slidingExpiration">活动过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Add(System.String,System.Object,System.DateTime)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="absoluteExpiration">绝对过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Add``1(System.String,``0,System.DateTime)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="absoluteExpiration">绝对过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Set(System.String,System.Object)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Set``1(System.String,``0)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Set(System.String,System.Object,System.TimeSpan)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="slidingExpiration">活动过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Set``1(System.String,``0,System.TimeSpan)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="slidingExpiration">活动过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Set(System.String,System.Object,System.DateTime)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="absoluteExpiration">绝对过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Set``1(System.String,``0,System.DateTime)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="absoluteExpiration">绝对过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Get``1(System.String)">
+            <summary>
+            从缓存中读取对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <returns>被缓存的对象。</returns>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Get(System.String)">
+            <summary>
+            从缓存中读取对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <returns>被缓存的对象。</returns>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Remove(System.String)">
+            <summary>
+            从缓存中移除对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Exists(System.String)">
+            <summary>
+            获取一个值，该值表示拥有指定键值的缓存是否存在。
+            </summary>
+            <param name="key">指定的键值。</param>
+            <returns>如果缓存存在，则返回true，否则返回false。</returns>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.FlushAll">
+            <summary>
+            清空所有缓存
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Add(System.String,System.String,System.Object)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Add``1(System.String,System.String,``0)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Add(System.String,System.String,System.Object,System.TimeSpan)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="slidingExpiration">活动过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Add``1(System.String,System.String,``0,System.TimeSpan)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="slidingExpiration">活动过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Add(System.String,System.String,System.Object,System.DateTime)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="absoluteExpiration">绝对过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Add``1(System.String,System.String,``0,System.DateTime)">
+            <summary>
+            向缓存中添加一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="absoluteExpiration">绝对过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Set(System.String,System.String,System.Object)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Set``1(System.String,System.String,``0)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Set(System.String,System.String,System.Object,System.TimeSpan)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="slidingExpiration">活动过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Set``1(System.String,System.String,``0,System.TimeSpan)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="slidingExpiration">活动过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Set(System.String,System.String,System.Object,System.DateTime)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="absoluteExpiration">绝对过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Set``1(System.String,System.String,``0,System.DateTime)">
+            <summary>
+            向缓存中更新一个对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <param name="value">需要缓存的对象。</param>
+            <param name="absoluteExpiration">绝对过期时间。</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Get``1(System.String,System.String)">
+            <summary>
+            从缓存中读取对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <returns>被缓存的对象。</returns>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Get(System.String,System.String)">
+            <summary>
+            从缓存中读取对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值的键值，该值通常是由使用缓存机制的方法的参数值所产生。</param>
+            <returns>被缓存的对象。</returns>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Remove(System.String,System.String)">
+            <summary>
+            从缓存中移除对象。
+            </summary>
+            <param name="key">缓存的键值，该值通常是使用缓存机制的方法的名称。</param>
+            <param name="valKey">缓存值键</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Exists(System.String,System.String)">
+            <summary>
+            获取一个值，该值表示拥有指定键值和缓存值键的缓存是否存在。
+            </summary>
+            <param name="key">指定的键值。</param>
+            <param name="valKey">缓存值键。</param>
+            <returns>如果缓存存在，则返回true，否则返回false。</returns>
+        </member>
+        <member name="P:Rookey.Frame.Cache.Factory.Provider.MemoryCacheProvider.Cache">
+            <summary>
+            MemoryCacheCache
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider">
+            <summary>
+            Redis缓存提供器
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.ExecuteReflectMethod(System.Type,System.String,System.Object[])">
+            <summary>
+            执行反射方法
+            </summary>
+            <param name="type">类型</param>
+            <param name="methodName">方法名</param>
+            <param name="args">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.SetCache(System.String,System.Object)">
+            <summary>
+            设置缓存值
+            </summary>
+            <param name="key">key</param>
+            <param name="value">value</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.SetTimeoutCache(System.String,System.Object,System.TimeSpan)">
+            <summary>
+            设置缓存值
+            </summary>
+            <param name="key">key</param>
+            <param name="value">value</param>
+            <param name="slidingExpiration">过期时间长</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.SetDateTimeCache(System.String,System.Object,System.DateTime)">
+            <summary>
+            设置缓存值
+            </summary>
+            <param name="key">key</param>
+            <param name="value">value</param>
+            <param name="absoluteExpiration">过期时间</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Add(System.String,System.Object)">
+            <summary>
+            添加
+            </summary>
+            <param name="key">键</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Add``1(System.String,``0)">
+            <summary>
+            添加
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">键</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Add(System.String,System.Object,System.TimeSpan)">
+            <summary>
+            添加
+            </summary>
+            <param name="key">键</param>
+            <param name="value">值</param>
+            <param name="slidingExpiration">过期时间</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Add``1(System.String,``0,System.TimeSpan)">
+            <summary>
+            添加
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">键</param>
+            <param name="value">值</param>
+            <param name="slidingExpiration">过期时间</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Add(System.String,System.Object,System.DateTime)">
+            <summary>
+            添加
+            </summary>
+            <param name="key">键</param>
+            <param name="value">值</param>
+            <param name="absoluteExpiration">过期时间</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Add``1(System.String,``0,System.DateTime)">
+            <summary>
+            添加
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">键</param>
+            <param name="value">值</param>
+            <param name="absoluteExpiration">过期时间</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Set(System.String,System.Object)">
+            <summary>
+            设置缓存
+            </summary>
+            <param name="key">键</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Set``1(System.String,``0)">
+            <summary>
+            设置缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">键</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Set(System.String,System.Object,System.TimeSpan)">
+            <summary>
+            设置缓存
+            </summary>
+            <param name="key">键</param>
+            <param name="value">值</param>
+            <param name="slidingExpiration">过期时间</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Set``1(System.String,``0,System.TimeSpan)">
+            <summary>
+            设置缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">键</param>
+            <param name="value">值</param>
+            <param name="slidingExpiration">过期时间</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Set(System.String,System.Object,System.DateTime)">
+            <summary>
+            设置缓存
+            </summary>
+            <param name="key">键</param>
+            <param name="value">值</param>
+            <param name="absoluteExpiration">过期时间</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Set``1(System.String,``0,System.DateTime)">
+            <summary>
+            设置缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">键</param>
+            <param name="value">值</param>
+            <param name="absoluteExpiration">过期时间</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Get``1(System.String)">
+            <summary>
+            取缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Get(System.String)">
+            <summary>
+            取缓存
+            </summary>
+            <param name="key">键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Remove(System.String)">
+            <summary>
+            删除缓存
+            </summary>
+            <param name="key">键</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Exists(System.String)">
+            <summary>
+            缓存是否存在
+            </summary>
+            <param name="key">键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.FlushAll">
+            <summary>
+            刷新缓存
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Add(System.String,System.String,System.Object)">
+            <summary>
+            添加
+            </summary>
+            <param name="key">键</param>
+            <param name="valKey">键</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Add``1(System.String,System.String,``0)">
+            <summary>
+            添加
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">键</param>
+            <param name="valKey">键</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Add(System.String,System.String,System.Object,System.TimeSpan)">
+            <summary>
+            添加
+            </summary>
+            <param name="key">键</param>
+            <param name="valKey">键</param>
+            <param name="value">值</param>
+            <param name="slidingExpiration">过期时间</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Add``1(System.String,System.String,``0,System.TimeSpan)">
+            <summary>
+            添加
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">键</param>
+            <param name="valKey">键</param>
+            <param name="value">值</param>
+            <param name="slidingExpiration">过期时间</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Add(System.String,System.String,System.Object,System.DateTime)">
+            <summary>
+            添加
+            </summary>
+            <param name="key">键</param>
+            <param name="valKey">键</param>
+            <param name="value">值</param>
+            <param name="absoluteExpiration">过期时间</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Add``1(System.String,System.String,``0,System.DateTime)">
+            <summary>
+            添加
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">键</param>
+            <param name="valKey">键</param>
+            <param name="value">值</param>
+            <param name="absoluteExpiration">过期时间</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Set(System.String,System.String,System.Object)">
+            <summary>
+            设置缓存
+            </summary>
+            <param name="key">键</param>
+            <param name="valKey">键</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Set``1(System.String,System.String,``0)">
+            <summary>
+            设置缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">键</param>
+            <param name="valKey">键</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Set(System.String,System.String,System.Object,System.TimeSpan)">
+            <summary>
+            设置缓存
+            </summary>
+            <param name="key">键</param>
+            <param name="valKey">键</param>
+            <param name="value">值</param>
+            <param name="slidingExpiration">过期时间</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Set``1(System.String,System.String,``0,System.TimeSpan)">
+            <summary>
+            设置缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">键</param>
+            <param name="valKey">键</param>
+            <param name="value">值</param>
+            <param name="slidingExpiration">过期时间</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Set(System.String,System.String,System.Object,System.DateTime)">
+            <summary>
+            设置缓存
+            </summary>
+            <param name="key">键</param>
+            <param name="valKey">键</param>
+            <param name="value">值</param>
+            <param name="absoluteExpiration">过期时间</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Set``1(System.String,System.String,``0,System.DateTime)">
+            <summary>
+            设置缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">键</param>
+            <param name="valKey">键</param>
+            <param name="value">值</param>
+            <param name="absoluteExpiration">过期时间</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Get``1(System.String,System.String)">
+            <summary>
+            取缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">键</param>
+            <param name="valKey">键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Get(System.String,System.String)">
+            <summary>
+            取缓存
+            </summary>
+            <param name="key">键</param>
+            <param name="valKey">键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Remove(System.String,System.String)">
+            <summary>
+            移除缓存
+            </summary>
+            <param name="key">键</param>
+            <param name="valKey">键</param>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.Exists(System.String,System.String)">
+            <summary>
+            缓存是否存在
+            </summary>
+            <param name="key">键</param>
+            <param name="valKey">键</param>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.TempRedisClass`1">
+            <summary>
+            临时类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Cache.Factory.Provider.RedisCacheProvider.TempRedisClass`1.SetDateTimeCache(System.String,System.Object,System.DateTime)">
+            <summary>
+            设置缓存值
+            </summary>
+            <param name="key">key</param>
+            <param name="value">value</param>
+            <param name="absoluteExpiration">过期时间</param>
+        </member>
+        <member name="T:Rookey.Frame.Cache.Factory.Provider.RedisConfigInfo">
+            <summary>
+            Redis配置信息类
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Cache.Factory.Provider.RedisConfigInfo.Host">
+            <summary>
+            主机
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Cache.Factory.Provider.RedisConfigInfo.Port">
+            <summary>
+            端口号
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Cache.Factory.Provider.RedisConfigInfo.Pwd">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Cache.Factory.Provider.RedisConfigInfo.InitalDB">
+            <summary>
+            数据库初始化大小
+            </summary>
+        </member>
+    </members>
+</doc>

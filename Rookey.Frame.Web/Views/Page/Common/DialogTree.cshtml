@@ -1,0 +1,7 @@
+﻿@{
+    ViewBag.Title = "DialogTree";
+}
+@using Rookey.Frame.UIOperate;
+@{ UIFrameFactory frameFactory = UIFrameFactory.GetInstance(Request);
+   Guid moduleId = UIOperate.GetModuleIdByRequest(Request);}
+@Html.Raw(frameFactory.GetDialogTreeHTML(moduleId,Request))

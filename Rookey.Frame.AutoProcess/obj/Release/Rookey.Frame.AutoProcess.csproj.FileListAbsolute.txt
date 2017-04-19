@@ -1,0 +1,15 @@
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.AutoProcess.XML
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.AutoProcess.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.AutoProcess.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.AutoProcess\obj\Release\Rookey.Frame.AutoProcess.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.AutoProcess\obj\Release\Rookey.Frame.AutoProcess.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.AutoProcess.XML
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.AutoProcess.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.AutoProcess.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.AutoProcess\obj\Release\Rookey.Frame.AutoProcess.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.AutoProcess\obj\Release\Rookey.Frame.AutoProcess.pdb
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.AutoProcess.XML
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.AutoProcess.dll
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.AutoProcess.pdb
+D:\rookey\git.oschina\Rookey.Frame.AutoProcess\obj\Release\Rookey.Frame.AutoProcess.dll
+D:\rookey\git.oschina\Rookey.Frame.AutoProcess\obj\Release\Rookey.Frame.AutoProcess.pdb

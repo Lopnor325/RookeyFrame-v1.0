@@ -1,0 +1,18 @@
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Office.XML
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Office.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Office.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Office\obj\Release\Rookey.Frame.Office.csprojResolveAssemblyReference.cache
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Office\obj\Release\Rookey.Frame.Office.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Office\obj\Release\Rookey.Frame.Office.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Office.XML
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Office.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Office.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Office\obj\Release\Rookey.Frame.Office.csprojResolveAssemblyReference.cache
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Office\obj\Release\Rookey.Frame.Office.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Office\obj\Release\Rookey.Frame.Office.pdb
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.Office.XML
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.Office.dll
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.Office.pdb
+D:\rookey\git.oschina\Rookey.Frame.Office\obj\Release\Rookey.Frame.Office.csprojResolveAssemblyReference.cache
+D:\rookey\git.oschina\Rookey.Frame.Office\obj\Release\Rookey.Frame.Office.dll
+D:\rookey\git.oschina\Rookey.Frame.Office\obj\Release\Rookey.Frame.Office.pdb

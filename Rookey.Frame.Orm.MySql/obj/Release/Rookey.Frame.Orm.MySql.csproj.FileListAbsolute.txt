@@ -1,0 +1,18 @@
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Orm.MySql.XML
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Orm.MySql.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Orm.MySql.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Orm.MySql\obj\Release\Rookey.Frame.Orm.MySql.csprojResolveAssemblyReference.cache
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Orm.MySql\obj\Release\Rookey.Frame.Orm.MySql.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Orm.MySql\obj\Release\Rookey.Frame.Orm.MySql.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Orm.MySql.XML
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Orm.MySql.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Orm.MySql.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Orm.MySql\obj\Release\Rookey.Frame.Orm.MySql.csprojResolveAssemblyReference.cache
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Orm.MySql\obj\Release\Rookey.Frame.Orm.MySql.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Orm.MySql\obj\Release\Rookey.Frame.Orm.MySql.pdb
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.Orm.MySql.XML
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.Orm.MySql.dll
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.Orm.MySql.pdb
+D:\rookey\git.oschina\Rookey.Frame.Orm.MySql\obj\Release\Rookey.Frame.Orm.MySql.csprojResolveAssemblyReference.cache
+D:\rookey\git.oschina\Rookey.Frame.Orm.MySql\obj\Release\Rookey.Frame.Orm.MySql.dll
+D:\rookey\git.oschina\Rookey.Frame.Orm.MySql\obj\Release\Rookey.Frame.Orm.MySql.pdb

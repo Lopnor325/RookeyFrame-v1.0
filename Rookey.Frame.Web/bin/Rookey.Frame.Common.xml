@@ -1,0 +1,3694 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rookey.Frame.Common</name>
+    </assembly>
+    <members>
+        <member name="T:Rookey.Frame.Common.ArgumentCheck">
+            <summary>
+            参数检查类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.ArgumentCheck.NotNull``1(``0,System.String)">
+            <summary>
+            参数不能为空
+            </summary>
+            <param name="argumentValue"></param>
+            <param name="argumentName"></param>
+        </member>
+        <member name="M:Rookey.Frame.Common.ArgumentCheck.NotNull``1(System.Nullable{``0},System.String)">
+            <summary>
+            参数不能为空
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <param name="parameterName"></param>
+        </member>
+        <member name="M:Rookey.Frame.Common.ArgumentCheck.MustMoreThanZero(System.Nullable{System.Int32},System.String)">
+            <summary>
+            参数必须大于零
+            </summary>
+            <param name="argumentValue"></param>
+            <param name="argumentName"></param>
+        </member>
+        <member name="M:Rookey.Frame.Common.ArgumentCheck.NotEmpty(System.String,System.String)">
+            <summary>
+            参数不能为null和empty
+            </summary>
+            <param name="argumentValue"></param>
+            <param name="argumentName"></param>
+        </member>
+        <member name="T:Rookey.Frame.Common.NotNullCheck">
+            <summary>
+            非空检查类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.NotNullCheck.NotNull(System.Object,System.String)">
+            <summary>
+            对象非空检查
+            </summary>
+            <param name="obj">对象</param>
+            <param name="objName">对象名称</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.NotNullCheck.NotEmpty(System.Object,System.String)">
+            <summary>
+            非空和非空字符串检查
+            </summary>
+            <param name="obj">字符串对象</param>
+            <param name="objName">对象名称</param>
+        </member>
+        <member name="T:Rookey.Frame.Common.SwfToolHelper">
+            <summary>
+            SWF文件转换工具类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.SwfToolHelper.PDF2SWF(System.String,System.String,System.String,System.String)">
+            <summary>
+            转换所有的页，图片质量80%
+            </summary>
+            <param name="pdfPath">PDF文件地址</param>
+            <param name="swfPath">生成后的SWF文件地址</param>
+            <param name="exePath">exe路径</param>
+            <param name="binPath"></param>
+        </member>
+        <member name="M:Rookey.Frame.Common.SwfToolHelper.PDF2SWF(System.String,System.String,System.Int32,System.String,System.String)">
+            <summary>
+            转换前N页，图片质量80%
+            </summary>
+            <param name="pdfPath">PDF文件地址</param>
+            <param name="swfPath">生成后的SWF文件地址</param>
+            <param name="page">页数</param>
+            <param name="exePath">exe路径</param>
+            <param name="binPath"></param>
+        </member>
+        <member name="M:Rookey.Frame.Common.SwfToolHelper.PDF2SWF(System.String,System.String,System.Int32,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            PDF格式转为SWF
+            </summary>
+            <param name="pdfPath">PDF文件地址</param>
+            <param name="swfPath">生成后的SWF文件地址</param>
+            <param name="beginpage">转换开始页</param>
+            <param name="endpage">转换结束页</param>
+            <param name="photoQuality"></param>
+            <param name="exePath"></param>
+            <param name="binPath"></param>
+        </member>
+        <member name="M:Rookey.Frame.Common.SwfToolHelper.GetPageCount(System.String)">
+            <summary>
+            返回页数
+            </summary>
+            <param name="pdfPath">PDF文件地址</param>
+        </member>
+        <member name="T:Rookey.Frame.Common.Globals">
+            <summary>
+            用途：用于全局使用
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.Globals.RedirectToSSL(System.Web.HttpContext)">
+            <summary>
+            转向ssl
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Rookey.Frame.Common.Globals.HtmlEncode(System.String)">
+            <summary>
+            Converts a prepared subject line back into a raw text subject line.
+            </summary>
+            <param name="text">The prepared subject line.</param>
+            <returns>A raw text subject line.</returns>
+            <remarks>This function is only needed when editing an existing message or when replying to
+            a message - it turns the HTML escaped characters back into their pre-escaped status.</remarks>
+        </member>
+        <member name="M:Rookey.Frame.Common.Globals.GetBaseUrl">
+            <summary>
+            获取网站架构Url
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Globals.GetClientIp">
+            <summary>
+            获取客户端IP
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Globals.GetWebDir">
+            <summary>
+            获取Web路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Globals.GetBinPath">
+            <summary>
+            获取Bin目录，包含反斜杠
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Globals.GetCurretnDir">
+            <summary>
+            获取当前目录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Globals.GetCurrentUrl">
+            <summary>
+            获取当前地址
+            </summary>
+            <returns>当前地址</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Globals.Deserialize(System.Type,System.String)">
+            <summary>
+            反序列化数据
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="jsonData">Json数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Globals.Deserialize(System.Type,System.String,System.String@)">
+            <summary>
+            反序列化数据
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="jsonData">Json数据</param>
+            <param name="errMsg">异常信息</param>
+            <returns></returns>
+        </member>
+        <member name="F:Rookey.Frame.Common.Globals.assemblyTypesCaches">
+            <summary>
+            程序集缓存
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.Globals.GetAssemblyTypes(System.String)">
+            <summary>
+            获取程序集中的所有类型集合
+            </summary>
+            <param name="dllName">程序集名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Globals.GetAssemblyType(System.String,System.String)">
+            <summary>
+            获取程序集中的类型
+            </summary>
+            <param name="dllName">程序集名称</param>
+            <param name="className">类名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Globals.ExecuteReflectMethod(System.String,System.String,System.String,System.Object[],System.Object@,System.Boolean,System.Type[],System.Type[])">
+            <summary>
+            执行反射方法，针对自定义程序集
+            </summary>
+            <param name="dllName">dll名称</param>
+            <param name="className">类名</param>
+            <param name="methodName">方法名</param>
+            <param name="args">参数</param>
+            <param name="instance">类型实例对象</param>
+            <param name="isStaticMethod">是否静态方法</param>
+            <param name="parmaTypes">方法参数类型集合</param>
+            <param name="methodGenericTypes">方法泛型参数</param>
+            <returns>返回执行结果</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Globals.ExecuteReflectMethod(System.Type,System.Type[],System.String,System.Object[],System.Object@,System.Boolean,System.Type[],System.Type[])">
+            <summary>
+            执行反射方法，针对系统程序集
+            </summary>
+            <param name="type">要反射的类型</param>
+            <param name="genericTypes">类型的参数类型集合</param>
+            <param name="methodName">方法名</param>
+            <param name="args">参数</param>
+            <param name="instance">类型实例对象</param>
+            <param name="isStaticMethod">是否静态方法</param>
+            <param name="parmaTypes">方法参数类型集合</param>
+            <param name="methodGenericTypes">方法泛型参数</param>
+            <returns>返回执行结果</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Globals.ExecuteReflectMethod(System.Type,System.String,System.Object[],System.Object@,System.Boolean,System.Type[],System.Type[])">
+            <summary>
+            执行反射方法，针对系统程序集
+            </summary>
+            <param name="type">要反射的类型</param>
+            <param name="methodName">方法名</param>
+            <param name="args">参数</param>
+            <param name="instance">类型实例对象</param>
+            <param name="isStaticMethod">是否静态方法</param>
+            <param name="parmaTypes">方法参数类型集合</param>
+            <param name="methodGenericTypes">方法的泛型参数</param>
+            <returns>返回执行结果</returns>
+        </member>
+        <member name="T:Rookey.Frame.Common.ApplicationObject">
+            <summary>
+            全局对象
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.ApplicationObject.GetHttpContext(System.Web.HttpRequestBase)">
+            <summary>
+            获取httpContext对象
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Rookey.Frame.Common.ApplicationObject.CurrentOneHttpContext">
+            <summary>
+            当前任意一个上下文对象，此对象不可用于获取用户缓存信息
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Common.HttpHelper.HttpCookieHelper">
+            <summary>
+            Cookie操作帮助类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.HttpHelper.HttpCookieHelper.WriteCookie(System.String,System.String)">
+            <summary>
+            写cookie值
+            </summary>
+            <param name="strName"></param>
+            <param name="strValue"></param>
+        </member>
+        <member name="M:Rookey.Frame.Common.HttpHelper.HttpCookieHelper.WriteCookie(System.String,System.String,System.String)">
+            <summary>
+            写cookie值
+            </summary>
+            <param name="strName"></param>
+            <param name="key"></param>
+            <param name="strValue"></param>
+        </member>
+        <member name="M:Rookey.Frame.Common.HttpHelper.HttpCookieHelper.WriteCookie(System.String,System.String,System.Int32)">
+            <summary>
+            写cookie值
+            </summary>
+            <param name="strName"></param>
+            <param name="strValue"></param>
+            <param name="expires">过期时间（分钟）</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.HttpHelper.HttpCookieHelper.GetCookie(System.String)">
+            <summary>
+            读Cookie值
+            </summary>
+            <param name="strName">cookies名称</param>
+            <returns>返回的cookies</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.HttpHelper.HttpCookieHelper.GetCookie(System.String,System.String)">
+            <summary>
+            读cookie值
+            </summary>
+            <param name="strName"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.HttpHelper.HttpCookieHelper.GetCookieList(System.String)">
+            <summary>
+            根据字符生成Cookie列表
+            </summary>
+            <param name="cookie">Cookie字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.HttpHelper.HttpCookieHelper.GetCookieValue(System.String,System.String)">
+            <summary>
+            根据Key值得到Cookie值,Key不区分大小写
+            </summary>
+            <param name="Key">key</param>
+            <param name="cookie">字符串Cookie</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.HttpHelper.HttpCookieHelper.CookieFormat(System.String,System.String)">
+            <summary>
+            格式化Cookie为标准格式
+            </summary>
+            <param name="key">Key值</param>
+            <param name="value">Value值</param>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Common.HttpHelper.CookieItem">
+            <summary>
+            Cookie对象
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.CookieItem.Key">
+            <summary>
+            键
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.CookieItem.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Common.HttpHelper.HttpHelper">
+            <summary>
+            Http连接操作帮助类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.HttpHelper.HttpHelper.GetHtml(Rookey.Frame.Common.HttpHelper.HttpItem)">
+            <summary>
+            根据相传入的数据，得到相应页面数据
+            </summary>
+            <param name="item">参数类对象</param>
+            <returns>返回HttpResult类型</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.HttpHelper.HttpHelper.GetMemoryStream(System.IO.Stream)">
+            <summary>
+            4.0以下.net版本取数据使用
+            </summary>
+            <param name="streamResponse">流</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.HttpHelper.HttpHelper.SetRequest(Rookey.Frame.Common.HttpHelper.HttpItem)">
+             <summary>
+             为请求准备参数
+             </summary>
+            <param name="item">参数列表</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.HttpHelper.HttpHelper.SetCer(Rookey.Frame.Common.HttpHelper.HttpItem)">
+            <summary>
+            设置证书
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Rookey.Frame.Common.HttpHelper.HttpHelper.SetCerList(Rookey.Frame.Common.HttpHelper.HttpItem)">
+            <summary>
+            设置多个证书
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Rookey.Frame.Common.HttpHelper.HttpHelper.SetCookie(Rookey.Frame.Common.HttpHelper.HttpItem)">
+            <summary>
+            设置Cookie
+            </summary>
+            <param name="item">Http参数</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.HttpHelper.HttpHelper.SetPostData(Rookey.Frame.Common.HttpHelper.HttpItem)">
+            <summary>
+            设置Post数据
+            </summary>
+            <param name="item">Http参数</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.HttpHelper.HttpHelper.SetProxy(Rookey.Frame.Common.HttpHelper.HttpItem)">
+            <summary>
+            设置代理
+            </summary>
+            <param name="item">参数对象</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.HttpHelper.HttpHelper.CheckValidationResult(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)">
+            <summary>
+            回调验证证书问题
+            </summary>
+            <param name="sender">流对象</param>
+            <param name="certificate">证书</param>
+            <param name="chain">X509Chain</param>
+            <param name="errors">SslPolicyErrors</param>
+            <returns>bool</returns>
+        </member>
+        <member name="T:Rookey.Frame.Common.HttpHelper.HttpItem">
+            <summary>
+            Http请求参考类
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpItem.URL">
+            <summary>
+            请求URL必须填写
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpItem.Method">
+            <summary>
+            请求方式默认为GET方式,当为POST方式时必须设置Postdata的值
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpItem.Timeout">
+            <summary>
+            默认请求超时时间
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpItem.ReadWriteTimeout">
+            <summary>
+            默认写入Post数据超时间
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpItem.KeepAlive">
+            <summary>
+             获取或设置一个值，该值指示是否与 Internet 资源建立持久性连接默认为true。
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpItem.Accept">
+            <summary>
+            请求标头值 默认为text/html, application/xhtml+xml, */*
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpItem.ContentType">
+            <summary>
+            请求返回类型默认 text/html
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpItem.UserAgent">
+            <summary>
+            客户端访问信息默认Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpItem.Encoding">
+            <summary>
+            返回数据编码默认为NUll,可以自动识别,一般为utf-8,gbk,gb2312
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpItem.PostDataType">
+            <summary>
+            Post的数据类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpItem.Postdata">
+            <summary>
+            Post请求时要发送的字符串Post数据
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpItem.PostdataByte">
+            <summary>
+            Post请求时要发送的Byte类型的Post数据
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpItem.CookieCollection">
+            <summary>
+            Cookie对象集合
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpItem.Cookie">
+            <summary>
+            请求时的Cookie
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpItem.Referer">
+            <summary>
+            来源地址，上次访问地址
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpItem.CerPath">
+            <summary>
+            证书绝对路径
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpItem.IsToLower">
+            <summary>
+            是否设置为全文小写，默认为不转化
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpItem.Allowautoredirect">
+            <summary>
+            支持跳转页面，查询结果将是跳转后的页面，默认是不跳转
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpItem.Connectionlimit">
+            <summary>
+            最大连接数
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpItem.ProxyUserName">
+            <summary>
+            代理Proxy 服务器用户名
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpItem.ProxyPwd">
+            <summary>
+            代理 服务器密码
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpItem.ProxyIp">
+            <summary>
+            代理 服务IP
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpItem.ResultType">
+            <summary>
+            设置返回类型String和Byte
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpItem.Header">
+            <summary>
+            header对象
+            </summary>
+        </member>
+        <!-- 对于成员“P:Rookey.Frame.Common.HttpHelper.HttpItem.ProtocolVersion”忽略有格式错误的 XML 注释 -->
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpItem.Expect100Continue">
+            <summary>
+             获取或设置一个 System.Boolean 值，该值确定是否使用 100-Continue 行为。如果 POST 请求需要 100-Continue 响应，则为 true；否则为 false。默认值为 true。
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpItem.ClentCertificates">
+            <summary>
+            设置509证书集合
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpItem.PostEncoding">
+            <summary>
+            设置或获取Post参数编码,默认的为Default编码
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Common.HttpHelper.HttpResult">
+            <summary>
+            Http返回参数类
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpResult.Cookie">
+            <summary>
+            Http请求返回的Cookie
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpResult.CookieCollection">
+            <summary>
+            Cookie对象集合
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpResult.Html">
+            <summary>
+            返回的String类型数据 只有ResultType.String时才返回数据，其它情况为空
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpResult.ResultByte">
+            <summary>
+            返回的Byte数组 只有ResultType.Byte时才返回数据，其它情况为空
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpResult.Header">
+            <summary>
+            header对象
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpResult.StatusDescription">
+            <summary>
+            返回状态说明
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.HttpHelper.HttpResult.StatusCode">
+            <summary>
+            返回状态码,默认为OK
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Common.HttpHelper.ResultType">
+            <summary>
+            返回类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Common.HttpHelper.ResultType.String">
+            <summary>
+            表示只返回字符串 只有Html有数据
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Common.HttpHelper.ResultType.Byte">
+            <summary>
+            表示返回字符串和字节流 ResultByte和Html都有数据返回
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Common.HttpHelper.PostDataType">
+            <summary>
+            Post的数据格式默认为string
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Common.HttpHelper.PostDataType.String">
+            <summary>
+            字符串类型，这时编码Encoding可不设置
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Common.HttpHelper.PostDataType.Byte">
+            <summary>
+            Byte类型，需要设置PostdataByte参数的值编码Encoding可设置为空
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Common.HttpHelper.PostDataType.FilePath">
+            <summary>
+            传文件，Postdata必须设置为文件的绝对路径，必须设置Encoding的值
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.CutPhotoHelp.MakeThumbnail(System.Drawing.Image,System.Int32,System.Int32)">
+            <summary>
+            生成缩略图
+            </summary>
+            <param name="fromImg"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Common.OfficeToPdfHelper">
+            <summary>
+            office转PDF工具类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.OfficeToPdfHelper.Doc2Pdf(System.String,System.String)">
+            <summary>  Word转换成pdf </summary> 
+            <param name="sourcePath">源文件路径</param> 
+            <param name="targetPath">目标文件路径</param> 
+            <returns>true=转换成功</returns>     
+        </member>
+        <member name="M:Rookey.Frame.Common.OfficeToPdfHelper.Xls2Pdf(System.String,System.String)">
+            <summary>把Excel文件转换成PDF格式文件</summary>  
+            <param name="sourcePath">源文件路径</param>  
+            <param name="targetPath">目标文件路径</param> 
+            <returns>true=转换成功</returns>      
+        </member>
+        <member name="M:Rookey.Frame.Common.OfficeToPdfHelper.PPt2Pdf(System.String,System.String)">
+            <summary>把PowerPoint文件转换成PDF格式文件</summary>     
+            <param name="sourcePath">源文件路径</param>      
+            <param name="targetPath">目标文件路径</param>    
+            <returns>true=转换成功</returns>     
+        </member>
+        <member name="T:Rookey.Frame.Common.Model.TbIndexInfo">
+            <summary>
+            数据表索引信息
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.Model.TbIndexInfo.TableName">
+            <summary>
+            表名
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.Model.TbIndexInfo.IndexName">
+            <summary>
+            索引名
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.Model.TbIndexInfo.IndexTypeDes">
+            <summary>
+            索引类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.Model.TbIndexInfo.PartitionNum">
+            <summary>
+            分区数
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.Model.TbIndexInfo.FragmentationPercent">
+            <summary>
+            逻辑碎片百分比
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Common.Model.DbLinkArgs">
+            <summary>
+            数据库连接参数
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.Model.DbLinkArgs.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.Model.DbLinkArgs.DataSource">
+            <summary>
+            服务器
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.Model.DbLinkArgs.DbName">
+            <summary>
+            数据库名
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.Model.DbLinkArgs.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.Model.DbLinkArgs.Pwd">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.Model.DbLinkArgs.DbType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.Model.DbLinkArgs.ConnString">
+            <summary>
+            连接字符串
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Common.Model.TransactionTask">
+            <summary>
+            委托（用于异步处理事务）
+            </summary>
+            <param name="conn">事务连接对象</param>
+        </member>
+        <member name="T:Rookey.Frame.Common.Model.TransactionExtendModel">
+            <summary>
+            数据库事务扩展类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.Model.TransactionExtendModel.#ctor(System.Type,Rookey.Frame.Common.PubDefine.DataOperateType,System.Collections.IEnumerable)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="_modelType">实体类型</param>
+            <param name="_operateType">操作类型</param>
+            <param name="_models">实体集合</param>
+        </member>
+        <member name="P:Rookey.Frame.Common.Model.TransactionExtendModel.ModelType">
+            <summary>
+            实体类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.Model.TransactionExtendModel.OperateType">
+            <summary>
+            操作类型
+            </summary>
+        </member>
+        <!-- 对于成员“P:Rookey.Frame.Common.Model.TransactionExtendModel.Models”忽略有格式错误的 XML 注释 -->
+        <member name="T:Rookey.Frame.Common.Model.TransactionModel`1">
+            <summary>
+            数据库事务对象
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.Model.TransactionModel`1.#ctor(Rookey.Frame.Common.PubDefine.DataOperateType,System.Collections.Generic.List{`0},System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="_operateType">操作类型</param>
+            <param name="_models">实体集合</param>
+            <param name="references">是否保存实体的关联表数据</param>
+        </member>
+        <member name="P:Rookey.Frame.Common.Model.TransactionModel`1.OperateType">
+            <summary>
+            操作类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.Model.TransactionModel`1.Models">
+            <summary>
+            操作实体集合
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.Model.TransactionModel`1.References">
+            <summary>
+            是否保存实体的关联表数据
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Common.PubDefine.DatabaseType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Common.PubDefine.DatabaseType.MsSqlServer">
+            <summary>
+            微软MsSqlServer数据库
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Common.PubDefine.DatabaseType.MySql">
+            <summary>
+            MySql数据库
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Common.PubDefine.DatabaseType.Oracle">
+            <summary>
+            Oracle数据库
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Common.PubDefine.DataOperateType">
+            <summary>
+            数据操作类型
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Common.PubDefine.DataOperateType.Add">
+            <summary>
+            新增
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Common.PubDefine.DataOperateType.Edit">
+            <summary>
+            编辑
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Common.PubDefine.DataOperateType.Del">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <!-- 对于成员“T:Rookey.Frame.Common.StringHelper”忽略有格式错误的 XML 注释 -->
+        <member name="M:Rookey.Frame.Common.StringHelper.GetStrArray(System.String,System.Char,System.Boolean)">
+            <summary>
+            把字符串按照分隔符转换成 List
+            </summary>
+            <param name="str">源字符串</param>
+            <param name="speater">分隔符</param>
+            <param name="toLower">是否转换为小写</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.StringHelper.GetStrArray(System.String)">
+            <summary>
+            把字符串转 按照, 分割 换为数据
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:Rookey.Frame.Common.StringHelper.GetArrayStr(System.Collections.Generic.List{System.String},System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Rookey.Frame.Common.StringHelper.GetArrayStr(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            得到数组列表以逗号分隔的字符串
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.StringHelper.GetArrayValueStr(System.Collections.Generic.Dictionary{System.Int32,System.Int32})">
+            <summary>
+            得到数组列表以逗号分隔的字符串
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.StringHelper.DelLastComma(System.String)">
+            <summary>
+            删除最后结尾的一个逗号
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.StringHelper.DelLastChar(System.String,System.String)">
+            <summary>
+            删除最后结尾的指定字符后的字符
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.StringHelper.ToSBC(System.String)">
+            <summary>
+            转全角的函数(SBC case)
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.StringHelper.ToDBC(System.String)">
+            <summary>
+             转半角的函数(SBC case)
+            </summary>
+            <param name="input">输入</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.StringHelper.GetSubStringList(System.String,System.Char)">
+            <summary>
+            把字符串按照指定分隔符装成 List 去除重复
+            </summary>
+            <param name="o_str"></param>
+            <param name="sepeater"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.StringHelper.GetCleanStyle(System.String,System.String)">
+            <summary>
+             将字符串样式转换为纯字符串
+            </summary>
+            <param name="StrList"></param>
+            <param name="SplitString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.StringHelper.GetNewStyle(System.String,System.String,System.String,System.String@)">
+            <summary>
+            将字符串转换为新样式
+            </summary>
+            <param name="StrList"></param>
+            <param name="NewStyle"></param>
+            <param name="SplitString"></param>
+            <param name="Error"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.StringHelper.SplitMulti(System.String,System.String)">
+            <summary>
+            分割字符串
+            </summary>
+            <param name="str"></param>
+            <param name="splitstr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.StringHelper.SqlSafeString(System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="String"></param>
+            <param name="IsDel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.StringHelper.StrToId(System.String)">
+            <summary>
+            获取正确的Id，如果不是正整数，返回0
+            </summary>
+            <param name="_value"></param>
+            <returns>返回正确的整数ID，失败返回0</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.StringHelper.IsNumberId(System.String)">
+            <summary>
+            检查一个字符串是否是纯数字构成的，一般用于查询字符串参数的有效性验证。(0除外)
+            </summary>
+            <param name="_value">需验证的字符串。。</param>
+            <returns>是否合法的bool值。</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.StringHelper.QuickValidate(System.String,System.String)">
+            <summary>
+            快速验证一个字符串是否符合指定的正则表达式。
+            </summary>
+            <param name="_express">正则表达式的内容。</param>
+            <param name="_value">需验证的字符串。</param>
+            <returns>是否合法的bool值。</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.StringHelper.GetMD5(System.String)">
+            <summary>
+            根据配置对指定字符串进行 MD5 加密
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.StringHelper.StrLength(System.String)">
+            <summary>
+            得到字符串长度，一个汉字长度为2
+            </summary>
+            <param name="inputString">参数字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.StringHelper.ClipString(System.String,System.Int32)">
+            <summary>
+            截取指定长度字符串
+            </summary>
+            <param name="inputString">要处理的字符串</param>
+            <param name="len">指定长度</param>
+            <returns>返回处理后的字符串</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.StringHelper.GetBiggestString(System.String,System.String)">
+            <summary>
+            获得两个字符串匹配的最长字符串 
+            </summary>
+            <param name="str1"></param>
+            <param name="str2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.StringHelper.HtmlToTxt(System.String)">
+            <summary>
+            HTML转行成TEXT
+            </summary>
+            <param name="strHtml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.StringHelper.IsNullOrEmpty``1(``0)">
+            <summary>
+            判断对象是否为空，为空返回true
+            </summary>
+            <typeparam name="T">要验证的对象的类型</typeparam>
+            <param name="data">要验证的对象</param>        
+        </member>
+        <member name="M:Rookey.Frame.Common.StringHelper.IsNullOrEmpty(System.Object)">
+            <summary>
+            判断对象是否为空，为空返回true
+            </summary>
+            <param name="data">要验证的对象</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.StringHelper.GetSQLReplaceString(System.String)">
+            <summary>
+            在SQL  LIKE 子句中,特殊字符的处理
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.StringHelper.GetExpressionReplaceString(System.String)">
+            <summary>
+            在Expression  LIKE 子句中,特殊字符的处理
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Common.Sys.AppPoolService">
+            <summary>  
+                IIS应用程序池辅助类  
+            </summary>  
+        </member>
+        <member name="F:Rookey.Frame.Common.Sys.AppPoolService.Host">
+            <summary>
+            主机地址
+            </summary>
+        </member>
+        <!-- 对于成员“M:Rookey.Frame.Common.Sys.AppPoolService.GetAppPools”忽略有格式错误的 XML 注释 -->
+        <member name="M:Rookey.Frame.Common.Sys.AppPoolService.GetAppPool(System.String)">
+            <summary>  
+                取得单个应用程序池  
+            </summary>  
+            <returns></returns>  
+        </member>
+        <member name="M:Rookey.Frame.Common.Sys.AppPoolService.IsAppPoolExsit(System.String)">
+            <summary>  
+                判断程序池是否存在  
+            </summary>  
+            <param name="appPoolName">程序池名称</param>  
+            <returns>true存在 false不存在</returns>  
+        </member>
+        <member name="M:Rookey.Frame.Common.Sys.AppPoolService.DeleteAppPool(System.String)">
+            <summary>  
+                删除指定程序池  
+            </summary>  
+            <param name="appPoolName">程序池名称</param>  
+            <returns>true删除成功 false删除失败</returns>  
+        </member>
+        <member name="M:Rookey.Frame.Common.Sys.AppPoolService.CreateAppPool(System.String)">
+            <summary>  
+                创建应用程序池  
+            </summary>  
+            <param name="appPool"></param>  
+            <returns></returns>  
+        </member>
+        <member name="M:Rookey.Frame.Common.Sys.AppPoolService.EditAppPool(Microsoft.Web.Administration.ApplicationPool)">
+            <summary>  
+                编辑应用程序池  
+            </summary>  
+            <param name="application"></param>  
+            <returns></returns>  
+        </member>
+        <member name="T:Rookey.Frame.Common.Sys.DynamicCompiler">
+            <summary>
+            动态编译类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.Sys.DynamicCompiler.CompileFromFile(System.String[],System.String[],System.String)">
+            <summary>
+            从文件编译
+            </summary>
+            <param name="files">要编译的代码文件集合</param>
+            <param name="referenceAssemblyNames">引用程序集名称集合</param>
+            <param name="outputAssembly">输出dll名称</param>
+            <returns>返回异常信息</returns>
+        </member>
+        <member name="T:Rookey.Frame.Common.ClassHelper">
+            
+            <summary>
+            类帮助器，可以动态对类,类成员进行控制（添加，删除）,目前只支持属性控制。
+            注意，属性以外的其它成员会被清空，功能还有待完善，使其不影响其它成员。
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.ClassHelper.CreateInstance(System.Type)">
+            
+            <summary>
+            根据类的类型型创建类实例。
+            </summary>
+            <param name="t">将要创建的类型。</param>
+            <returns>返回创建的类实例。</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ClassHelper.CreateInstance(System.String,System.Collections.Generic.List{Rookey.Frame.Common.ClassHelper.CustPropertyInfo})">
+            
+            <summary>
+            根据类的名称，属性列表创建型实例。
+            </summary>
+            <param name="className">将要创建的类的名称。</param>
+            <param name="lcpi">将要创建的类的属性列表。</param>
+            <returns>返回创建的类实例</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ClassHelper.CreateInstance(System.Collections.Generic.List{Rookey.Frame.Common.ClassHelper.CustPropertyInfo})">
+            
+            <summary>
+            根据属性列表创建类的实例，默认类名为DefaultClass，由于生成的类不是强类型，所以类名可以忽略。
+            </summary>
+            <param name="lcpi">将要创建的类的属性列表</param>
+            <returns>返回创建的类的实例。</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ClassHelper.SetPropertyValue(System.Object,System.String,System.Object)">
+            
+            <summary>
+            根据类的实例设置类的属性。
+            </summary>
+            <param name="classInstance">将要设置的类的实例。</param>
+            <param name="propertyName">将要设置属性名。</param>
+            <param name="propertSetValue">将要设置属性值。</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.ClassHelper.GetPropertyValue(System.Object,System.String)">
+            
+            <summary>
+            根据类的实例获取类的属性。
+            </summary>
+            <param name="classInstance">将要获取的类的实例</param>
+            <param name="propertyName">将要设置的属性名。</param>
+            <returns>返回获取的类的属性。</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ClassHelper.BuildType">
+            
+            <summary>
+            创建一个没有成员的类型的实例，类名为"DefaultClass"。
+            </summary>
+            <returns>返回创建的类型的实例。</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ClassHelper.BuildType(System.String,System.String)">
+            
+            <summary>
+            根据类名创建一个没有成员的类型的实例。
+            </summary>
+            <param name="className">将要创建的类型的实例的类名。</param>
+            <param name="assemblyName">自定义程序集名称</param>
+            <returns>返回创建的类型的实例。</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ClassHelper.AddProperty(System.Type,System.Collections.Generic.List{Rookey.Frame.Common.ClassHelper.CustPropertyInfo})">
+            
+            <summary>
+            添加属性到类型的实例，注意：该操作会将其它成员清除掉，其功能有待完善。
+            </summary>
+            <param name="classType">指定类型的实例。</param>
+            <param name="lcpi">表示属性的一个列表。</param>
+            <returns>返回处理过的类型的实例。</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ClassHelper.AddProperty(System.Type,Rookey.Frame.Common.ClassHelper.CustPropertyInfo)">
+            
+            <summary>
+            添加属性到类型的实例，注意：该操作会将其它成员清除掉，其功能有待完善。
+            </summary>
+            <param name="classType">指定类型的实例。</param>
+            <param name="cpi">表示一个属性。</param>
+            <returns>返回处理过的类型的实例。</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ClassHelper.DeleteProperty(System.Type,System.String)">
+            
+            <summary>
+            从类型的实例中移除属性，注意：该操作会将其它成员清除掉，其功能有待完善。
+            </summary>
+            <param name="classType">指定类型的实例。</param>
+            <param name="cpi">要移除的属性。</param>
+            <returns>返回处理过的类型的实例。</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ClassHelper.DeleteProperty(System.Type,System.Collections.Generic.List{System.String})">
+            
+            <summary>
+            从类型的实例中移除属性，注意：该操作会将其它成员清除掉，其功能有待完善。
+            </summary>
+            <param name="classType">指定类型的实例。</param>
+            <param name="lcpi">要移除的属性列表。</param>
+            <returns>返回处理过的类型的实例。</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ClassHelper.MergeProperty(System.Type,System.Collections.Generic.List{Rookey.Frame.Common.ClassHelper.CustPropertyInfo})">
+            
+            <summary>
+            把类型的实例t和lcpi参数里的属性进行合并。
+            </summary>
+            <param name="t">实例t</param>
+            <param name="lcpi">里面包含属性列表的信息。</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.ClassHelper.SeparateProperty(System.Type,System.Collections.Generic.List{System.String})">
+            
+            <summary>
+            从类型的实例t的属性移除属性列表lcpi，返回的新属性列表在lcpi中。
+            </summary>
+            <param name="t">类型的实例t。</param>
+            <param name="lcpi">要移除的属性列表。</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.ClassHelper.AddPropertyToTypeBuilder(System.Reflection.Emit.TypeBuilder,System.Collections.Generic.List{Rookey.Frame.Common.ClassHelper.CustPropertyInfo})">
+            
+            <summary>
+            把lcpi参数里的属性加入到myTypeBuilder中。注意：该操作会将其它成员清除掉，其功能有待完善。
+            </summary>
+            <param name="myTypeBuilder">类型构造器的实例。</param>
+            <param name="lcpi">里面包含属性列表的信息。</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.ClassHelper.AddPropertyToType(System.Type,System.Collections.Generic.List{Rookey.Frame.Common.ClassHelper.CustPropertyInfo})">
+            
+            <summary>
+            把属性加入到类型的实例。
+            </summary>
+            <param name="classType">类型的实例。</param>
+            <param name="lcpi">要加入的属性列表。</param>
+            <returns>返回处理过的类型的实例。</returns>
+        </member>
+        <member name="T:Rookey.Frame.Common.ClassHelper.CustPropertyInfo">
+            
+            <summary>
+            自定义的属性信息类型。
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.ClassHelper.CustPropertyInfo.#ctor">
+            
+            <summary>
+            空构造。
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.ClassHelper.CustPropertyInfo.#ctor(System.String,System.String)">
+            
+            <summary>
+            根据属性类型名称，属性名称构造实例。
+            </summary>
+            <param name="type">属性类型名称。</param>
+            <param name="propertyName">属性名称。</param>
+        </member>
+        <member name="P:Rookey.Frame.Common.ClassHelper.CustPropertyInfo.Type">
+            
+            <summary>
+            获取或设置属性类型名称。
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.ClassHelper.CustPropertyInfo.PropertyName">
+            
+            <summary>
+            获取或设置属性名称。
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.ClassHelper.CustPropertyInfo.FieldName">
+            
+            <summary>
+            获取属性字段名称。
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.ClassHelper.CustPropertyInfo.SetPropertyMethodName">
+            
+            <summary>
+            获取属性在IL中的Set方法名。
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.ClassHelper.CustPropertyInfo.GetPropertyMethodName">
+            
+            <summary>
+             获取属性在IL中的Get方法名。
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Common.StaticDynamicMethodMemberAccessor">
+            <summary>
+            静态成员访问类，优化反射
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.StaticDynamicMethodMemberAccessor.GetValue2(System.Reflection.PropertyInfo,System.Object,System.Object[])">
+            <summary>
+            获取属性值
+            </summary>
+            <param name="p">属性对象</param>
+            <param name="instance">实体对象</param>
+            <param name="index">索引置空</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.StaticDynamicMethodMemberAccessor.SetValue2(System.Reflection.PropertyInfo,System.Object,System.Object,System.Object[])">
+            <summary>
+            设置属性值
+            </summary>
+            <param name="p">属性对象</param>
+            <param name="instance">实体对象</param>
+            <param name="newValue">新值</param>
+            <param name="index">索引置空</param>
+        </member>
+        <member name="T:Rookey.Frame.Common.IMemberAccessor">
+            <summary>
+            Abstraction of the function of accessing member of a object at runtime.
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.IMemberAccessor.GetValue(System.Object,System.String)">
+            <summary>
+            Get the member value of an object.
+            </summary>
+            <param name="instance">The object to get the member value from.</param>
+            <param name="memberName">The member name, could be the name of a property of field. Must be public member.</param>
+            <returns>The member value</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.IMemberAccessor.SetValue(System.Object,System.String,System.Object)">
+            <summary>
+            Set the member value of an object.
+            </summary>
+            <param name="instance">The object to get the member value from.</param>
+            <param name="memberName">The member name, could be the name of a property of field. Must be public member.</param>
+            <param name="newValue">The new value of the property for the object instance.</param>
+        </member>
+        <member name="T:Rookey.Frame.Common.DynamicMethodMemberAccessor">
+            <summary>
+            动态函数调用类，优化反射
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.DynamicMethodMemberAccessor.GetValue(System.Object,System.String)">
+            <summary>
+            获取属性值
+            </summary>
+            <param name="instance">实体对象</param>
+            <param name="memberName">成员名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.DynamicMethodMemberAccessor.SetValue(System.Object,System.String,System.Object)">
+            <summary>
+            设置属性值
+            </summary>
+            <param name="instance">实体对象</param>
+            <param name="memberName">成员名</param>
+            <param name="newValue">新值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.DynamicMethodMemberAccessor.FindClassAccessor(System.Object)">
+            <summary>
+            获取IMemberAccessor对象
+            </summary>
+            <param name="instance"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Common.DynamicMethod`1">
+            <summary>
+            Dynamic方法类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Rookey.Frame.Common.FastInvoke">
+            <summary>
+            快速调用反射
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Common.ObjectHelper">
+            <summary>
+            对象操作帮助类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.ObjectHelper.CopyValue(System.Object,System.Object)">
+            <summary>
+            实现对象属性复制
+            </summary>
+            <param name="origin">原始对象</param>
+            <param name="target">目标对象</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.ObjectHelper.CopyValue``1(``0,``0,System.Collections.Generic.List{System.String})">
+            <summary>
+            对象复制
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="origin">源对象</param>
+            <param name="target">目标对象</param>
+            <param name="copyFields">复制的字段集合</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.ObjectHelper.FillModel``1(System.Data.DataSet)">
+            <summary>
+            填充对象列表：用DataSet的第一个表填充实体类
+            </summary>
+            <param name="ds">DataSet</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ObjectHelper.FillModel``1(System.Data.DataSet,System.Int32)">
+            <summary>  
+            填充对象列表：用DataSet的第index个表填充实体类
+            </summary>  
+        </member>
+        <member name="M:Rookey.Frame.Common.ObjectHelper.FillModel``1(System.Data.DataTable)">
+            <summary>  
+            填充对象列表：用DataTable填充实体类
+            </summary>  
+        </member>
+        <member name="M:Rookey.Frame.Common.ObjectHelper.FillModel(System.Type,System.Data.DataTable)">
+            <summary>
+            填充对象列表，用DataTable填充实体集合
+            </summary>
+            <param name="modelType">实体类型</param>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ObjectHelper.FillModel(System.Type,System.Data.DataRow)">
+            <summary>
+            填充对象
+            </summary>
+            <param name="modelType">实体类型</param>
+            <param name="dr">dr</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ObjectHelper.FillModel``1(System.Data.DataRow)">
+            <summary>  
+            填充对象：用DataRow填充实体类
+            </summary>  
+        </member>
+        <member name="M:Rookey.Frame.Common.ObjectHelper.FillDataSet``1(System.Collections.Generic.List{``0})">
+            <summary>
+            实体类转换成DataSet
+            </summary>
+            <param name="modelList">实体类列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ObjectHelper.FillDataTable``1(System.Collections.Generic.List{``0})">
+            <summary>
+            实体类转换成DataTable
+            </summary>
+            <param name="modelList">实体类列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ObjectHelper.CreateData``1(``0)">
+            <summary>
+            根据实体类得到表结构
+            </summary>
+            <param name="model">实体类</param>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Common.Validator">
+            <summary>
+            验证类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsMatch(System.String,System.String)">
+            <summary>
+            验证字符串是否匹配正则表达式描述的规则
+            </summary>
+            <param name="inputStr">待验证的字符串</param>
+            <param name="patternStr">正则表达式字符串</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsMatch(System.String,System.String,System.Boolean)">
+            <summary>
+            验证字符串是否匹配正则表达式描述的规则
+            </summary>
+            <param name="inputStr">待验证的字符串</param>
+            <param name="patternStr">正则表达式字符串</param>
+            <param name="ifValidateWhiteSpace">是否验证空白字符串</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsMatch(System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            验证字符串是否匹配正则表达式描述的规则
+            </summary>
+            <param name="inputStr">待验证的字符串</param>
+            <param name="patternStr">正则表达式字符串</param>
+            <param name="ifIgnoreCase">匹配时是否不区分大小写</param>
+            <param name="ifValidateWhiteSpace">是否验证空白字符串</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsNumber(System.String)">
+            <summary>
+            验证数字(double类型)
+            [可以包含负号和小数点]
+            </summary>
+            <param name="input">待验证的字符串</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsInteger(System.String)">
+            <summary>
+            验证整数
+            </summary>
+            <param name="input">待验证的字符串</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsIntegerNotNagtive(System.String)">
+            <summary>
+            验证非负整数
+            </summary>
+            <param name="input">待验证的字符串</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsIntegerPositive(System.String)">
+            <summary>
+            验证正整数
+            </summary>
+            <param name="input">待验证的字符串</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsDecimal(System.String)">
+            <summary>
+            验证小数
+            </summary>
+            <param name="input">待验证的字符串</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsEnglishCharacter(System.String)">
+            <summary>
+            验证只包含英文字母
+            </summary>
+            <param name="input">待验证的字符串</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsIntegerAndEnglishCharacter(System.String)">
+            <summary>
+            验证只包含数字和英文字母
+            </summary>
+            <param name="input">待验证的字符串</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsChineseCharacter(System.String)">
+            <summary>
+            验证只包含汉字
+            </summary>
+            <param name="input">待验证的字符串</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsIntegerLength(System.String,System.Int32,System.Int32)">
+            <summary>
+            验证数字长度范围（数字前端的0计长度）
+            [若要验证固定长度，可传入相同的两个长度数值]
+            </summary>
+            <param name="input">待验证的字符串</param>
+            <param name="lengthBegin">长度范围起始值（含）</param>
+            <param name="lengthEnd">长度范围结束值（含）</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsStringInclude(System.String,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            验证字符串包含内容
+            </summary>
+            <param name="input">待验证的字符串</param>
+            <param name="withEnglishCharacter">是否包含英文字母</param>
+            <param name="withNumber">是否包含数字</param>
+            <param name="withChineseCharacter">是否包含汉字</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsStringLength(System.String,System.Int32,System.Int32)">
+            <summary>
+            验证字符串长度范围
+            [若要验证固定长度，可传入相同的两个长度数值]
+            </summary>
+            <param name="input">待验证的字符串</param>
+            <param name="lengthBegin">长度范围起始值（含）</param>
+            <param name="lengthEnd">长度范围结束值（含）</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsStringLengthOnlyNumberAndEnglishCharacter(System.String,System.Int32,System.Int32)">
+            <summary>
+            验证字符串长度范围（字符串内只包含数字和/或英文字母）
+            [若要验证固定长度，可传入相同的两个长度数值]
+            </summary>
+            <param name="input">待验证的字符串</param>
+            <param name="lengthBegin">长度范围起始值（含）</param>
+            <param name="lengthEnd">长度范围结束值（含）</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsStringLengthByInclude(System.String,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            验证字符串长度范围
+            [若要验证固定长度，可传入相同的两个长度数值]
+            </summary>
+            <param name="input">待验证的字符串</param>
+            <param name="withEnglishCharacter">是否包含英文字母</param>
+            <param name="withNumber">是否包含数字</param>
+            <param name="withChineseCharacter">是否包含汉字</param>
+            <param name="lengthBegin">长度范围起始值（含）</param>
+            <param name="lengthEnd">长度范围结束值（含）</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsStringByteLength(System.String,System.Int32,System.Int32)">
+            <summary>
+            验证字符串字节数长度范围
+            [若要验证固定长度，可传入相同的两个长度数值；每个汉字为两个字节长度]
+            </summary>
+            <param name="input">待验证的字符串</param>
+            <param name="lengthBegin">长度范围起始值（含）</param>
+            <param name="lengthEnd">长度范围结束值（含）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsDateTime(System.String)">
+            <summary>
+            验证日期
+            </summary>
+            <param name="input">待验证的字符串</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsTelePhoneNumber(System.String)">
+            <summary>
+            验证固定电话号码
+            [3位或4位区号；区号可以用小括号括起来；区号可以省略；区号与本地号间可以用减号或空格隔开；可以有3位数的分机号，分机号前要加减号]
+            </summary>
+            <param name="input">待验证的字符串</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsMobilePhoneNumber(System.String)">
+            <summary>
+            验证手机号码
+            [可匹配"(+86)013325656352"，括号可以省略，+号可以省略，(+86)可以省略，11位手机号前的0可以省略；11位手机号第二位数可以是3、4、5、8中的任意一个]
+            </summary>
+            <param name="input">待验证的字符串</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsPhoneNumber(System.String)">
+            <summary>
+            验证电话号码（可以是固定电话号码或手机号码）
+            [固定电话：[3位或4位区号；区号可以用小括号括起来；区号可以省略；区号与本地号间可以用减号或空格隔开；可以有3位数的分机号，分机号前要加减号]]
+            [手机号码：[可匹配"(+86)013325656352"，括号可以省略，+号可以省略，(+86)可以省略，手机号前的0可以省略；手机号第二位数可以是3、4、5、8中的任意一个]]
+            </summary>
+            <param name="input">待验证的字符串</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsZipCode(System.String)">
+            <summary>
+            验证邮政编码
+            </summary>
+            <param name="input">待验证的字符串</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsEmail(System.String)">
+            <summary>
+            验证电子邮箱
+            [@字符前可以包含字母、数字、下划线和点号；@字符后可以包含字母、数字、下划线和点号；@字符后至少包含一个点号且点号不能是最后一个字符；最后一个点号后只能是字母或数字]
+            </summary>
+            <param name="input">待验证的字符串</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsURL(System.String)">
+            <summary>
+            验证网址（可以匹配IPv4地址但没对IPv4地址进行格式验证；IPv6暂时没做匹配）
+            [允许省略"://"；可以添加端口号；允许层级；允许传参；域名中至少一个点号且此点号前要有内容]
+            </summary>
+            <param name="input">待验证的字符串</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsIPv4(System.String)">
+            <summary>
+            验证IPv4地址
+            [第一位和最后一位数字不能是0或255；允许用0补位]
+            </summary>
+            <param name="input">待验证的字符串</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsIPv6(System.String)">
+            <summary>
+            验证IPv6地址
+            [可用于匹配任何一个合法的IPv6地址]
+            </summary>
+            <param name="input">待验证的字符串</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsIDCard15(System.String)">
+            <summary>
+            验证一代身份证号（15位数）
+            [长度为15位的数字；匹配对应省份地址；生日能正确匹配]
+            </summary>
+            <param name="input">待验证的字符串</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsIDCard18(System.String)">
+            <summary>
+            验证二代身份证号（18位数，GB11643-1999标准）
+            [长度为18位；前17位为数字，最后一位(校验码)可以为大小写x；匹配对应省份地址；生日能正确匹配；校验码能正确匹配]
+            </summary>
+            <param name="input">待验证的字符串</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsIDCard(System.String)">
+            <summary>
+            验证身份证号（不区分一二代身份证号）
+            </summary>
+            <param name="input">待验证的字符串</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsLongitude(System.String)">
+            <summary>
+            验证经度
+            </summary>
+            <param name="input">待验证的字符串</param>
+            <returns>是否匹配</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Validator.IsLatitude(System.String)">
+            <summary>
+            验证纬度
+            </summary>
+            <param name="input">待验证的字符串</param>
+            <returns>是否匹配</returns>
+        </member>
+        <!-- 对于成员“T:Rookey.Frame.Common.Web.HttpAsyncHandler”忽略有格式错误的 XML 注释 -->
+        <member name="M:Rookey.Frame.Common.Web.HttpAsyncHandler.BeginProcessRequest(System.Web.HttpContext,System.AsyncCallback,System.Object)">
+            <summary>
+            开始处理请求
+            </summary>
+            <param name="context">上下文对象</param>
+            <param name="cb"></param>
+            <param name="extraData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.Web.HttpAsyncHandler.BeginProcess(System.Web.HttpContext)">
+            <summary>
+            结束处理抽象方法
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Rookey.Frame.Common.Web.HttpAsyncHandler.EndProcess">
+            <summary>
+            结束处理
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.Web.HttpAsyncHandler.DoProcess(System.Object)">
+            <summary>
+            处理请求
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="M:Rookey.Frame.Common.Web.HttpAsyncHandler.ProcessRequest(System.Web.HttpContext)">
+            <summary>
+            接收请求
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Rookey.Frame.Common.ModelConfigHelper">
+            <summary>
+            模块配置帮助类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.ModelConfigHelper.GetModelNode(System.Type)">
+            <summary>
+            获取实体节点
+            </summary>
+            <param name="modelType">实体类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ModelConfigHelper.IsEnableCache(System.Type,System.String@)">
+            <summary>
+            是否启用缓存
+            </summary>
+            <param name="modelType">实体类型对象</param>
+            <param name="cacheType">缓存类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ModelConfigHelper.IsModelEnableCache(System.Type)">
+            <summary>
+            模块是否启用缓存
+            </summary>
+            <param name="modelType">实体类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ModelConfigHelper.IsModelEnableMemeryCache(System.Type)">
+            <summary>
+            是否启用内存缓存
+            </summary>
+            <param name="modelType">实体类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ModelConfigHelper.GetModelConnString(System.Type,System.String@,System.Boolean,System.Boolean)">
+            <summary>
+            获取实体连接字符串
+            </summary>
+            <param name="modelType">实体类型对象</param>
+            <param name="dbType">数据库类型</param>
+            <param name="read">读写分离标识，是否读数据库，为否则取写数据库</param>
+            <param name="export">是否为导出</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ModelConfigHelper.GetModelConnStr(System.Type,Rookey.Frame.Common.PubDefine.DatabaseType@,System.Boolean,System.Boolean)">
+            <summary>
+            获取实体连接字符串
+            </summary>
+            <param name="modelType">实体类型对象</param>
+            <param name="dbType">数据库类型</param>
+            <param name="read">读写分离标识，是否读数据库，为否则取写数据库</param>
+            <param name="export">是否为导出</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ModelConfigHelper.GetDbLinkArgsConnStr(Rookey.Frame.Common.Model.DbLinkArgs)">
+            <summary>
+            获取数据库连接字符串
+            </summary>
+            <param name="dbLinkArgs">连接对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ModelConfigHelper.GetModelConfigXml">
+            <summary>
+            获取模块配置xml
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ModelConfigHelper.ModelIsViewMode(System.Type)">
+            <summary>
+            模块是否为视图模式
+            </summary>
+            <param name="modelType">实体类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ModelConfigHelper.GetDataSource(System.String,Rookey.Frame.Common.PubDefine.DatabaseType)">
+            <summary>
+            获取服务器数据源
+            </summary>
+            <param name="dataSource">数据源</param>
+            <param name="dbType">数据库类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ModelConfigHelper.GetDbLinkArgs(System.String,Rookey.Frame.Common.PubDefine.DatabaseType)">
+            <summary>
+            获取跨库模块的远程连接参数
+            </summary>
+            <param name="connString">连接字符串</param>
+            <param name="dbType">数据库类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ModelConfigHelper.GetDbLinkArgs(System.Type)">
+            <summary>
+            获取模块数据库连接参数
+            </summary>
+            <param name="modelType">实体类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ModelConfigHelper.IsCrossServer(System.Type)">
+            <summary>
+            模块数据库是否是跨服务器
+            </summary>
+            <param name="modelType">实体类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ModelConfigHelper.GetModuleTableName(System.Type,Rookey.Frame.Common.Model.DbLinkArgs)">
+            <summary>
+            获取模块表名，支持跨库
+            </summary>
+            <param name="modelType">实体类型对象</param>
+            <param name="currTempDblinkArgs">当前连接对象，默认为本地连接</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ModelConfigHelper.GetLocalDbLinkArgs">
+            <summary>
+            获取本地数据库连接对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ModelConfigHelper.GetCrossServerDbLinkArgs(System.Boolean)">
+            <summary>
+            获取跨服务器的连接参数集合
+            </summary>
+            <param name="isCrossServer">是否跨库服务器，不包含服务器相同数据库不同的</param>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Common.DataMutual">
+            <summary>
+            数据交互类，从后台获取数据或向后台传递数据
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.DataMutual.#ctor(System.String,System.String,System.Boolean,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="url">url</param>
+            <param name="method">请求方式</param>
+            <param name="isAsync">是否异步</param>
+            <param name="timeout">超时时间，默认30s</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.DataMutual.Start(System.Byte[])">
+            <summary>
+            向服务器发送数据或请求数据
+            </summary>
+            <param name="data">向服务器发送的数据</param>
+        </member>
+        <member name="P:Rookey.Frame.Common.DataMutual.Url">
+            <summary>
+            请求或发送的Url
+            </summary>
+        </member>
+        <member name="E:Rookey.Frame.Common.DataMutual.DataReceivedEvent">
+            <summary>
+            数据接收事件
+            </summary>
+        </member>
+        <member name="E:Rookey.Frame.Common.DataMutual.DataErrorEvent">
+            <summary>
+            异常事件
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Common.DataMutualEventArgs">
+            <summary>
+            数据交互事件参数类
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.DataMutualEventArgs.ErrMsg">
+            <summary>
+            异常信息
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.DataMutualEventArgs.ReceivedDataStream">
+            <summary>
+            接收到的数据流
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Common.DistinctComparer`1">
+            <summary>
+            泛型Distinct比较
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Rookey.Frame.Common.DistinctComparer`1.#ctor(System.String)">
+            <summary>
+            通过propertyName 获取PropertyInfo对象        
+            </summary>
+            <param name="propertyName"></param>
+        </member>
+        <member name="M:Rookey.Frame.Common.FileOperateHelper.ReadFile(System.String)">
+            <summary>
+            读文件
+            </summary>
+            <param name="path">文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.FileOperateHelper.GetFileName(System.String)">
+            <summary>
+            获取文件名
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.FileOperateHelper.GetFileExtension(System.String)">
+            <summary>
+            获取文件扩展名
+            </summary>
+            <param name="file">文件名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.FileOperateHelper.GetFileExt(System.String)">
+            <summary>
+            取文件后缀名
+            </summary>
+            <param name="filename">文件名</param>
+            <returns>.gif|.html格式</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.FileOperateHelper.GetFileSize(System.String)">
+            <summary>
+            获取文件大小
+            </summary>
+            <param name="file">文件名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.FileOperateHelper.FileSize(System.Int64)">
+            <summary>
+            将文件大小转换输出
+            </summary>
+            <param name="Size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.FileOperateHelper.GetHttpMIMEContentType(System.String)">
+            <summary>
+            获取响应内容类型
+            </summary>
+            <param name="ext">文件后缀</param>
+        </member>
+        <member name="F:Rookey.Frame.Common.Earth.EARTH_RADIUS">
+            <summary>  
+            地球的半径（公里）
+            </summary>  
+        </member>
+        <member name="M:Rookey.Frame.Common.Earth.GetDistance(Rookey.Frame.Common.LongLatPoint,Rookey.Frame.Common.LongLatPoint)">
+            <summary>  
+            计算经纬度坐标点的距离  
+            </summary>  
+            <param name="begin">开始的经度纬度</param>  
+            <param name="end">结束的经度纬度</param>  
+            <returns>距离(公里)</returns>  
+        </member>
+        <member name="T:Rookey.Frame.Common.LongLatPoint">
+            <summary>  
+            代表经度, 纬度  
+            </summary>  
+        </member>
+        <member name="M:Rookey.Frame.Common.LongLatPoint.#ctor(System.Double,System.Double)">
+            <param name="lat">纬度 X</param>  
+            <param name="lng">经度 Y</param>  
+        </member>
+        <member name="P:Rookey.Frame.Common.LongLatPoint.Lat">
+            <summary>  
+            代表纬度 X轴  
+            </summary>  
+        </member>
+        <member name="P:Rookey.Frame.Common.LongLatPoint.Lng">
+            <summary>  
+            代表经度 Y轴  
+            </summary>  
+        </member>
+        <member name="M:Rookey.Frame.Common.SecurityHelper.GenerateSalt">
+            <summary>
+            获取混淆码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.SecurityHelper.EncodePassword(System.String,System.String)">
+            <summary>
+            获取通过混淆码混淆后的密码
+            </summary>
+            <param name="pass"></param>
+            <param name="passwordFormat"></param>
+            <param name="salt"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“T:Rookey.Frame.Common.SortComparer`1”忽略有格式错误的 XML 注释 -->
+        <member name="M:Rookey.Frame.Common.SortComparer`1.#ctor(System.Type,System.String,Rookey.Frame.Common.ReverserInfo.Direction)">
+            
+            <summary>
+            构造函数
+            </summary>
+            <param name="type">进行比较的类类型</param>
+            <param name="name">进行比较对象的属性名称</param>
+            <param name="direction">比较方向(升序/降序)</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.SortComparer`1.#ctor(System.String,System.String,Rookey.Frame.Common.ReverserInfo.Direction)">
+            
+            <summary>
+            构造函数
+            </summary>
+            <param name="className">进行比较的类名称</param>
+            <param name="name">进行比较对象的属性名称</param>
+            <param name="direction">比较方向(升序/降序)</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.SortComparer`1.#ctor(`0,System.String,Rookey.Frame.Common.ReverserInfo.Direction)">
+            
+            <summary>
+            构造函数
+            </summary>
+            <param name="t">进行比较的类型的实例</param>
+            <param name="name">进行比较对象的属性名称</param>
+            <param name="direction">比较方向(升序/降序)</param>
+        </member>
+        <member name="T:Rookey.Frame.Common.ReverserInfo">
+            
+            <summary>
+            对象比较时使用的信息类
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Common.ReverserInfo.Direction">
+            
+            <summary>
+            比较的方向，如下：
+            ASC：升序
+            DESC：降序
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.Common.ConvertHelper">
+            <summary>
+            强制转化辅助类(无异常抛出)
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.ConvertHelper.ObjToBool(System.Object)">
+            <summary>
+            object转化为Bool类型
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ConvertHelper.ObjToDateNull(System.Object)">
+            <summary>
+            object强制转化为DateTime类型(吃掉异常)
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ConvertHelper.ObjToByte(System.Object)">
+            <summary>
+            byte强制转化
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ConvertHelper.ObjToInt(System.Object)">
+            <summary>
+            int强制转化
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ConvertHelper.ObjToLong(System.Object)">
+            <summary>
+            强制转化为long
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ConvertHelper.ObjToIntNull(System.Object)">
+            <summary>
+            强制转化可空int类型
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ConvertHelper.ObjToLongNull(System.Object)">
+            <summary>
+            强制转化可空long类型
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ConvertHelper.ObjToStr(System.Object)">
+            <summary>
+            强制转化为string
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ConvertHelper.ObjToDouble(System.Object)">
+            <summary>
+            double强制转化
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ConvertHelper.ObjToDecimal(System.Object)">
+            <summary>
+            Decimal转化
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ConvertHelper.ObjToDecimalNull(System.Object)">
+            <summary>
+            Decimal可空类型转化
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ConvertHelper.ObjToGuid(System.Object)">
+            <summary>
+            强制转化为Guid
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ConvertHelper.ObjToGuidNull(System.Object)">
+            <summary>
+            强制转化为Guid?
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ConvertHelper.ObjToDateTimeNull(System.Object)">
+            <summary>
+            强制转化为DateTime?
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.DictionaryExtension.Get``3(System.Collections.Generic.IDictionary{``0,``1},``0,``2)">
+            <summary>
+            获取字典值
+            </summary>
+            <typeparam name="TKey">字典键类型</typeparam>
+            <typeparam name="TValue">字典值类型</typeparam>
+            <typeparam name="TReturn">获取字典值的返回类型</typeparam>
+            <param name="dict">字典</param>
+            <param name="key">获取的键值</param>
+            <param name="defaultValue">获取失败的默认返回值</param>
+            <returns>返回的值</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.DictionaryExtension.Get``3(System.Collections.Generic.IDictionary{``0,``1},``0)">
+            <summary>
+            获取字典值
+            </summary>
+            <typeparam name="TKey">字典键类型</typeparam>
+            <typeparam name="TValue">字典值类型</typeparam>
+            <typeparam name="TReturn">获取字典值的返回类型</typeparam>
+            <param name="dict">字典</param>
+            <param name="key">获取的键值</param>
+            <returns>返回的值</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.DictionaryExtension.Get``2(System.Collections.Generic.IDictionary{``0,``1},``0)">
+            <summary>
+            获取字典值
+            </summary>
+            <typeparam name="TKey">字典键类型</typeparam>
+            <typeparam name="TValue">字典值类型</typeparam>
+            <param name="dict">字典</param>
+            <param name="key">获取的键值</param>
+            <returns>返回的值</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.DictionaryExtension.AddOrUpdate``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)">
+            <summary>
+            当键存在时更新键值，当键不存在则添加键值
+            </summary>
+            <typeparam name="TKey">字典键类型</typeparam>
+            <typeparam name="TValue">字典值类型</typeparam>
+            <param name="dict">字典</param>
+            <param name="key">键</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.DictionaryExtension.Serialize``2(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}},System.String,System.String)">
+            <summary>
+            将字典序列化成Xml字符串
+            </summary>
+            <typeparam name="TKey">字典键类型</typeparam>
+            <typeparam name="TValue">字典值类型</typeparam>
+            <param name="dict">字典</param>
+            <param name="rootName">Xml根节点名称</param>
+            <param name="itemName">Xml项节点名称</param>
+            <returns>Xml字符串</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.DictionaryExtension.Serialize``2(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}},System.String)">
+            <summary>
+            将字典序列化成Xml字符串，根节点名称为项目名称+s
+            </summary>
+            <typeparam name="TKey">字典键类型</typeparam>
+            <typeparam name="TValue">字典值类型</typeparam>
+            <param name="dict">字典</param>
+            <param name="itemName">Xml项节点名称</param>
+            <returns>Xml字符串</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.DictionaryExtension.Serialize``2(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})">
+            <summary>
+            将字典序列化成Xml字符串,根节点名称为params,项目节点为param
+            </summary>
+            <typeparam name="TKey">字典键类型</typeparam>
+            <typeparam name="TValue">字典值类型</typeparam>
+            <param name="dict">字典</param>
+            <returns>Xml字符串</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.DictionaryExtension.FillInternal``2(System.Collections.Generic.IDictionary{``0,``1},System.String,System.String,System.String,System.Boolean,System.Func{System.Collections.Generic.IDictionary{``0,``1},``0,``1,System.Boolean})">
+            <summary>
+            从Xml字符串中读取字典填充
+            </summary>
+            <typeparam name="TKey">字典键类型</typeparam>
+            <typeparam name="TValue">字典值类型</typeparam>
+            <param name="dict">字典</param>
+            <param name="xml">xml字符串</param>
+            <param name="rootName">Xml根节点名称</param>
+            <param name="itemName">Xml项节点名称</param>
+            <param name="overwrite">如果字典中已存在此键值，是否覆盖</param>
+            <param name="predicate">字典项目检测条件，返回true则添加到字典中，返回false则忽略</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.DictionaryExtension.Fill``2(System.Collections.Generic.IDictionary{``0,``1},System.String,System.String,System.String,System.Boolean,System.Func{System.Collections.Generic.IDictionary{``0,``1},``0,``1,System.Boolean})">
+            <summary>
+            从Xml字符串中读取字典填充
+            </summary>
+            <typeparam name="TKey">字典键类型</typeparam>
+            <typeparam name="TValue">字典值类型</typeparam>
+            <param name="dict">字典</param>
+            <param name="xml">xml字符串</param>
+            <param name="rootName">Xml根节点名称</param>
+            <param name="itemName">Xml项节点名称</param>
+            <param name="overwrite">如果字典中已存在此键值，是否覆盖</param>
+            <param name="predicate">字典项目检测条件，返回true则添加到字典中，返回false则忽略</param>
+            <returns>填充完毕后的字典</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.DictionaryExtension.Fill``2(System.Collections.Generic.Dictionary{``0,``1},System.String,System.String,System.String,System.Boolean,System.Func{System.Collections.Generic.IDictionary{``0,``1},``0,``1,System.Boolean})">
+            <summary>
+            从Xml字符串中读取字典填充
+            </summary>
+            <typeparam name="TKey">字典键类型</typeparam>
+            <typeparam name="TValue">字典值类型</typeparam>
+            <param name="dict">字典</param>
+            <param name="xml">xml字符串</param>
+            <param name="rootName">Xml根节点名称</param>
+            <param name="itemName">Xml项节点名称</param>
+            <param name="overwrite">如果字典中已存在此键值，是否覆盖</param>
+            <param name="predicate">字典项目检测条件，返回true则添加到字典中，返回false则忽略</param>
+            <returns>填充完毕后的字典</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.DictionaryExtension.Fill``2(System.Collections.Generic.IDictionary{``0,``1},System.String,System.String,System.Boolean,System.Func{System.Collections.Generic.IDictionary{``0,``1},``0,``1,System.Boolean})">
+            <summary>
+            从Xml字符串中读取字典填充
+            </summary>
+            <typeparam name="TKey">字典键类型</typeparam>
+            <typeparam name="TValue">字典值类型</typeparam>
+            <param name="dict">字典</param>
+            <param name="xml">xml字符串</param>
+            <param name="itemName">Xml项节点名称</param>
+            <param name="overwrite">如果字典中已存在此键值，是否覆盖</param>
+            <param name="predicate">字典项目检测条件，返回true则添加到字典中，返回false则忽略</param>
+            <returns>填充完毕后的字典</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.DictionaryExtension.Fill``2(System.Collections.Generic.Dictionary{``0,``1},System.String,System.String,System.Boolean,System.Func{System.Collections.Generic.IDictionary{``0,``1},``0,``1,System.Boolean})">
+            <summary>
+            从Xml字符串中读取字典填充
+            </summary>
+            <typeparam name="TKey">字典键类型</typeparam>
+            <typeparam name="TValue">字典值类型</typeparam>
+            <param name="dict">字典</param>
+            <param name="xml">xml字符串</param>
+            <param name="itemName">Xml项节点名称</param>
+            <param name="overwrite">如果字典中已存在此键值，是否覆盖</param>
+            <param name="predicate">字典项目检测条件，返回true则添加到字典中，返回false则忽略</param>
+            <returns>填充完毕后的字典</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.DictionaryExtension.Fill``2(System.Collections.Generic.IDictionary{``0,``1},System.String,System.String,System.Func{System.Collections.Generic.IDictionary{``0,``1},``0,``1,System.Boolean})">
+            <summary>
+            从Xml字符串中读取字典填充
+            </summary>
+            <typeparam name="TKey">字典键类型</typeparam>
+            <typeparam name="TValue">字典值类型</typeparam>
+            <param name="dict">字典</param>
+            <param name="xml">xml字符串</param>
+            <param name="itemName">Xml项节点名称</param>
+            <param name="predicate">字典项目检测条件，返回true则添加到字典中，返回false则忽略</param>
+            <returns>填充完毕后的字典</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.DictionaryExtension.Fill``2(System.Collections.Generic.Dictionary{``0,``1},System.String,System.String,System.Func{System.Collections.Generic.IDictionary{``0,``1},``0,``1,System.Boolean})">
+            <summary>
+            从Xml字符串中读取字典填充
+            </summary>
+            <typeparam name="TKey">字典键类型</typeparam>
+            <typeparam name="TValue">字典值类型</typeparam>
+            <param name="dict">字典</param>
+            <param name="xml">xml字符串</param>
+            <param name="itemName">Xml项节点名称</param>
+            <param name="predicate">字典项目检测条件，返回true则添加到字典中，返回false则忽略</param>
+            <returns>填充完毕后的字典</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.DictionaryExtension.Fill``2(System.Collections.Generic.IDictionary{``0,``1},System.String,System.Boolean,System.Func{System.Collections.Generic.IDictionary{``0,``1},``0,``1,System.Boolean})">
+            <summary>
+            从Xml字符串中读取字典填充
+            </summary>
+            <typeparam name="TKey">字典键类型</typeparam>
+            <typeparam name="TValue">字典值类型</typeparam>
+            <param name="dict">字典</param>
+            <param name="xml">xml字符串</param>
+            <param name="overwrite">如果字典中已存在此键值，是否覆盖</param>
+            <param name="predicate">字典项目检测条件，返回true则添加到字典中，返回false则忽略</param>
+            <returns>填充完毕后的字典</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.DictionaryExtension.Fill``2(System.Collections.Generic.Dictionary{``0,``1},System.String,System.Boolean,System.Func{System.Collections.Generic.IDictionary{``0,``1},``0,``1,System.Boolean})">
+            <summary>
+            从Xml字符串中读取字典填充
+            </summary>
+            <typeparam name="TKey">字典键类型</typeparam>
+            <typeparam name="TValue">字典值类型</typeparam>
+            <param name="dict">字典</param>
+            <param name="xml">xml字符串</param>
+            <param name="overwrite">如果字典中已存在此键值，是否覆盖</param>
+            <param name="predicate">字典项目检测条件，返回true则添加到字典中，返回false则忽略</param>
+            <returns>填充完毕后的字典</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.DictionaryExtension.Fill``2(System.Collections.Generic.IDictionary{``0,``1},System.String,System.Func{System.Collections.Generic.IDictionary{``0,``1},``0,``1,System.Boolean})">
+            <summary>
+            从Xml字符串中读取字典填充
+            </summary>
+            <typeparam name="TKey">字典键类型</typeparam>
+            <typeparam name="TValue">字典值类型</typeparam>
+            <param name="dict">字典</param>
+            <param name="xml">xml字符串</param>
+            <param name="overwrite">如果字典中已存在此键值，是否覆盖</param>
+            <param name="predicate">字典项目检测条件，返回true则添加到字典中，返回false则忽略</param>
+            <returns>填充完毕后的字典</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.DictionaryExtension.Fill``2(System.Collections.Generic.Dictionary{``0,``1},System.String,System.Func{System.Collections.Generic.IDictionary{``0,``1},``0,``1,System.Boolean})">
+            <summary>
+            从Xml字符串中读取字典填充
+            </summary>
+            <typeparam name="TKey">字典键类型</typeparam>
+            <typeparam name="TValue">字典值类型</typeparam>
+            <param name="dict">字典</param>
+            <param name="xml">xml字符串</param>
+            <param name="overwrite">如果字典中已存在此键值，是否覆盖</param>
+            <param name="predicate">字典项目检测条件，返回true则添加到字典中，返回false则忽略</param>
+            <returns>填充完毕后的字典</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.DictionaryExtension.Splice``2(System.Collections.Generic.IDictionary{``0,``1},System.String,System.String,System.Boolean)">
+            <summary>
+            将字典对象转换为指定符号分隔字符串连接的字符串
+            </summary>
+            <typeparam name="TKey">字典键类型</typeparam>
+            <typeparam name="TValue">字典值类型</typeparam>
+            <param name="dict">字典</param>
+            <param name="itemSplit">字典项分隔符</param>
+            <param name="keyValueSplit">字典名值对分隔符</param>
+            <param name="reverse">是否反转字典名值对连接顺序（默认键连接值）</param>
+            <returns>拼接后的字符串</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.EnumHelper.GetDisplayName(System.Type,System.Object,System.String)">
+            <summary>
+            根据枚举值获取枚举显示信息
+            </summary>
+            <param name="enumType">枚举类型</param>
+            <param name="enumField">枚举成员或枚举值或枚举名称</param>
+            <param name="defaultText">默认值</param>
+            <returns>枚举显示信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.EnumHelper.GetDescription(System.Type,System.Object,System.String)">
+            <summary>
+            根据枚举值获取枚举描述信息
+            </summary>
+            <param name="enumType"></param>
+            <param name="enumField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.EnumHelper.GetDisplayName(System.Object)">
+            <summary>
+            根据枚举值获取枚举显示信息
+            </summary>
+            <param name="enumField">枚举成员</param>
+            <returns>枚举显示信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.EnumHelper.GetDisplayName``1(System.Object,System.String)">
+            <summary>
+            根据枚举值获取枚举显示信息
+            </summary>
+            <typeparam name="TEnum">枚举类型</typeparam>
+            <param name="value">枚举成员值</param>
+            <param name="defaultText">未找到枚举值时的默认显示</param>
+            <returns>枚举显示信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.EnumHelper.GetDisplayNames``1">
+            <summary>
+            获取枚举类型的显示属性
+            </summary>
+            <typeparam name="TEnum">枚举类型</typeparam>
+            <returns>枚举和显示属性字典</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.EnumHelper.GetDisplayNames(System.Type)">
+            <summary>
+            获取枚举类型的显示属性
+            </summary>
+            <param name="enumType">枚举类型</param>
+            <returns>枚举和显示属性字典</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.EnumHelper.GetDisplayNames(System.Reflection.Assembly[])">
+            <summary>
+            在程序集中搜索枚举类型，并转换成字典返回
+            </summary>
+            <param name="assemblies">程序集</param>
+            <returns>返回信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.EnumHelper.GetDisplays``1">
+            <summary>
+            获取枚举类型的显示属性
+            </summary>
+            <typeparam name="TEnum">枚举类型</typeparam>
+            <returns>枚举和显示属性字典</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.EnumHelper.GetDisplays(System.Reflection.Assembly[])">
+            <summary>
+            在程序集中搜索枚举类型，并转换成字典返回
+            </summary>
+            <param name="assemblies">程序集</param>
+            <returns>返回信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.EnumHelper.GetDisplays(System.Type)">
+            <summary>
+            获取枚举类型的显示属性
+            </summary>
+            <param name="enumType">枚举类型</param>
+            <returns>枚举和显示属性字典</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.EnumHelper.GetEnumDescValue``1">
+            <summary>
+            从枚举类型和它的特性读出并返回一个键值对
+            </summary>
+            <returns>键值对</returns>
+        </member>
+        <!-- 对于成员“M:Rookey.Frame.Common.EnumHelper.GetEnumDescValue(System.Type)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:Rookey.Frame.Common.EnumHelper.GetEnumDescName(System.Type)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Rookey.Frame.Common.EnumHelper.GetDescription(System.Enum)">
+            <summary>
+            获取Enum的描述信息
+            </summary>
+            <param name="enumValue"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Common.ExpressionExtension">
+            <summary>
+            http://blogs.msdn.com/b/meek/archive/2008/05/02/linq-to-entities-combining-predicates.aspx
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.ExpressionExtension.Compose``1(System.Linq.Expressions.Expression{``0},System.Linq.Expressions.Expression{``0},System.Func{System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Linq.Expressions.Expression})">
+            <summary>
+            The compose.
+            </summary>
+            <param name="first">
+            The first.
+            </param>
+            <param name="second">
+            The second.
+            </param>
+            <param name="merge">
+            The merge.
+            </param>
+            <typeparam name="T">
+            </typeparam>
+            <returns>
+            The <see cref="T:System.Linq.Expressions.Expression"/>.
+            </returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ExpressionExtension.And``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            The and.
+            </summary>
+            <param name="first">
+            The first.
+            </param>
+            <param name="second">
+            The second.
+            </param>
+            <typeparam name="T">
+            </typeparam>
+            <returns>
+            The <see cref="T:System.Linq.Expressions.Expression"/>.
+            </returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ExpressionExtension.Or``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            The or.
+            </summary>
+            <param name="first">
+            The first.
+            </param>
+            <param name="second">
+            The second.
+            </param>
+            <typeparam name="T">
+            </typeparam>
+            <returns>
+            The <see cref="T:System.Linq.Expressions.Expression"/>.
+            </returns>
+        </member>
+        <member name="T:Rookey.Frame.Common.ExpressionVisitor">
+            <summary>
+            This comes from Matt Warren's sample:
+            http://blogs.msdn.com/mattwar/archive/2007/07/31/linq-building-an-iqueryable-provider-part-ii.aspx
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.IEnumerableExtension.Splice``1(System.Collections.Generic.IEnumerable{``0},System.String,System.Func{``0,System.String})">
+            <summary>
+            将可枚举对象值转换为以指定符号分隔字符串连接的字符串
+            </summary>
+            <param name="val">可枚举对象</param>
+            <param name="separator">连接符号</param>
+            <param name="format">转换格式</param>
+            <returns>字符串</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.IEnumerableExtension.Splice``1(System.Collections.Generic.IEnumerable{``0},System.String,System.String)">
+            <summary>
+            将可枚举对象值转换为以指定符号分隔字符串连接的字符串
+            </summary>
+            <param name="val">可枚举对象</param>
+            <param name="separator">连接符号</param>
+            <param name="format">转换格式</param>
+            <returns>字符串</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.IEnumerableExtension.Splice``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+            <summary>
+            将可枚举对象值转换为以指定符号分隔字符串连接的字符串
+            </summary>
+            <param name="val">可枚举对象</param>
+            <param name="separator">连接符号</param>
+            <returns>字符串</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.IEnumerableExtension.Splice``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            将可枚举对象值转换为以逗号分隔字符串连接的字符串
+            </summary>
+            <param name="val">可枚举对象</param>
+            <returns>字符串</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.IEnumerableExtension.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0,System.Int32})">
+            <summary>
+            可枚举类型迭代函数
+            </summary>
+            <typeparam name="T">枚举类型</typeparam>
+            <param name="val">枚举</param>
+            <param name="action">迭代函数主体，第一个参数为迭代项，第二个参数为索引号</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.IEnumerableExtension.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+            <summary>
+            可枚举类型迭代函数
+            </summary>
+            <typeparam name="T">枚举类型</typeparam>
+            <param name="val">枚举</param>
+            <param name="action">迭代函数主体,第一个参数为迭代项</param>
+        </member>
+        <member name="T:Rookey.Frame.Common.ParameterRebinder">
+            <summary>
+            http://blogs.msdn.com/b/meek/archive/2008/05/02/linq-to-entities-combining-predicates.aspx
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.Common.ParameterRebinder.map">
+            <summary>
+            The map.
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.ParameterRebinder.#ctor(System.Collections.Generic.Dictionary{System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.ParameterExpression})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Rookey.Frame.Common.ParameterRebinder"/> class.
+            </summary>
+            <param name="map">
+            The map.
+            </param>
+        </member>
+        <member name="M:Rookey.Frame.Common.ParameterRebinder.ReplaceParameters(System.Collections.Generic.Dictionary{System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.ParameterExpression},System.Linq.Expressions.Expression)">
+            <summary>
+            The replace parameters.
+            </summary>
+            <param name="map">
+            The map.
+            </param>
+            <param name="exp">
+            The exp.
+            </param>
+            <returns>
+            The <see cref="T:System.Linq.Expressions.Expression"/>.
+            </returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ParameterRebinder.VisitParameter(System.Linq.Expressions.ParameterExpression)">
+            <summary>
+            The visit parameter.
+            </summary>
+            <param name="p">
+            The p.
+            </param>
+            <returns>
+            The <see cref="T:System.Linq.Expressions.Expression"/>.
+            </returns>
+        </member>
+        <member name="T:Rookey.Frame.Common.JsonHelper">
+            <summary>
+            序列化帮助类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.JsonHelper.Deserialize``1(System.String)">
+            <summary>
+            反序列化为对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.JsonHelper.Deserialize``1(System.String,System.String@)">
+            <summary>
+            反序列化为对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="json"></param>
+            <param name="errMsg">异常信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.JsonHelper.Deserialize(System.String,System.Type)">
+            <summary>
+            反序列化
+            </summary>
+            <param name="json">JSON数据</param>
+            <param name="type">类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.JsonHelper.Deserialize(System.String,System.Type,System.String@)">
+            <summary>
+            反序列化
+            </summary>
+            <param name="json">JSON数据</param>
+            <param name="type">类型</param>
+            <param name="errMsg">异常信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.JsonHelper.Serialize``1(``0)">
+            <summary>
+            序列化到json
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.JsonHelper.DataTableToJson(System.Data.DataTable)">
+            <summary>
+            将datatable转换为json  
+            </summary>
+            <param name="dt">Dt</param>
+            <returns>JSON字符串</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.JsonHelper.JsonToDataTable(System.String)">
+            <summary>    
+            将获取的Json数据转换为DataTable    
+            </summary>    
+            <param name="strJson">Json字符串</param>   
+            <returns></returns>    
+        </member>
+        <member name="M:Rookey.Frame.Common.MyJsonHelper`1.Deserialize(System.String)">
+            <summary>
+            反序列化为对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.MyJsonHelper`1.CollectDeserialize(System.String)">
+            <summary>
+            反序列化为对象集合
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.MyJsonHelper`1.Serialize(`0)">
+            <summary>
+            序列化到json
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Common.ObjectExtension">
+            <summary>
+            对象扩展类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.ObjectExtension.ToDisplay``1(System.Object,System.String)">
+            <summary>
+            将整形转换为指定枚举类型的显示输出
+            </summary>
+            <typeparam name="TEnum">枚举类型</typeparam>
+            <param name="value">枚举值</param>
+            <param name="defaultText">未在枚举中找到此枚举值时显示的文本</param>
+            <returns>枚举显示</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ObjectExtension.ToDictionary(System.Object,System.Boolean,System.Object[])">
+            <summary>
+            将来多个对象合并成一个字典输出
+            </summary>
+            <param name="value"></param>
+            <param name="overrideProperty"></param>
+            <param name="objects"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ObjectExtension.ToDictionary(System.Object)">
+            <summary>
+            将对象所有属性转换为一个字典
+            </summary>
+            <param name="value">对象</param>
+            <returns>对象属性字典</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ObjectExtension.To``2(``0,``1)">
+            <summary>
+            检查输入对象值是否为空，为空返回默认值，否则将对象转换为输入类型
+            </summary>
+            <typeparam name="TFrom">源类型</typeparam>
+            <typeparam name="TTo">目标类型</typeparam>
+            <param name="from">待转换值</param>
+            <param name="defaultValue">默认值</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ObjectExtension.To``2(``0)">
+            <summary>
+            检查输入对象值是否为空，为空返回default(TTo)，否则将对象转换为输入类型
+            </summary>
+            <typeparam name="TFrom">源类型</typeparam>
+            <typeparam name="TTo">目标类型</typeparam>
+            <param name="from">待转换值</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ObjectExtension.To``1(System.Object,``0)">
+            <summary>
+            检查输入对象值是否为空，为空返回默认值，否则将对象转换为输入类型
+            </summary>
+            <typeparam name="TTo">类型</typeparam>
+            <param name="from">待转换值</param>
+            <param name="defaultValue">默认值</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ObjectExtension.To``1(System.String,``0)">
+            <summary>
+            检查输入对象值是否为空，为空返回默认值，否则将对象转换为输入类型
+            </summary>
+            <typeparam name="TTo">类型</typeparam>
+            <param name="from">待转换值</param>
+            <param name="defaultValue">默认值</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ObjectExtension.To``1(System.Object)">
+            <summary>
+            检查输入对象值是否为空，为空返回default(TTo)，否则将对象转换为输入类型
+            </summary>
+            <typeparam name="TTo">类型</typeparam>
+            <param name="from">待转换值</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ObjectExtension.To``1(System.String)">
+            <summary>
+            检查输入字符串是否为空，为空返回default(TTo)，否则将字符串转换为输入类型
+            </summary>
+            <typeparam name="TTo">类型</typeparam>
+            <param name="from">待转换字符串</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ObjectExtension.To``3(``0,System.Func{``0,``1},``2)">
+            <summary>
+            获取对象的属性值，并转换成目标类型，获取或者转换失败，返回默认值
+            </summary>
+            <typeparam name="TFrom">对象的类型</typeparam>
+            <typeparam name="TProperty">对象属性类型</typeparam>
+            <typeparam name="TTo">转换类型</typeparam>
+            <param name="from">对象</param>
+            <param name="getProperty">属性获取委托</param>
+            <param name="defaultValue"></param>
+            <returns>转换结果</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ObjectExtension.To``3(``0,System.Func{``0,``1})">
+            <summary>
+            获取对象的属性值，并转换成目标类型，获取或者转换失败，返回类型默认值
+            </summary>
+            <typeparam name="TFrom">对象的类型</typeparam>
+            <typeparam name="TProperty">对象属性类型</typeparam>
+            <typeparam name="TTo">转换类型</typeparam>
+            <param name="from">对象</param>
+            <param name="getProperty">属性获取委托</param>
+            <returns>转换结果</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.ObjectExtension.To``2(``0,System.Func{``0,System.Object})">
+            <summary>
+            获取对象的属性值，并转换成目标类型，获取或者转换失败，返回类型默认值
+            </summary>
+            <typeparam name="TFrom">对象的类型</typeparam>
+            <typeparam name="TTo">转换类型</typeparam>
+            <param name="from">对象</param>
+            <param name="getProperty">属性获取委托</param>
+            <returns>转换结果</returns>
+        </member>
+        <member name="T:Rookey.Frame.Common.MySecurity">
+            <summary>
+            安全操作类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.MySecurity.#ctor">
+            <summary>
+            初始化安全类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.MySecurity.SEncryptString(System.String,System.String)">
+            <summary>
+            加密字符串
+            </summary>
+            <param name="inputStr">输入字符串</param>
+            <param name="keyStr">密码，可以为“”</param>
+            <returns>输出加密后字符串</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.MySecurity.EncryptString(System.String,System.String)">
+            <summary>
+            加密字符串
+            </summary>
+            <param name="inputStr">输入字符串</param>
+            <param name="keyStr">密码，可以为“”</param>
+            <returns>输出加密后字符串</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.MySecurity.DES3EncryptString(System.String,System.String,System.String)">
+            <summary>
+            DES3加密
+            </summary>
+            <param name="key"></param>
+            <param name="iv"></param>
+            <param name="Value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.MySecurity.EncryptFile(System.String,System.String,System.String)">
+            <summary>
+            加密文件
+            </summary>
+            <param name="filePath">输入文件路径</param>
+            <param name="savePath">加密后输出文件路径</param>
+            <param name="keyStr">密码，可以为“”</param>
+            <returns></returns>  
+        </member>
+        <member name="M:Rookey.Frame.Common.MySecurity.SDecryptString(System.String,System.String)">
+            <summary>
+            解密字符串
+            </summary>
+            <param name="inputStr">要解密的字符串</param>
+            <param name="keyStr">密钥</param>
+            <returns>解密后的结果</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.MySecurity.SDecryptString(System.String)">
+            <summary>
+             解密字符串 密钥为系统默认
+            </summary>
+            <param name="inputStr">要解密的字符串</param>
+            <returns>解密后的结果</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.MySecurity.DecryptString(System.String,System.String)">
+            <summary>
+            解密字符串
+            </summary>
+            <param name="inputStr">要解密的字符串</param>
+            <param name="keyStr">密钥</param>
+            <returns>解密后的结果</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.MySecurity.DES3DecryptString(System.String,System.String,System.String)">
+            <summary>
+            DES3解密
+            </summary>
+            <param name="key"></param>
+            <param name="iv"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.MySecurity.DecryptFile(System.String,System.String,System.String)">
+            <summary>
+            解密文件
+            </summary>
+            <param name="filePath">输入文件路径</param>
+            <param name="savePath">解密后输出文件路径</param>
+            <param name="keyStr">密码，可以为“”</param>
+            <returns></returns>    
+        </member>
+        <member name="M:Rookey.Frame.Common.MySecurity.MD5(System.String)">
+            <summary>
+            128位MD5算法加密字符串
+            </summary>
+            <param name="text">要加密的字符串</param>    
+        </member>
+        <member name="M:Rookey.Frame.Common.MySecurity.MD5(System.Byte[])">
+            <summary>
+            128位MD5算法加密Byte数组
+            </summary>
+            <param name="data">要加密的Byte数组</param>    
+        </member>
+        <member name="M:Rookey.Frame.Common.MySecurity.EncodeBase64(System.String,System.Text.Encoding)">
+            <summary>
+            Base64加密
+            </summary>
+            <param name="text">要加密的字符串</param>
+            <param name="encoding">编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.MySecurity.EncodeBase64(System.String)">
+            <summary>
+            Base64加密
+            </summary>
+            <param name="text">要加密的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.MySecurity.DecodeBase64(System.String,System.Text.Encoding)">
+            <summary>
+            Base64解密
+            </summary>
+            <param name="text">要解密的字符串</param>
+            <param name="encoding">编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.MySecurity.DecodeBase64(System.String)">
+            <summary>
+            Base64解密
+            </summary>
+            <param name="text">要解密的字符串</param>
+        </member>
+        <member name="T:Rookey.Frame.Common.RegexHelper">
+            <summary>
+            操作正则表达式的公共类
+            </summary>    
+        </member>
+        <member name="M:Rookey.Frame.Common.RegexHelper.IsMatch(System.String,System.String)">
+            <summary>
+            验证输入字符串是否与模式字符串匹配，匹配返回true
+            </summary>
+            <param name="input">输入字符串</param>
+            <param name="pattern">模式字符串</param>        
+        </member>
+        <member name="M:Rookey.Frame.Common.RegexHelper.IsMatch(System.String,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            验证输入字符串是否与模式字符串匹配，匹配返回true
+            </summary>
+            <param name="input">输入的字符串</param>
+            <param name="pattern">模式字符串</param>
+            <param name="options">筛选条件</param>
+        </member>
+        <member name="T:Rookey.Frame.Common.ValidateTools">
+            <summary>
+            共用工具类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.ValidateTools.IsNullOrEmpty``1(``0)">
+            <summary>
+            判断对象是否为空，为空返回true
+            </summary>
+            <typeparam name="T">要验证的对象的类型</typeparam>
+            <param name="data">要验证的对象</param>        
+        </member>
+        <member name="M:Rookey.Frame.Common.ValidateTools.IsNullOrEmpty(System.Object)">
+            <summary>
+            判断对象是否为空，为空返回true
+            </summary>
+            <param name="data">要验证的对象</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.ValidateTools.IsIP(System.String)">
+            <summary>
+            验证IP地址是否合法
+            </summary>
+            <param name="ip">要验证的IP地址</param>        
+        </member>
+        <member name="M:Rookey.Frame.Common.ValidateTools.IsEmail(System.String)">
+            <summary>
+            验证EMail是否合法
+            </summary>
+            <param name="email">要验证的Email</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.ValidateTools.IsInt(System.String)">
+            <summary>
+            验证是否为整数 如果为空，认为验证不合格 返回false
+            </summary>
+            <param name="number">要验证的整数</param>        
+        </member>
+        <member name="M:Rookey.Frame.Common.ValidateTools.IsNumber(System.String)">
+            <summary>
+            验证是否为数字
+            </summary>
+            <param name="number">要验证的数字</param>        
+        </member>
+        <member name="M:Rookey.Frame.Common.ValidateTools.IsDate(System.String@)">
+            <summary>
+            验证日期是否合法,对不规则的作了简单处理
+            </summary>
+            <param name="date">日期</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.ValidateTools.IsIdCard(System.String)">
+            <summary>
+            验证身份证是否合法
+            </summary>
+            <param name="idCard">要验证的身份证</param>        
+        </member>
+        <member name="M:Rookey.Frame.Common.ValidateTools.IsValidInput(System.String@)">
+            <summary>
+            检测客户输入的字符串是否有效,并将原始字符串修改为有效字符串或空字符串。
+            当检测到客户的输入中有攻击性危险字符串,则返回false,有效返回true。
+            </summary>
+            <param name="input">要检测的字符串</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.TypeUtil.GetUnNullableType(System.Type)">
+            <summary>
+            获取可空类型的实际类型
+            </summary>
+            <param name="conversionType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.TypeUtil.ChangeType(System.Object,System.Type)">
+            <summary>
+            类型转换
+            </summary>
+            <param name="value">值</param>
+            <param name="type">类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.TypeUtil.FileSize(System.Int64)">
+            <summary>
+            将文件大小转换输出
+            </summary>
+            <param name="Size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.TypeUtil.SqlType2CsharpType(System.Data.SqlDbType)">
+            <summary>
+            SqlDbType转换为C#数据类型
+            </summary>
+            <param name="sqlType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.TypeUtil.SqlTypeString2SqlType(System.String)">
+            <summary>
+            sql server数据类型（如：varchar）
+            转换为SqlDbType类型
+            </summary>
+            <param name="sqlTypeString"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Common.UploadConfig">
+            <summary>
+            上传信息配置
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.UploadConfig.AllowType">
+            <summary>
+            允许上传的文件类型
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.UploadConfig.MaxFileSize">
+            <summary>
+            上传文件最大尺寸,单位KB
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.UploadConfig.QueueSizeLimit">
+            <summary>
+            最多允许上传文件个数
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.UploadConfig.BasePath">
+            <summary>
+            上传文件的基目录
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.UploadConfig.TempPath">
+            <summary>
+            上传文件缓存目录
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.UploadConfig.Folder">
+            <summary>
+            实际保存目录
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.UploadFileManager.ReadBytes(System.IO.Stream)">
+            <summary>
+            将流转换为内存字节数组
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.UploadFileManager.GetUploadFile(System.String,System.String)">
+            <summary>
+            读取上传文件
+            </summary>
+            <param name="url">上传文件地址</param>
+            <param name="configName">上传配置名</param>
+            <returns>文件流</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.UploadFileManager.RemoveUploadFile(System.String,System.String)">
+            <summary>
+            删除上传文件
+            </summary>
+            <param name="url">上传文件地址</param>
+            <param name="configName">上传配置名</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.UploadFileManager.CreateFileName(System.String,Rookey.Frame.Common.UploadConfig,System.String)">
+            <summary>
+            创建一个指定类型带路径的文件名
+            </summary>
+            <param name="ext">文件类型</param>
+            <param name="cfg">上传配置</param>
+            <param name="customerFileName">自定义文件名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.UploadFileManager.CreatTemporaryFileName(System.String,Rookey.Frame.Common.UploadConfig)">
+            <summary>
+            创建一个指定类型带路径的临时文件名
+            </summary>
+            <param name="ext">文件类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.UploadFileManager.GetUploadConfig(System.String)">
+            <summary>
+            获取上传参数
+            </summary>
+            <returns>上传参数</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.UploadFileManager.GetUploadConfig(System.String,System.String)">
+            <summary>
+            获取上传参数
+            </summary>
+            <returns>上传参数</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.UploadFileManager.GetUploadConfig">
+            <summary>
+            获取上传参数
+            </summary>
+            <returns>上传参数</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.UploadFileManager.GetConfigByXmlNote(Rookey.Frame.Common.UploadConfig,System.Xml.Linq.XElement)">
+            <summary>
+            从XML载入上传配置
+            </summary>
+            <param name="cfg"></param>
+            <param name="el"></param>
+        </member>
+        <member name="M:Rookey.Frame.Common.UploadFileManager.Save(System.Web.HttpPostedFileBase,System.String,System.String)">
+            <summary>
+            保存上传文件
+            </summary>
+            <param name="file">上传文件</param>
+            <param name="fileName">保存文件名</param>
+            <param name="configName">上传配置信息节点名称</param>
+            <returns>返回地址</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.UploadFileManager.Save(System.IO.Stream,System.String,System.String,Rookey.Frame.Common.UploadConfig)">
+            <summary>
+            保存文件流
+            </summary>
+            <param name="stream"></param>
+            <param name="fileName"></param>
+            <param name="ext"></param>
+            <param name="cfg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.UploadFileManager.Check(System.Web.HttpPostedFileBase,System.String)">
+            <summary>
+            上传文件检查
+            </summary>
+            <param name="file">文件信息</param>
+            <param name="cfg">上传配置信息</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.UploadFileManager.Check(System.Web.HttpPostedFileBase,Rookey.Frame.Common.UploadConfig)">
+            <summary>
+            上传文件检查
+            </summary>
+            <param name="file">文件信息</param>
+            <param name="cfg">上传配置信息</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.UploadFileManager.Save(System.Web.HttpPostedFileBase,System.String,Rookey.Frame.Common.UploadConfig)">
+            <summary>
+            保存上传文件
+            </summary>
+            <param name="file">上传文件</param>
+            <param name="fileName">保存文件名</param>
+            <param name="cfg">上传配置信息</param>
+            <returns>返回地址</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.UploadFileManager.SaveAs(System.Web.HttpPostedFileBase,System.String)">
+            <summary>
+            保存上传文件
+            </summary>
+            <param name="file">上传文件</param>
+            <param name="configName">上传配置信息节点名称</param>
+            <returns>新保存文件路径信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.UploadFileManager.SaveAs(System.Web.HttpPostedFileBase,System.String,System.String,System.String)">
+            <summary>
+            保存上传文件
+            </summary>
+            <param name="file">上传文件</param>
+            <param name="configName">上传配置信息节点名称</param>
+            <param name="fileName">自定义保存文件夹</param>
+            <param name="customerFileName">自定义文件名</param>
+            <returns>新保存文件路径信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.UploadFileManager.SaveAs(System.Web.HttpPostedFileBase,Rookey.Frame.Common.UploadConfig,System.String)">
+            <summary>
+            保存上传文件
+            </summary>
+            <param name="file">上传文件</param>
+            <param name="cfg">上传配置信息</param>
+            <param name="customerFileName">自定义文件名</param>
+            <returns>新保存文件路径信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.UploadFileManager.SaveAsTemporary(System.Web.HttpPostedFileBase,System.String)">
+            <summary>
+            保存上传文件临时文件夹
+            </summary>
+            <param name="file">上传文件</param>
+            <param name="configName">上传配置信息节点名称</param>
+            <returns>新保存文件路径信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.UploadFileManager.SaveAsTemporary(System.Web.HttpPostedFileBase,Rookey.Frame.Common.UploadConfig)">
+            <summary>
+            保存上传文件临时文件夹
+            </summary>
+            <param name="file">上传文件</param>
+            <param name="cfg">上传配置信息</param>
+            <returns>新保存文件路径信息</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.UploadFileManager.SaveAs(System.String,System.String,System.String,System.String)">
+            <summary>
+            将缓存目录中的文件保存到实际保存目录，并获取文件信息
+            </summary>
+            <param name="attachments">文件信息字符串</param>
+            <param name="fileSplit">文件分隔符</param>
+            <param name="itemSplit">文件名和文件路径分隔符</param>
+            <param name="saveFolder">保存的文件夹</param>
+            <returns>保存的文件Xml集合</returns>
+        </member>
+        <member name="P:Rookey.Frame.Common.UploadFileModel.FileName">
+            <summary>
+            上传文件原始名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.UploadFileModel.FilePath">
+            <summary>
+            带路径的上传文件名称
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Common.UploadFileModel.FileSize">
+            <summary>
+            文件大小
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.UploadFileModelCollection.ToXml">
+            <summary>
+            讲文件集信息输出为Xml
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.UploadFileModelCollection.ParseByXml(System.String)">
+            <summary>
+            从Xml载入文件信息
+            </summary>
+            <param name="xml"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Common.ValidateCodeHelper">
+            <summary>     
+            生成验证码的类     
+            </summary>     
+        </member>
+        <member name="F:Rookey.Frame.Common.ValidateCodeHelper.PI">
+            <summary>             
+            产生波形滤镜效果             
+            </summary>             
+        </member>
+        <member name="M:Rookey.Frame.Common.ValidateCodeHelper.CreateValidateCode(System.Int32)">
+            <summary>     
+            生成验证码     
+            </summary>     
+            <param name="length">指定验证码的长度</param>     
+            <returns></returns>     
+        </member>
+        <member name="M:Rookey.Frame.Common.ValidateCodeHelper.CreateValidateGraphic(System.String)">
+            <summary>     
+            创建验证码的图片     
+            </summary>     
+            <param name="containsPage">要输出到的page对象</param>     
+            <param name="validateNum">验证码</param>     
+        </member>
+        <member name="M:Rookey.Frame.Common.ValidateCodeHelper.GetImageWidth(System.Int32)">
+            <summary>     
+            得到验证码图片的长度     
+            </summary>     
+            <param name="validateNumLength">验证码的长度</param>     
+            <returns></returns>     
+        </member>
+        <member name="M:Rookey.Frame.Common.ValidateCodeHelper.GetImageHeight">
+            <summary>     
+            得到验证码的高度     
+            </summary>     
+            <returns></returns>     
+        </member>
+        <member name="M:Rookey.Frame.Common.ValidateCodeHelper.TwistImage(System.Drawing.Bitmap,System.Boolean,System.Double,System.Double)">
+            <summary>             
+            正弦曲线Wave扭曲图片             
+            </summary>             
+            <param name="srcBmp">图片路径</param>             
+            <param name="bXDir">如果扭曲则选择为True</param>             
+            <param name="nMultValue">波形的幅度倍数，越大扭曲的程度越高，一般为3</param>             
+            <param name="dPhase">波形的起始相位，取值区间[0-2*PI)</param>             
+            <returns></returns>            
+        </member>
+        <member name="P:Rookey.Frame.Common.ValidateCodeHelper.MaxLength">
+            <summary>     
+            验证码的最大长度     
+            </summary>     
+        </member>
+        <member name="P:Rookey.Frame.Common.ValidateCodeHelper.MinLength">
+            <summary>     
+            验证码的最小长度     
+            </summary>     
+        </member>
+        <member name="T:Rookey.Frame.Common.XmlHelper">
+            <summary>
+            xml帮助类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.XmlHelper.XMLLoad(System.String)">
+            <summary>
+            导入XML文件
+            </summary>
+            <param name="xmlPath">XML文件路径</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.XmlHelper.NodeIsExists(System.String,System.String)">
+            <summary>
+            判断节点是否存在
+            </summary>
+            <param name="xmlPath">xml文件路径</param>
+            <param name="node">节点</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.XmlHelper.Read(System.String,System.String)">
+            <summary>
+            读取指定路径和节点的串联值
+            </summary>
+            <param name="path">路径</param>
+            <param name="node">节点</param>
+            <param name="attribute">属性名，非空时返回该属性值，否则返回串联值</param>
+            使用示列:
+            XMLProsess.Read(path, "/Node", "")
+            XMLProsess.Read(path, "/Node/Element[@Attribute='Name']")
+        </member>
+        <member name="M:Rookey.Frame.Common.XmlHelper.Read(System.String,System.String,System.String)">
+            <summary>
+            读取指定路径和节点的属性值
+            </summary>
+            <param name="xmlPath">路径</param>
+            <param name="node">节点</param>
+            <param name="attribute">属性名，非空时返回该属性值，否则返回串联值</param>
+            使用示列:
+            XMLProsess.Read(path, "/Node", "")
+            XMLProsess.Read(path, "/Node/Element[@Attribute='Name']", "Attribute")
+        </member>
+        <member name="M:Rookey.Frame.Common.XmlHelper.ReadAllChildallValue(System.String,System.String)">
+            <summary>
+            获取某一节点的所有孩子节点的值
+            </summary>
+            <param name="xmlPath">xml文件路径</param>
+            <param name="node">要查询的节点</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.XmlHelper.ReadAllChild(System.String,System.String)">
+            <summary>
+            获取某一节点的所有孩子节点的值
+            </summary>
+            <param name="xmlPath">xml文件路径</param>
+            <param name="node">要查询的节点</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.XmlHelper.GetDataViewByXml(System.String,System.String,System.String)">
+            <summary> 
+            读取XML返回经排序或筛选后的DataView
+            </summary>
+            <param name="xmlPath">xml文件路径</param>
+            <param name="strWhere">筛选条件，如:"name='kgdiwss'"</param>
+            <param name="strSort"> 排序条件，如:"Id desc"</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.XmlHelper.GetDataSetByXml(System.String)">
+            <summary>
+            读取XML返回DataSet
+            </summary>
+            <param name="strXmlPath">XML文件路径</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.XmlHelper.Insert(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            插入数据
+            </summary>
+            <param name="xmlPath">路径</param>
+            <param name="node">节点</param>
+            <param name="element">元素名，非空时插入新元素，否则在该元素中插入属性</param>
+            <param name="attribute">属性名，非空时插入该元素属性值，否则插入元素值</param>
+            <param name="value">值</param>
+            使用示列:
+            XMLProsess.Insert(path, "/Node", "Element", "", "Value")
+            XMLProsess.Insert(path, "/Node", "Element", "Attribute", "Value")
+            XMLProsess.Insert(path, "/Node", "", "Attribute", "Value")
+        </member>
+        <member name="M:Rookey.Frame.Common.XmlHelper.Insert(System.String,System.String,System.String,System.String[][])">
+            <summary>
+            插入数据
+            </summary>
+            <param name="xmlPath">xml文件路径</param>
+            <param name="node">节点</param>
+            <param name="element">元素名，非空时插入新元素，否则在该元素中插入属性</param>
+            <param name="strList">由XML属性名和值组成的二维数组</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.XmlHelper.WriteXmlByDataSet(System.String,System.String[],System.String[])">
+            <summary>
+            插入一行数据
+            </summary>
+            <param name="xmlPath">XML文件路径</param>
+            <param name="Columns">要插入行的列名数组，如：string[] Columns = {"name","IsMarried"};</param>
+            <param name="ColumnValue">要插入行每列的值数组，如：string[] ColumnValue={"XML大全","false"};</param>
+            <returns>成功返回true,否则返回false</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.XmlHelper.Update(System.String,System.String,System.String)">
+            <summary>
+            修改指定节点的数据
+            </summary>
+            <param name="xmlPath">路径</param>
+            <param name="node">节点</param>
+            <param name="value">值</param>
+            使用示列:
+            XMLProsess.Insert(path, "/Node","Value")
+            XMLProsess.Insert(path, "/Node","Value")
+        </member>
+        <member name="M:Rookey.Frame.Common.XmlHelper.Update(System.String,System.String,System.String,System.String)">
+            <summary>
+            修改指定节点的属性值(静态)
+            </summary>
+            <param name="xmlPath">路径</param>
+            <param name="node">节点</param>
+            <param name="attribute">属性名，非空时修改该节点属性值，否则修改节点值</param>
+            <param name="value">值</param>
+            使用示列:
+            XMLProsess.Insert(path, "/Node", "", "Value")
+            XMLProsess.Insert(path, "/Node", "Attribute", "Value")
+        </member>
+        <member name="M:Rookey.Frame.Common.XmlHelper.UpdateXmlRow(System.String,System.String[],System.String[],System.String,System.String)">
+            <summary>
+            更改符合条件的一条记录
+            </summary>
+            <param name="xmlPath">XML文件路径</param>
+            <param name="Columns">列名数组</param>
+            <param name="ColumnValue">列值数组</param>
+            <param name="strWhereColumnName">条件列名</param>
+            <param name="strWhereColumnValue">条件列值</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.XmlHelper.Delete(System.String,System.String)">
+            <summary>
+            删除节点值
+            </summary>
+            <param name="xmlPath">路径</param>
+            <param name="node">节点</param>
+            <param name="attribute">属性名，非空时删除该节点属性值，否则删除节点值</param>
+            <param name="value">值</param>
+            使用示列:
+            XMLProsess.Delete(path, "/Node", "")
+            XMLProsess.Delete(path, "/Node", "Attribute")
+        </member>
+        <member name="M:Rookey.Frame.Common.XmlHelper.Delete(System.String,System.String,System.String)">
+            <summary>
+            删除数据
+            </summary>
+            <param name="xmlPath">路径</param>
+            <param name="node">节点</param>
+            <param name="attribute">属性名，非空时删除该节点属性值，否则删除节点值</param>
+            <param name="value">值</param>
+            使用示列:
+            XMLProsess.Delete(path, "/Node", "")
+            XMLProsess.Delete(path, "/Node", "Attribute")
+        </member>
+        <member name="M:Rookey.Frame.Common.XmlHelper.DeleteXmlAllRows(System.String)">
+            <summary>
+            删除所有行
+            </summary>
+            <param name="xmlPath">XML路径</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.XmlHelper.DeleteXmlRowByIndex(System.String,System.Int32)">
+            <summary>
+            通过删除DataSet中指定索引行，重写XML以实现删除指定行
+            </summary>
+            <param name="iDeleteRow">要删除的行在DataSet中的Index值</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.XmlHelper.DeleteXmlRows(System.String,System.String,System.String[])">
+            <summary>
+            删除指定列中指定值的行
+            </summary>
+            <param name="xmlPath">XML路径</param>
+            <param name="strColumn">列名</param>
+            <param name="ColumnValue">指定值</param>
+        </member>
+        <member name="M:Rookey.Frame.Common.XmlHelper.SerializeToXml(System.Object,System.String)">
+            <summary>
+            XML序列化
+            </summary>
+            <param name="obj">序列对象</param>
+            <param name="filePath">XML文件路径</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.XmlHelper.DeserializeFromXML(System.Type,System.String)">
+            <summary>
+            XML反序列化
+            </summary>
+            <param name="type">目标类型(Type类型)</param>
+            <param name="filePath">XML文件路径</param>
+            <returns>序列对象</returns>
+        </member>
+        <member name="T:Rookey.Frame.Common.WebConfigHelper">
+            <summary>
+            WebConfig操作帮助类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.WebConfigHelper.GetAppSettingValue(System.String)">
+            <summary>
+            获取配置文件AppSetting值
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.WebConfigHelper.GetConnectionString(System.String)">
+            <summary>
+            获取连接字符串
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.WebConfigHelper.GetConfigFileConnectionString(System.String,System.String)">
+            <summary>
+            获取特定配置文件的连接字符串
+            </summary>
+            <param name="configFile">配置文件路径</param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.WebConfigHelper.GetCurrWebName">
+            <summary>
+            获取当前网站系统名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.WebConfigHelper.GetCurrWebLogo">
+            <summary>
+            获取当前网站系统LOGO
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.WebConfigHelper.GetCurrLogoName">
+            <summary>
+            获取网站logo右边名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.WebConfigHelper.GetCurrWebCopyright">
+            <summary>
+            获取当前网站系统Copyright
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.WebConfigHelper.SetCurrWebInfo(System.String,System.String,System.String)">
+            <summary>
+            设置网站信息
+            </summary>
+            <param name="name">系统名称</param>
+            <param name="logo">系统LOGO</param>
+            <param name="copyright">版权信息</param>
+            <returns>返回异常信息</returns>
+        </member>
+        <member name="T:Rookey.Frame.Common.WebHelper">
+            <summary>
+            Web辅助处理类
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.Common.WebHelper.GetClientIP(System.Web.HttpRequestBase)">
+            <summary>
+            获取客户端IP
+            </summary>
+            <param name="request">请求对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.WebHelper.GetClientIP(System.Web.HttpContext)">
+            <summary>
+            获取客户端IP
+            </summary>
+            <param name="context">上下文请求对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.WebHelper.GetConfigFilePath(System.String)">
+            <summary>
+            获取配置文件
+            </summary>
+            <param name="configName">配置文件名，带文件扩展名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.WebHelper.GetContextRequest(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            获取webapi请求对象中的传统request对象
+            </summary>
+            <param name="requestMessage">webapi请求对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.Common.WebHelper.GetJsModifyTimeStr(System.String)">
+            <summary>
+            获取JS的修改时间
+            </summary>
+            <param name="jsPath">JS的URL路径</param>
+            <returns></returns>
+        </member>
+        <member name="T:Rookey.Frame.Common.Web.WebServiceHelper">
+            <summary>  
+            动态调用WebService（支持SaopHeader）  
+            </summary>  
+        </member>
+        <member name="M:Rookey.Frame.Common.Web.WebServiceHelper.GetWsClassName(System.String)">
+            <summary>     
+            获取WebService的类名     
+            </summary>     
+            <param name="wsUrl">WebService地址</param>     
+            <returns>返回WebService的类名</returns>     
+        </member>
+        <member name="M:Rookey.Frame.Common.Web.WebServiceHelper.InvokeWebService(System.String,System.String,System.Object[])">
+            <summary>     
+            调用WebService（不带SoapHeader）  
+            </summary>     
+            <param name="wsUrl">WebService地址</param>     
+            <param name="methodName">方法名称</param>     
+            <param name="args">参数列表</param>     
+            <returns>返回调用结果</returns>     
+        </member>
+        <member name="M:Rookey.Frame.Common.Web.WebServiceHelper.InvokeWebService(System.String,System.String,Rookey.Frame.Common.Web.WebServiceHelper.SoapHeader,System.Object[])">
+            <summary>     
+            调用WebService（带SoapHeader）  
+            </summary>     
+            <param name="wsUrl">WebService地址</param>     
+            <param name="methodName">方法名称</param>     
+            <param name="soapHeader">SOAP头</param>     
+            <param name="args">参数列表</param>     
+            <returns>返回调用结果</returns>  
+        </member>
+        <member name="M:Rookey.Frame.Common.Web.WebServiceHelper.InvokeWebService(System.String,System.String,System.String,Rookey.Frame.Common.Web.WebServiceHelper.SoapHeader,System.Object[])">
+            <summary>     
+            调用WebService  
+            </summary>     
+            <param name="wsUrl">WebService地址</param>     
+            <param name="className">类名</param>     
+            <param name="methodName">方法名称</param>     
+            <param name="soapHeader">SOAP头</param>  
+            <param name="args">参数列表</param>     
+            <returns>返回调用结果</returns>     
+        </member>
+        <member name="T:Rookey.Frame.Common.Web.WebServiceHelper.SoapHeader">
+            <summary>  
+            SOAP头  
+            </summary>  
+        </member>
+        <member name="M:Rookey.Frame.Common.Web.WebServiceHelper.SoapHeader.#ctor">
+            <summary>  
+            构造一个SOAP头  
+            </summary>  
+        </member>
+        <member name="M:Rookey.Frame.Common.Web.WebServiceHelper.SoapHeader.#ctor(System.String)">
+            <summary>  
+            构造一个SOAP头  
+            </summary>  
+            <param name="className">SOAP头的类名</param>  
+        </member>
+        <member name="M:Rookey.Frame.Common.Web.WebServiceHelper.SoapHeader.#ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>  
+            构造一个SOAP头  
+            </summary>  
+            <param name="className">SOAP头的类名</param>  
+            <param name="properties">SOAP头的类属性名及属性值</param>  
+        </member>
+        <member name="M:Rookey.Frame.Common.Web.WebServiceHelper.SoapHeader.AddProperty(System.String,System.Object)">
+            <summary>  
+            为SOAP头增加一个属性及值  
+            </summary>  
+            <param name="name">SOAP头的类属性名</param>  
+            <param name="value">SOAP头的类属性值</param>  
+        </member>
+        <member name="P:Rookey.Frame.Common.Web.WebServiceHelper.SoapHeader.ClassName">
+            <summary>  
+            SOAP头的类名  
+            </summary>  
+        </member>
+        <member name="P:Rookey.Frame.Common.Web.WebServiceHelper.SoapHeader.Properties">
+            <summary>  
+            SOAP头的类属性名及属性值  
+            </summary>  
+        </member>
+    </members>
+</doc>

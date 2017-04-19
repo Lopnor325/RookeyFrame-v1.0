@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "AddJobPlan";
+}
+@section scripts{
+    <style type="text/css">
+        .td_text {
+            text-align: right;
+            font-size: 13px;
+            width: 150px;
+            height: 30px;
+        }
+
+        .td_value {
+            text-align: left;
+            font-size: 13px;
+            width: 400px;
+            height: 30px;
+        }
+    </style>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Quartz/AddJobPlan.js")"></script>
+}
+@using Rookey.Frame.UIOperate;
+@{ UIFrameFactory frameFactory = UIFrameFactory.GetInstance(Request);}
+@Html.Raw(frameFactory.GetAddJobPlanHTML())

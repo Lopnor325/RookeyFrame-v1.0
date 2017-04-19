@@ -1,0 +1,18 @@
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Bridge.XML
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Bridge.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Bridge.pdb
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Bridge\obj\Release\Rookey.Frame.Bridge.csprojResolveAssemblyReference.cache
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Bridge\obj\Release\Rookey.Frame.Bridge.dll
+D:\rookey\Rookey.Frame 1.0\Code\Rookey.Frame.Bridge\obj\Release\Rookey.Frame.Bridge.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Bridge.XML
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Bridge.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Lib\web\Rookey.Frame.Bridge.pdb
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Bridge\obj\Release\Rookey.Frame.Bridge.csprojResolveAssemblyReference.cache
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Bridge\obj\Release\Rookey.Frame.Bridge.dll
+D:\rookey\Rookey.Frame v1.0\Code\Rookey.Frame.Bridge\obj\Release\Rookey.Frame.Bridge.pdb
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.Bridge.XML
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.Bridge.dll
+D:\rookey\git.oschina\Rookey.Frame.Lib\web\Rookey.Frame.Bridge.pdb
+D:\rookey\git.oschina\Rookey.Frame.Bridge\obj\Release\Rookey.Frame.Bridge.csprojResolveAssemblyReference.cache
+D:\rookey\git.oschina\Rookey.Frame.Bridge\obj\Release\Rookey.Frame.Bridge.dll
+D:\rookey\git.oschina\Rookey.Frame.Bridge\obj\Release\Rookey.Frame.Bridge.pdb

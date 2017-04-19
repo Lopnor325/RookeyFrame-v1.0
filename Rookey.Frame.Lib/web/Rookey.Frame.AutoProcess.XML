@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rookey.Frame.AutoProcess</name>
+    </assembly>
+    <members>
+        <member name="T:Rookey.Frame.AutoProcess.AutoProcessTask">
+            <summary>
+            自动处理任务
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.AutoProcess.AutoProcessTask.isStart">
+            <summary>
+            是否已经开始运行
+            </summary>
+        </member>
+        <member name="F:Rookey.Frame.AutoProcess.AutoProcessTask.taskList">
+            <summary>
+            任务列表
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.AutoProcess.AutoProcessTask.AddTask(Rookey.Frame.AutoProcess.BackgroundTask)">
+            <summary>
+            添加任务
+            </summary>
+            <param name="task">任务对象</param>
+        </member>
+        <member name="M:Rookey.Frame.AutoProcess.AutoProcessTask.Execute">
+            <summary>
+            执行任务
+            </summary>
+        </member>
+        <member name="E:Rookey.Frame.AutoProcess.AutoProcessTask.EventAfterExecute">
+            <summary>
+            执行Execute方法后事件
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.AutoProcess.AutoProcessTask.IsStart">
+            <summary>
+            是否启动
+            </summary>
+        </member>
+        <member name="T:Rookey.Frame.AutoProcess.TaskHandle">
+            <summary>
+            委托（用于异步处理任务）
+            </summary>
+            <param name="parameter">任务参数</param>
+            <returns>是否执行成功</returns>
+        </member>
+        <member name="T:Rookey.Frame.AutoProcess.BackgroundTask">
+            <summary>
+            自动处理中心任务参数
+            </summary>
+        </member>
+        <member name="M:Rookey.Frame.AutoProcess.BackgroundTask.#ctor(Rookey.Frame.AutoProcess.TaskHandle,System.Object,System.Boolean,System.Int32,System.Boolean,System.Nullable{System.DateTime})">
+            <summary>
+            任务参数构造函数
+            </summary>
+            <param name="executeMethod">执行方法</param>
+            <param name="parameter">方法参数</param>
+            <param name="isOnce">是否执行一次</param>
+            <param name="interval">执行间隔（秒），默认为24小时</param>
+            <param name="isExecuteNow">是否立即执行</param>
+        </member>
+        <member name="M:Rookey.Frame.AutoProcess.BackgroundTask.Execute">
+            <summary>
+            开始执行任务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rookey.Frame.AutoProcess.BackgroundTask.Start(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>
+            开始执行Timer具体方法
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:Rookey.Frame.AutoProcess.BackgroundTask.IsAbortExcute">
+            <summary>
+            是否已经终止
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.AutoProcess.BackgroundTask.ExecuteMethod">
+            <summary>
+            执行的方法
+            </summary>
+        </member>
+    </members>
+</doc>

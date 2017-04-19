@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Test";
+}
+@section scripts
+{
+    <script type="text/javascript" src="~/Scripts/easyui-extension/dateranges.js"></script>
+}
+<div>
+    <input type="text" id="aaa" style="width:300px" />
+    <button id="btn">取值</button>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("#aaa").dateranges();        $('#btn').click(function () {
+            var text = $("#aaa").val();            var token = text.split('至');            alert(text);        });    });
+</script>

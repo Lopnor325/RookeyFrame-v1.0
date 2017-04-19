@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "RoleDataPermissionSet";
+}
+@using Rookey.Frame.Common;
+@using Rookey.Frame.UIOperate;
+@{ UIFrameFactory frameFactory = UIFrameFactory.GetInstance(Request);
+   string moduleName = Server.UrlDecode(Request["moduleName"].ObjToStr());
+   string roleName = Server.UrlDecode(Request["roleName"].ObjToStr());
+   int type = Request["type"].ObjToInt();}
+@Html.Raw(frameFactory.GetRoleDataPermissionSetHTML(moduleName, roleName, type))

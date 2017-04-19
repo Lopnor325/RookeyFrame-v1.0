@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C49902E4-7448-45FF-B336-A590E80BCCFA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rookey.Frame.Model</RootNamespace>
+    <AssemblyName>Rookey.Frame.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Rookey.Frame.Lib\web\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Rookey.Frame.Lib\web\Rookey.Frame.Model.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Rookey.Frame.Lib\web\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Rookey.Frame.Lib\web\Rookey.Frame.Model.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ServiceStack.Interfaces, Version=4.0.0.0, Culture=neutral, PublicKeyToken=e06fbc6124f57c43, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Cecport.Frame.Lib\serviceStack\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\BaseBpmEntity.cs" />
+    <Compile Include="Base\BaseDeskEntity.cs" />
+    <Compile Include="Base\BaseLogEntity.cs" />
+    <Compile Include="Base\BaseMonitorEntity.cs" />
+    <Compile Include="Base\BaseSysEntity.cs" />
+    <Compile Include="Base\BaseOrgMEntity.cs" />
+    <Compile Include="Base\BaseMsgEntity.cs" />
+    <Compile Include="Bpm\Bpm_FlowBtn.cs" />
+    <Compile Include="Bpm\Bpm_FlowClass.cs" />
+    <Compile Include="Bpm\Bpm_NodeBtnConfig.cs" />
+    <Compile Include="Bpm\Bpm_SubWorkFlow.cs" />
+    <Compile Include="Bpm\Bpm_WorkFlow.cs" />
+    <Compile Include="Bpm\Bpm_WorkFlowInstance.cs" />
+    <Compile Include="Bpm\Bpm_WorkLine.cs" />
+    <Compile Include="Bpm\Bpm_WorkNode.cs" />
+    <Compile Include="Bpm\Bpm_WorkNodeInstance.cs" />
+    <Compile Include="Bpm\Bpm_WorkToDoList.cs" />
+    <Compile Include="Bpm\Bpm_WorkToDoListHistory.cs" />
+    <Compile Include="Bpm\Bpm_WorkFlowInstanceHistory.cs" />
+    <Compile Include="Bpm\Bpm_WorkNodeInstanceHistory.cs" />
+    <Compile Include="Desktop\Desktop_GridField.cs" />
+    <Compile Include="Desktop\Desktop_Item.cs" />
+    <Compile Include="Desktop\Desktop_ItemTab.cs" />
+    <Compile Include="Desktop\Desktop_Permission.cs" />
+    <Compile Include="Msg\Msg_Bcc.cs" />
+    <Compile Include="Msg\Msg_Cc.cs" />
+    <Compile Include="Msg\Msg_SendLog.cs" />
+    <Compile Include="Msg\Msg_To.cs" />
+    <Compile Include="Msg\Msg_Template.cs" />
+    <Compile Include="Enum\BpmEnum.cs" />
+    <Compile Include="Enum\OrgMEnum.cs" />
+    <Compile Include="Enum\SystemEnum.cs" />
+    <Compile Include="Enum\MsgEnum.cs" />
+    <Compile Include="Log\Log_Exception.cs" />
+    <Compile Include="Log\Log_Login.cs" />
+    <Compile Include="Log\Log_Operate.cs" />
+    <Compile Include="Monitor\Monitor_OpExecuteTime.cs" />
+    <Compile Include="Msg\Msg_EventNotify.cs" />
+    <Compile Include="OrgM\OrgM_Dept.cs" />
+    <Compile Include="OrgM\OrgM_DeptDuty.cs" />
+    <Compile Include="OrgM\OrgM_Duty.cs" />
+    <Compile Include="OrgM\OrgM_Emp.cs" />
+    <Compile Include="OrgM\OrgM_EmpDeptDuty.cs" />
+    <Compile Include="System\Sys_AttachModuleBind.cs" />
+    <Compile Include="System\Sys_BillCodeRule.cs" />
+    <Compile Include="System\Sys_BindDictionary.cs" />
+    <Compile Include="System\Sys_CacheConfig.cs" />
+    <Compile Include="System\Sys_Organization.cs" />
+    <Compile Include="System\Sys_PermissionData.cs" />
+    <Compile Include="System\Sys_PermissionField.cs" />
+    <Compile Include="System\Sys_PermissionFun.cs" />
+    <Compile Include="System\Sys_RoleForm.cs" />
+    <Compile Include="System\Sys_DbConfig.cs" />
+    <Compile Include="System\Sys_IconManage.cs" />
+    <Compile Include="System\Sys_SystemSet.cs" />
+    <Compile Include="System\Sys_UserGrid.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Sys_Attachment.cs" />
+    <Compile Include="System\Sys_Dictionary.cs" />
+    <Compile Include="System\Sys_Field.cs" />
+    <Compile Include="System\Sys_Form.cs" />
+    <Compile Include="System\Sys_FormField.cs" />
+    <Compile Include="System\Sys_Grid.cs" />
+    <Compile Include="System\Sys_GridButton.cs" />
+    <Compile Include="System\Sys_GridField.cs" />
+    <Compile Include="System\Sys_Menu.cs" />
+    <Compile Include="System\Sys_Module.cs" />
+    <Compile Include="System\Sys_Role.cs" />
+    <Compile Include="System\Sys_TempUser.cs" />
+    <Compile Include="System\Sys_User.cs" />
+    <Compile Include="System\Sys_UserQuckMenu.cs" />
+    <Compile Include="System\Sys_UserRole.cs" />
+    <Compile Include="System\Sys_UserPermissionData.cs" />
+    <Compile Include="System\Sys_UserPermissionField.cs" />
+    <Compile Include="System\Sys_UserPermissionFun.cs" />
+    <Compile Include="System\Sys_PageCache.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rookey.Frame.EntityBase\Rookey.Frame.EntityBase.csproj">
+      <Project>{ca335d51-bcd7-4d88-8016-57dea03fc6c1}</Project>
+      <Name>Rookey.Frame.EntityBase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

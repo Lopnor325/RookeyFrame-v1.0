@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "ImgUploadForm";
+}
+<form method="post" id="uploadform" enctype="multipart/form-data">
+    <input id="file" name="file" type="file" style="display: none;" />
+</form>
+<script type="text/javascript">
+    //开始上传图片
+    //beforeUploadFun:上传前回调函数
+    //uploadCompletedFun:上传后回调函数
+    //imgName:图片文件名，不包含扩展名
+    function UploadImage(beforeUploadFun, uploadCompletedFun, imgName) {
+        $("#file").click();
+        //先将文件上传到临时目录下
+        $("#uploadform").ajaxSubmit({
+            type: "post",
+            url: "/Annex/UploadTempImage.html",
+            data: { imgName: imgName },
+            beforeSubmit: function () {
+                if (typeof (beforeUploadFun) == "function") {
+                    beforeUploadFun();
+                }
+                topWin.OpenWaitDialog('处理中...');
+            },
+            success: function (result) {
+                topWin.CloseWaitDialog();
+                if (!result.Success) {
+                    topWin.ShowAlertMsg('提示', result.Message, 'info');
+                }
+                if (typeof (uploadCompletedFun) == "function") {
+                    uploadCompletedFun(result);
+                }
+            },
+            error: function (err) {
+                topWin.CloseWaitDialog();
+                topWin.ShowAlertMsg('提示', '图片获取失败，服务端异常！', 'error', function () {
+                    if (typeof (uploadCompletedFun) == "function") {
+                        uploadCompletedFun(null);
+                    }
+                });
+            },
+            dataType: "json"
+        });
+    }
+</script>
