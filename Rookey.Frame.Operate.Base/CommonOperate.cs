@@ -6014,7 +6014,7 @@ namespace Rookey.Frame.Operate.Base
                 }
             }
             bool isDetailChildFlowApproval = false;
-            if (gridDataParmas.GridType == DataGridType.EditDetailGrid && currUser.EmpId.HasValue) //来自编辑表单页面
+            if (gridDataParmas.GridType == DataGridType.EditDetailGrid && (currUser.EmpId.HasValue || currUser.UserName == "admin")) //来自编辑表单页面
             {
                 if (gridDataParmas.OtherParams != null && gridDataParmas.OtherParams.ContainsKey("p_todoId")) //明细子流程审批时
                 {
@@ -6066,7 +6066,7 @@ namespace Rookey.Frame.Operate.Base
                 Type modelType = GetModelType(gridDataParmas.ModuleId);
                 PropertyInfo p_todoId = modelType.GetProperty("TaskToDoId");
                 PropertyInfo pId = modelType.GetProperty("Id");
-                Guid currEmpId = currUser.EmpId.Value;
+                Guid currEmpId = currUser.EmpId.HasValue ? currUser.EmpId.Value : Guid.Empty;
                 List<object> tempList = new List<object>();
                 long addNum = 0;
                 long reduceNum = 0;
