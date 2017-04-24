@@ -3307,9 +3307,32 @@ namespace Rookey.Frame.Operate.Base
                         }
                         else if (recordId.HasValue && recordId.Value != Guid.Empty)//审批流程
                         {
-                            if ((!module.ParentId.HasValue || module.ParentId.Value == Guid.Empty) && BpmOperate.IsCurrentToDoTaskHandler(toDoTaskId.Value, currUser))
+                            if ((!module.ParentId.HasValue || module.ParentId.Value == Guid.Empty))
                             {
-                                btns.AddRange(BpmOperate.GetNodeFlowBtns(toDoTaskId.Value, currUser));
+                                if (BpmOperate.IsCurrentToDoTaskHandler(toDoTaskId.Value, currUser)) //为当前审批人时
+                                {
+                                    btns.AddRange(BpmOperate.GetNodeFlowBtns(toDoTaskId.Value, currUser));
+                                }
+                                else if (currUser != null && currUser.UserName == "admin") //管理员添加指派功能
+                                {
+                                    string errMsg = string.Empty;
+                                    bool isParentTodo = false;
+                                    Bpm_WorkToDoList todo = CommonOperate.GetEntityById<Bpm_WorkToDoList>(toDoTaskId.Value, out errMsg);
+                                    if (todo == null)
+                                    {
+                                        Bpm_WorkToDoListHistory todoHistory = CommonOperate.GetEntityById<Bpm_WorkToDoListHistory>(toDoTaskId.Value, out errMsg);
+                                        if (todoHistory != null)
+                                            isParentTodo = todoHistory.IsParentTodo == true;
+                                    }
+                                    else
+                                    {
+                                        isParentTodo = todo.IsParentTodo == true;
+                                    }
+                                    FormButton tempBtn = new FormButton() { TagId = string.Format("flowBtn_{0}", Guid.NewGuid().ToString()), IconType = ButtonIconType.FlowDirect, Icon = "eu-icon-user", DisplayText = "指派", ClickMethod = "DirectFlow(this)", Sort = 7 };
+                                    if (isParentTodo)
+                                        tempBtn.ParentToDoId = toDoTaskId.Value.ToString();
+                                    btns.Add(tempBtn);
+                                }
                             }
                         }
                     }

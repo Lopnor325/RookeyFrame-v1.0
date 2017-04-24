@@ -23,7 +23,7 @@ namespace Rookey.Frame.UIOperate
         /// <summary>
         /// 默认皮肤样式为扁平灰
         /// </summary>
-        public const string DEFAULT_THEME = "default";
+        public const string DEFAULT_THEME = "metro";
 
         /// <summary>
         /// 滚动条宽度

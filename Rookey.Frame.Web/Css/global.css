@@ -302,8 +302,7 @@ table.thinBorder {
     }
 
     table.thinBorder th {
-        background-color: #F0F0F0;
-        color: #000;
+        background-color: #f8f8f8;        color: #000;
     }
 
 table.padding5 td, table.padding5 th {

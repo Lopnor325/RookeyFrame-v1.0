@@ -260,5 +260,11 @@ namespace Rookey.Frame.Operate.Base.TempModel
         /// 实现自动补全功能的字段名
         /// </summary>
         public string FieldName { get; set; }
+
+        /// <summary>
+        /// 针对外键智能提示选择外键模块数据的原始模块，
+        /// 如在员工新增页面选择部门时，员工模块就为原始模块
+        /// </summary>
+        public string InitModule { get; set; }
     }
 }

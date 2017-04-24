@@ -1346,6 +1346,10 @@ namespace Rookey.Frame.Controllers
                     tempItems.Add(new ConditionItem() { Field = fieldName, Method = QueryMethod.NotEqual, Value = null });
                     tempExp = CommonOperate.GetQueryCondition(module.Id, tempItems);
                 }
+                else
+                {
+                    gridDataParams.InitModule = module.Name;
+                }
                 needLoadFields = needLoadFields.Distinct().ToList();
                 gridDataParams.NeedLoadFields = needLoadFields;
                 object list = CommonOperate.GetGridData(gridDataParams, out total, GetCurrentUser(_Request), tempExp);

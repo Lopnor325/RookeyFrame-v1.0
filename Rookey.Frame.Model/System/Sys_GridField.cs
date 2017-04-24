@@ -151,13 +151,15 @@ namespace Rookey.Frame.Model.Sys
         /// <summary>
         /// 格式化函数
         /// </summary>
-       [FieldConfig(Display = "格式化函数", RowNum = 8, ColNum = 1, HeadSort = 15)]
+        [FieldConfig(Display = "格式化函数", RowNum = 8, ColNum = 1, HeadSort = 15)]
+        [StringLength(4000)]
         public string FieldFormatter { get; set; }
 
         /// <summary>
         /// 编辑器函数
         /// </summary>
         [FieldConfig(Display = "编辑器函数", RowNum = 8, ColNum = 2, HeadSort = 16)]
+        [StringLength(4000)]
         public string EditorFormatter { get; set; }
 
         #endregion

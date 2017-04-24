@@ -175,6 +175,24 @@ function LoadTree(dom, url, params) {
         }
     };
     if (params) {
+        if (params.loadFilter) {
+            treeParams.loadFilter = params.loadFilter;
+        }
+        if (params.onClick) {
+            treeParams.onClick = params.onClick;
+        }
+        if (params.onExpand) {
+            treeParams.onExpand = params.onExpand;
+        }
+        if (params.onCollapse) {
+            treeParams.onCollapse = params.onCollapse;
+        }
+        if (params.onLoadSuccess) {
+            treeParams.onLoadSuccess = params.onLoadSuccess;
+        }
+        if (params.onBeforeSelect) {
+            treeParams.onBeforeSelect = params.onBeforeSelect;
+        }
         if (params.method) {
             treeParams.method = params.method;
         }

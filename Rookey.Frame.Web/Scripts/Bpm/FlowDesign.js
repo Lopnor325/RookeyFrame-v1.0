@@ -69,7 +69,7 @@ function LoadFlowClassTree() {
             });
             StopBubble(e);
         },
-        onDblClick: function (node) {
+        onClick: function (node) {
             var workflowId = node.attribute.obj ? node.attribute.obj.workflowId : null;
             if (workflowId) {
                 var url = '/' + CommonController.Bpm_Controller + '/FlowCanvas.html?workflowId=' + workflowId;

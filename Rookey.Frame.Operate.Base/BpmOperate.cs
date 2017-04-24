@@ -1194,8 +1194,15 @@ namespace Rookey.Frame.Operate.Base
                 return string.Format("{0}当前待办任务对应的流程结点数据丢失", errPrex);
             if (currUser == null)
                 return string.Format("{0}当前用户信息获取失败", errPrex);
-            if (!BpmOperate.IsCurrentToDoTaskHandler(workTodoId, currUser))
+            if (currUser.UserName != "admin")
+            {
+                if (!BpmOperate.IsCurrentToDoTaskHandler(workTodoId, currUser))
+                    return string.Format("{0}您不是当前待办的处理者，如有疑问请联系管理员", errPrex);
+            }
+            else if (workAction != WorkActionEnum.Directing)
+            {
                 return string.Format("{0}您不是当前待办的处理者，如有疑问请联系管理员", errPrex);
+            }
             Bpm_WorkNode returnNode = null;
             if (workAction == WorkActionEnum.Returning) //回退时
             {
@@ -1895,7 +1902,7 @@ namespace Rookey.Frame.Operate.Base
                     //获取当前记录的明细ID集合
                     DatabaseType tempDbType = DatabaseType.MsSqlServer;
                     string tempConnStr = ModelConfigHelper.GetModelConnStr(subModelType, out tempDbType, true);
-                    string sql = string.Format("SELECT Id FROM {0} WHERE {1}Id='{2}'", tableName, mainModelType.Name, workTodo.RecordId);
+                    string sql = string.Format("SELECT Id FROM {0} WHERE {1}Id='{2}' AND IsDeleted=0", tableName, mainModelType.Name, workTodo.RecordId);
                     DataTable dt = CommonOperate.ExecuteQuery(out errMsg, sql, null, tempConnStr, tempDbType);
                     if (dt != null && dt.Rows.Count > 0)
                     {
@@ -1933,7 +1940,7 @@ namespace Rookey.Frame.Operate.Base
                             tempWorkFlowInst = parentWorkflowInst;
                             autoJumpNode = parentNextNode;
                             List<Bpm_WorkNode> tempNextNodes = GetNextWorkNodes(tempWorkflow.Id, autoJumpNode.Id);
-                            if (tempNextNodes.Count == 0) //父流程当前自动审批结点为最后一个结点时，判断子流程只要有一个子流程审批通过则该父流程结点为同意，否则为拒绝
+                            if (tempNextNodes.Count == 0 && workflowStatus == WorkFlowStatusEnum.Refused) //父流程当前自动审批结点为最后一个结点时，判断子流程只要有一个子流程审批通过则该父流程结点为同意，否则为拒绝
                             {
                                 List<object> statusObjs = CommonOperate.GetColumnFieldValues<Bpm_WorkFlowInstance>(out tempMsg, "Status", x => x.ParentId == parentWorkflowInst.Id); //获取所有子流程状态
                                 if (statusObjs.Count > 0)
@@ -2827,12 +2834,14 @@ namespace Rookey.Frame.Operate.Base
         /// <param name="moduleId">模块ID</param>
         /// <param name="recordId">记录ID</param>
         /// <param name="currEmpId">当前人empId</param>
+        /// <param name="isAdmin">是否超级管理员</param>
         /// <returns></returns>
-        public static Guid GetChildFlowToDoId(Guid parentTodoId, Guid moduleId, Guid recordId, Guid currEmpId)
+        public static Guid GetChildFlowToDoId(Guid parentTodoId, Guid moduleId, Guid recordId, Guid currEmpId, bool isAdmin = false)
         {
             string errMsg = string.Empty;
             int noAction = (int)WorkActionEnum.NoAction;
-            Bpm_WorkToDoList childTodo = CommonOperate.GetEntity<Bpm_WorkToDoList>(x => x.ParentId == parentTodoId && x.OrgM_EmpId == currEmpId && x.ModuleId == moduleId && x.RecordId == recordId && x.WorkAction == noAction, null, out errMsg);
+            Bpm_WorkToDoList childTodo = isAdmin ? CommonOperate.GetEntity<Bpm_WorkToDoList>(x => x.ParentId == parentTodoId && x.ModuleId == moduleId && x.RecordId == recordId && x.WorkAction == noAction, null, out errMsg) :
+                                       CommonOperate.GetEntity<Bpm_WorkToDoList>(x => x.ParentId == parentTodoId && x.OrgM_EmpId == currEmpId && x.ModuleId == moduleId && x.RecordId == recordId && x.WorkAction == noAction, null, out errMsg);
             if (childTodo != null)
                 return childTodo.Id;
             return Guid.Empty;

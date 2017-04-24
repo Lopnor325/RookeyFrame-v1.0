@@ -610,6 +610,7 @@ namespace Rookey.Frame.Controllers
         {
             if (_Request == null) _Request = Request;
             SetRequest(_Request);
+            UserInfo currUser = GetCurrentUser(_Request);
             WorkActionEnum workAction = WorkActionEnum.NoAction;
             Bpm_FlowBtn flowBtn = BpmOperate.GetAllWorkButtons(x => x.Id == flowBtnId).FirstOrDefault();
             if (flowBtn != null)
@@ -630,9 +631,13 @@ namespace Rookey.Frame.Controllers
                         break;
                 }
             }
-            else if (toDoTaskId == flowBtnId) //回退重新提交
+            else if (toDoTaskId == flowBtnId) //重新发起
             {
                 workAction = WorkActionEnum.ReStarting;
+            }
+            else if (currUser != null && currUser.UserName == "admin" && directHandler.HasValue && directHandler.Value != Guid.Empty)
+            {
+                workAction = WorkActionEnum.Directing;
             }
             return ApprovalProcess(toDoTaskId, approvalOpinions, workAction, returnNodeId, directHandler, childTodoIds);
         }

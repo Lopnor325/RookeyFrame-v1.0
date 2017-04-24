@@ -5905,19 +5905,26 @@ namespace Rookey.Frame.Operate.Base
             }
             else
             {
+                string initModule = string.Empty;
+                string initField = string.Empty;
                 if (type == typeof(AutoCompelteDataParams)) //自动完成数据参数类型
                 {
                     AutoCompelteDataParams autoDataParams = gridDataParmas as AutoCompelteDataParams;
                     q = StringHelper.GetExpressionReplaceString(q);
                     if (!string.IsNullOrEmpty(q))
                         searchDic.Add(autoDataParams.FieldName, q);
+                    if (!string.IsNullOrEmpty(autoDataParams.InitModule))
+                    {
+                        initModule = autoDataParams.InitModule;
+                        initField = autoDataParams.FieldName;
+                    }
                 }
                 else //默认网格参数类型
                 {
                     searchDic = JsonHelper.Deserialize<Dictionary<string, string>>(q);
                 }
                 //将自定义条件和搜索条件转成lamda表达式
-                conditionExpression = GetGridFilterCondition(ref whereSql, gridDataParmas.ModuleId, searchDic, gridDataParmas.GridType, customerCondition, null, null, gridDataParmas.OtherParams, gridDataParmas.ViewId, currUser);
+                conditionExpression = GetGridFilterCondition(ref whereSql, gridDataParmas.ModuleId, searchDic, gridDataParmas.GridType, customerCondition, initModule, initField, gridDataParmas.OtherParams, gridDataParmas.ViewId, currUser);
             }
             //复杂过滤条件
             if (gridDataParmas.CdItems != null && gridDataParmas.CdItems.Count > 0)
@@ -6053,7 +6060,7 @@ namespace Rookey.Frame.Operate.Base
                     }
                 }
             }
-            else if (isDetailChildFlowApproval && currUser.UserName != "admin") //明细子流程审批时
+            else if (isDetailChildFlowApproval) //明细子流程审批时
             {
                 Guid parentTodoId = gridDataParmas.OtherParams["p_todoId"].ObjToGuid();
                 Type modelType = GetModelType(gridDataParmas.ModuleId);
@@ -6066,7 +6073,7 @@ namespace Rookey.Frame.Operate.Base
                 foreach (object obj in (list as IEnumerable))
                 {
                     Guid recordId = pId.GetValue2(obj, null).ObjToGuid();
-                    Guid todoId = BpmOperate.GetChildFlowToDoId(parentTodoId, gridDataParmas.ModuleId, recordId, currEmpId);
+                    Guid todoId = BpmOperate.GetChildFlowToDoId(parentTodoId, gridDataParmas.ModuleId, recordId, currEmpId, currUser.UserName == "admin");
                     if (todoId != Guid.Empty)
                     {
                         p_todoId.SetValue2(obj, todoId, null);

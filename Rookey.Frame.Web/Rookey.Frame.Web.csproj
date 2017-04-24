@@ -161,6 +161,7 @@
     </Content>
     <Content Include="Css\common\easyui_ext.css" />
     <Content Include="Css\common\main.css" />
+    <Content Include="Css\common\main_bak.css" />
     <Content Include="Css\common\main_ext\main_black.css" />
     <Content Include="Css\common\main_ext\main_bootstrap.css" />
     <Content Include="Css\common\main_ext\main_default.css" />

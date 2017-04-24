@@ -506,7 +506,7 @@
             <param name="todoTaskId">待办ID</param>
             <returns></returns>
         </member>
-        <member name="M:Rookey.Frame.Operate.Base.BpmOperate.GetChildFlowToDoId(System.Guid,System.Guid,System.Guid,System.Guid)">
+        <member name="M:Rookey.Frame.Operate.Base.BpmOperate.GetChildFlowToDoId(System.Guid,System.Guid,System.Guid,System.Guid,System.Boolean)">
             <summary>
             获取当前子流程待办ID
             </summary>
@@ -514,6 +514,7 @@
             <param name="moduleId">模块ID</param>
             <param name="recordId">记录ID</param>
             <param name="currEmpId">当前人empId</param>
+            <param name="isAdmin">是否超级管理员</param>
             <returns></returns>
         </member>
         <member name="M:Rookey.Frame.Operate.Base.BpmOperate.GetCurrentToDoHandler(System.Guid)">
@@ -6437,6 +6438,12 @@
         <member name="P:Rookey.Frame.Operate.Base.TempModel.AutoCompelteDataParams.FieldName">
             <summary>
             实现自动补全功能的字段名
+            </summary>
+        </member>
+        <member name="P:Rookey.Frame.Operate.Base.TempModel.AutoCompelteDataParams.InitModule">
+            <summary>
+            针对外键智能提示选择外键模块数据的原始模块，
+            如在员工新增页面选择部门时，员工模块就为原始模块
             </summary>
         </member>
         <member name="T:Rookey.Frame.Operate.Base.TempModel.GridFilterRule">

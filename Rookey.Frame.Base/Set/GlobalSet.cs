@@ -39,13 +39,19 @@ namespace Rookey.Frame.Base.Set
     {
         #region 系统设置
 
-        private static UserNameAndEmpConfigRule _empUserNameConfigRule = UserNameAndEmpConfigRule.EmpCode;
+        private static UserNameAndEmpConfigRule _empUserNameConfigRule = UserNameAndEmpConfigRule.Email;
         /// <summary>
         /// 员工用户名默认配置规则
         /// </summary>
         public static UserNameAndEmpConfigRule EmpUserNameConfigRule
         {
-            get { return _empUserNameConfigRule; }
+            get
+            {
+                string configRule = WebConfigHelper.GetAppSettingValue("UserNameConfigRule");
+                if (!string.IsNullOrEmpty(configRule))
+                    _empUserNameConfigRule = (UserNameAndEmpConfigRule)Enum.Parse(typeof(UserNameAndEmpConfigRule), configRule);
+                return _empUserNameConfigRule;
+            }
             set { _empUserNameConfigRule = value; }
         }
 
@@ -55,7 +61,13 @@ namespace Rookey.Frame.Base.Set
         /// </summary>
         public static bool IsAllowOtherConfigRuleLogin
         {
-            get { return _isAllowOtherConfigRuleLogin; }
+            get
+            {
+                string isAllowOtherLogin = WebConfigHelper.GetAppSettingValue("IsAllowOtherConfigRuleLogin");
+                if (!string.IsNullOrEmpty(isAllowOtherLogin))
+                    _isAllowOtherConfigRuleLogin = isAllowOtherLogin.ObjToBool();
+                return _isAllowOtherConfigRuleLogin;
+            }
             set { _isAllowOtherConfigRuleLogin = value; }
         }
 
@@ -75,7 +87,7 @@ namespace Rookey.Frame.Base.Set
             }
         }
 
-        private static bool _isShowStyleBtn = true;
+        private static bool _isShowStyleBtn = false;
         /// <summary>
         /// 是否显示样式按钮
         /// </summary>
