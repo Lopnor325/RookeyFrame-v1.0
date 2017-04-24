@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rookey.Frame.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -26,22 +27,29 @@ namespace Rookey.Frame.Controllers.AppConfig
             routes.IgnoreRoute("FileManage/{webform}");
             routes.IgnoreRoute("IM/{webform}");
 
+            string defaultController = WebConfigHelper.GetAppSettingValue("DefaultController");
+            string defaultAction = WebConfigHelper.GetAppSettingValue("DefaultAction");
+            if (string.IsNullOrEmpty(defaultController))
+                defaultController = "Page";
+            if (string.IsNullOrEmpty(defaultAction))
+                defaultAction = "Main";
+
             routes.MapRoute(
                  "index", // Route name
                  "", // URL with parameters
-                 new { controller = "Page", action = "Main", id = UrlParameter.Optional } // Parameter defaults
+                 new { controller = defaultController, action = defaultAction, id = UrlParameter.Optional } // Parameter defaults
                  , namespaces: new[] { NAMESPACE }
             );
             routes.MapRoute(
                 "Default1",
                 "{controller}/{action}.html",
-                new { controller = "Page", action = "Main" }
+                new { controller = defaultController, action = defaultAction }
                 , namespaces: new[] { NAMESPACE }
             );
             routes.MapRoute(
                 "Default2", // Route name
                 "{controller}/{action}/{id}.html", // URL with parameters
-                new { controller = "Page", action = "Main", id = UrlParameter.Optional } // Parameter defaults
+                new { controller = defaultController, action = defaultAction, id = UrlParameter.Optional } // Parameter defaults
                  , namespaces: new[] { NAMESPACE }
             );
         }
